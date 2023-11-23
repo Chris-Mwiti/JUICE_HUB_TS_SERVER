@@ -1,0 +1,508 @@
+231001	16:21:01	ca32a026-035b-451a-baab-bd3499f403fc	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\User.js:22:105
+
+  19 // CRUD OPERATIONS FOR THE USER MODEL:
+  20 static createUser(userInfo) {
+  21     return __awaiter(this, void 0, void 0, function* () {
+→ 22         const { data: userRecord, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create(
+Unique constraint failed on the constraint: `User_google_id_key`	 PrismaClientKnownRequestError231001	21:35:55	109a9090-2f72-45cd-a8ce-a08ce5481d37	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\User.js:22:105
+
+  19 // CRUD OPERATIONS FOR THE USER MODEL:
+  20 static createUser(userInfo) {
+  21     return __awaiter(this, void 0, void 0, function* () {
+→ 22         const { data: userRecord, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create(
+Unique constraint failed on the constraint: `User_google_id_key`	 PrismaClientKnownRequestError231001	22:20:12	06209634-4162-42ee-9633-e60374bc8ba3	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\User.js:22:105
+
+  19 // CRUD OPERATIONS FOR THE USER MODEL:
+  20 static createUser(userInfo) {
+  21     return __awaiter(this, void 0, void 0, function* () {
+→ 22         const { data: userRecord, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create(
+Unique constraint failed on the constraint: `User_google_id_key`	 PrismaClientKnownRequestError231001	22:25:05	ae05c79f-f043-4395-ae04-0ab43ec17f8f	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\User.js:22:105
+
+  19 // CRUD OPERATIONS FOR THE USER MODEL:
+  20 static createUser(userInfo) {
+  21     return __awaiter(this, void 0, void 0, function* () {
+→ 22         const { data: userRecord, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create(
+Unique constraint failed on the constraint: `User_google_id_key`	 PrismaClientKnownRequestError231004	20:05:05	a37eadc8-af99-4b13-8c4d-838aa7502c09	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:24:106
+
+  21 static createProduct(productInfoObj) {
+  22     return __awaiter(this, void 0, void 0, function* () {
+  23         // Creates a new product with its relational subset fields if none of them exists
+→ 24         const { data: productInfo, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create({
+               data: {
+                 id: "PRODUCT-46cd63a6a5",
+                 productName: "Mango Juice",
+                 productDescription: "A blend of mango juice",
+                 price: 200,
+                 asset: {
+                   create: {
+                     id: "ASSET-74d71e474a",
+                     image: "product.jpg"
+                   }
+                 },
+                 category: {
+                   connectOrCreate: {
+                     where: {
+                       id: undefined,
+             ?         categoryName?: String,
+             ?         AND?: CategoryWhereInput | CategoryWhereInput[],
+             ?         OR?: CategoryWhereInput[],
+             ?         NOT?: CategoryWhereInput | CategoryWhereInput[],
+             ?         categoryDescription?: StringFilter | String,
+             ?         createdAt?: DateTimeFilter | DateTime,
+             ?         updatedAt?: DateTimeFilter | DateTime,
+             ?         product?: ProductListRelationFilter
+                     },
+                     create: {
+                       id: "CATEGORY-17a2af89cc",
+                       categoryName: "Mango",
+                       categoryDescription: "Mango Flavour"
+                     }
+                   }
+                 },
+                 discount: {
+                   connectOrCreate: {
+                     where: {
+                       coupon: "ASDEF"
+                     },
+                     create: {
+                       id: "DISCOUNT-e295731e96",
+                       coupon: "ASDEF",
+                       percentage: NaN
+                     }
+                   }
+                 },
+                 inventory: {
+                   create: {
+                     id: "INVENTORY-620ccf29f2",
+                     quantity: 10,
+                     productName: "Mango Juice"
+                   }
+                 }
+               }
+             })
+
+Argument `where` of type CategoryWhereUniqueInput needs at least one of `id` or `categoryName` arguments. Available options are listed in green.	 PrismaClientValidationError231004	20:08:59	400468b2-7445-4cfe-a05e-db6a422e981c	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:24:106
+
+  21 static createProduct(productInfoObj) {
+  22     return __awaiter(this, void 0, void 0, function* () {
+  23         // Creates a new product with its relational subset fields if none of them exists
+→ 24         const { data: productInfo, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create({
+               data: {
+                 id: "PRODUCT-a258888db4",
+                 productName: "Mango Juice",
+                 productDescription: "A blend of mango juice",
+                 price: 200,
+                 asset: {
+                   create: {
+                     id: "ASSET-37a39eb0d7",
+                     image: "product.jpg"
+                   }
+                 },
+                 category: {
+                   connectOrCreate: {
+                     where: {
+                       categoryName: "Mango"
+                     },
+                     create: {
+                       id: "CATEGORY-9fa0a10121",
+                       categoryName: "Mango",
+                       categoryDescription: "Mango Flavour"
+                     }
+                   }
+                 },
+                 discount: {
+                   connectOrCreate: {
+                     where: {
+                       coupon: "ASDEF"
+                     },
+                     create: {
+                       id: "DISCOUNT-0eaf3a86e5",
+                       coupon: "ASDEF",
+             +         percentage: Int
+                     }
+                   }
+                 },
+                 inventory: {
+                   create: {
+                     id: "INVENTORY-2550efb564",
+                     quantity: 10,
+                     productName: "Mango Juice"
+                   }
+                 }
+               }
+             })
+
+Argument `percentage` is missing.	 PrismaClientValidationError231004	20:10:43	2c7cb66b-db52-4b9b-ad93-269f77d9668c	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:24:106
+
+  21 static createProduct(productInfoObj) {
+  22     return __awaiter(this, void 0, void 0, function* () {
+  23         // Creates a new product with its relational subset fields if none of them exists
+→ 24         const { data: productInfo, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create({
+               data: {
+                 id: "PRODUCT-cad1973ee1",
+                 productName: "Mango Juice",
+                 productDescription: "A blend of mango juice",
+                 price: 200,
+                 asset: {
+                   create: {
+                     id: "ASSET-5ec9ef0f5e",
+                     image: "product.jpg"
+                   }
+                 },
+                 category: {
+                   connectOrCreate: {
+                     where: {
+                       categoryName: "Mango"
+                     },
+                     create: {
+                       id: "CATEGORY-162ed5d4a3",
+                       categoryName: "Mango",
+                       categoryDescription: "Mango Flavour"
+                     }
+                   }
+                 },
+                 discount: {
+                   connectOrCreate: {
+                     where: {
+                       coupon: "ASDEF"
+                     },
+                     create: {
+                       id: "DISCOUNT-27f1fc042c",
+                       coupon: "ASDEF",
+             +         percentage: Int
+                     }
+                   }
+                 },
+                 inventory: {
+                   create: {
+                     id: "INVENTORY-0a9a3695f4",
+                     quantity: 10,
+                     productName: "Mango Juice"
+                   }
+                 }
+               }
+             })
+
+Argument `percentage` is missing.	 PrismaClientValidationError231123	12:12:04	fb076f51-fac8-469d-9e22-babe37234945	
+Invalid `this.model.findMany()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:86:110
+
+  83 }
+  84 static getAllProducts(joinProperties) {
+  85     return __awaiter(this, void 0, void 0, function* () {
+→ 86         const { data: productInfos, error: fetchError } = yield (0, trycatch_1.default)(() => this.model.findMany(
+Can't reach database server at `localhost`:`3306`
+
+Please make sure your database server is running at `localhost`:`3306`.	 PrismaClientInitializationError231123	14:03:24	8ecb56e3-f5f7-4acb-bae9-1fdcd0bf485f	
+Invalid `this.model.findMany()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:86:110
+
+  83 }
+  84 static getAllProducts(joinProperties) {
+  85     return __awaiter(this, void 0, void 0, function* () {
+→ 86         const { data: productInfos, error: fetchError } = yield (0, trycatch_1.default)(() => this.model.findMany(
+Can't reach database server at `localhost`:`3306`
+
+Please make sure your database server is running at `localhost`:`3306`.	 PrismaClientInitializationError231123	15:08:45	f1716a41-828d-4684-964b-56b9318a5555	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:26:106
+
+  23 static createProduct(productInfoObj) {
+  24     return __awaiter(this, void 0, void 0, function* () {
+  25         // Creates a new product with its relational subset fields if none of them exists
+→ 26         const { data: productInfo, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create({
+               data: {
+                 id: "PRODUCT-d09a67f59d",
+                 productName: "Mango Juice",
+                 productDescription: "A blend of mango juice",
+                 price: 200,
+                 buyingPrice: 150,
+                 asset: {
+                   create: {
+                     id: "ASSET-662d9d601c",
+                     image: "product.jpg"
+                   }
+                 },
+                 category: {
+                   connectOrCreate: {
+                     where: {
+                       categoryName: "Mango"
+                     },
+                     create: {
+                       id: "CATEGORY-af42f36259",
+                       categoryName: "Mango",
+                       categoryDescription: "Mango Flavour"
+                     }
+                   }
+                 },
+                 inventory: {
+                   create: {
+                     id: "INVENTORY-67fadecf34",
+                     quantity: 10,
+                     productName: "Mango Juice",
+                     lastRefilDate: new Date("2023-11-23T12:08:45.319Z")
+                   }
+                 },
+                 supplier: {
+                   connectOrCreate: {
+                     where: {
+                       id: undefined,
+             ?         AND?: SupplierDetailsWhereInput | SupplierDetailsWhereInput[],
+             ?         OR?: SupplierDetailsWhereInput[],
+             ?         NOT?: SupplierDetailsWhereInput | SupplierDetailsWhereInput[],
+             ?         companyName?: StringFilter | String,
+             ?         address?: StringFilter | String,
+             ?         phone?: StringFilter | String,
+             ?         createdAt?: DateTimeFilter | DateTime,
+             ?         updatedAt?: DateTimeFilter | DateTime,
+             ?         product?: ProductListRelationFilter
+                     },
+                     create: {
+                       id: "SUPPLIER-bc76588686",
+                       companyName: "Juice Hub",
+                       address: "Nairobi, Embakasi",
+                       phone: "0112001875"
+                     }
+                   }
+                 },
+                 discountIds: {
+                   connect: {
+                     id: undefined
+                   }
+                 }
+               }
+             })
+
+Argument `where` of type SupplierDetailsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.	 PrismaClientValidationError231123	15:13:27	329f5092-2378-4269-a096-8131156eaa26	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:26:106
+
+  23 static createProduct(productInfoObj) {
+  24     return __awaiter(this, void 0, void 0, function* () {
+  25         // Creates a new product with its relational subset fields if none of them exists
+→ 26         const { data: productInfo, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create({
+               data: {
+                 id: "PRODUCT-6513a34062",
+                 productName: "Mango Juice",
+                 productDescription: "A blend of mango juice",
+                 price: 200,
+                 buyingPrice: 150,
+                 asset: {
+                   create: {
+                     id: "ASSET-3fff2b3e5f",
+                     image: "product.jpg"
+                   }
+                 },
+                 category: {
+                   connectOrCreate: {
+                     where: {
+                       categoryName: "Mango"
+                     },
+                     create: {
+                       id: "CATEGORY-e9b0106151",
+                       categoryName: "Mango",
+                       categoryDescription: "Mango Flavour"
+                     }
+                   }
+                 },
+                 inventory: {
+                   create: {
+                     id: "INVENTORY-cda244146a",
+                     quantity: 10,
+                     productName: "Mango Juice",
+                     lastRefilDate: new Date("2023-11-23T12:13:27.043Z")
+                   }
+                 },
+                 supplier: {
+                   connectOrCreate: {
+                     where: {
+                       id: undefined,
+             ?         AND?: SupplierDetailsWhereInput | SupplierDetailsWhereInput[],
+             ?         OR?: SupplierDetailsWhereInput[],
+             ?         NOT?: SupplierDetailsWhereInput | SupplierDetailsWhereInput[],
+             ?         companyName?: StringFilter | String,
+             ?         address?: StringFilter | String,
+             ?         phone?: StringFilter | String,
+             ?         createdAt?: DateTimeFilter | DateTime,
+             ?         updatedAt?: DateTimeFilter | DateTime,
+             ?         product?: ProductListRelationFilter
+                     },
+                     create: {
+                       id: "SUPPLIER-7593684cbc",
+                       companyName: "Juice Hub",
+                       address: "Nairobi, Embakasi",
+                       phone: "0112001875"
+                     }
+                   }
+                 },
+                 discountIds: {
+                   connect: {
+                     id: undefined
+                   }
+                 }
+               }
+             })
+
+Argument `where` of type SupplierDetailsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.	 PrismaClientValidationError231123	15:16:26	bb630a51-1cd3-4afa-8e73-2ee07dbae67e	compa is not defined	 ReferenceError231123	15:18:30	2b19395f-2e7c-45bc-9b4b-403ebf2b61db	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:26:106
+
+  23 static createProduct(productInfoObj) {
+  24     return __awaiter(this, void 0, void 0, function* () {
+  25         // Creates a new product with its relational subset fields if none of them exists
+→ 26         const { data: productInfo, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create({
+               data: {
+                 id: "PRODUCT-d33d12997d",
+                 productName: "Mango Juice",
+                 productDescription: "A blend of mango juice",
+                 price: 200,
+                 buyingPrice: 150,
+                 asset: {
+                   create: {
+                     id: "ASSET-af73fb9346",
+                     image: "product.jpg"
+                   }
+                 },
+                 category: {
+                   connectOrCreate: {
+                     where: {
+                       categoryName: "Mango"
+                     },
+                     create: {
+                       id: "CATEGORY-448b600e60",
+                       categoryName: "Mango",
+                       categoryDescription: "Mango Flavour"
+                     }
+                   }
+                 },
+                 inventory: {
+                   create: {
+                     id: "INVENTORY-1d1efc39b6",
+                     quantity: 10,
+                     productName: "Mango Juice",
+                     lastRefilDate: new Date("2023-11-23T12:18:29.249Z")
+                   }
+                 },
+                 supplier: {
+                   connectOrCreate: {
+                     where: {
+                       id: undefined,
+             ?         AND?: SupplierDetailsWhereInput | SupplierDetailsWhereInput[],
+             ?         OR?: SupplierDetailsWhereInput[],
+             ?         NOT?: SupplierDetailsWhereInput | SupplierDetailsWhereInput[],
+             ?         companyName?: StringFilter | String,
+             ?         address?: StringFilter | String,
+             ?         phone?: StringFilter | String,
+             ?         createdAt?: DateTimeFilter | DateTime,
+             ?         updatedAt?: DateTimeFilter | DateTime,
+             ?         product?: ProductListRelationFilter
+                     },
+                     create: {
+                       id: "SUPPLIER-cfc06eb002",
+                       companyName: "Juice Hub",
+                       address: "Nairobi, Embakasi",
+                       phone: "0112001875"
+                     }
+                   }
+                 },
+                 discountIds: {
+                   connect: {
+                     id: undefined
+                   }
+                 }
+               }
+             })
+
+Argument `where` of type SupplierDetailsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.	 PrismaClientValidationError231123	15:21:03	7a36d53d-c37f-4ea6-8c38-35afcecc71b8	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:26:106
+
+  23 static createProduct(productInfoObj) {
+  24     return __awaiter(this, void 0, void 0, function* () {
+  25         // Creates a new product with its relational subset fields if none of them exists
+→ 26         const { data: productInfo, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create({
+               data: {
+                 id: "PRODUCT-4add958f83",
+                 productName: "Mango Juice",
+                 productDescription: "A blend of mango juice",
+                 price: 200,
+                 buyingPrice: 150,
+                 asset: {
+                   create: {
+                     id: "ASSET-a06f237cae",
+                     image: "product.jpg"
+                   }
+                 },
+                 category: {
+                   connectOrCreate: {
+                     where: {
+                       categoryName: "Mango"
+                     },
+                     create: {
+                       id: "CATEGORY-8a0e14388e",
+                       categoryName: "Mango",
+                       categoryDescription: "Mango Flavour"
+                     }
+                   }
+                 },
+                 inventory: {
+                   create: {
+                     id: "INVENTORY-8ab93dad43",
+                     quantity: 10,
+                     productName: "Mango Juice",
+                     lastRefilDate: new Date("2023-11-23T12:21:02.956Z")
+                   }
+                 },
+                 supplier: {
+                   connectOrCreate: {
+                     where: {
+                       id: ""
+                     },
+                     create: {
+                       id: "SUPPLIER-cca65e0c22",
+                       companyName: "Juice Hub",
+                       address: "Nairobi, Embakasi",
+                       phone: "0112001875"
+                     }
+                   }
+                 },
+                 discountIds: {
+                   connect: {
+                     id: undefined
+                   }
+                   ~~~~~~~~~~~~~~~
+                 }
+               }
+             })
+
+Argument `connect`: Invalid value provided. Expected DiscountWhereUniqueInput[], provided Object.	 PrismaClientValidationError231123	15:22:46	a78c7276-58ae-497d-b2f0-6102549ab8dc	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:26:106
+
+  23 static createProduct(productInfoObj) {
+  24     return __awaiter(this, void 0, void 0, function* () {
+  25         // Creates a new product with its relational subset fields if none of them exists
+→ 26         const { data: productInfo, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create(
+An operation failed because it depends on one or more records that were required but not found. Expected 1 records to be connected, found only 0.	 PrismaClientKnownRequestError231123	15:25:18	77af03be-730a-454d-8b2d-96298c1670bb	
+Invalid `this.model.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\JUICE-VENDOR-E-SHOP\ts-server\build\js\models\Products.js:26:106
+
+  23 static createProduct(productInfoObj) {
+  24     return __awaiter(this, void 0, void 0, function* () {
+  25         // Creates a new product with its relational subset fields if none of them exists
+→ 26         const { data: productInfo, error: postErr } = yield (0, trycatch_1.default)(() => this.model.create(
+An operation failed because it depends on one or more records that were required but not found. Expected 1 records to be connected, found only 0.	 PrismaClientKnownRequestError

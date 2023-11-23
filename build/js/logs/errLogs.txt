@@ -1,0 +1,19 @@
+231001	13:38:56	655f91de-40cd-4db2-8b60-c10bbeb3974f	Error	Unknown authentication strategy "google"
+231001	13:43:07	9f1198fb-d20d-456e-b0e5-0cf4112d4dca	Error	Unknown authentication strategy "google"
+231001	14:37:35	41d89a45-334c-4d6b-a09c-c37c82133a92	InternalOAuthError	Failed to obtain access token
+231001	14:39:55	156bf963-8e46-4093-84a7-96caf5f2c9f2	TokenError	Bad Request
+231001	14:55:41	8270f3ff-75df-4e73-92bd-893aec16e2b7	TokenError	Bad Request
+231001	21:35:55	507c6b25-5dc8-4736-9760-233a4ec317d5	Error	Error while creating user
+231001	21:43:00	5219223e-176f-4c16-8d94-85394523a81a	TokenError	Bad Request
+231001	22:20:12	9f7058f6-df80-4b08-a752-26de08edd9e0	Error	Error while creating user
+231001	22:25:05	8e02e0c3-39c6-4df7-bd06-34f9aef9451c	Error	Error while creating user
+231001	22:26:45	cfbaedfa-11b8-463a-ac95-a1ba809f7961	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
+231001	22:27:30	8aa0796f-e10f-4539-bb66-7d089f915a3f	InternalOAuthError	Failed to fetch user profile
+231001	22:41:00	c7a6c0cf-563f-4ac7-83f2-1eaf1752cc98	Error	Login sessions require session support. Did you forget to use `express-session` middleware?
+231002	19:44:23	81cfe413-a584-4296-946b-cb4d2f5a79a9	TokenError	Bad Request
+231002	20:13:17	1e02621c-aaac-42d4-bfaf-b20da4e20638	TokenError	Bad Request
+231002	20:48:10	179cab92-6357-406f-b22b-db2dd24a058d	TokenError	Bad Request
+231002	21:37:12	d58d93bc-e2d1-461a-b208-96ccb9b05521	TokenError	Bad Request
+231003	07:57:47	4cdaa5ad-13f3-44dc-a621-2a7ac0064dae	TypeError	req.session.save is not a function
+231003	08:40:41	89296ac0-d6fc-4b9a-b6ad-c936bebb375f	TokenError	Bad Request
+231009	11:45:48	45baff54-0914-49a8-afab-fefc43b7b866	TokenError	Bad Request

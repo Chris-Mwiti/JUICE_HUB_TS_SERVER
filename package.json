@@ -1,0 +1,48 @@
+{
+  "name": "juice-e-shop-server",
+  "version": "1.0.0",
+  "description": "juice-e-shop server side package",
+  "main": "server.ts",
+  "scripts": {
+    "test": "npm run test",
+    "dev": "concurrently \" npx tsc -w \" \"nodemon build/js/server.js\"",
+    "build": "npx tsc"
+  },
+  "author": "Chris-Mwiti",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.3.1",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.4",
+    "@types/cookie-session": "^2.0.45",
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.18",
+    "@types/express-session": "^1.17.8",
+    "@types/jsonwebtoken": "^9.0.3",
+    "@types/node": "^20.7.1",
+    "@types/passport": "^1.0.13",
+    "@types/passport-google-oauth20": "^2.0.12",
+    "@types/passport-local": "^1.0.36",
+    "@types/winston": "^2.4.4",
+    "concurrently": "^8.2.1",
+    "prisma": "^5.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,0 +1,299 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// @TODO: Tables id's should correspond with the tables name short form
+//@TODO: Add phone property field in the user's model
+
+// User Management Database structure
+model User {
+  id String @id @map("user_id")
+  firstName String @db.VarChar(255) @map("first_name")
+  lastName String @db.VarChar(255) @map("last_name")
+  role Roles @default(user)
+  googleId String? @map("google_id") @unique
+  profileUrl String?
+  email String @db.VarChar(255) @unique
+  password String? @db.VarChar(255)
+  phone String? @db.VarChar(10) @unique
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  session ShoppingSession?
+  order OrderDetails[]
+  paymentInfo PaymentDetails[]
+  refreshToken RefreshTokens[]
+  shippingInfo ShippingDetails[]
+}
+
+model RefreshTokens{
+  id String @id 
+  refreshToken String @unique @map("refresh_token")
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+  createdAt DateTime
+  updatedAt DateTime
+} 
+
+// Product Management 
+model Product {
+  id String @id @map("product_id")
+  productName String @db.VarChar(255) @map("product_name")
+  productDescription String @db.VarChar(255) @map("product_description")
+  price Int 
+  buyingPrice Int @map("buying_price")
+  lowLevelAlert Int @default(15)
+  isPerishable Boolean @default(false)
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  categoryId String @map("category_id") 
+  inventory Inventory @relation(fields: [inventoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  inventoryId String @unique @map("inventory_id")
+  asset ProductAsset @relation(fields: [assetId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  assetId String @unique @map("asset_id")
+  supplier SupplierDetails @relation(fields: [supplierId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  supplierId String 
+  cartItem CartItems[] 
+  orderItem OrderItems[]
+  discountIds Discount[]
+  productSales ProductSales[]
+  productRefunds ProductRefunds[]
+  productRefills ProductRefil[]
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+}
+
+model ProductRefunds {
+  id String @id @map("refund_id")
+  returnDate DateTime @default(now())
+  status RefundStatus @default(pending)
+  refundQuantity Int
+  refundAmount Int
+  product Product @relation(fields: [productId], references: [id])
+  productId String
+  order OrderDetails @relation(fields: [orderId], references: [id])
+  orderId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([orderId, productId])
+}
+
+model ProductRefil {
+  id String @id @map("refill_id")
+  refilDate DateTime @default(now())
+  refilAmount Int 
+  status RefillStatus @default(pending) 
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate:Cascade)
+  productId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt 
+}
+
+model ProductSales {
+  id String @id @map("sales_id")
+  lastPurchaseDate DateTime @default(now()) @map("sales_date")
+  sales Int
+  product Product @relation(fields: [productId], references: [id])
+  productId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model ProductAsset {
+  id String @id @map("asset_id")
+  image String @db.VarChar(255)
+  products  Product?
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+}
+
+//@TODO: Create a supplier model to store supplier details on a particular product
+model SupplierDetails {
+  id String @id @map("supplier_id")
+  companyName String @db.VarChar(25) @map("company_name")
+  address String @db.VarChar(25) @map("company_address")
+  phone String @db.VarChar(10) @map("company_phone")
+  product Product[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Category{
+  id String @id @map("category_id")
+  categoryName String @db.VarChar(255) @unique @map("category_name")
+  categoryDescription String @db.VarChar(255) @map("category_description")
+  product Product[]
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+}
+model Inventory{
+  id String @id @map("inventory_id")
+  quantity Int
+  productName String @unique @map("product_name")
+  lastRefilDate DateTime?
+  product Product?  
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+}
+model Discount{
+  id String @id @map("discount_id")
+  coupon String @unique
+  tokens Int @default(15)
+  percentage Int
+  status DiscountStatus @default(inactive)
+  type DiscountTypes @default(STANDARD)
+  expirationDate DateTime 
+  product Product[]
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+}
+
+// Shopping Cart Management
+model ShoppingSession {
+  id String @id @map("session_id")
+  total Int
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  status ShoppingSessionStatus @default(pending)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId String @unique @map("user_id")
+  cartItems CartItems[]
+}
+model CartItems{
+  id String @id 
+  product Product @relation(fields: [productId], references: [id], onUpdate: Cascade)
+  productId String
+  quantity Int 
+  session ShoppingSession @relation(fields: [sessionId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  sessionId String
+  createdAt DateTime
+  updatedAt DateTime
+
+  @@unique([productId,sessionId])
+}
+
+// Order Structure
+model OrderDetails {
+  id String @id @map("order_id")
+  total Int 
+  user User @relation(fields: [userId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  userId String @map("user_id")
+  payment PaymentDetails @relation(fields: [paymentId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  paymentId String @unique @map("payment_id")
+  shippingInfo ShippingDetails @relation(fields: [shippingId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  shippingId String @map("shipping_id")
+  status OrderStatus @default(pending)
+  items OrderItems[]
+  orderRefunds ProductRefunds[]
+  updatedAt DateTime @updatedAt @map("updated_at")
+  createdAt DateTime @default(now()) @map("created_at")
+  invoiceReport InvoiceReports?
+}
+model OrderItems {
+  id String @id @map("order_item_id")
+  order OrderDetails @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  orderId String @map("order_id")
+  product Product @relation(fields: [productId], references: [id], onUpdate: Cascade)
+  productId String @map("product_id")
+  quantity Int
+  createdAt DateTime
+  updatedAt DateTime
+
+  @@unique([productId,orderId])
+}
+model PaymentDetails {
+  id String  @id @map("payment_id")
+  orderPayment OrderDetails?
+  amount Int 
+  provider PaymentProviders @default(mpesa)
+  status PaymentStatus @default(pending)
+  user User @relation(fields: [userId], references: [id])
+  userId String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+}
+
+model ShippingDetails {
+  id String @id @map("shipping_id")
+  county String 
+  street String
+  town String
+  locationDesc String @map("location_desc")
+  status ShippingStatus @default(pending)
+  createdAt DateTime @default(now()) @map("created_at")
+  modifiedAt DateTime @updatedAt @map("modified_at")
+  user User @relation(fields: [userId], references: [id], onUpdate: Cascade)
+  userId String @map("user_id")
+  order OrderDetails[]
+}
+
+
+
+
+//Invoices, Reports, Sales Managment
+model InvoiceReports {
+  id String @id @map("invoice_id")
+  order OrderDetails @relation(fields: [orderId], references: [id])
+  orderId String @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("invoice_reports")
+}
+
+enum Roles {
+  user
+  admin
+}
+
+enum RefillStatus {
+  pending
+  completed
+}
+
+enum RefundStatus {
+  pending
+  approved
+}
+
+enum DiscountStatus {
+  active
+  inactive
+}
+
+enum ShoppingSessionStatus {
+  pending
+  completed
+}
+
+enum PaymentProviders {
+  mpesa
+  paypal
+}
+
+enum OrderStatus {
+  pending
+  completed
+  refunded
+}
+
+enum PaymentStatus {
+  pending
+  completed
+  refunded
+}
+
+enum ShippingStatus {
+  pending
+  completed
+  incomplete
+}
+
+enum DiscountTypes {
+  BOGO
+  MNP
+  STANDARD
+}
