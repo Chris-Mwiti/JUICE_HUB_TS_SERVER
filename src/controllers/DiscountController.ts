@@ -30,6 +30,17 @@ class DiscountController {
      new ResponseHandler(this.res, discounts).getResponse();
    }
 
+   public async getDiscountById(){
+     const { productId } = this.req.params
+     const { data:discount, error:fetchErr } = await trycatchHelper<TJoinedDiscount>(
+        () => this.model.getDiscountById(productId)
+     )
+
+     if(fetchErr) return checkErrProperties(this.res,fetchErr);
+
+     new ResponseHandler(this.res,discount).getResponse();
+   }
+
    public async updateDiscountById(){
     const { productId } = this.req.params
     const info:Partial<TDiscountRecord> = this.req.body

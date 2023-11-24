@@ -9,6 +9,7 @@ import corsOptions from "./config/corsConfig";
 import AuthRouter from "./routes/auth/auth.routes";
 import GooglePassportStrategy from "./config/passport-google-config";
 import ProductRouter from "./routes/api/product.routes";
+import DiscountRouter from "./routes/api/discounts.routes";
 
 /* ---------------- Server set up ----------------------- */
 
@@ -49,7 +50,7 @@ app.use(LoggerHelper.RequestLogger);
 // Auth routes
 app.use("/auth", AuthRouter);
 app.use("/api/product", ProductRouter);
-
+app.use("/api/discounts", DiscountRouter);
 // Error Logger 
 app.use(ErrMiddleWareHandler.ErrHandler);
 

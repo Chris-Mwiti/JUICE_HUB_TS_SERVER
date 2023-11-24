@@ -17,3 +17,25 @@ DiscountRouter.route('/')
         const discountController = new DiscountController(req,res);
         await discountController.createDiscount();
     })
+    .delete(VerifyRoleMiddleware.verifyAdminRole, async (req,res) => {
+        const discountController = new DiscountController(req,res);
+        await discountController.deleteAllDiscounts();
+    })
+
+
+DiscountRouter.route('/:productId')
+    .get(async (req,res) => {
+        const discountController = new DiscountController(req,res);
+        await discountController.getDiscountById();
+    })
+    .put(VerifyRoleMiddleware.verifyAdminRole,async (req,res) => {
+        const discountController = new DiscountController(req,res);
+        await discountController.updateDiscountById();
+    })
+    .delete(VerifyRoleMiddleware.verifyAdminRole, async(req,res) => {
+        const discountController = new DiscountController(req,res);
+        await discountController.deleteDiscountById();
+    })
+
+
+export default DiscountRouter
