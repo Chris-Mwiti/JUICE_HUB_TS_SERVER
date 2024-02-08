@@ -1,3 +1,5 @@
+import logger from "./logger";
+
 const trycatchHelper = async <DataType>(func: Function) => {
     let data = null;
     let error = null;
@@ -5,7 +7,7 @@ const trycatchHelper = async <DataType>(func: Function) => {
         const result: DataType = await func();
         data = result;
     }catch(UnknownError){
-        console.error(UnknownError);
+        logger("async_error").error(error);
         error = UnknownError
     }
 

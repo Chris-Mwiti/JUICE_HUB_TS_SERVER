@@ -11,7 +11,11 @@ class DiscountController {
 
    public async createDiscount(){
         if("coupon" in this.req.body && "tokens" in this.req.body && "expirationDate" in this.req.body){
-            const newInfo:TDiscountRecord = this.req.body;
+            let newInfo:TDiscountRecord = this.req.body;
+
+            //Converts the expiration date to a date format
+            newInfo = {...newInfo, expirationDate:new Date(newInfo.expirationDate)};
+
             const { data:newDiscountInfo, error: postErr} = await trycatchHelper<IDiscount>(
                 () => this.model.createDiscount(newInfo)
             )

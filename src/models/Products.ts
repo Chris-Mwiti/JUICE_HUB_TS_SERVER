@@ -2,7 +2,6 @@ import prismaClient from "../config/prismaConfig";
 import prismaErrHandler, {
   PrismaErrorTypes,
 } from "../helpers/prismaErrHandler";
-import { Prisma } from "@prisma/client";
 import trycatchHelper from "../util/functions/trycatch";
 import { InnerJoinActionsProperties } from "../util/types/util.types";
 import { INewProductInfoObj, IProduct } from "./Interfaces/IModels";
@@ -71,7 +70,11 @@ class ProductModel {
             asset: {
               create: {
                 id: new RecordIdGenerator("ASSET").generate(),
-                image: productInfoObj.image,
+                images:{
+                  create: {
+                    id: new RecordIdGenerator("ASSET").generate(),
+                  }
+                }
               },
             },
             category: {

@@ -50,21 +50,22 @@ interface IProduct extends Product {}
 
 interface IProductAsset extends ProductAsset {}
 
-interface INewProductInfoObj {
+
+interface INewProductInfoObj  {
   // Product Details
   productName: string;
   productDescription: string;
   buyingPrice:number;
   isPerishable:boolean;
+  lowLevelAlert:number;
   price: number;
-  image: string;
+  images: string[];
+  thumbnails: string[];
   inventoryQty: number;
   category: string;
   
   //Discount Details
-  discountCoupon?: string;
   discountId?:string;
-  discountCouponPercentage?: number;
   
   // Category Details
   categoryId?:string;

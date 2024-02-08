@@ -72,9 +72,9 @@ model ProductRefunds {
   status RefundStatus @default(pending)
   refundQuantity Int
   refundAmount Int
-  product Product @relation(fields: [productId], references: [id])
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   productId String
-  order OrderDetails @relation(fields: [orderId], references: [id])
+  order OrderDetails @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   orderId String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -97,14 +97,34 @@ model ProductSales {
   id String @id @map("sales_id")
   lastPurchaseDate DateTime @default(now()) @map("sales_date")
   sales Int
-  product Product @relation(fields: [productId], references: [id])
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   productId String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Images {
+  id String @id @map("image_id")
+  imageUrl String
+  asset ProductAsset @relation(fields: [assetId], references: [id], onDelete: Cascade)
+  assetId String
+  thumbnail ThumbnailImages[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ThumbnailImages {
+  id String @id @map("thumbnail_id")
+  thumbnailUrl String
+  image Images @relation(fields: [imageId], references: [id], onDelete: Cascade)
+  imageId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 model ProductAsset {
   id String @id @map("asset_id")
-  image String @db.VarChar(255)
+  images Images[]
   products  Product?
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")

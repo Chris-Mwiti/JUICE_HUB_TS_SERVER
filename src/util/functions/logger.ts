@@ -3,7 +3,7 @@ const { timestamp, combine, label, printf } = format
 import path from 'path';
 
 const pathRedirector = (pathName:string) => {
-    const newPath = path.join(__dirname, '..', pathName);
+    const newPath = path.join(__dirname, '../../logs/', pathName);
     return newPath;
 }
 

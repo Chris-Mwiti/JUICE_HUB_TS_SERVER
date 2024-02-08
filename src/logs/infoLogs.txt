@@ -1,0 +1,169 @@
+2024-02-01T16:46:07.928Z	[products]	info	Creating product
+2024-02-01T16:46:07.964Z	[async_error]	error	null
+2024-02-01T16:46:07.968Z	[DB_ERROR]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:64:20
+
+  61 // Creates a new product with its relational subset fields if none of them exists
+  62 const { data: productInfo, error: postErr } =
+  63   await trycatchHelper<IProduct>(() =>
+→ 64     this.model.create({
+           data: {
+             id: "PRODUCT-db5134280c",
+             productName: "Mango Juice",
+             productDescription: "A blend of mango juice",
+             price: 200,
+             buyingPrice: 150,
+             asset: {
+               create: {
+                 id: "ASSET-f7eecffc99",
+                 image: "product.jpg"
+               }
+             },
+             category: {
+               connectOrCreate: {
+                 where: {
+                   categoryName: "Mango"
+                 },
+                 create: {
+                   id: "CATEGORY-f384bb859a",
+                   categoryName: "Mango",
+                   categoryDescription: "Mango Flavour"
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-4faded5803",
+                 quantity: 10,
+                 productName: "Mango Juice",
+                 lastRefilDate: new Date("2024-02-01T16:46:07.931Z")
+               }
+             },
+             supplier: {
+               connectOrCreate: {
+                 where: {
+                   id: ""
+                 },
+                 create: {
+                   id: "SUPPLIER-6fce48d88a",
+                   address: undefined,
+                   phone: undefined,
+         +         companyName: String
+                 }
+               }
+             },
+             discountIds: {
+               connect: {
+                 id: ""
+               }
+             }
+           }
+         })
+
+Argument `companyName` is missing.
+2024-02-01T16:47:02.602Z	[products]	info	Creating product
+2024-02-01T16:47:02.609Z	[async_error]	error	null
+2024-02-01T16:47:02.611Z	[DB_ERROR]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:64:20
+
+  61 // Creates a new product with its relational subset fields if none of them exists
+  62 const { data: productInfo, error: postErr } =
+  63   await trycatchHelper<IProduct>(() =>
+→ 64     this.model.create({
+           data: {
+             id: "PRODUCT-7a365f6b8c",
+             productName: "Mango Juice",
+             productDescription: "A blend of mango juice",
+             price: 200,
+             buyingPrice: 150,
+             asset: {
+               create: {
+                 id: "ASSET-1c1faed1ce",
+                 image: "product.jpg"
+               }
+             },
+             category: {
+               connectOrCreate: {
+                 where: {
+                   categoryName: "Mango"
+                 },
+                 create: {
+                   id: "CATEGORY-89d580fdce",
+                   categoryName: "Mango",
+                   categoryDescription: "Mango Flavour"
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-bc0496b972",
+                 quantity: 10,
+                 productName: "Mango Juice",
+                 lastRefilDate: new Date("2024-02-01T16:47:02.603Z")
+               }
+             },
+             supplier: {
+               connectOrCreate: {
+                 where: {
+                   id: ""
+                 },
+                 create: {
+                   id: "SUPPLIER-98f88cc96c",
+                   companyName: "Mango Distributors",
+                   phone: undefined,
+         +         address: String
+                 }
+               }
+             },
+             discountIds: {
+               connect: {
+                 id: ""
+               }
+             }
+           }
+         })
+
+Argument `address` is missing.
+2024-02-01T18:47:29.694Z	[async_error]	error	null
+2024-02-01T18:47:29.698Z	[DB_ERROR]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Discounts.ts:39:30
+
+  36 
+  37 public static async createDiscount(info:TDiscountRecord){
+  38     const { data:newInfo, error:postErr } = await trycatchHelper<IDiscount>(
+→ 39         () => this.model.create({
+               data: {
+                 id: "DISCOUNT-c09369a7ff",
+                 coupon: "ABCDE",
+                 percentage: 5,
+                 tokens: 10,
+                 expirationDate: "02-01-2024"
+                                 ~~~~~~~~~~~~
+               }
+             })
+
+Invalid value for argument `expirationDate`: input contains invalid characters. Expected ISO-8601 DateTime.
+2024-02-01T18:50:20.924Z	[async_error]	error	null
+2024-02-01T18:50:20.926Z	[DB_ERROR]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Discounts.ts:39:30
+
+  36 
+  37 public static async createDiscount(info:TDiscountRecord){
+  38     const { data:newInfo, error:postErr } = await trycatchHelper<IDiscount>(
+→ 39         () => this.model.create({
+               data: {
+                 id: "DISCOUNT-e04f3fa5ff",
+                 coupon: "ABCDE",
+                 percentage: 5,
+                 tokens: 10,
+                 expirationDate: "02-01-2024"
+                                 ~~~~~~~~~~~~
+               }
+             })
+
+Invalid value for argument `expirationDate`: input contains invalid characters. Expected ISO-8601 DateTime.
+2024-02-01T18:52:46.085Z	[products]	info	Creating product

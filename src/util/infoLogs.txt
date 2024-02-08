@@ -1,0 +1,126 @@
+2024-02-01T16:21:50.927Z	[products]	info	Creating product
+2024-02-01T16:21:51.015Z	[DB_ERROR]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:64:20
+
+  61 // Creates a new product with its relational subset fields if none of them exists
+  62 const { data: productInfo, error: postErr } =
+  63   await trycatchHelper<IProduct>(() =>
+→ 64     this.model.create({
+           data: {
+             id: "PRODUCT-dc5c0c04a6",
+             productName: "Mango Juice",
+             productDescription: "A blend of mango juice",
+             price: 200,
+             asset: {
+               create: {
+                 id: "ASSET-3450ca3b32",
+                 image: "product.jpg"
+               }
+             },
+             category: {
+               connectOrCreate: {
+                 where: {
+                   categoryName: "Mango"
+                 },
+                 create: {
+                   id: "CATEGORY-12971901b2",
+                   categoryName: "Mango",
+                   categoryDescription: "Mango Flavour"
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-42dd301af6",
+                 quantity: 10,
+                 productName: "Mango Juice",
+                 lastRefilDate: new Date("2024-02-01T16:21:50.934Z")
+               }
+             },
+             supplier: {
+               connectOrCreate: {
+                 where: {
+                   id: ""
+                 },
+                 create: {
+                   id: "SUPPLIER-27caeb86a2",
+                   companyName: undefined,
+                   address: undefined,
+                   phone: undefined
+                 }
+               }
+             },
+             discountIds: {
+               connect: {
+                 id: ""
+               }
+             },
+         +   buyingPrice: Int
+           }
+         })
+
+Argument `buyingPrice` is missing.
+2024-02-01T16:23:31.236Z	[products]	info	Creating product
+2024-02-01T16:23:31.268Z	[DB_ERROR]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:64:20
+
+  61 // Creates a new product with its relational subset fields if none of them exists
+  62 const { data: productInfo, error: postErr } =
+  63   await trycatchHelper<IProduct>(() =>
+→ 64     this.model.create({
+           data: {
+             id: "PRODUCT-df59f7f61d",
+             productName: "Mango Juice",
+             productDescription: "A blend of mango juice",
+             price: 200,
+             buyingPrice: 150,
+             asset: {
+               create: {
+                 id: "ASSET-3647561e6b",
+                 image: "product.jpg"
+               }
+             },
+             category: {
+               connectOrCreate: {
+                 where: {
+                   categoryName: "Mango"
+                 },
+                 create: {
+                   id: "CATEGORY-8a14fb11cb",
+                   categoryName: "Mango",
+                   categoryDescription: "Mango Flavour"
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-b8f732ca19",
+                 quantity: 10,
+                 productName: "Mango Juice",
+                 lastRefilDate: new Date("2024-02-01T16:23:31.237Z")
+               }
+             },
+             supplier: {
+               connectOrCreate: {
+                 where: {
+                   id: ""
+                 },
+                 create: {
+                   id: "SUPPLIER-107bfd1cba",
+                   address: undefined,
+                   phone: undefined,
+         +         companyName: String
+                 }
+               }
+             },
+             discountIds: {
+               connect: {
+                 id: ""
+               }
+             }
+           }
+         })
+
+Argument `companyName` is missing.

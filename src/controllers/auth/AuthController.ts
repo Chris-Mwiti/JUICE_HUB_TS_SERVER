@@ -5,6 +5,7 @@
  *
  */
 
+
 import UserModel from "../../models/User";
 import prismaClient from "../../config/prismaConfig";
 import trycatchHelper from "../../util/functions/trycatch";

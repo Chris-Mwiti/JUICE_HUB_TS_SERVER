@@ -25,13 +25,13 @@ class ProductController {
 
   public async createProduct() {
     let productInfoObj: INewProductInfoObj = this.req.body;
+
     logger("products").info("Creating product");
     //Type casts the product price into number type
     productInfoObj = {
       ...productInfoObj,
       price: Number(productInfoObj.price),
       inventoryQty: Number(productInfoObj.inventoryQty),
-      discountCouponPercentage: Number(productInfoObj.discountCouponPercentage),
     };
 
     const { data: newProduct, error: postErr } = await trycatchHelper<IProduct>(
