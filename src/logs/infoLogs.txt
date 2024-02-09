@@ -167,3 +167,67 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Discounts.
 
 Invalid value for argument `expirationDate`: input contains invalid characters. Expected ISO-8601 DateTime.
 2024-02-01T18:52:46.085Z	[products]	info	Creating product
+2024-02-08T16:38:02.478Z	[products]	info	Creating product
+2024-02-08T16:38:02.542Z	[async_error]	error	null
+2024-02-08T16:38:02.547Z	[DB_ERROR]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:64:20
+
+  61 // Creates a new product with its relational subset fields if none of them exists
+  62 const { data: productInfo, error: postErr } =
+  63   await trycatchHelper<IProduct>(() =>
+→ 64     this.model.create({
+           data: {
+             id: "PRODUCT-cbee3378eb",
+             productName: "Mango Juice",
+             productDescription: "A blend of mango juice",
+             price: 200,
+             buyingPrice: 150,
+             assetId: undefined,
+             category: {
+               connectOrCreate: {
+                 where: {
+                   categoryName: "Mango"
+                 },
+                 create: {
+                   id: "CATEGORY-255124381e",
+                   categoryName: "Mango",
+                   categoryDescription: "Mango Flavour"
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-9eb063d98b",
+                 quantity: 10,
+                 productName: "Mango Juice",
+                 lastRefilDate: new Date("2024-02-08T16:38:02.488Z")
+               }
+             },
+             supplier: {
+               connectOrCreate: {
+                 where: {
+                   id: ""
+                 },
+                 create: {
+                   id: "SUPPLIER-4205f3e739",
+                   companyName: "Mango Distributors",
+                   address: "Meru",
+                   phone: "012345678"
+                 }
+               }
+             },
+             discountIds: {
+               connect: {
+                 id: "DISCOUNT-aa2eec068f"
+               }
+             },
+         +   asset: {
+         +     create: ProductAssetCreateWithoutProductsInput | ProductAssetUncheckedCreateWithoutProductsInput,
+         +     connectOrCreate: ProductAssetCreateOrConnectWithoutProductsInput,
+         +     connect: ProductAssetWhereUniqueInput
+         +   }
+           }
+         })
+
+Argument `asset` is missing.

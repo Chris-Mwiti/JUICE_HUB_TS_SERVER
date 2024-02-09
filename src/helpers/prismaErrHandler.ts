@@ -13,15 +13,18 @@ export type PrismaErrorTypes =
   | PrismaClientInitializationError
   | PrismaClientUnknownRequestError
   | PrismaClientRustPanicError
-  | PrismaClientValidationError;
+  | PrismaClientValidationError
+  | [string, PrismaErrorTypes];
 
 function prismaErrHandler(err: PrismaErrorTypes) {
-  LoggerHelper.Logger(
-    `${err?.message}\t ${err?.name}`,
-    "databaseErrorLogs.txt"
-  );
-  logger("DB_ERROR").error(err?.message);
-  console.error(err.message);
+
+  if(Array.isArray(err)){
+    logger("[DB_ERROR]").error(`${err[0]}\t${err[1]}`);
+  }else {
+    logger("[DB_ERROR]").error(`${err?.message}\t ${err?.name}`);
+    console.error(err.message);
+  }
+
 }
 
 export default prismaErrHandler;

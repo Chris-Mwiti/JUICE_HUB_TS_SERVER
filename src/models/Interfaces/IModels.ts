@@ -76,6 +76,9 @@ interface INewProductInfoObj  {
   companyName?:string;
   address?:string;
   phone?:string;
+
+  //Asset Details
+  assetId?:string;
 }
 
 type TJoinProductTypes = {

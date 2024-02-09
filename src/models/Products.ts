@@ -1,3 +1,4 @@
+import { Prisma } from "@prisma/client";
 import prismaClient from "../config/prismaConfig";
 import prismaErrHandler, {
   PrismaErrorTypes,
@@ -25,8 +26,6 @@ export type ProductRecordWithoutId = Pick<
 >;
 
 // @TODO: Check various examples on mapped object type
-
-
 
 // Inner join properties
 export interface IJoinProperties {
@@ -67,16 +66,7 @@ class ProductModel {
             productDescription: productInfoObj.productDescription,
             price: productInfoObj.price,
             buyingPrice: productInfoObj.buyingPrice,
-            asset: {
-              create: {
-                id: new RecordIdGenerator("ASSET").generate(),
-                images:{
-                  create: {
-                    id: new RecordIdGenerator("ASSET").generate(),
-                  }
-                }
-              },
-            },
+            assetId: productInfoObj.assetId!,
             category: {
               connectOrCreate: {
                 where: {
@@ -94,27 +84,29 @@ class ProductModel {
                 id: new RecordIdGenerator("INVENTORY").generate(),
                 quantity: productInfoObj.inventoryQty,
                 productName: productInfoObj.productName,
-                lastRefilDate: new Date()
+                lastRefilDate: new Date(),
               },
             },
             supplier: {
               connectOrCreate: {
-                where:{
-                  id: productInfoObj.supplierId ? productInfoObj.supplierId : ""
+                where: {
+                  id: productInfoObj.supplierId
+                    ? productInfoObj.supplierId
+                    : "",
                 },
-                create:{
+                create: {
                   id: new RecordIdGenerator("SUPPLIER").generate(),
                   companyName: productInfoObj.companyName!,
                   address: productInfoObj.address!,
-                  phone: productInfoObj.phone!
-                }
-              }
+                  phone: productInfoObj.phone!,
+                },
+              },
             },
-            discountIds:{
-              connect:{
-                id: productInfoObj.discountId ? productInfoObj.discountId : ""
-              }
-            }
+            discountIds: {
+              connect: {
+                id: productInfoObj.discountId ? productInfoObj.discountId : "",
+              },
+            },
           },
         })
       );
