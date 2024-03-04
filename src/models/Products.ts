@@ -7,6 +7,7 @@ import trycatchHelper from "../util/functions/trycatch";
 import { InnerJoinActionsProperties } from "../util/types/util.types";
 import { INewProductInfoObj, IProduct } from "./Interfaces/IModels";
 import RecordIdGenerator from "./generators/RecordIdGenerator";
+import DatabaseError from "../helpers/databaseError";
 
 export type ProductRecord = Pick<
   IProduct,
@@ -48,6 +49,19 @@ interface IProductUpdateQtyObj {
   qty: number;
 }
 
+//Include Type
+const productInclude = Prisma.validator<Prisma.ProductDefaultArgs>()({
+  include: {
+    category: true,
+    inventory: true,
+    asset: true,
+    supplier: true,
+    discountIds: true,
+  },
+});
+
+type TProductInclude = Prisma.ProductGetPayload<typeof productInclude>;
+
 /**
  * Performs CRUD operations on the Product model
  */
@@ -61,56 +75,66 @@ class ProductModel {
       await trycatchHelper<IProduct>(() =>
         this.model.create({
           data: {
+
+            //Product Details
             id: new RecordIdGenerator("PRODUCT").generate(),
             productName: productInfoObj.productName,
             productDescription: productInfoObj.productDescription,
-            price: productInfoObj.price,
             buyingPrice: productInfoObj.buyingPrice,
-            assetId: productInfoObj.assetId!,
-            category: {
-              connectOrCreate: {
-                where: {
-                  categoryName: productInfoObj.category,
+            price: productInfoObj.sellingPrice,
+            isPerishable: productInfoObj.isPerishable,
+
+            //Product Properties
+            category:{
+              connectOrCreate:{
+                where:{
+                  id: productInfoObj.categoryId
                 },
-                create: {
+                create:{
                   id: new RecordIdGenerator("CATEGORY").generate(),
-                  categoryName: productInfoObj.category,
-                  categoryDescription: productInfoObj.categoryDescription!,
-                },
-              },
+                  categoryName: productInfoObj.category ?? "",
+                  categoryDescription: productInfoObj.categoryDescription ?? ""
+                }
+              }
             },
-            inventory: {
-              create: {
-                id: new RecordIdGenerator("INVENTORY").generate(),
-                quantity: productInfoObj.inventoryQty,
-                productName: productInfoObj.productName,
-                lastRefilDate: new Date(),
-              },
-            },
-            supplier: {
-              connectOrCreate: {
+            supplier:{
+              connectOrCreate:{
                 where: {
-                  id: productInfoObj.supplierId
-                    ? productInfoObj.supplierId
-                    : "",
+                  id: productInfoObj.supplierId ?? ""
                 },
-                create: {
+                create:{
                   id: new RecordIdGenerator("SUPPLIER").generate(),
-                  companyName: productInfoObj.companyName!,
-                  address: productInfoObj.address!,
-                  phone: productInfoObj.phone!,
-                },
-              },
+                  companyName: productInfoObj.companyName ?? "",
+                  address: productInfoObj.address ?? "",
+                  phone: productInfoObj.phone ?? ""
+                }
+              }
             },
-            discountIds: {
+            inventory:{
+              create:{
+                id: new RecordIdGenerator("INVENTORY").generate(),
+                productName: productInfoObj.productName,
+                quantity: productInfoObj.inventoryQty ?? 0,
+                lastRefilDate: new Date()
+              }
+            },
+            asset: {
               connect: {
-                id: productInfoObj.discountId ? productInfoObj.discountId : "",
-              },
+                id: productInfoObj.assetId
+              }
             },
-          },
+            discountIds:{
+              connect:{
+                id: productInfoObj.discountId
+              }
+            }
+          }
         })
       );
-    if (postErr) prismaErrHandler(postErr as PrismaErrorTypes);
+    if (postErr) return new DatabaseError({
+      message: ["An error has occured while creating the product", postErr as PrismaErrorTypes],
+      code: "500"
+    }) 
 
     return productInfo;
   }

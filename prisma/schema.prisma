@@ -15,6 +15,7 @@ model User {
   id String @id @map("user_id")
   firstName String @db.VarChar(255) @map("first_name")
   lastName String @db.VarChar(255) @map("last_name")
+  avatarUrl String?
   role Roles @default(user)
   googleId String? @map("google_id") @unique
   profileUrl String?
@@ -26,6 +27,8 @@ model User {
   session ShoppingSession?
   order OrderDetails[]
   paymentInfo PaymentDetails[]
+  invoicesSent InvoiceReports[] @relation("sender")
+  invoicesReceived InvoiceReports[] @relation("receipient")
   refreshToken RefreshTokens[]
   shippingInfo ShippingDetails[]
 }
@@ -54,8 +57,8 @@ model Product {
   inventoryId String @unique @map("inventory_id")
   asset ProductAsset @relation(fields: [assetId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   assetId String @unique @map("asset_id")
-  supplier SupplierDetails @relation(fields: [supplierId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  supplierId String 
+  supplier SupplierDetails? @relation(fields: [supplierId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  supplierId String? 
   cartItem CartItems[] 
   orderItem OrderItems[]
   discountIds Discount[]
@@ -108,16 +111,6 @@ model Images {
   imageUrl String
   asset ProductAsset @relation(fields: [assetId], references: [id], onDelete: Cascade)
   assetId String
-  thumbnail ThumbnailImages[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
-model ThumbnailImages {
-  id String @id @map("thumbnail_id")
-  thumbnailUrl String
-  image Images @relation(fields: [imageId], references: [id], onDelete: Cascade)
-  imageId String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -257,6 +250,12 @@ model ShippingDetails {
 //Invoices, Reports, Sales Managment
 model InvoiceReports {
   id String @id @map("invoice_id")
+  title String 
+  description String
+  receipient User @relation("receipient",fields: [receipientId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  receipientId String
+  sender User @relation("sender",fields: [senderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  senderId String
   order OrderDetails @relation(fields: [orderId], references: [id])
   orderId String @unique
   createdAt DateTime @default(now())

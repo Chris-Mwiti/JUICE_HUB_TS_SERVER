@@ -25,7 +25,7 @@ export function checkErrProperties(res: Response, err: Error | CustomError| Data
         res.send(err.code).json({err: err.message});
     }
     else if(err instanceof DatabaseError){
-        res.send(err.code).json({err: typeof err === "string" ? err : "An Error has occured on the server"})
+        res.send(err.code).json({err: typeof err === "string" ? err : err.message})
     }
     else if(err instanceof Error){
         res.send(500).json({err: err.message});

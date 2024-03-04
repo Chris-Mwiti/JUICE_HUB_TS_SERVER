@@ -58,16 +58,15 @@ interface INewProductInfoObj  {
   buyingPrice:number;
   isPerishable:boolean;
   lowLevelAlert:number;
-  price: number;
-  images: string[];
-  thumbnails: string[];
-  inventoryQty: number;
-  category: string;
+  sellingPrice: number;
+  productImages: string[];
+  productQuantity: number;
   
   //Discount Details
   discountId?:string;
   
   // Category Details
+  category?:string
   categoryId?:string;
   categoryDescription?:string;
   
@@ -76,6 +75,9 @@ interface INewProductInfoObj  {
   companyName?:string;
   address?:string;
   phone?:string;
+
+  //Inventory Details
+  inventoryQty:number;
 
   //Asset Details
   assetId?:string;
