@@ -17,7 +17,8 @@ type RecordIdsPrefixes =
   | "SUPPLIER"
   | "SALE"
   | "REFILL"
-  | "REFUND";
+  | "REFUND"
+  | "IMAGE";
 
 interface IRecordId {
     readonly prefix: RecordIdsPrefixes;

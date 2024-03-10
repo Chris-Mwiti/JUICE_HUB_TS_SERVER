@@ -7,13 +7,12 @@ import VerifyRoleMiddleware from "../../middlewares/verifyRole";
 const DiscountRouter = Router();
 
 DiscountRouter.use(verifyJWT);
-
 DiscountRouter.route('/')
     .get(async (req,res) => {
         const discountController = new DiscountController(req,res);
         await discountController.getAllDiscounts();
     })
-    .post(VerifyRoleMiddleware.verifyAdminRole, async (req,res) => {
+    .post(async (req,res) => {
         const discountController = new DiscountController(req,res);
         await discountController.createDiscount();
     })
@@ -23,7 +22,7 @@ DiscountRouter.route('/')
     })
 
 
-DiscountRouter.route('/:productId')
+DiscountRouter.route('/:discountId')
     .get(async (req,res) => {
         const discountController = new DiscountController(req,res);
         await discountController.getDiscountById();

@@ -47,21 +47,26 @@ model Product {
   id String @id @map("product_id")
   productName String @db.VarChar(255) @map("product_name")
   productDescription String @db.VarChar(255) @map("product_description")
-  price Int 
+  sellingPrice Int @map("selling_price")
   buyingPrice Int @map("buying_price")
   lowLevelAlert Int @default(15)
   isPerishable Boolean @default(false)
+  productCode String? @unique
+  productLabel String @default("NEW") 
+  productTag String?
+  productSku String
+  published Boolean @default(false)
+  stockStatus StockStatus @default(IN_STOCK)
   category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   categoryId String @map("category_id") 
   inventory Inventory @relation(fields: [inventoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   inventoryId String @unique @map("inventory_id")
-  asset ProductAsset @relation(fields: [assetId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  assetId String @unique @map("asset_id")
   supplier SupplierDetails? @relation(fields: [supplierId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   supplierId String? 
   cartItem CartItems[] 
   orderItem OrderItems[]
   discountIds Discount[]
+  assetIds ProductAsset[]
   productSales ProductSales[]
   productRefunds ProductRefunds[]
   productRefills ProductRefil[]
@@ -110,15 +115,15 @@ model Images {
   id String @id @map("image_id")
   imageUrl String
   asset ProductAsset @relation(fields: [assetId], references: [id], onDelete: Cascade)
-  assetId String
+  assetId String @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model ProductAsset {
   id String @id @map("asset_id")
-  images Images[]
-  products  Product?
+  images Images?
+  products  Product[]
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 }
@@ -315,4 +320,9 @@ enum DiscountTypes {
   BOGO
   MNP
   STANDARD
+}
+
+enum StockStatus {
+  IN_STOCK
+  OUT_STOCK 
 }

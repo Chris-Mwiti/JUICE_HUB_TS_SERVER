@@ -1,43 +1,134 @@
-2024-02-01T16:46:07.928Z	[products]	info	Creating product
-2024-02-01T16:46:07.964Z	[async_error]	error	null
-2024-02-01T16:46:07.968Z	[DB_ERROR]	error	
+2024-03-08T11:48:23.437Z	[products]	info	Hello my products
+2024-03-08T13:14:21.123Z	[category]	info	Fetchind categories
+2024-03-08T13:16:31.082Z	[category]	info	Fetchind categories
+2024-03-08T13:16:46.066Z	[category]	info	Fetchind categories
+2024-03-08T13:16:49.040Z	[category]	info	Fetchind categories
+2024-03-08T13:16:53.061Z	[category]	info	Fetchind categories
+2024-03-08T13:16:54.036Z	[category]	info	Fetchind categories
+2024-03-08T13:16:58.309Z	[category]	info	Fetchind categories
+2024-03-08T13:19:17.036Z	[category]	info	Fetchind categories
+2024-03-08T13:19:23.046Z	[category]	info	Fetchind categories
+2024-03-08T13:19:47.071Z	[category]	info	Fetchind categories
+2024-03-08T13:19:49.029Z	[category]	info	Fetchind categories
+2024-03-08T13:19:59.027Z	[category]	info	Fetchind categories
+2024-03-08T13:20:02.020Z	[category]	info	Fetchind categories
+2024-03-08T13:20:26.033Z	[category]	info	Fetchind categories
+2024-03-08T13:20:27.084Z	[category]	info	Fetchind categories
+2024-03-08T13:20:29.027Z	[category]	info	Fetchind categories
+2024-03-08T13:20:31.105Z	[category]	info	Fetchind categories
+2024-03-08T13:20:34.024Z	[category]	info	Fetchind categories
+2024-03-08T13:20:38.025Z	[category]	info	Fetchind categories
+2024-03-08T13:20:39.044Z	[category]	info	Fetchind categories
+2024-03-08T13:20:43.039Z	[category]	info	Fetchind categories
+2024-03-08T13:20:57.056Z	[category]	info	Fetchind categories
+2024-03-08T13:21:03.030Z	[category]	info	Fetchind categories
+2024-03-08T13:21:06.023Z	[category]	info	Fetchind categories
+2024-03-08T13:21:13.857Z	[category]	info	Fetchind categories
+2024-03-08T13:26:44.030Z	[category]	info	Fetchind categories
+2024-03-08T13:26:52.034Z	[category]	info	Fetchind categories
+2024-03-08T13:26:56.015Z	[category]	info	Fetchind categories
+2024-03-08T13:26:59.045Z	[category]	info	Fetchind categories
+2024-03-08T13:27:01.039Z	[category]	info	Fetchind categories
+2024-03-08T13:27:09.054Z	[category]	info	Fetchind categories
+2024-03-08T13:27:20.016Z	[category]	info	Fetchind categories
+2024-03-08T13:27:42.037Z	[category]	info	Fetchind categories
+2024-03-08T13:27:44.040Z	[category]	info	Fetchind categories
+2024-03-08T13:27:46.037Z	[category]	info	Fetchind categories
+2024-03-08T13:27:52.193Z	[category]	info	Fetchind categories
+2024-03-08T13:29:03.087Z	[category]	info	Fetchind categories
+2024-03-08T13:29:52.143Z	[category]	info	Fetchind categories
+2024-03-08T13:30:12.039Z	[category]	info	Fetchind categories
+2024-03-08T13:30:19.032Z	[category]	info	Fetchind categories
+2024-03-08T13:30:26.037Z	[category]	info	Fetchind categories
+2024-03-08T13:30:30.076Z	[category]	info	Fetchind categories
+2024-03-08T13:30:37.043Z	[category]	info	Fetchind categories
+2024-03-08T13:30:42.114Z	[category]	info	Fetchind categories
+2024-03-08T13:30:45.478Z	[category]	info	Fetchind categories
+2024-03-08T13:33:36.039Z	[category]	info	Fetchind categories
+2024-03-08T13:34:12.276Z	[category]	info	Fetchind categories
+2024-03-08T13:34:50.454Z	[category]	info	Fetchind categories
+2024-03-08T13:34:55.399Z	[category]	info	Fetchind categories
+2024-03-08T13:37:41.749Z	[cetegory]	info	Creating category
+2024-03-08T13:37:53.156Z	[category]	info	Fetchind categories
+2024-03-08T13:37:58.592Z	[category]	info	Fetchind categories
+2024-03-08T13:39:04.120Z	[category]	info	Fetchind categories
+2024-03-08T13:40:26.024Z	[category]	info	Fetchind categories
+2024-03-08T13:40:27.018Z	[category]	info	Fetchind categories
+2024-03-08T13:40:38.057Z	[category]	info	Fetchind categories
+2024-03-08T13:41:41.039Z	[category]	info	Fetchind categories
+2024-03-08T13:43:10.839Z	[category]	info	Fetchind categories
+2024-03-08T13:43:21.118Z	[category]	info	Fetchind categories
+2024-03-08T13:43:43.046Z	[category]	info	Fetchind categories
+2024-03-08T13:44:23.816Z	[category]	info	Fetchind categories
+2024-03-08T13:45:05.051Z	[category]	info	Fetchind categories
+2024-03-08T13:45:07.016Z	[category]	info	Fetchind categories
+2024-03-08T13:45:09.018Z	[category]	info	Fetchind categories
+2024-03-08T13:45:12.016Z	[category]	info	Fetchind categories
+2024-03-08T13:45:39.097Z	[category]	info	Fetchind categories
+2024-03-08T13:45:58.031Z	[category]	info	Fetchind categories
+2024-03-08T13:46:22.038Z	[category]	info	Fetchind categories
+2024-03-08T13:46:25.028Z	[category]	info	Fetchind categories
+2024-03-08T13:46:32.038Z	[category]	info	Fetchind categories
+2024-03-08T13:46:33.030Z	[category]	info	Fetchind categories
+2024-03-08T13:46:35.026Z	[category]	info	Fetchind categories
+2024-03-08T13:46:39.052Z	[category]	info	Fetchind categories
+2024-03-08T13:46:45.019Z	[category]	info	Fetchind categories
+2024-03-08T13:46:47.034Z	[category]	info	Fetchind categories
+2024-03-08T13:46:48.049Z	[category]	info	Fetchind categories
+2024-03-08T13:46:54.034Z	[category]	info	Fetchind categories
+2024-03-08T13:46:57.033Z	[category]	info	Fetchind categories
+2024-03-08T13:46:58.020Z	[category]	info	Fetchind categories
+2024-03-08T13:47:32.071Z	[category]	info	Fetchind categories
+2024-03-08T13:47:32.890Z	[category]	info	Fetchind categories
+2024-03-08T13:48:17.700Z	[category]	info	Fetchind categories
+2024-03-08T13:48:51.642Z	[cetegory]	info	Creating category
+2024-03-08T13:48:59.864Z	[category]	info	Fetchind categories
+2024-03-08T13:49:26.018Z	[category]	info	Fetchind categories
+2024-03-08T13:56:31.496Z	[category]	info	Fetchind categories
+2024-03-08T13:56:31.770Z	[category]	info	Fetchind categories
+2024-03-08T13:59:08.055Z	[category]	info	Fetchind categories
+2024-03-08T14:03:58.447Z	[category]	info	Fetchind categories
+2024-03-08T14:06:41.404Z	[category]	info	Fetchind categories
+2024-03-08T14:22:12.098Z	[category]	info	Fetchind categories
+2024-03-08T14:22:21.370Z	[category]	info	Fetchind categories
+2024-03-08T14:22:54.880Z	[category]	info	Fetchind categories
+2024-03-08T14:23:13.299Z	[category]	info	Fetchind categories
+2024-03-08T14:29:08.356Z	[category]	info	Fetchind categories
+2024-03-08T14:41:58.983Z	[category]	info	Fetchind categories
+2024-03-08T14:42:07.633Z	[category]	info	Fetchind categories
+2024-03-08T14:42:12.553Z	[category]	info	Fetchind categories
+2024-03-08T14:42:16.196Z	[category]	info	Fetchind categories
+2024-03-08T14:42:44.931Z	[category]	info	Fetchind categories
+2024-03-08T14:42:46.805Z	[category]	info	Fetchind categories
+2024-03-08T14:53:42.102Z	[category]	info	Fetchind categories
+2024-03-08T14:54:55.284Z	[products]	info	Creating product
+2024-03-08T14:55:00.389Z	[async_error]	error	null
+2024-03-08T14:55:00.392Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientValidationError: 
 Invalid `this.model.create()` invocation in
-D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:64:20
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
 
-  61 // Creates a new product with its relational subset fields if none of them exists
-  62 const { data: productInfo, error: postErr } =
-  63   await trycatchHelper<IProduct>(() =>
-→ 64     this.model.create({
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create({
            data: {
-             id: "PRODUCT-db5134280c",
-             productName: "Mango Juice",
-             productDescription: "A blend of mango juice",
-             price: 200,
-             buyingPrice: 150,
-             asset: {
-               create: {
-                 id: "ASSET-f7eecffc99",
-                 image: "product.jpg"
-               }
-             },
+             id: "PRODUCT-5d89a7b61d",
+             productName: "Blue berry juice",
+             productDescription: "Blue berry juice on sale",
+             buyingPrice: "300",
+                          ~~~~~
+             price: "500",
+             isPerishable: false,
              category: {
                connectOrCreate: {
                  where: {
-                   categoryName: "Mango"
+                   id: undefined
                  },
                  create: {
-                   id: "CATEGORY-f384bb859a",
-                   categoryName: "Mango",
-                   categoryDescription: "Mango Flavour"
+                   id: "CATEGORY-4c83ef17d2",
+                   categoryName: "",
+                   categoryDescription: ""
                  }
-               }
-             },
-             inventory: {
-               create: {
-                 id: "INVENTORY-4faded5803",
-                 quantity: 10,
-                 productName: "Mango Juice",
-                 lastRefilDate: new Date("2024-02-01T16:46:07.931Z")
                }
              },
              supplier: {
@@ -46,88 +137,123 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.t
                    id: ""
                  },
                  create: {
-                   id: "SUPPLIER-6fce48d88a",
-                   address: undefined,
-                   phone: undefined,
-         +         companyName: String
-                 }
-               }
-             },
-             discountIds: {
-               connect: {
-                 id: ""
-               }
-             }
-           }
-         })
-
-Argument `companyName` is missing.
-2024-02-01T16:47:02.602Z	[products]	info	Creating product
-2024-02-01T16:47:02.609Z	[async_error]	error	null
-2024-02-01T16:47:02.611Z	[DB_ERROR]	error	
-Invalid `this.model.create()` invocation in
-D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:64:20
-
-  61 // Creates a new product with its relational subset fields if none of them exists
-  62 const { data: productInfo, error: postErr } =
-  63   await trycatchHelper<IProduct>(() =>
-→ 64     this.model.create({
-           data: {
-             id: "PRODUCT-7a365f6b8c",
-             productName: "Mango Juice",
-             productDescription: "A blend of mango juice",
-             price: 200,
-             buyingPrice: 150,
-             asset: {
-               create: {
-                 id: "ASSET-1c1faed1ce",
-                 image: "product.jpg"
-               }
-             },
-             category: {
-               connectOrCreate: {
-                 where: {
-                   categoryName: "Mango"
-                 },
-                 create: {
-                   id: "CATEGORY-89d580fdce",
-                   categoryName: "Mango",
-                   categoryDescription: "Mango Flavour"
+                   id: "SUPPLIER-3760b79184",
+                   companyName: "",
+                   address: "",
+                   phone: ""
                  }
                }
              },
              inventory: {
                create: {
-                 id: "INVENTORY-bc0496b972",
-                 quantity: 10,
-                 productName: "Mango Juice",
-                 lastRefilDate: new Date("2024-02-01T16:47:02.603Z")
+                 id: "INVENTORY-126c9c5bd5",
+                 productName: "Blue berry juice",
+                 quantity: 0,
+                 lastRefilDate: new Date("2024-03-08T14:55:00.363Z")
                }
              },
-             supplier: {
-               connectOrCreate: {
-                 where: {
-                   id: ""
+             assetIds: {
+               connect: [
+                 {
+                   id: "ASSET-d29b8ab9ad",
+                   createdAt: new Date("2024-03-08T14:55:00.339Z"),
+                   updatedAt: new Date("2024-03-08T14:55:00.339Z")
                  },
-                 create: {
-                   id: "SUPPLIER-98f88cc96c",
-                   companyName: "Mango Distributors",
-                   phone: undefined,
-         +         address: String
+                 {
+                   id: "ASSET-6e9a0314c5",
+                   createdAt: new Date("2024-03-08T14:55:00.339Z"),
+                   updatedAt: new Date("2024-03-08T14:55:00.339Z")
+                 },
+                 {
+                   id: "ASSET-79abc3403b",
+                   createdAt: new Date("2024-03-08T14:55:00.339Z"),
+                   updatedAt: new Date("2024-03-08T14:55:00.339Z")
                  }
-               }
+               ]
              },
              discountIds: {
                connect: {
-                 id: ""
+                 id: undefined
                }
              }
            }
          })
 
-Argument `address` is missing.
-2024-02-01T18:47:29.694Z	[async_error]	error	null
-2024-02-01T18:47:29.698Z	[DB_ERROR]	error	
+Argument `buyingPrice`: Invalid value provided. Expected Int, provided String.
+2024-03-08T14:57:18.092Z	[category]	info	Fetchind categories
+2024-03-08T14:57:38.720Z	[category]	info	Fetchind categories
+2024-03-08T15:21:09.491Z	[category]	info	Fetchind categories
+2024-03-08T15:21:26.058Z	[products]	info	Creating product
+2024-03-08T15:21:30.700Z	[async_error]	error	null
+2024-03-08T15:21:30.702Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create({
+           data: {
+             id: "PRODUCT-7dc5b445bf",
+             productName: "Blue berry juice",
+             productDescription: "Blue berry juice on sale",
+             buyingPrice: 300,
+             sellingPrice: 500,
+             isPerishable: false,
+             productSku: "PKU123",
+             category: {
+               connectOrCreate: {
+                 where: {
+                   id: "Food"
+                 },
+                 create: {
+                   id: "CATEGORY-cf33bef76d",
+                   categoryName: "",
+                   categoryDescription: ""
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-68931611e2",
+                 productName: "Blue berry juice",
+                 quantity: 30,
+                 lastRefilDate: new Date("2024-03-08T15:21:30.680Z")
+               }
+             },
+             assetIds: {
+               connect: [
+                 {
+                   id: "ASSET-b27ae40432",
+                   createdAt: new Date("2024-03-08T15:21:30.662Z"),
+                   updatedAt: new Date("2024-03-08T15:21:30.662Z")
+                 },
+                 {
+                   id: "ASSET-e8dd9a07e5",
+                   createdAt: new Date("2024-03-08T15:21:30.662Z"),
+                   updatedAt: new Date("2024-03-08T15:21:30.662Z")
+                 },
+                 {
+                   id: "ASSET-dcd9b3c31c",
+                   createdAt: new Date("2024-03-08T15:21:30.662Z"),
+                   updatedAt: new Date("2024-03-08T15:21:30.662Z")
+                 }
+               ]
+             },
+             discountIds: {
+               connect: {
+                 id: undefined
+               }
+               ~~~~~~~~~~~~~~~
+             }
+           }
+         })
+
+Argument `connect`: Invalid value provided. Expected DiscountWhereUniqueInput[], provided Object.
+2024-03-08T15:36:50.180Z	[discounts]	info	Creating discount
+2024-03-08T15:37:34.821Z	[discounts]	info	Creating discount
+2024-03-08T15:37:34.832Z	[async_error]	error	null
+2024-03-08T15:37:34.834Z	[[DB_ERROR]]	error	
 Invalid `this.model.create()` invocation in
 D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Discounts.ts:39:30
 
@@ -136,98 +262,216 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Discounts.
   38     const { data:newInfo, error:postErr } = await trycatchHelper<IDiscount>(
 → 39         () => this.model.create({
                data: {
-                 id: "DISCOUNT-c09369a7ff",
+                 id: "DISCOUNT-367697e948",
                  coupon: "ABCDE",
                  percentage: 5,
-                 tokens: 10,
-                 expirationDate: "02-01-2024"
-                                 ~~~~~~~~~~~~
+                 tokens: 50,
+                 expirationDate: new Date("Invalid Date")
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~
                }
              })
 
-Invalid value for argument `expirationDate`: input contains invalid characters. Expected ISO-8601 DateTime.
-2024-02-01T18:50:20.924Z	[async_error]	error	null
-2024-02-01T18:50:20.926Z	[DB_ERROR]	error	
+Invalid value for argument `expirationDate`: Provided Date object is invalid. Expected Date.	 PrismaClientValidationError
+2024-03-08T15:38:06.245Z	[discounts]	info	Creating discount
+2024-03-08T15:38:06.258Z	[async_error]	error	null
+2024-03-08T15:38:06.260Z	[[DB_ERROR]]	error	
 Invalid `this.model.create()` invocation in
 D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Discounts.ts:39:30
 
   36 
   37 public static async createDiscount(info:TDiscountRecord){
   38     const { data:newInfo, error:postErr } = await trycatchHelper<IDiscount>(
-→ 39         () => this.model.create({
-               data: {
-                 id: "DISCOUNT-e04f3fa5ff",
-                 coupon: "ABCDE",
-                 percentage: 5,
-                 tokens: 10,
-                 expirationDate: "02-01-2024"
-                                 ~~~~~~~~~~~~
-               }
-             })
-
-Invalid value for argument `expirationDate`: input contains invalid characters. Expected ISO-8601 DateTime.
-2024-02-01T18:52:46.085Z	[products]	info	Creating product
-2024-02-08T16:38:02.478Z	[products]	info	Creating product
-2024-02-08T16:38:02.542Z	[async_error]	error	null
-2024-02-08T16:38:02.547Z	[DB_ERROR]	error	
+→ 39         () => this.model.create(
+Unique constraint failed on the constraint: `Discount_coupon_key`	 PrismaClientKnownRequestError
+2024-03-08T15:38:49.825Z	[discounts]	info	Creating discount
+2024-03-08T15:39:08.979Z	[category]	info	Fetchind categories
+2024-03-08T15:48:59.816Z	[category]	info	Fetchind categories
+2024-03-08T15:49:28.816Z	[category]	info	Fetchind categories
+2024-03-08T15:50:57.109Z	[category]	info	Fetchind categories
+2024-03-08T15:59:49.255Z	[category]	info	Fetchind categories
+2024-03-09T00:11:53.299Z	[category]	info	Fetchind categories
+2024-03-09T00:13:08.007Z	[category]	info	Fetchind categories
+2024-03-09T08:57:46.078Z	[category]	info	Fetchind categories
+2024-03-09T10:27:33.693Z	[category]	info	Fetchind categories
+2024-03-09T10:30:34.232Z	[category]	info	Fetchind categories
+2024-03-09T10:32:08.362Z	[category]	info	Fetchind categories
+2024-03-09T10:33:48.093Z	[discounts]	info	Fetching discounts
+2024-03-09T10:33:48.126Z	[category]	info	Fetchind categories
+2024-03-09T23:07:39.411Z	[category]	info	Fetchind categories
+2024-03-09T23:07:39.438Z	[discounts]	info	Fetching discounts
+2024-03-10T09:02:34.514Z	[category]	info	Fetchind categories
+2024-03-10T09:03:16.578Z	[category]	info	Fetchind categories
+2024-03-10T09:04:32.316Z	[category]	info	Fetchind categories
+2024-03-10T09:07:27.173Z	[category]	info	Fetchind categories
+2024-03-10T09:08:44.645Z	[category]	info	Fetchind categories
+2024-03-10T09:11:10.772Z	[category]	info	Fetchind categories
+2024-03-10T09:11:32.772Z	[category]	info	Fetchind categories
+2024-03-10T09:12:09.765Z	[category]	info	Fetchind categories
+2024-03-10T09:12:12.750Z	[category]	info	Fetchind categories
+2024-03-10T09:12:16.795Z	[category]	info	Fetchind categories
+2024-03-10T09:12:17.800Z	[category]	info	Fetchind categories
+2024-03-10T09:12:38.867Z	[category]	info	Fetchind categories
+2024-03-10T09:12:38.830Z	[discounts]	info	Fetching discounts
+2024-03-10T09:16:04.757Z	[discounts]	info	Fetching discounts
+2024-03-10T09:16:05.442Z	[category]	info	Fetchind categories
+2024-03-10T09:16:05.446Z	[discounts]	info	Fetching discounts
+2024-03-10T09:16:14.521Z	[category]	info	Fetchind categories
+2024-03-10T09:16:14.537Z	[discounts]	info	Fetching discounts
+2024-03-10T09:17:55.309Z	[category]	info	Fetchind categories
+2024-03-10T09:17:55.612Z	[category]	info	Fetchind categories
+2024-03-10T09:17:59.764Z	[category]	info	Fetchind categories
+2024-03-10T09:19:35.529Z	[category]	info	Fetchind categories
+2024-03-10T09:20:54.019Z	[category]	info	Fetchind categories
+2024-03-10T09:49:10.962Z	[category]	info	Fetchind categories
+2024-03-10T09:49:34.418Z	[category]	info	Fetchind categories
+2024-03-10T09:50:26.471Z	[category]	info	Fetchind categories
+2024-03-10T09:51:32.094Z	[category]	info	Fetchind categories
+2024-03-10T09:53:24.801Z	[category]	info	Fetchind categories
+2024-03-10T09:53:28.787Z	[category]	info	Fetchind categories
+2024-03-10T09:53:55.827Z	[category]	info	Fetchind categories
+2024-03-10T09:54:01.932Z	[category]	info	Fetchind categories
+2024-03-10T09:54:03.806Z	[category]	info	Fetchind categories
+2024-03-10T09:55:54.867Z	[category]	info	Fetchind categories
+2024-03-10T09:55:54.889Z	[discounts]	info	Fetching discounts
+2024-03-10T09:57:30.727Z	[category]	info	Fetchind categories
+2024-03-10T09:57:30.742Z	[discounts]	info	Fetching discounts
+2024-03-10T09:57:42.925Z	[category]	info	Fetchind categories
+2024-03-10T09:59:46.882Z	[category]	info	Fetchind categories
+2024-03-10T10:01:18.783Z	[category]	info	Fetchind categories
+2024-03-10T10:01:20.797Z	[category]	info	Fetchind categories
+2024-03-10T10:01:22.780Z	[category]	info	Fetchind categories
+2024-03-10T10:01:25.773Z	[category]	info	Fetchind categories
+2024-03-10T10:01:26.762Z	[category]	info	Fetchind categories
+2024-03-10T10:01:33.767Z	[category]	info	Fetchind categories
+2024-03-10T10:01:39.754Z	[category]	info	Fetchind categories
+2024-03-10T10:01:40.820Z	[category]	info	Fetchind categories
+2024-03-10T10:02:10.768Z	[category]	info	Fetchind categories
+2024-03-10T10:02:34.763Z	[category]	info	Fetchind categories
+2024-03-10T10:02:56.773Z	[category]	info	Fetchind categories
+2024-03-10T10:03:02.780Z	[category]	info	Fetchind categories
+2024-03-10T10:03:13.828Z	[category]	info	Fetchind categories
+2024-03-10T10:03:16.792Z	[category]	info	Fetchind categories
+2024-03-10T10:04:10.169Z	[category]	info	Fetchind categories
+2024-03-10T12:27:49.653Z	[category]	info	Fetchind categories
+2024-03-10T12:27:49.680Z	[discounts]	info	Fetching discounts
+2024-03-10T12:34:15.804Z	[discounts]	info	Fetching discounts
+2024-03-10T12:35:51.622Z	[category]	info	Fetchind categories
+2024-03-10T12:35:51.634Z	[discounts]	info	Fetching discounts
+2024-03-10T12:35:59.670Z	[category]	info	Fetchind categories
+2024-03-10T12:35:59.678Z	[discounts]	info	Fetching discounts
+2024-03-10T12:36:07.695Z	[category]	info	Fetchind categories
+2024-03-10T12:36:07.716Z	[discounts]	info	Fetching discounts
+2024-03-10T12:36:20.320Z	[category]	info	Fetchind categories
+2024-03-10T12:36:20.344Z	[discounts]	info	Fetching discounts
+2024-03-10T12:36:36.303Z	[category]	info	Fetchind categories
+2024-03-10T12:36:36.311Z	[discounts]	info	Fetching discounts
+2024-03-10T12:37:18.714Z	[discounts]	info	Fetching discounts
+2024-03-10T12:37:19.064Z	[category]	info	Fetchind categories
+2024-03-10T12:37:19.082Z	[discounts]	info	Fetching discounts
+2024-03-10T12:41:18.741Z	[category]	info	Fetchind categories
+2024-03-10T12:42:13.040Z	[category]	info	Fetchind categories
+2024-03-10T12:42:13.054Z	[discounts]	info	Fetching discounts
+2024-03-10T12:42:37.131Z	[category]	info	Fetchind categories
+2024-03-10T12:42:37.139Z	[discounts]	info	Fetching discounts
+2024-03-10T12:42:52.718Z	[category]	info	Fetchind categories
+2024-03-10T12:43:00.723Z	[category]	info	Fetchind categories
+2024-03-10T12:43:20.719Z	[category]	info	Fetchind categories
+2024-03-10T12:43:21.738Z	[category]	info	Fetchind categories
+2024-03-10T12:43:31.732Z	[category]	info	Fetchind categories
+2024-03-10T12:43:34.736Z	[category]	info	Fetchind categories
+2024-03-10T12:43:45.710Z	[category]	info	Fetchind categories
+2024-03-10T12:43:56.717Z	[category]	info	Fetchind categories
+2024-03-10T12:45:37.728Z	[category]	info	Fetchind categories
+2024-03-10T12:45:38.723Z	[category]	info	Fetchind categories
+2024-03-10T12:45:45.719Z	[category]	info	Fetchind categories
+2024-03-10T12:45:47.744Z	[category]	info	Fetchind categories
+2024-03-10T12:46:03.762Z	[category]	info	Fetchind categories
+2024-03-10T12:46:03.771Z	[discounts]	info	Fetching discounts
+2024-03-10T12:47:11.760Z	[category]	info	Fetchind categories
+2024-03-10T12:47:11.768Z	[discounts]	info	Fetching discounts
+2024-03-10T12:49:16.050Z	[category]	info	Fetchind categories
+2024-03-10T12:49:16.058Z	[discounts]	info	Fetching discounts
+2024-03-10T12:49:32.797Z	[category]	info	Fetchind categories
+2024-03-10T12:49:32.805Z	[discounts]	info	Fetching discounts
+2024-03-10T12:49:36.328Z	[category]	info	Fetchind categories
+2024-03-10T12:49:36.348Z	[discounts]	info	Fetching discounts
+2024-03-10T12:49:49.696Z	[category]	info	Fetchind categories
+2024-03-10T12:49:49.704Z	[discounts]	info	Fetching discounts
+2024-03-10T12:50:01.178Z	[category]	info	Fetchind categories
+2024-03-10T12:50:01.186Z	[discounts]	info	Fetching discounts
+2024-03-10T12:50:43.797Z	[category]	info	Fetchind categories
+2024-03-10T12:50:43.802Z	[discounts]	info	Fetching discounts
+2024-03-10T12:50:47.730Z	[category]	info	Fetchind categories
+2024-03-10T12:50:53.729Z	[category]	info	Fetchind categories
+2024-03-10T12:50:56.726Z	[category]	info	Fetchind categories
+2024-03-10T12:50:57.742Z	[category]	info	Fetchind categories
+2024-03-10T12:51:02.720Z	[category]	info	Fetchind categories
+2024-03-10T12:51:05.715Z	[category]	info	Fetchind categories
+2024-03-10T12:51:12.716Z	[category]	info	Fetchind categories
+2024-03-10T12:51:23.755Z	[category]	info	Fetchind categories
+2024-03-10T12:51:23.760Z	[discounts]	info	Fetching discounts
+2024-03-10T12:51:35.741Z	[category]	info	Fetchind categories
+2024-03-10T12:51:44.739Z	[category]	info	Fetchind categories
+2024-03-10T12:51:49.740Z	[category]	info	Fetchind categories
+2024-03-10T12:51:53.724Z	[category]	info	Fetchind categories
+2024-03-10T12:51:54.736Z	[category]	info	Fetchind categories
+2024-03-10T12:52:20.728Z	[category]	info	Fetchind categories
+2024-03-10T12:52:26.718Z	[category]	info	Fetchind categories
+2024-03-10T12:52:28.720Z	[category]	info	Fetchind categories
+2024-03-10T12:52:32.724Z	[category]	info	Fetchind categories
+2024-03-10T12:52:35.711Z	[category]	info	Fetchind categories
+2024-03-10T12:52:49.709Z	[category]	info	Fetchind categories
+2024-03-10T12:52:55.719Z	[category]	info	Fetchind categories
+2024-03-10T12:52:59.733Z	[category]	info	Fetchind categories
+2024-03-10T12:53:15.349Z	[category]	info	Fetchind categories
+2024-03-10T12:53:15.357Z	[discounts]	info	Fetching discounts
+2024-03-10T12:53:26.735Z	[category]	info	Fetchind categories
+2024-03-10T12:53:33.761Z	[category]	info	Fetchind categories
+2024-03-10T12:53:48.271Z	[category]	info	Fetchind categories
+2024-03-10T12:53:48.290Z	[discounts]	info	Fetching discounts
+2024-03-10T12:56:19.713Z	[category]	info	Fetchind categories
+2024-03-10T12:59:15.281Z	[category]	info	Fetchind categories
+2024-03-10T12:59:15.286Z	[discounts]	info	Fetching discounts
+2024-03-10T13:00:43.852Z	[products]	info	Creating product
+2024-03-10T13:00:47.856Z	[products]	info	Creating product
+2024-03-10T13:00:49.656Z	[async_error]	error	null
+2024-03-10T13:00:49.662Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
 Invalid `this.model.create()` invocation in
-D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:64:20
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
 
-  61 // Creates a new product with its relational subset fields if none of them exists
-  62 const { data: productInfo, error: postErr } =
-  63   await trycatchHelper<IProduct>(() =>
-→ 64     this.model.create({
-           data: {
-             id: "PRODUCT-cbee3378eb",
-             productName: "Mango Juice",
-             productDescription: "A blend of mango juice",
-             price: 200,
-             buyingPrice: 150,
-             assetId: undefined,
-             category: {
-               connectOrCreate: {
-                 where: {
-                   categoryName: "Mango"
-                 },
-                 create: {
-                   id: "CATEGORY-255124381e",
-                   categoryName: "Mango",
-                   categoryDescription: "Mango Flavour"
-                 }
-               }
-             },
-             inventory: {
-               create: {
-                 id: "INVENTORY-9eb063d98b",
-                 quantity: 10,
-                 productName: "Mango Juice",
-                 lastRefilDate: new Date("2024-02-08T16:38:02.488Z")
-               }
-             },
-             supplier: {
-               connectOrCreate: {
-                 where: {
-                   id: ""
-                 },
-                 create: {
-                   id: "SUPPLIER-4205f3e739",
-                   companyName: "Mango Distributors",
-                   address: "Meru",
-                   phone: "012345678"
-                 }
-               }
-             },
-             discountIds: {
-               connect: {
-                 id: "DISCOUNT-aa2eec068f"
-               }
-             },
-         +   asset: {
-         +     create: ProductAssetCreateWithoutProductsInput | ProductAssetUncheckedCreateWithoutProductsInput,
-         +     connectOrCreate: ProductAssetCreateOrConnectWithoutProductsInput,
-         +     connect: ProductAssetWhereUniqueInput
-         +   }
-           }
-         })
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-10T13:03:27.281Z	[category]	info	Fetchind categories
+2024-03-10T13:03:27.294Z	[discounts]	info	Fetching discounts
+2024-03-10T13:03:31.467Z	[products]	info	Creating product
+2024-03-10T13:03:39.732Z	[async_error]	error	null
+2024-03-10T13:03:39.738Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
 
-Argument `asset` is missing.
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-10T13:07:10.356Z	[category]	info	Fetchind categories
+2024-03-10T13:07:10.366Z	[discounts]	info	Fetching discounts
+2024-03-10T13:07:10.374Z	[products]	info	Creating product
+2024-03-10T13:07:13.110Z	[async_error]	error	null
+2024-03-10T13:07:13.114Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-10T13:07:40.304Z	[category]	info	Fetchind categories
+2024-03-10T13:07:40.313Z	[discounts]	info	Fetching discounts
+2024-03-10T13:07:45.138Z	[products]	info	Creating product
+2024-03-10T13:08:02.357Z	[category]	info	Fetchind categories
+2024-03-10T13:08:02.371Z	[discounts]	info	Fetching discounts

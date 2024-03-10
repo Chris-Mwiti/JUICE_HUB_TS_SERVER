@@ -9,6 +9,10 @@ import trycatchHelper from "../util/functions/trycatch";
 import ProductModel, { ProductRecordWithoutId } from "../models/Products";
 import ResponseHandler from "../util/classes/modelResponseHandlers";
 import logger from "../util/functions/logger";
+import cloudinary from "../config/cloudinary";
+import AssetsModel from "../models/Assets";
+import { ProductAsset } from "@prisma/client";
+import { checkErrProperties } from "../helpers/customError";
 
 /**
  * Product Controller:
@@ -24,16 +28,28 @@ class ProductController {
 
 
   public async createProduct() {
+    logger("products").info("Creating product");
     let productInfoObj: INewProductInfoObj = this.req.body;
 
-    logger("products").info("Creating product");
-    //Type casts the product price into number type
-    productInfoObj = {
-      ...productInfoObj,
-      price: Number(productInfoObj.price),
-      inventoryQty: Number(productInfoObj.inventoryQty),
-    };
-
+    //Stores the images to the cloudinary image provider
+    const base64UrlImages = productInfoObj.productImages
+    const uploadResponsePromises = base64UrlImages.map((url) => {
+      return cloudinary.uploader.upload(url, {
+        upload_preset: "ohteilft",
+      });
+    })
+    const settledUploadResponse = await Promise.all(uploadResponsePromises);
+    console.log(settledUploadResponse);
+    //Store the public id of each image asset
+    const {data: assetUploadResponse, error: uploadError} = await trycatchHelper<ProductAsset[]>(
+      () =>  AssetsModel.createAsset(settledUploadResponse)
+    )
+    if(uploadError) checkErrProperties(this.res, uploadError);
+    if(!assetUploadResponse) return this.res.status(500).json({
+      err: "Something went wrong please try again later"
+    })
+    productInfoObj.assetId = assetUploadResponse
+    
     const { data: newProduct, error: postErr } = await trycatchHelper<IProduct>(
       () => this.model.createProduct(productInfoObj)
     );

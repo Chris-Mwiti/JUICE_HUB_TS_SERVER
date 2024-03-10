@@ -14,8 +14,7 @@ export type ProductRecord = Pick<
   | "id"
   | "productName"
   | "productDescription"
-  | "price"
-  | "assetId"
+  | "sellingPrice"
   | "categoryId"
   | "inventoryId"
   | "supplierId"
@@ -23,17 +22,21 @@ export type ProductRecord = Pick<
 >;
 export type ProductRecordWithoutId = Pick<
   ProductRecord,
-  "productName" | "productDescription" | "price" | "buyingPrice"
+  "productName" | "productDescription" | "sellingPrice" | "buyingPrice"
 >;
 
 // @TODO: Check various examples on mapped object type
-
+//@TODO: Redefine the join properties structure to be strongly typed
 // Inner join properties
 export interface IJoinProperties {
+  assetIds?:boolean | {
+    include: {
+      images: true
+    }
+  }
   category?: boolean | InnerJoinActionsProperties;
   inventory?: boolean | InnerJoinActionsProperties;
   discount?: boolean | InnerJoinActionsProperties;
-  asset?: boolean | InnerJoinActionsProperties;
   cartItem?: boolean | InnerJoinActionsProperties;
   orderItem?: boolean | InnerJoinActionsProperties;
 }
@@ -52,13 +55,29 @@ interface IProductUpdateQtyObj {
 //Include Type
 const productInclude = Prisma.validator<Prisma.ProductDefaultArgs>()({
   include: {
+    assetIds: {
+      include:{
+        images: true
+      }
+    },
     category: true,
     inventory: true,
-    asset: true,
     supplier: true,
     discountIds: true,
   },
 });
+const producIncludeProp: Prisma.ProductInclude =
+  Prisma.validator<Prisma.ProductInclude>()({
+    assetIds:{
+      include: {
+        images: true
+      }
+    },
+    category: true,
+    inventory: true,
+    supplier: true,
+    discountIds: true,
+  });
 
 type TProductInclude = Prisma.ProductGetPayload<typeof productInclude>;
 
@@ -75,60 +94,44 @@ class ProductModel {
       await trycatchHelper<IProduct>(() =>
         this.model.create({
           data: {
-
             //Product Details
             id: new RecordIdGenerator("PRODUCT").generate(),
             productName: productInfoObj.productName,
             productDescription: productInfoObj.productDescription,
-            buyingPrice: productInfoObj.buyingPrice,
-            price: productInfoObj.sellingPrice,
+            buyingPrice: parseInt(productInfoObj.buyingPrice),
+            sellingPrice: parseInt(productInfoObj.sellingPrice),
             isPerishable: productInfoObj.isPerishable,
-
+            productSku: productInfoObj.productSku,
             //Product Properties
-            category:{
-              connectOrCreate:{
-                where:{
-                  id: productInfoObj.categoryId
-                },
-                create:{
-                  id: new RecordIdGenerator("CATEGORY").generate(),
-                  categoryName: productInfoObj.category ?? "",
-                  categoryDescription: productInfoObj.categoryDescription ?? ""
-                }
-              }
-            },
-            supplier:{
-              connectOrCreate:{
+            category: {
+              connectOrCreate: {
                 where: {
-                  id: productInfoObj.supplierId ?? ""
+                  id: productInfoObj.productCategory,
                 },
-                create:{
-                  id: new RecordIdGenerator("SUPPLIER").generate(),
-                  companyName: productInfoObj.companyName ?? "",
-                  address: productInfoObj.address ?? "",
-                  phone: productInfoObj.phone ?? ""
-                }
-              }
+                create: {
+                  id: new RecordIdGenerator("CATEGORY").generate(),
+                  categoryName: productInfoObj.categoryName ?? "",
+                  categoryDescription: productInfoObj.categoryDescription ?? "",
+                },
+              },
             },
-            inventory:{
-              create:{
+            inventory: {
+              create: {
                 id: new RecordIdGenerator("INVENTORY").generate(),
                 productName: productInfoObj.productName,
-                quantity: productInfoObj.inventoryQty ?? 0,
-                lastRefilDate: new Date()
-              }
+                quantity: parseInt(productInfoObj.productQuantity) ?? 0,
+                lastRefilDate: new Date(),
+              },
             },
-            asset: {
+            assetIds: {
+              connect: productInfoObj.assetId,
+            },
+            discountIds: {
               connect: {
-                id: productInfoObj.assetId
-              }
+                id: productInfoObj.discountId,
+              },
             },
-            discountIds:{
-              connect:{
-                id: productInfoObj.discountId
-              }
-            }
-          }
+          },
         })
       );
     if (postErr) return new DatabaseError({
@@ -139,12 +142,12 @@ class ProductModel {
     return productInfo;
   }
 
-  public static async getAllProducts(joinProperties?: IJoinProperties) {
+  public static async getAllProducts(joinProperties?: TProductInclude) {
     const { data: productInfos, error: fetchError } = await trycatchHelper<
       IProduct[]
     >(() =>
       this.model.findMany({
-        include: joinProperties,
+        include: producIncludeProp,
       })
     );
     if (fetchError) prismaErrHandler(fetchError as PrismaErrorTypes);
@@ -158,7 +161,7 @@ class ProductModel {
           where: {
             id: id,
           },
-          include: properties,
+          include: producIncludeProp,
         })
       );
 

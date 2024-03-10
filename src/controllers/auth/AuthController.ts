@@ -21,6 +21,7 @@ import RecordIdGenerator from "../../models/generators/RecordIdGenerator";
 import bcrypt from "bcrypt";
 import jsonwebtoken from "jsonwebtoken";
 import dotenv from "dotenv";
+import logger from "../../util/functions/logger";
 dotenv.config();
 
 type AuthStrategies = "google" | "local";
@@ -98,6 +99,7 @@ class AuthController {
   }
 
   public async CreateUser(userInfoObj: UserRecordWithoutId) {
+    logger("user").debug("Creating user");
     // Generates a new user id
     const userId = new RecordIdGenerator("USER").generate();
 

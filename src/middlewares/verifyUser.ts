@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import { IUser, IUserLoginCredentials } from "../models/Interfaces/IModels";
 import trycatchHelper from "../util/functions/trycatch";
 import AuthController from "../controllers/auth/AuthController";
+import { checkErrProperties } from "../helpers/customError";
 
 /**
  * Verifies users using the local strategy method(email & password)
@@ -15,7 +16,7 @@ async function verifyUser(req: Request, res: Response, next: NextFunction) {
   const { data: user, error: checkErr } = await trycatchHelper<IUser>(() =>
     authController.CheckIfUserExists(userInfo.email)
   );
-  if (checkErr) return res.status(500).json({ err: (checkErr as any).message });
+  if (checkErr) return checkErrProperties(res,checkErr);
 
   if (!user)
     return res

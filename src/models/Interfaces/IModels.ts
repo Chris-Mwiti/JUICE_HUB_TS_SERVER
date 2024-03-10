@@ -1,10 +1,4 @@
 import { PartialFields, RequiredFields } from "../../util/types/util.types";
-import {
-  DiscountStatus,
-  PaymentProviders,
-  Roles,
-  ShoppingSessionStatus,
-} from "../Types/ModelTypes";
 import { CartItems, Category, Discount, Inventory, OrderDetails, OrderItems, PaymentDetails, Prisma, Product, ProductAsset, RefreshTokens, ShippingDetails, ShoppingSession, SupplierDetails, User } from "@prisma/client";
 
 interface BaseRecord {
@@ -55,19 +49,22 @@ interface INewProductInfoObj  {
   // Product Details
   productName: string;
   productDescription: string;
-  buyingPrice:number;
+  productSku:string;
+  productLabel?:string;
+  productCode?:string;
+  buyingPrice:string;
   isPerishable:boolean;
   lowLevelAlert:number;
-  sellingPrice: number;
+  sellingPrice: string;
   productImages: string[];
-  productQuantity: number;
+  productQuantity: string;
+  productCategory?:string;
   
   //Discount Details
   discountId?:string;
   
   // Category Details
-  category?:string
-  categoryId?:string;
+  categoryName?:string
   categoryDescription?:string;
   
   //Supplier Details
@@ -80,7 +77,7 @@ interface INewProductInfoObj  {
   inventoryQty:number;
 
   //Asset Details
-  assetId?:string;
+  assetId?:ProductAsset[];
 }
 
 type TJoinProductTypes = {

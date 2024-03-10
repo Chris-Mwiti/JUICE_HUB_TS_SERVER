@@ -10,6 +10,7 @@ import AuthRouter from "./routes/auth/auth.routes";
 import GooglePassportStrategy from "./config/passport-google-config";
 import ProductRouter from "./routes/api/product.routes";
 import DiscountRouter from "./routes/api/discounts.routes";
+import CategoryRouter from "./routes/api/category.routes";
 
 /* ---------------- Server set up ----------------------- */
 
@@ -39,8 +40,8 @@ app.use(GooglePassportStrategy.session());
 app.use(cookieParser());
 
 // Body parser
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.json({limit: "50mb"}));
+app.use(express.urlencoded({ extended: false, limit: "50mb" }));
 
 // Request Logger
 app.use(LoggerHelper.RequestLogger);
@@ -51,6 +52,7 @@ app.use(LoggerHelper.RequestLogger);
 app.use("/auth", AuthRouter);
 app.use("/api/product", ProductRouter);
 app.use("/api/discounts", DiscountRouter);
+app.use("/api/category", CategoryRouter);
 // Error Logger 
 app.use(ErrMiddleWareHandler.ErrHandler);
 

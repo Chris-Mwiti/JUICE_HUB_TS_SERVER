@@ -227,3 +227,207 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.t
          })
 
 Argument `asset` is missing.
+2024-03-08T14:55:00.389Z	[async_error]	error	null
+2024-03-08T14:55:00.392Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create({
+           data: {
+             id: "PRODUCT-5d89a7b61d",
+             productName: "Blue berry juice",
+             productDescription: "Blue berry juice on sale",
+             buyingPrice: "300",
+                          ~~~~~
+             price: "500",
+             isPerishable: false,
+             category: {
+               connectOrCreate: {
+                 where: {
+                   id: undefined
+                 },
+                 create: {
+                   id: "CATEGORY-4c83ef17d2",
+                   categoryName: "",
+                   categoryDescription: ""
+                 }
+               }
+             },
+             supplier: {
+               connectOrCreate: {
+                 where: {
+                   id: ""
+                 },
+                 create: {
+                   id: "SUPPLIER-3760b79184",
+                   companyName: "",
+                   address: "",
+                   phone: ""
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-126c9c5bd5",
+                 productName: "Blue berry juice",
+                 quantity: 0,
+                 lastRefilDate: new Date("2024-03-08T14:55:00.363Z")
+               }
+             },
+             assetIds: {
+               connect: [
+                 {
+                   id: "ASSET-d29b8ab9ad",
+                   createdAt: new Date("2024-03-08T14:55:00.339Z"),
+                   updatedAt: new Date("2024-03-08T14:55:00.339Z")
+                 },
+                 {
+                   id: "ASSET-6e9a0314c5",
+                   createdAt: new Date("2024-03-08T14:55:00.339Z"),
+                   updatedAt: new Date("2024-03-08T14:55:00.339Z")
+                 },
+                 {
+                   id: "ASSET-79abc3403b",
+                   createdAt: new Date("2024-03-08T14:55:00.339Z"),
+                   updatedAt: new Date("2024-03-08T14:55:00.339Z")
+                 }
+               ]
+             },
+             discountIds: {
+               connect: {
+                 id: undefined
+               }
+             }
+           }
+         })
+
+Argument `buyingPrice`: Invalid value provided. Expected Int, provided String.
+2024-03-08T15:21:30.700Z	[async_error]	error	null
+2024-03-08T15:21:30.702Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create({
+           data: {
+             id: "PRODUCT-7dc5b445bf",
+             productName: "Blue berry juice",
+             productDescription: "Blue berry juice on sale",
+             buyingPrice: 300,
+             sellingPrice: 500,
+             isPerishable: false,
+             productSku: "PKU123",
+             category: {
+               connectOrCreate: {
+                 where: {
+                   id: "Food"
+                 },
+                 create: {
+                   id: "CATEGORY-cf33bef76d",
+                   categoryName: "",
+                   categoryDescription: ""
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-68931611e2",
+                 productName: "Blue berry juice",
+                 quantity: 30,
+                 lastRefilDate: new Date("2024-03-08T15:21:30.680Z")
+               }
+             },
+             assetIds: {
+               connect: [
+                 {
+                   id: "ASSET-b27ae40432",
+                   createdAt: new Date("2024-03-08T15:21:30.662Z"),
+                   updatedAt: new Date("2024-03-08T15:21:30.662Z")
+                 },
+                 {
+                   id: "ASSET-e8dd9a07e5",
+                   createdAt: new Date("2024-03-08T15:21:30.662Z"),
+                   updatedAt: new Date("2024-03-08T15:21:30.662Z")
+                 },
+                 {
+                   id: "ASSET-dcd9b3c31c",
+                   createdAt: new Date("2024-03-08T15:21:30.662Z"),
+                   updatedAt: new Date("2024-03-08T15:21:30.662Z")
+                 }
+               ]
+             },
+             discountIds: {
+               connect: {
+                 id: undefined
+               }
+               ~~~~~~~~~~~~~~~
+             }
+           }
+         })
+
+Argument `connect`: Invalid value provided. Expected DiscountWhereUniqueInput[], provided Object.
+2024-03-08T15:37:34.832Z	[async_error]	error	null
+2024-03-08T15:37:34.834Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Discounts.ts:39:30
+
+  36 
+  37 public static async createDiscount(info:TDiscountRecord){
+  38     const { data:newInfo, error:postErr } = await trycatchHelper<IDiscount>(
+→ 39         () => this.model.create({
+               data: {
+                 id: "DISCOUNT-367697e948",
+                 coupon: "ABCDE",
+                 percentage: 5,
+                 tokens: 50,
+                 expirationDate: new Date("Invalid Date")
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~
+               }
+             })
+
+Invalid value for argument `expirationDate`: Provided Date object is invalid. Expected Date.	 PrismaClientValidationError
+2024-03-08T15:38:06.258Z	[async_error]	error	null
+2024-03-08T15:38:06.260Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Discounts.ts:39:30
+
+  36 
+  37 public static async createDiscount(info:TDiscountRecord){
+  38     const { data:newInfo, error:postErr } = await trycatchHelper<IDiscount>(
+→ 39         () => this.model.create(
+Unique constraint failed on the constraint: `Discount_coupon_key`	 PrismaClientKnownRequestError
+2024-03-10T13:00:49.656Z	[async_error]	error	null
+2024-03-10T13:00:49.662Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-10T13:03:39.732Z	[async_error]	error	null
+2024-03-10T13:03:39.738Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-10T13:07:13.110Z	[async_error]	error	null
+2024-03-10T13:07:13.114Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
