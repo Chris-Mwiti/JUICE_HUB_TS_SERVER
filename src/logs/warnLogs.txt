@@ -431,3 +431,34 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.t
   94   await trycatchHelper<IProduct>(() =>
 → 95     this.model.create(
 Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-14T18:49:20.252Z	[async_error]	error	null
+2024-03-14T18:49:20.255Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+Unique constraint failed on the constraint: `OrderDetails_user_id_key`
+2024-03-14T18:49:20.257Z	[async_error]	error	null
+2024-03-14T19:18:51.763Z	[async_error]	error	null
+2024-03-14T19:18:51.769Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+Unique constraint failed on the constraint: `OrderDetails_user_id_key`
+2024-03-14T19:18:51.772Z	[async_error]	error	null
+2024-03-14T20:23:41.590Z	[async_error]	error	null
+2024-03-14T20:23:41.593Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+Unique constraint failed on the constraint: `ShippingDetails_user_id_key`
+2024-03-14T20:23:41.595Z	[async_error]	error	null
+2024-03-14T20:35:41.301Z	[async_error]	error	null
+2024-03-14T20:35:41.305Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`

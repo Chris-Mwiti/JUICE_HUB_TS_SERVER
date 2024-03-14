@@ -34,7 +34,7 @@ const productSaleProduct = Prisma.validator<Prisma.ProductSalesDefaultArgs>()({
     include:{
         product:{
             select:{
-                price: true,
+                sellingPrice: true,
                 productName: true
             }
         }
@@ -43,7 +43,7 @@ const productSaleProduct = Prisma.validator<Prisma.ProductSalesDefaultArgs>()({
 const productSaleIncludeProduct: Prisma.ProductSalesInclude = Prisma.validator<Prisma.ProductSalesInclude>()({
     product:{
         select:{
-            price: true,
+            sellingPrice: true,
             productName: true
         }
     }

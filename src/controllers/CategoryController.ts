@@ -32,7 +32,7 @@ class CategoryController {
 
 
     public async getAllCategories(){
-        logger("category").info("Fetchind categories")
+        logger("category").info("Fetching categories")
         const {data: infos, error: fetchRrror} = await trycatchHelper<Category[]>(
             () => this.model.getAllCategories()
         )

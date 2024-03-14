@@ -25,12 +25,14 @@ model User {
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
   session ShoppingSession?
-  order OrderDetails[]
+  order OrderDetails? @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  orderId String?
+  shipping ShippingDetails? @relation(fields: [shippingId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  shippingId String?
   paymentInfo PaymentDetails[]
   invoicesSent InvoiceReports[] @relation("sender")
   invoicesReceived InvoiceReports[] @relation("receipient")
   refreshToken RefreshTokens[]
-  shippingInfo ShippingDetails[]
 }
 
 model RefreshTokens{
@@ -197,34 +199,32 @@ model CartItems{
 model OrderDetails {
   id String @id @map("order_id")
   total Int 
-  user User @relation(fields: [userId], references: [id], onUpdate: Cascade, onDelete: Cascade)
-  userId String @map("user_id")
-  payment PaymentDetails @relation(fields: [paymentId], references: [id], onUpdate: Cascade, onDelete: Cascade)
-  paymentId String @unique @map("payment_id")
-  shippingInfo ShippingDetails @relation(fields: [shippingId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  shippingId String @map("shipping_id")
+  payment PaymentDetails[]
+  user User[]
+  shippingInfo ShippingDetails[]
   status OrderStatus @default(pending)
-  items OrderItems[]
   orderRefunds ProductRefunds[]
+  items OrderItems[]
   updatedAt DateTime @updatedAt @map("updated_at")
   createdAt DateTime @default(now()) @map("created_at")
   invoiceReport InvoiceReports?
 }
 model OrderItems {
   id String @id @map("order_item_id")
-  order OrderDetails @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  orderId String @map("order_id")
+  order OrderDetails? @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  orderId String? @map("order_id")
   product Product @relation(fields: [productId], references: [id], onUpdate: Cascade)
   productId String @map("product_id")
   quantity Int
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@unique([productId,orderId])
 }
 model PaymentDetails {
   id String  @id @map("payment_id")
-  orderPayment OrderDetails?
+  orderPayment OrderDetails @relation(fields: [orderId], references: [id])
+  orderId String 
   amount Int 
   provider PaymentProviders @default(mpesa)
   status PaymentStatus @default(pending)
@@ -244,9 +244,9 @@ model ShippingDetails {
   status ShippingStatus @default(pending)
   createdAt DateTime @default(now()) @map("created_at")
   modifiedAt DateTime @updatedAt @map("modified_at")
-  user User @relation(fields: [userId], references: [id], onUpdate: Cascade)
-  userId String @map("user_id")
-  order OrderDetails[]
+  user User[]
+  order OrderDetails @relation(fields: [orderId], references: [id])
+  orderId String
 }
 
 

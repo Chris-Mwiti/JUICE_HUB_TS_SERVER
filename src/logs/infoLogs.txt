@@ -475,3 +475,94 @@ Unique constraint failed on the constraint: `Inventory_product_name_key`
 2024-03-10T13:07:45.138Z	[products]	info	Creating product
 2024-03-10T13:08:02.357Z	[category]	info	Fetchind categories
 2024-03-10T13:08:02.371Z	[discounts]	info	Fetching discounts
+2024-03-10T14:10:10.495Z	[category]	info	Fetchind categories
+2024-03-10T14:10:10.499Z	[discounts]	info	Fetching discounts
+2024-03-10T14:10:10.842Z	[category]	info	Fetchind categories
+2024-03-10T14:10:10.846Z	[discounts]	info	Fetching discounts
+2024-03-10T14:10:10.905Z	[category]	info	Fetchind categories
+2024-03-10T14:10:10.910Z	[discounts]	info	Fetching discounts
+2024-03-10T14:10:11.647Z	[category]	info	Fetchind categories
+2024-03-10T14:10:11.652Z	[discounts]	info	Fetching discounts
+2024-03-10T14:10:22.386Z	[category]	info	Fetchind categories
+2024-03-10T14:10:22.390Z	[discounts]	info	Fetching discounts
+2024-03-10T14:11:00.679Z	[category]	info	Fetchind categories
+2024-03-10T14:11:00.696Z	[discounts]	info	Fetching discounts
+2024-03-10T14:17:43.440Z	[category]	info	Fetchind categories
+2024-03-10T14:17:43.448Z	[discounts]	info	Fetching discounts
+2024-03-14T18:26:04.060Z	[orders]	info	Creating new order
+2024-03-14T18:26:04.064Z	[sale]	info	Creating sale
+2024-03-14T18:26:04.068Z	[sale]	info	Creating sale
+2024-03-14T18:26:04.219Z	[orderItem]	info	Creating order item
+2024-03-14T18:26:04.224Z	[orderItem]	info	Creating order item
+2024-03-14T18:41:27.433Z	[orders]	info	Creating new order
+2024-03-14T18:41:27.437Z	[sale]	info	Creating sale
+2024-03-14T18:41:27.440Z	[sale]	info	Creating sale
+2024-03-14T18:41:27.467Z	[orderItem]	info	Creating order item
+2024-03-14T18:41:27.472Z	[orderItem]	info	Creating order item
+2024-03-14T18:42:38.726Z	[orders]	info	Creating new order
+2024-03-14T18:42:38.730Z	[sale]	info	Creating sale
+2024-03-14T18:42:38.733Z	[sale]	info	Creating sale
+2024-03-14T18:42:38.768Z	[orderItem]	info	Creating order item
+2024-03-14T18:42:38.780Z	[orderItem]	info	Creating order item
+2024-03-14T18:44:57.981Z	[orders]	info	Creating new order
+2024-03-14T18:44:57.987Z	[sale]	info	Creating sale
+2024-03-14T18:44:57.995Z	[sale]	info	Creating sale
+2024-03-14T18:44:58.027Z	[orderItem]	info	Creating order item
+2024-03-14T18:44:58.036Z	[orderItem]	info	Creating order item
+2024-03-14T18:49:20.057Z	[orders]	info	Creating new order
+2024-03-14T18:49:20.061Z	[sale]	info	Creating sale
+2024-03-14T18:49:20.064Z	[sale]	info	Creating sale
+2024-03-14T18:49:20.209Z	[orderItem]	info	Creating order item
+2024-03-14T18:49:20.215Z	[orderItem]	info	Creating order item
+2024-03-14T18:49:20.252Z	[async_error]	error	null
+2024-03-14T18:49:20.255Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+Unique constraint failed on the constraint: `OrderDetails_user_id_key`
+2024-03-14T18:49:20.257Z	[async_error]	error	null
+2024-03-14T18:53:59.009Z	[category]	info	Fetching categories
+2024-03-14T18:53:59.032Z	[discounts]	info	Fetching discounts
+2024-03-14T19:18:51.719Z	[orders]	info	Creating new order
+2024-03-14T19:18:51.721Z	[sale]	info	Creating sale
+2024-03-14T19:18:51.723Z	[sale]	info	Creating sale
+2024-03-14T19:18:51.742Z	[orderItem]	info	Creating order item
+2024-03-14T19:18:51.748Z	[orderItem]	info	Creating order item
+2024-03-14T19:18:51.763Z	[async_error]	error	null
+2024-03-14T19:18:51.769Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+Unique constraint failed on the constraint: `OrderDetails_user_id_key`
+2024-03-14T19:18:51.772Z	[async_error]	error	null
+2024-03-14T20:23:41.424Z	[orders]	info	Creating new order
+2024-03-14T20:23:41.428Z	[sale]	info	Creating sale
+2024-03-14T20:23:41.431Z	[sale]	info	Creating sale
+2024-03-14T20:23:41.549Z	[orderItem]	info	Creating order item
+2024-03-14T20:23:41.554Z	[orderItem]	info	Creating order item
+2024-03-14T20:23:41.590Z	[async_error]	error	null
+2024-03-14T20:23:41.593Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+Unique constraint failed on the constraint: `ShippingDetails_user_id_key`
+2024-03-14T20:23:41.595Z	[async_error]	error	null
+2024-03-14T20:33:19.607Z	[orders]	info	Creating new order
+2024-03-14T20:33:19.612Z	[sale]	info	Creating sale
+2024-03-14T20:33:19.616Z	[sale]	info	Creating sale
+2024-03-14T20:33:19.712Z	[orderItem]	info	Creating order item
+2024-03-14T20:33:19.717Z	[orderItem]	info	Creating order item
+2024-03-14T20:33:46.778Z	[category]	info	Fetching categories
+2024-03-14T20:33:46.814Z	[discounts]	info	Fetching discounts
+2024-03-14T20:35:38.111Z	[products]	info	Creating product
+2024-03-14T20:35:39.567Z	[products]	info	Creating product
+2024-03-14T20:35:41.301Z	[async_error]	error	null
+2024-03-14T20:35:41.305Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`

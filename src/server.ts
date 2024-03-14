@@ -11,6 +11,7 @@ import GooglePassportStrategy from "./config/passport-google-config";
 import ProductRouter from "./routes/api/product.routes";
 import DiscountRouter from "./routes/api/discounts.routes";
 import CategoryRouter from "./routes/api/category.routes";
+import OrdersRouter from "./routes/api/orders.routes";
 
 /* ---------------- Server set up ----------------------- */
 
@@ -53,6 +54,9 @@ app.use("/auth", AuthRouter);
 app.use("/api/product", ProductRouter);
 app.use("/api/discounts", DiscountRouter);
 app.use("/api/category", CategoryRouter);
+app.use("/api/orders", OrdersRouter);
+
+
 // Error Logger 
 app.use(ErrMiddleWareHandler.ErrHandler);
 

@@ -17,9 +17,7 @@ AuthRouter.post('/register', async(req,res) => {
   await registerController.createUser();
 })
 //Login route
-AuthRouter.post('/login', verifyUser, JWTMiddlewareAssigner, (req,res) => {
-  res.status(200).json({msg: "Ok"});
-})
+AuthRouter.post('/login', verifyUser, JWTMiddlewareAssigner)
 
 // Logout route
 AuthRouter.get("/logout", (req, res) => {
