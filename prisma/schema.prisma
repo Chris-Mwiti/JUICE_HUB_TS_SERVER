@@ -77,6 +77,7 @@ model Product {
 }
 
 model ProductRefunds {
+
   id String @id @map("refund_id")
   returnDate DateTime @default(now())
   status RefundStatus @default(pending)
@@ -216,6 +217,7 @@ model OrderItems {
   product Product @relation(fields: [productId], references: [id], onUpdate: Cascade)
   productId String @map("product_id")
   quantity Int
+  price Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -299,6 +301,7 @@ enum PaymentProviders {
 }
 
 enum OrderStatus {
+  canceled
   pending
   completed
   refunded

@@ -1,4 +1,4 @@
-import { OrderDetails, OrderItems, OrderStatus, PaymentProviders, Prisma, Product, ShippingDetails, User } from "@prisma/client";
+import { OrderDetails, OrderItems, OrderStatus, PaymentProviders, Prisma, Product, ProductRefunds, ShippingDetails, User } from "@prisma/client";
 import prismaClient from "../config/prismaConfig";
 import trycatchHelper from "../util/functions/trycatch";
 import RecordIdGenerator from "./generators/RecordIdGenerator";
@@ -12,6 +12,45 @@ export type TOrderDto = Omit<OrderDetails, "id"> & {
     shippingDto: Omit<ShippingDetails, "id" | "userId">
     userId: string;
 }
+
+const orderInclude:Prisma.OrderDetailsInclude = Prisma.validator<Prisma.OrderDetailsInclude>()({
+    user: {
+        select: {
+            id: true,
+            avatarUrl: true,
+            firstName: true,
+            lastName: true,
+            order: true,
+        }
+    },
+    payment: true,
+    items: {
+        select: {
+            product: {
+                select: {
+                    productName: true,
+                    sellingPrice: true,
+                    assetIds: {
+                        select: {
+                            id: true,
+                        },
+                        include: {
+                            images: true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    shippingInfo: true
+})
+
+const OrdersIncludeDto = Prisma.validator<Prisma.OrderDetailsDefaultArgs>()({
+    include: orderInclude
+});
+
+export type TOrderIncludeDto = Prisma.OrderDetailsGetPayload<typeof OrdersIncludeDto>
+
 
 class Orders {
     private static model = prismaClient.orderDetails;
@@ -46,6 +85,11 @@ class Orders {
                             connect: {id: orderDto.userId}
                         }
                     }
+                },
+                user: {
+                    connect: {
+                        id: orderDto.userId
+                    }
                 }
             }
            })
@@ -60,8 +104,11 @@ class Orders {
     }
 
     public static async getAllOrders(){
-        const {data: orderInfos, error: fetchError} = await trycatchHelper<OrderDetails[]>(
-            () => this.model.findMany()
+        const {data: orderInfos, error: fetchError} = await trycatchHelper<TOrderIncludeDto[]>(
+            () => this.model.findMany({
+                include: orderInclude
+            })
+            
         );
 
         if(fetchError) throw new DatabaseError({
@@ -73,11 +120,12 @@ class Orders {
     }
 
     public static async getOrderById(orderId:string){
-        const {data: orderInfo, error: fetchErr} = await trycatchHelper<OrderDetails>(
+        const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
             () => this.model.findUnique({
                 where: {
                     id: orderId
-                }
+                },
+                include: orderInclude
             })
         )
 
@@ -90,14 +138,16 @@ class Orders {
     }
 
     public static async updateOrderStatus(orderId:string,status: OrderStatus){
-        const {data: updatedInfo, error: updateErr} = await trycatchHelper<OrderDetails>(
+        
+        const {data: updatedInfo, error: updateErr} = await trycatchHelper<TOrderIncludeDto>(
             () =>  this.model.update({
                 where: {
                     id: orderId
                 },
                 data: {
                     status: status
-                }
+                },
+                include: orderInclude
             })
         )
 

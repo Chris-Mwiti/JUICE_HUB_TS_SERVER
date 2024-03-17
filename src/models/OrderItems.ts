@@ -41,6 +41,7 @@ class OrderItemsModel {
               id: new RecordIdGenerator("ORDER_ITEM").generate(),
               productId: dto.productId,
               quantity: dto.quantity,
+              price: dto.price
             },
           })
         );

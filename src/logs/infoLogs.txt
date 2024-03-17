@@ -566,3 +566,529 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.t
   94   await trycatchHelper<IProduct>(() =>
 → 95     this.model.create(
 Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-14T21:45:50.498Z	[category]	info	Fetching categories
+2024-03-14T21:45:50.530Z	[discounts]	info	Fetching discounts
+2024-03-14T21:47:14.852Z	[category]	info	Fetching categories
+2024-03-14T21:47:14.859Z	[discounts]	info	Fetching discounts
+2024-03-14T21:47:19.668Z	[category]	info	Fetching categories
+2024-03-14T21:47:19.676Z	[discounts]	info	Fetching discounts
+2024-03-14T21:50:21.463Z	[category]	info	Fetching categories
+2024-03-14T21:50:21.471Z	[discounts]	info	Fetching discounts
+2024-03-14T21:50:42.595Z	[category]	info	Fetching categories
+2024-03-14T21:50:42.607Z	[discounts]	info	Fetching discounts
+2024-03-14T21:50:49.452Z	[category]	info	Fetching categories
+2024-03-14T21:50:49.469Z	[discounts]	info	Fetching discounts
+2024-03-14T21:56:31.972Z	[category]	info	Fetching categories
+2024-03-14T21:56:31.984Z	[discounts]	info	Fetching discounts
+2024-03-14T22:01:45.348Z	[category]	info	Fetching categories
+2024-03-14T22:01:45.355Z	[discounts]	info	Fetching discounts
+2024-03-14T22:11:10.031Z	[orders]	info	Fetching orders
+2024-03-14T22:12:49.975Z	[orders]	info	Fetching orders
+2024-03-14T22:13:31.731Z	[orders]	info	Creating new order
+2024-03-14T22:13:31.735Z	[sale]	info	Creating sale
+2024-03-14T22:13:31.740Z	[sale]	info	Creating sale
+2024-03-14T22:13:31.783Z	[orderItem]	info	Creating order item
+2024-03-14T22:13:31.789Z	[orderItem]	info	Creating order item
+2024-03-14T22:14:05.128Z	[orders]	info	Fetching orders
+2024-03-14T22:15:35.015Z	[orders]	info	Creating new order
+2024-03-14T22:15:35.020Z	[sale]	info	Creating sale
+2024-03-14T22:15:35.023Z	[sale]	info	Creating sale
+2024-03-14T22:15:35.053Z	[orderItem]	info	Creating order item
+2024-03-14T22:15:35.060Z	[orderItem]	info	Creating order item
+2024-03-14T22:15:38.249Z	[orders]	info	Fetching orders
+2024-03-17T12:19:01.027Z	[category]	info	Fetching categories
+2024-03-17T12:19:01.037Z	[discounts]	info	Fetching discounts
+2024-03-17T12:32:24.056Z	[discounts]	info	Creating discount
+2024-03-17T12:32:46.440Z	[discounts]	info	Creating discount
+2024-03-17T12:32:50.766Z	[discounts]	info	Creating discount
+2024-03-17T12:32:56.779Z	[discounts]	info	Creating discount
+2024-03-17T12:33:06.251Z	[category]	info	Fetching categories
+2024-03-17T12:33:06.296Z	[discounts]	info	Fetching discounts
+2024-03-17T12:33:21.568Z	[products]	info	Creating product
+2024-03-17T12:33:25.602Z	[products]	info	Creating product
+2024-03-17T12:33:27.505Z	[async_error]	error	null
+2024-03-17T12:33:27.508Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-17T12:34:05.510Z	[discounts]	info	Fetching discounts
+2024-03-17T12:34:05.522Z	[category]	info	Fetching categories
+2024-03-17T12:34:51.908Z	[category]	info	Fetching categories
+2024-03-17T12:34:51.930Z	[discounts]	info	Fetching discounts
+2024-03-17T12:35:25.420Z	[category]	info	Fetching categories
+2024-03-17T12:35:25.437Z	[discounts]	info	Fetching discounts
+2024-03-17T12:36:26.097Z	[category]	info	Fetching categories
+2024-03-17T12:36:26.120Z	[discounts]	info	Fetching discounts
+2024-03-17T12:36:35.649Z	[category]	info	Fetching categories
+2024-03-17T12:36:35.668Z	[discounts]	info	Fetching discounts
+2024-03-17T12:38:00.592Z	[products]	info	Creating product
+2024-03-17T12:38:14.926Z	[category]	info	Fetching categories
+2024-03-17T12:38:14.937Z	[discounts]	info	Fetching discounts
+2024-03-17T12:39:16.503Z	[category]	info	Fetching categories
+2024-03-17T12:39:16.512Z	[discounts]	info	Fetching discounts
+2024-03-17T12:39:19.283Z	[category]	info	Fetching categories
+2024-03-17T12:39:19.302Z	[discounts]	info	Fetching discounts
+2024-03-17T12:39:21.289Z	[category]	info	Fetching categories
+2024-03-17T12:39:21.296Z	[discounts]	info	Fetching discounts
+2024-03-17T12:39:23.310Z	[category]	info	Fetching categories
+2024-03-17T12:39:23.317Z	[discounts]	info	Fetching discounts
+2024-03-17T12:39:35.502Z	[category]	info	Fetching categories
+2024-03-17T12:39:35.510Z	[discounts]	info	Fetching discounts
+2024-03-17T12:39:37.279Z	[category]	info	Fetching categories
+2024-03-17T12:39:37.284Z	[discounts]	info	Fetching discounts
+2024-03-17T12:39:40.934Z	[category]	info	Fetching categories
+2024-03-17T12:39:40.951Z	[discounts]	info	Fetching discounts
+2024-03-17T12:41:04.144Z	[products]	info	Creating product
+2024-03-17T12:44:34.280Z	[orders]	info	Creating new order
+2024-03-17T12:44:34.282Z	[sale]	info	Creating sale
+2024-03-17T12:44:34.285Z	[sale]	info	Creating sale
+2024-03-17T12:44:34.307Z	[async_error]	error	null
+2024-03-17T12:44:34.309Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductSales.ts:59:26
+
+  56 
+  57 public static async createProductSale(sales:number, productId:string, lastPurchaseDate?:Date){
+  58   const {data: newProductSale, error:postError} = await trycatchHelper<IProductSales>(
+→ 59       () => this.model.create(
+Foreign key constraint failed on the field: `productId`	 PrismaClientKnownRequestError
+2024-03-17T12:44:34.314Z	[orderItem]	info	Creating order item
+2024-03-17T12:44:34.318Z	[async_error]	error	null
+2024-03-17T12:44:34.322Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductSales.ts:59:26
+
+  56 
+  57 public static async createProductSale(sales:number, productId:string, lastPurchaseDate?:Date){
+  58   const {data: newProductSale, error:postError} = await trycatchHelper<IProductSales>(
+→ 59       () => this.model.create(
+Foreign key constraint failed on the field: `productId`	 PrismaClientKnownRequestError
+2024-03-17T12:44:34.329Z	[orderItem]	info	Creating order item
+2024-03-17T12:44:34.339Z	[async_error]	error	null
+2024-03-17T12:44:34.340Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-9be4ec60d3",
+             productId: "PRODUCT-9875d623b2",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:44:34.344Z	[async_error]	error	null
+2024-03-17T12:44:34.349Z	[async_error]	error	null
+2024-03-17T12:44:34.354Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-940be99b13",
+             productId: "PRODUCT-5df21a58cd",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:46:45.332Z	[orders]	info	Creating new order
+2024-03-17T12:46:45.338Z	[sale]	info	Creating sale
+2024-03-17T12:46:45.341Z	[sale]	info	Creating sale
+2024-03-17T12:46:45.352Z	[orderItem]	info	Creating order item
+2024-03-17T12:46:45.356Z	[orderItem]	info	Creating order item
+2024-03-17T12:46:45.360Z	[async_error]	error	null
+2024-03-17T12:46:45.361Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-87a60000e2",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:46:45.366Z	[async_error]	error	null
+2024-03-17T12:46:45.372Z	[async_error]	error	null
+2024-03-17T12:46:45.374Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-daee109c6f",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:02.908Z	[orders]	info	Creating new order
+2024-03-17T12:47:02.917Z	[sale]	info	Creating sale
+2024-03-17T12:47:02.923Z	[sale]	info	Creating sale
+2024-03-17T12:47:02.956Z	[orderItem]	info	Creating order item
+2024-03-17T12:47:02.962Z	[orderItem]	info	Creating order item
+2024-03-17T12:47:02.980Z	[async_error]	error	null
+2024-03-17T12:47:02.983Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-ace7fdc77e",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:02.988Z	[async_error]	error	null
+2024-03-17T12:47:03.000Z	[async_error]	error	null
+2024-03-17T12:47:03.003Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-b4100e8f87",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:49.932Z	[orders]	info	Creating new order
+2024-03-17T12:47:49.935Z	[sale]	info	Creating sale
+2024-03-17T12:47:49.936Z	[sale]	info	Creating sale
+2024-03-17T12:47:49.949Z	[orderItem]	info	Creating order item
+2024-03-17T12:47:49.953Z	[orderItem]	info	Creating order item
+2024-03-17T12:47:49.960Z	[async_error]	error	null
+2024-03-17T12:47:49.963Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-f88c2925e5",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:49.967Z	[async_error]	error	null
+2024-03-17T12:47:49.978Z	[async_error]	error	null
+2024-03-17T12:47:49.980Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-dd88c19165",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:58.206Z	[orders]	info	Creating new order
+2024-03-17T12:47:58.210Z	[sale]	info	Creating sale
+2024-03-17T12:47:58.215Z	[sale]	info	Creating sale
+2024-03-17T12:47:58.238Z	[orderItem]	info	Creating order item
+2024-03-17T12:47:58.241Z	[orderItem]	info	Creating order item
+2024-03-17T12:47:58.262Z	[async_error]	error	null
+2024-03-17T12:47:58.264Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-f1c20da48e",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:58.269Z	[async_error]	error	null
+2024-03-17T12:47:58.283Z	[async_error]	error	null
+2024-03-17T12:47:58.285Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-7b5ed7b534",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:48:58.263Z	[orders]	info	Creating new order
+2024-03-17T12:48:58.265Z	[sale]	info	Creating sale
+2024-03-17T12:48:58.269Z	[sale]	info	Creating sale
+2024-03-17T12:48:58.279Z	[orderItem]	info	Creating order item
+2024-03-17T12:48:58.284Z	[orderItem]	info	Creating order item
+2024-03-17T12:48:58.290Z	[async_error]	error	null
+2024-03-17T12:48:58.292Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-3b613c249c",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:48:58.296Z	[async_error]	error	null
+2024-03-17T12:48:58.300Z	[async_error]	error	null
+2024-03-17T12:48:58.304Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-e4742a2db6",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:49:24.978Z	[orders]	info	Creating new order
+2024-03-17T12:49:24.984Z	[sale]	info	Creating sale
+2024-03-17T12:49:24.992Z	[sale]	info	Creating sale
+2024-03-17T12:49:25.025Z	[orderItem]	info	Creating order item
+2024-03-17T12:49:25.029Z	[orderItem]	info	Creating order item
+2024-03-17T12:49:25.046Z	[async_error]	error	null
+2024-03-17T12:49:25.048Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-79e25a0c87",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:49:25.051Z	[async_error]	error	null
+2024-03-17T12:49:25.063Z	[async_error]	error	null
+2024-03-17T12:49:25.065Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-4a13537c41",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:49:58.371Z	[orders]	info	Creating new order
+2024-03-17T12:49:58.376Z	[sale]	info	Creating sale
+2024-03-17T12:49:58.379Z	[sale]	info	Creating sale
+2024-03-17T12:49:58.403Z	[orderItem]	info	Creating order item
+2024-03-17T12:49:58.425Z	[orderItem]	info	Creating order item
+2024-03-17T12:49:58.465Z	[async_error]	error	null
+2024-03-17T12:49:58.467Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:49:58.470Z	[async_error]	error	null
+2024-03-17T12:50:45.598Z	[orders]	info	Creating new order
+2024-03-17T12:50:45.603Z	[sale]	info	Creating sale
+2024-03-17T12:50:45.607Z	[sale]	info	Creating sale
+2024-03-17T12:50:45.640Z	[orderItem]	info	Creating order item
+2024-03-17T12:50:45.647Z	[orderItem]	info	Creating order item
+2024-03-17T12:50:45.685Z	[async_error]	error	null
+2024-03-17T12:50:45.687Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:50:45.690Z	[async_error]	error	null
+2024-03-17T12:56:25.004Z	[orders]	info	Creating new order
+2024-03-17T12:56:25.005Z	[sale]	info	Creating sale
+2024-03-17T12:56:25.007Z	[sale]	info	Creating sale
+2024-03-17T12:56:25.029Z	[orderItem]	info	Creating order item
+2024-03-17T12:56:25.037Z	[orderItem]	info	Creating order item
+2024-03-17T12:56:25.068Z	[async_error]	error	null
+2024-03-17T12:56:25.070Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:56:25.074Z	[async_error]	error	null
+2024-03-17T12:59:04.503Z	[orders]	info	Creating new order
+2024-03-17T12:59:04.505Z	[sale]	info	Creating sale
+2024-03-17T12:59:04.507Z	[sale]	info	Creating sale
+2024-03-17T12:59:04.525Z	[orderItem]	info	Creating order item
+2024-03-17T12:59:04.534Z	[orderItem]	info	Creating order item
+2024-03-17T12:59:04.565Z	[async_error]	error	null
+2024-03-17T12:59:04.568Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:59:04.570Z	[async_error]	error	null
+2024-03-17T12:59:06.247Z	[orders]	info	Creating new order
+2024-03-17T12:59:06.249Z	[sale]	info	Creating sale
+2024-03-17T12:59:06.251Z	[sale]	info	Creating sale
+2024-03-17T12:59:06.263Z	[orderItem]	info	Creating order item
+2024-03-17T12:59:06.270Z	[orderItem]	info	Creating order item
+2024-03-17T12:59:06.294Z	[async_error]	error	null
+2024-03-17T12:59:06.299Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:59:06.301Z	[async_error]	error	null
+2024-03-17T12:59:23.149Z	[orders]	info	Creating new order
+2024-03-17T12:59:23.151Z	[sale]	info	Creating sale
+2024-03-17T12:59:23.154Z	[sale]	info	Creating sale
+2024-03-17T12:59:23.166Z	[orderItem]	info	Creating order item
+2024-03-17T12:59:23.171Z	[orderItem]	info	Creating order item
+2024-03-17T12:59:23.200Z	[async_error]	error	null
+2024-03-17T12:59:23.206Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:59:23.209Z	[async_error]	error	null
+2024-03-17T13:05:04.614Z	[orders]	info	Creating new order
+2024-03-17T13:05:04.617Z	[sale]	info	Creating sale
+2024-03-17T13:05:04.619Z	[sale]	info	Creating sale
+2024-03-17T13:05:04.649Z	[orderItem]	info	Creating order item
+2024-03-17T13:05:04.652Z	[orderItem]	info	Creating order item
+2024-03-17T13:05:04.683Z	[async_error]	error	null
+2024-03-17T13:05:04.684Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T13:05:04.686Z	[async_error]	error	null
+2024-03-17T13:05:22.598Z	[orders]	info	Creating new order
+2024-03-17T13:05:22.603Z	[sale]	info	Creating sale
+2024-03-17T13:05:22.617Z	[sale]	info	Creating sale
+2024-03-17T13:05:22.697Z	[orderItem]	info	Creating order item
+2024-03-17T13:05:22.706Z	[orderItem]	info	Creating order item
+2024-03-17T13:05:22.751Z	[async_error]	error	null
+2024-03-17T13:05:22.754Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T13:05:22.760Z	[async_error]	error	null
+2024-03-17T13:07:01.329Z	[orders]	info	Creating new order
+2024-03-17T13:07:01.332Z	[sale]	info	Creating sale
+2024-03-17T13:07:01.334Z	[sale]	info	Creating sale
+2024-03-17T13:07:01.354Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:01.359Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:21.679Z	[orders]	info	Creating new order
+2024-03-17T13:07:21.681Z	[sale]	info	Creating sale
+2024-03-17T13:07:21.682Z	[sale]	info	Creating sale
+2024-03-17T13:07:21.703Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:21.711Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:23.578Z	[orders]	info	Creating new order
+2024-03-17T13:07:23.580Z	[sale]	info	Creating sale
+2024-03-17T13:07:23.582Z	[sale]	info	Creating sale
+2024-03-17T13:07:23.601Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:23.608Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:24.842Z	[orders]	info	Creating new order
+2024-03-17T13:07:24.844Z	[sale]	info	Creating sale
+2024-03-17T13:07:24.846Z	[sale]	info	Creating sale
+2024-03-17T13:07:24.857Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:24.862Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:26.049Z	[orders]	info	Creating new order
+2024-03-17T13:07:26.052Z	[sale]	info	Creating sale
+2024-03-17T13:07:26.055Z	[sale]	info	Creating sale
+2024-03-17T13:07:26.071Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:26.082Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:27.015Z	[orders]	info	Creating new order
+2024-03-17T13:07:27.017Z	[sale]	info	Creating sale
+2024-03-17T13:07:27.018Z	[sale]	info	Creating sale
+2024-03-17T13:07:27.033Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:27.038Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:27.922Z	[orders]	info	Creating new order
+2024-03-17T13:07:27.923Z	[sale]	info	Creating sale
+2024-03-17T13:07:27.925Z	[sale]	info	Creating sale
+2024-03-17T13:07:27.936Z	[orderItem]	info	Creating order item
+2024-03-17T13:07:27.942Z	[orderItem]	info	Creating order item
+2024-03-17T13:08:41.295Z	[orders]	info	Creating new order
+2024-03-17T13:08:41.297Z	[sale]	info	Creating sale
+2024-03-17T13:08:41.299Z	[sale]	info	Creating sale

@@ -13,7 +13,7 @@ interface IRefundInfo {
 const productRefundInclude:Prisma.ProductRefundsInclude = Prisma.validator<Prisma.ProductRefundsInclude>()({
     product:{
         select:{
-            price:true,
+            sellingPrice:true,
             productName: true
         }
     }
@@ -22,7 +22,7 @@ const productRefundJoin = Prisma.validator<Prisma.ProductRefundsDefaultArgs>()({
     include:{
         product:{
             select:{
-                price:true,
+                sellingPrice:true,
                 productName:true
             }
         }

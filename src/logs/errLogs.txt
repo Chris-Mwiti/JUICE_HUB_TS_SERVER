@@ -476,3 +476,348 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.t
   94   await trycatchHelper<IProduct>(() =>
 → 95     this.model.create(
 Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-17T12:33:27.505Z	[async_error]	error	null
+2024-03-17T12:33:27.508Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-17T12:44:34.307Z	[async_error]	error	null
+2024-03-17T12:44:34.309Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductSales.ts:59:26
+
+  56 
+  57 public static async createProductSale(sales:number, productId:string, lastPurchaseDate?:Date){
+  58   const {data: newProductSale, error:postError} = await trycatchHelper<IProductSales>(
+→ 59       () => this.model.create(
+Foreign key constraint failed on the field: `productId`	 PrismaClientKnownRequestError
+2024-03-17T12:44:34.318Z	[async_error]	error	null
+2024-03-17T12:44:34.322Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductSales.ts:59:26
+
+  56 
+  57 public static async createProductSale(sales:number, productId:string, lastPurchaseDate?:Date){
+  58   const {data: newProductSale, error:postError} = await trycatchHelper<IProductSales>(
+→ 59       () => this.model.create(
+Foreign key constraint failed on the field: `productId`	 PrismaClientKnownRequestError
+2024-03-17T12:44:34.339Z	[async_error]	error	null
+2024-03-17T12:44:34.340Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-9be4ec60d3",
+             productId: "PRODUCT-9875d623b2",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:44:34.344Z	[async_error]	error	null
+2024-03-17T12:44:34.349Z	[async_error]	error	null
+2024-03-17T12:44:34.354Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-940be99b13",
+             productId: "PRODUCT-5df21a58cd",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:46:45.360Z	[async_error]	error	null
+2024-03-17T12:46:45.361Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-87a60000e2",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:46:45.366Z	[async_error]	error	null
+2024-03-17T12:46:45.372Z	[async_error]	error	null
+2024-03-17T12:46:45.374Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-daee109c6f",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:02.980Z	[async_error]	error	null
+2024-03-17T12:47:02.983Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-ace7fdc77e",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:02.988Z	[async_error]	error	null
+2024-03-17T12:47:03.000Z	[async_error]	error	null
+2024-03-17T12:47:03.003Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-b4100e8f87",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:49.960Z	[async_error]	error	null
+2024-03-17T12:47:49.963Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-f88c2925e5",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:49.967Z	[async_error]	error	null
+2024-03-17T12:47:49.978Z	[async_error]	error	null
+2024-03-17T12:47:49.980Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-dd88c19165",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:58.262Z	[async_error]	error	null
+2024-03-17T12:47:58.264Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-f1c20da48e",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:47:58.269Z	[async_error]	error	null
+2024-03-17T12:47:58.283Z	[async_error]	error	null
+2024-03-17T12:47:58.285Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-7b5ed7b534",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:48:58.290Z	[async_error]	error	null
+2024-03-17T12:48:58.292Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-3b613c249c",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:48:58.296Z	[async_error]	error	null
+2024-03-17T12:48:58.300Z	[async_error]	error	null
+2024-03-17T12:48:58.304Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-e4742a2db6",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:49:25.046Z	[async_error]	error	null
+2024-03-17T12:49:25.048Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-79e25a0c87",
+             productId: "PRODUCT-c6b3c619e1",
+             quantity: 12,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:49:25.051Z	[async_error]	error	null
+2024-03-17T12:49:25.063Z	[async_error]	error	null
+2024-03-17T12:49:25.065Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:39:22
+
+  36 logger("orderItem").info("Creating order item");
+  37 const { data: itemInfo, error: createErr } =
+  38   await trycatchHelper<OrderItems>(() =>
+→ 39     this.model.create({
+           data: {
+             id: "ORDER_ITEM-4a13537c41",
+             productId: "PRODUCT-fa605fde4e",
+             quantity: 8,
+         +   price: Int
+           }
+         })
+
+Argument `price` is missing.
+2024-03-17T12:49:58.465Z	[async_error]	error	null
+2024-03-17T12:49:58.467Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:49:58.470Z	[async_error]	error	null
+2024-03-17T12:50:45.685Z	[async_error]	error	null
+2024-03-17T12:50:45.687Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:50:45.690Z	[async_error]	error	null
+2024-03-17T12:56:25.068Z	[async_error]	error	null
+2024-03-17T12:56:25.070Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:56:25.074Z	[async_error]	error	null
+2024-03-17T12:59:04.565Z	[async_error]	error	null
+2024-03-17T12:59:04.568Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:59:04.570Z	[async_error]	error	null
+2024-03-17T12:59:06.294Z	[async_error]	error	null
+2024-03-17T12:59:06.299Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:59:06.301Z	[async_error]	error	null
+2024-03-17T12:59:23.200Z	[async_error]	error	null
+2024-03-17T12:59:23.206Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T12:59:23.209Z	[async_error]	error	null
+2024-03-17T13:05:04.683Z	[async_error]	error	null
+2024-03-17T13:05:04.684Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T13:05:04.686Z	[async_error]	error	null
+2024-03-17T13:05:22.751Z	[async_error]	error	null
+2024-03-17T13:05:22.754Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-17T13:05:22.760Z	[async_error]	error	null
