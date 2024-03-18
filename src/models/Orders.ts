@@ -13,37 +13,37 @@ export type TOrderDto = Omit<OrderDetails, "id"> & {
     userId: string;
 }
 
-const orderInclude:Prisma.OrderDetailsInclude = Prisma.validator<Prisma.OrderDetailsInclude>()({
+const orderInclude: Prisma.OrderDetailsInclude =
+  Prisma.validator<Prisma.OrderDetailsInclude>()({
     user: {
-        select: {
-            id: true,
-            avatarUrl: true,
-            firstName: true,
-            lastName: true,
-            order: true,
-        }
+      select: {
+        id: true,
+        avatarUrl: true,
+        firstName: true,
+        lastName: true,
+        order: true,
+      },
     },
     payment: true,
     items: {
-        select: {
-            product: {
-                select: {
-                    productName: true,
-                    sellingPrice: true,
-                    assetIds: {
-                        select: {
-                            id: true,
-                        },
-                        include: {
-                            images: true
-                        }
-                    }
-                }
-            }
-        }
+      include: {
+        product: {
+          select: {
+            productName: true,
+            sellingPrice: true,
+            inventoryId: true,
+            assetIds: {
+              select: {
+                id: true,
+                images: true,
+              },
+            },
+          },
+        },
+      },
     },
-    shippingInfo: true
-})
+    shippingInfo: true,
+  });
 
 const OrdersIncludeDto = Prisma.validator<Prisma.OrderDetailsDefaultArgs>()({
     include: orderInclude

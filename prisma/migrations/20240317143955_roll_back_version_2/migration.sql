@@ -1,0 +1,2 @@
+-- DropIndex
+DROP TABLE `productrefunds`

@@ -1,7 +1,14 @@
 import { Request, Response } from "express";
-import Orders, { TOrderDto } from "../models/Orders";
+import Orders, { TOrderDto, TOrderIncludeDto } from "../models/Orders";
 import trycatchHelper from "../util/functions/trycatch";
-import { OrderItems, OrderStatus, ProductRefunds } from "@prisma/client";
+import {
+  Inventory,
+  OrderDetails,
+  OrderItems,
+  OrderStatus,
+  ProductRefunds,
+  ProductSales,
+} from "@prisma/client";
 import OrderItemsModel from "../models/OrderItems";
 import { checkErrProperties } from "../helpers/customError";
 import ResponseHandler from "../util/classes/modelResponseHandlers";
@@ -10,13 +17,26 @@ import { IUser } from "../models/Interfaces/IModels";
 import { TReqUser } from "../middlewares/verifyJWT";
 import ProductRefundsModel from "../models/ProductRefund";
 import ProductRefundsController from "./ProductRefundsController";
+import ProductSalesModel from "../models/ProductSales";
+import DatabaseError from "../helpers/databaseError";
+import { PrismaErrorTypes } from "../helpers/prismaErrHandler";
+import StockController from "./StockController";
+
+type TUpdateBodyDto = {
+  status: OrderStatus;
+};
 
 class OrderController {
   private model = Orders;
   private itemsModel = OrderItemsModel;
-  private refundsController = new ProductRefundsController(this.req, this.res);
+  private refundsController: ProductRefundsController;
+  private stockController: StockController;
+  private salesModel = ProductSalesModel;
 
-  constructor(private req: Request, private res: Response) {}
+  constructor(private req: Request, private res: Response) {
+    this.refundsController = new ProductRefundsController(req, res);
+    this.stockController = new StockController(req,res);
+  }
 
   public async createOrder() {
     logger("orders").info("Creating new order");
@@ -30,7 +50,6 @@ class OrderController {
       OrderItems[]
     >(() => this.itemsModel.createOrderItem(orderDto.items));
     if (createErr) return checkErrProperties(this.res, createErr);
-
     if (!orderItems)
       return this.res.status(500).json({ err: "Internal server error" });
 
@@ -71,18 +90,65 @@ class OrderController {
   public async updateOrderStatus() {
     logger("orders").info("Updating order");
     const { orderId } = this.req.params;
-    const status: OrderStatus = this.req.body;
+    const updateDto: TUpdateBodyDto = this.req.body;
 
-    if(status === "canceled"){
-      const {data: refundedInfo, error:refundedErr} = await trycatchHelper<ProductRefunds[]>(
-        () => this.refundsController.createRefund(orderId)
-      )
-      if(refundedErr) return checkErrProperties(this.res, refundedErr);
+    if (updateDto.status === "canceled") {
+      const { data: refundedInfo, error: refundedErr } = await trycatchHelper<
+        ProductRefunds[]
+      >(() => this.refundsController.createRefund(orderId));
+      if (refundedErr) return checkErrProperties(this.res, refundedErr);
+    }
+
+    if (updateDto.status == "completed") {
+      const { data: orderInfo, error: fetchErr } =
+        await trycatchHelper<TOrderIncludeDto>(() =>
+          this.model.getOrderById(orderId)
+        );
+
+      if (fetchErr) return checkErrProperties(this.res, fetchErr);
+
+      //Create sales info for each item
+      //@TODO: Shift to a product sale controller
+      const salesPromises = orderInfo?.items.map(async (dto) => {
+        logger("sale").info("Creating sale");
+        const { data: saleInfo, error: saleErr } =
+          await trycatchHelper<ProductSales>(() =>
+            this.salesModel.createProductSale(dto.quantity, dto.productId)
+          );
+
+        if (saleErr)
+          throw new DatabaseError({
+            message: [
+              "Error while creating product sale",
+              saleErr as PrismaErrorTypes,
+            ],
+            code: "500",
+          });
+
+        logger("inventory").info("Updating the inventory");
+        const {data: inventoryInfo, error:updateErr} = await trycatchHelper<Inventory>(
+          () => this.stockController.reduceProductQtyByProductId(dto.productId,dto.quantity)
+        )
+
+        if(updateErr) return checkErrProperties(this.res,updateErr);
+
+        return {
+          inventoryInfo,
+          saleInfo
+        }
+      });
+
+      if (!salesPromises)
+        return this.res.status(400).json({ err: "Order does not exist" });
+
+      await Promise.all(salesPromises);
+
+
     }
 
     const { data: updatedInfo, error: updateErr } =
       await trycatchHelper<Orders>(() =>
-        this.model.updateOrderStatus(orderId, status)
+        this.model.updateOrderStatus(orderId, updateDto.status)
       );
 
     if (updateErr) return checkErrProperties(this.res, updateErr);

@@ -54,14 +54,14 @@ type TProductSaleProduct = Prisma.ProductSalesGetPayload<typeof productSaleProdu
 class ProductSalesModel {
   private static model = prismaClient.productSales;
 
-  public static async createProductSale(sales:number, productId:string, lastPurchaseDate?:Date){
+  public static async createProductSale(sales:number, productId:string,lastPurchaseDate?:Date){
     const {data: newProductSale, error:postError} = await trycatchHelper<IProductSales>(
         () => this.model.create({
             data:{
                 id: new RecordIdGenerator("SALE").generate(),
                 lastPurchaseDate: lastPurchaseDate ? lastPurchaseDate : new Date(),
                 sales: sales,
-                productId: productId
+                productId: productId,
             }
         })
 
@@ -173,6 +173,7 @@ class ProductSalesModel {
     return deletedSalesInfos;
 
   }
+
 
 }
 

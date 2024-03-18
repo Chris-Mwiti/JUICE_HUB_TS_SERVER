@@ -16,23 +16,7 @@ class OrderItemsModel {
   public static async createOrderItem(itemDtos: TOrderItem[]) {
     //Create Product sales for each item
     const orderItemsPromises = itemDtos.map(async (dto) => {
-      logger("sale").info("Creating sale");
-      const { data: saleInfo, error: saleErr } =
-        await trycatchHelper<ProductSales>(() =>
-          this.salesModel.createProductSale(dto.quantity, dto.productId)
-        );
-
-      if (saleErr)
-        throw new DatabaseError({
-          message: [
-            "Error while creating product sale",
-            saleErr as PrismaErrorTypes,
-          ],
-          code: "500",
-        });
-
-      console.log(saleInfo);
-
+    
       logger("orderItem").info("Creating order item");
       const { data: itemInfo, error: createErr } =
         await trycatchHelper<OrderItems>(() =>

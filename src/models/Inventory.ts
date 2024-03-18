@@ -1,10 +1,18 @@
+import { Inventory } from "@prisma/client";
 import prismaClient from "../config/prismaConfig";
 import prismaErrHandler, {
   PrismaErrorTypes,
 } from "../helpers/prismaErrHandler";
 import trycatchHelper from "../util/functions/trycatch";
 import { InnerJoinActionsProperties } from "../util/types/util.types";
-import { IInventory, IProduct, TJoinModel, TJoinProductTypes } from "./Interfaces/IModels";
+import {
+  IInventory,
+  IProduct,
+  TJoinModel,
+  TJoinProductTypes,
+} from "./Interfaces/IModels";
+import DatabaseError from "../helpers/databaseError";
+import CustomError from "../helpers/customError";
 
 type TInventoryJoinProperties = {
   product?: boolean | InnerJoinActionsProperties;
@@ -27,7 +35,27 @@ class InventoryModel {
     inventoryId: string,
     qty: number,
     properties?: TInventoryJoinProperties
-  ){
+  ) {
+    const { data: inventoryInfo, error: fetchErr } =
+      await trycatchHelper<Inventory>(() => this.getProductQty(inventoryId));
+
+    if (fetchErr)
+      throw new DatabaseError({
+        message: [
+          "Error while fetching inventory info",
+          fetchErr as PrismaErrorTypes,
+        ],
+        code: "500",
+      });
+
+    if (!inventoryInfo)
+      throw new CustomError({
+        message: "Inventory does not exist",
+        code: "400",
+      });
+
+    const newProductQty = inventoryInfo.quantity + qty;
+
     const { data: updatedProductQty, error: updateErr } = await trycatchHelper<
       IInventory | TJoinModel<IInventory, TInventoryJoinTypes>
     >(() =>
@@ -36,8 +64,8 @@ class InventoryModel {
           id: inventoryId,
         },
         data: {
-          quantity: qty,
-          lastRefilDate: new Date()
+          quantity: newProductQty,
+          lastRefilDate: new Date(),
         },
         include: properties,
       })
@@ -47,7 +75,31 @@ class InventoryModel {
     return updatedProductQty;
   }
 
-  public static async reduceProductQty(inventoryId: string, qty: number, properties?:TInventoryJoinProperties){
+  public static async reduceProductQty(
+    inventoryId: string,
+    qty: number,
+    properties?: TInventoryJoinProperties
+  ) {
+    const { data: inventoryInfo, error: fetchErr } =
+      await trycatchHelper<Inventory>(() => this.getProductQty(inventoryId));
+
+    if (fetchErr)
+      throw new DatabaseError({
+        message: [
+          "Error while fetching inventory info",
+          fetchErr as PrismaErrorTypes,
+        ],
+        code: "500",
+      });
+
+    if (!inventoryInfo)
+      throw new CustomError({
+        message: "Inventory does not exist",
+        code: "400",
+      });
+
+    const newProductQty = inventoryInfo.quantity - qty;
+
     const { data: updatedProductQty, error: updateErr } = await trycatchHelper<
       IInventory | TJoinModel<IInventory, TInventoryJoinTypes>
     >(() =>
@@ -56,12 +108,15 @@ class InventoryModel {
           id: inventoryId,
         },
         data: {
-          quantity: qty,
+          quantity: newProductQty,
         },
         include: properties,
       })
     );
-    if (updateErr) prismaErrHandler(updateErr as PrismaErrorTypes);
+    if (updateErr) throw new DatabaseError({
+      message: ["Error while updating inventory", updateErr as PrismaErrorTypes],
+      code: "500"
+    })
 
     return updatedProductQty;
   }
@@ -70,27 +125,29 @@ class InventoryModel {
     updateProductsInfo: TInventoryUpdateObj[],
     properties: TInventoryJoinProperties
   ) {
-    const updateInfoPromises = updateProductsInfo.map(async product => {
-        const {data: updateInfo, error: updateErr} = await trycatchHelper<IInventory | TJoinModel<IInventory, TJoinProductTypes>>(
-            () => this.model.update({
-                where: {
-                    id: product.inventoryId
-                },
-                data:{
-                    quantity: product.qty
-                },
-                include: properties
-            })
-        )
+    const updateInfoPromises = updateProductsInfo.map(async (product) => {
+      const { data: updateInfo, error: updateErr } = await trycatchHelper<
+        IInventory | TJoinModel<IInventory, TJoinProductTypes>
+      >(() =>
+        this.model.update({
+          where: {
+            id: product.inventoryId,
+          },
+          data: {
+            quantity: product.qty,
+          },
+          include: properties,
+        })
+      );
 
-        if(updateErr) prismaErrHandler(updateErr as PrismaErrorTypes)
+      if (updateErr) prismaErrHandler(updateErr as PrismaErrorTypes);
 
-        return updateInfo
-    })
+      return updateInfo;
+    });
 
-    const updatedInfos = await Promise.all(updateInfoPromises)
+    const updatedInfos = await Promise.all(updateInfoPromises);
 
-    return updatedInfos
+    return updatedInfos;
   }
 
   public static async getProductQty(
@@ -125,25 +182,30 @@ class InventoryModel {
     return productQtys;
   }
 
-  public static async getProductsQty(inventoryIds: string[], properties: TInventoryJoinProperties){
-    const fetchPromise = inventoryIds.map(async id => {
-        const {data: productQty, error: fetchErr} = await trycatchHelper<IInventory | TJoinModel<IInventory, TInventoryJoinTypes>>(
-            () => this.model.findUnique({
-                where:{
-                    id: id
-                },
-                include: properties
-            })
-        )
+  public static async getProductsQty(
+    inventoryIds: string[],
+    properties: TInventoryJoinProperties
+  ) {
+    const fetchPromise = inventoryIds.map(async (id) => {
+      const { data: productQty, error: fetchErr } = await trycatchHelper<
+        IInventory | TJoinModel<IInventory, TInventoryJoinTypes>
+      >(() =>
+        this.model.findUnique({
+          where: {
+            id: id,
+          },
+          include: properties,
+        })
+      );
 
-        if(fetchErr) prismaErrHandler(fetchErr as PrismaErrorTypes)
+      if (fetchErr) prismaErrHandler(fetchErr as PrismaErrorTypes);
 
-        return productQty
-    })
+      return productQty;
+    });
 
     const awaitedQtyPromises = await Promise.all(fetchPromise);
 
-    return awaitedQtyPromises
+    return awaitedQtyPromises;
   }
 
   public static async deleteProductInventory(
@@ -176,10 +238,7 @@ class InventoryModel {
     return deleteInventorys;
   }
 
-
   //Inventory Evaluations
-
-
 }
 
-export default InventoryModel
+export default InventoryModel;

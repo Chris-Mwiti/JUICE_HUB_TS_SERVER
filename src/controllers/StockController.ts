@@ -6,6 +6,8 @@ import ProductModel from "../models/Products";
 import logger from "../util/functions/logger";
 import ProductRefillsModel from "../models/ProductRefil";
 import ResponseHandler from "../util/classes/modelResponseHandlers";
+import { Inventory, Product } from "@prisma/client";
+import { checkErrProperties } from "../helpers/customError";
 
 // @TODO: Fetch the products from the cached database
 
@@ -48,6 +50,31 @@ class StockController {
         }else{
             this.res.status(400).json({err: "Missing field in the request" })
         }
+    }
+
+    public async reduceProductQty(inventoryId:string,quantity:number){
+        const { data:updatedInfo, error: updateErr} = await trycatchHelper<Inventory>(
+            () => this.model.reduceProductQty(inventoryId,quantity)
+        )
+        if(updateErr) return checkErrProperties(this.res,updateErr);
+
+        return updatedInfo
+    }
+
+    public async reduceProductQtyByProductId(productId:string,qty:number){
+        const {data: productInfo, error: fetchErr} = await trycatchHelper<Product>(
+            () => this.productModel.getProduct(productId)
+        )
+        if(fetchErr) return checkErrProperties(this.res, fetchErr);
+        if(!productInfo) return this.res.status(400).json({err: "Product was not found"});
+
+        const { data: updatedInfo, error: updateErr } =
+          await trycatchHelper<Inventory>(() =>
+            this.model.reduceProductQty(productInfo?.inventoryId, qty)
+          );
+        if (updateErr) return checkErrProperties(this.res, updateErr);
+
+        return updatedInfo;
     }
 }
 

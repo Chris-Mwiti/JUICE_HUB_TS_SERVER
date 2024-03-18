@@ -821,3 +821,456 @@ Invalid `prisma.orderDetails.create()` invocation:
 
 The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
 2024-03-17T13:05:22.760Z	[async_error]	error	null
+2024-03-17T13:32:42.819Z	[async_error]	error	null
+2024-03-17T13:32:42.822Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientValidationError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:124:30
+
+  121 
+  122 public static async getOrderById(orderId:string){
+  123     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 124         () => this.model.findUnique({
+                where: {
+                  id: "ORDER_DETAIL-1ce47c1f33"
+                },
+                include: {
+                  user: {
+                    select: {
+                      id: true,
+                      avatarUrl: true,
+                      firstName: true,
+                      lastName: true,
+                      order: true
+                    }
+                  },
+                  payment: true,
+                  items: {
+                    select: {
+                      product: {
+                        select: {
+                          productName: true,
+                          sellingPrice: true,
+                          assetIds: {
+                            select: {
+                            ~~~~~~
+                              id: true
+                            },
+                            include: {
+                            ~~~~~~~
+                              images: true
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  shippingInfo: true
+                }
+              })
+
+Please either use `include` or `select`, but not both at the same time.
+2024-03-17T13:32:42.829Z	[async_error]	error	null
+2024-03-17T13:34:21.483Z	[async_error]	error	null
+2024-03-17T13:34:21.486Z	[[DB_ERROR]]	error	Error while updating order	PrismaClientValidationError: 
+Invalid `this.model.update()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:141:31
+
+  138 public static async updateOrderStatus(orderId:string,status: OrderStatus){
+  139     
+  140     const {data: updatedInfo, error: updateErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 141         () =>  this.model.update({
+                where: {
+                  id: "ORDER_DETAIL-1ce47c1f33"
+                },
+                data: {
+                  status: {
+                    status: "canceled",
+                    ~~~~~~
+              ?     set?: OrderStatus
+                  }
+                },
+                include: {
+                  user: {
+                    select: {
+                      id: true,
+                      avatarUrl: true,
+                      firstName: true,
+                      lastName: true,
+                      order: true
+                    }
+                  },
+                  payment: true,
+                  items: {
+                    select: {
+                      product: {
+                        select: {
+                          productName: true,
+                          sellingPrice: true,
+                          assetIds: {
+                            select: {
+                              id: true,
+                              images: true
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  shippingInfo: true
+                }
+              })
+
+Unknown argument `status`. Available options are listed in green.
+2024-03-17T13:34:21.494Z	[async_error]	error	null
+2024-03-17T13:37:55.334Z	[async_error]	error	null
+2024-03-17T13:37:55.337Z	[[DB_ERROR]]	error	Error while updating order	PrismaClientValidationError: 
+Invalid `this.model.update()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:141:31
+
+  138 public static async updateOrderStatus(orderId:string,status: OrderStatus){
+  139     
+  140     const {data: updatedInfo, error: updateErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 141         () =>  this.model.update({
+                where: {
+                  id: "ORDER_DETAIL-1ce47c1f33"
+                },
+                data: {
+                  status: {
+                    status: "canceled",
+                    ~~~~~~
+              ?     set?: OrderStatus
+                  }
+                },
+                include: {
+                  user: {
+                    select: {
+                      id: true,
+                      avatarUrl: true,
+                      firstName: true,
+                      lastName: true,
+                      order: true
+                    }
+                  },
+                  payment: true,
+                  items: {
+                    select: {
+                      product: {
+                        select: {
+                          productName: true,
+                          sellingPrice: true,
+                          assetIds: {
+                            select: {
+                              id: true,
+                              images: true
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  shippingInfo: true
+                }
+              })
+
+Unknown argument `status`. Available options are listed in green.
+2024-03-17T13:37:55.348Z	[async_error]	error	null
+2024-03-17T13:43:45.721Z	[async_error]	error	null
+2024-03-17T13:43:45.723Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create({
+               data: {
+                 id: "REFUND-5294a06621",
+                 refundAmount: NaN,
+                 productId: undefined,
+                 orderId: "ORDER_DETAIL-1ce47c1f33",
+             +   refundQuantity: Int
+               }
+             })
+
+Argument `refundQuantity` is missing.	 PrismaClientValidationError
+2024-03-17T13:43:45.731Z	[async_error]	error	null
+2024-03-17T13:43:45.733Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create({
+               data: {
+                 id: "REFUND-523c278985",
+                 refundAmount: NaN,
+                 productId: undefined,
+                 orderId: "ORDER_DETAIL-1ce47c1f33",
+             +   refundQuantity: Int
+               }
+             })
+
+Argument `refundQuantity` is missing.	 PrismaClientValidationError
+2024-03-17T13:46:59.909Z	[async_error]	error	null
+2024-03-17T13:46:59.911Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create({
+               data: {
+                 id: "REFUND-a0a4c57a83",
+                 refundAmount: NaN,
+                 productId: undefined,
+                 orderId: "ORDER_DETAIL-1ce47c1f33",
+             +   refundQuantity: Int
+               }
+             })
+
+Argument `refundQuantity` is missing.	 PrismaClientValidationError
+2024-03-17T13:46:59.925Z	[async_error]	error	null
+2024-03-17T13:46:59.927Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create({
+               data: {
+                 id: "REFUND-8af06a3e0b",
+                 refundAmount: NaN,
+                 productId: undefined,
+                 orderId: "ORDER_DETAIL-1ce47c1f33",
+             +   refundQuantity: Int
+               }
+             })
+
+Argument `refundQuantity` is missing.	 PrismaClientValidationError
+2024-03-17T13:49:14.024Z	[async_error]	error	null
+2024-03-17T13:49:14.026Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create({
+               data: {
+                 id: "REFUND-48744ca70e",
+                 refundAmount: NaN,
+                 productId: undefined,
+                 orderId: "ORDER_DETAIL-1ce47c1f33",
+             +   refundQuantity: Int
+               }
+             })
+
+Argument `refundQuantity` is missing.	 PrismaClientValidationError
+2024-03-17T13:49:14.036Z	[async_error]	error	null
+2024-03-17T13:49:14.038Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create({
+               data: {
+                 id: "REFUND-41decb1372",
+                 refundAmount: NaN,
+                 productId: undefined,
+                 orderId: "ORDER_DETAIL-1ce47c1f33",
+             +   refundQuantity: Int
+               }
+             })
+
+Argument `refundQuantity` is missing.	 PrismaClientValidationError
+2024-03-17T13:56:50.364Z	[async_error]	error	null
+2024-03-17T13:56:50.366Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create(
+Foreign key constraint failed on the field: `productId`	 PrismaClientKnownRequestError
+2024-03-17T13:56:50.372Z	[async_error]	error	null
+2024-03-17T13:56:50.375Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create(
+Foreign key constraint failed on the field: `productId`	 PrismaClientKnownRequestError
+2024-03-17T14:55:42.008Z	[async_error]	error	null
+2024-03-17T14:55:42.010Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-17T14:55:44.426Z	[async_error]	error	null
+2024-03-17T14:55:44.428Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-17T15:02:23.824Z	[async_error]	error	null
+2024-03-17T15:02:23.826Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-17T19:24:27.338Z	[async_error]	error	null
+2024-03-17T19:24:27.342Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create(
+Foreign key constraint failed on the field: `productId`	 PrismaClientKnownRequestError
+2024-03-17T19:24:27.350Z	[async_error]	error	null
+2024-03-17T19:24:27.352Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create(
+Foreign key constraint failed on the field: `productId`	 PrismaClientKnownRequestError
+2024-03-17T19:46:53.506Z	[async_error]	error	null
+2024-03-17T19:46:53.509Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create(
+Foreign key constraint failed on the field: `productId`	 PrismaClientKnownRequestError
+2024-03-17T19:46:53.520Z	[async_error]	error	null
+2024-03-17T19:46:53.523Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductRefund.ts:63:30
+
+  60 
+  61 public static async createRefund(refundInfo:IRefundInfo){
+  62     const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
+→ 63         () => this.model.create(
+Foreign key constraint failed on the field: `productId`	 PrismaClientKnownRequestError
+2024-03-18T03:51:49.739Z	[async_error]	error	null
+2024-03-18T03:51:49.744Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductSales.ts:59:26
+
+  56 
+  57 public static async createProductSale(sales:number, productId:string,orderId:string, lastPurchaseDate?:Date){
+  58   const {data: newProductSale, error:postError} = await trycatchHelper<IProductSales>(
+→ 59       () => this.model.create({
+             data: {
+               id: "SALE-db13c683d5",
+               lastPurchaseDate: new Date("2024-03-18T03:51:49.535Z"),
+               sales: 8,
+               productId: "PRODUCT-b68bf064ea",
+               orderId: undefined,
+           +   product: {
+           +     create: ProductCreateWithoutProductSalesInput | ProductUncheckedCreateWithoutProductSalesInput,
+           +     connectOrCreate: ProductCreateOrConnectWithoutProductSalesInput,
+           +     connect: ProductWhereUniqueInput
+           +   }
+             }
+           })
+
+Argument `product` is missing.	 PrismaClientValidationError
+2024-03-18T03:51:49.765Z	[async_error]	error	null
+2024-03-18T03:51:49.770Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductSales.ts:59:26
+
+  56 
+  57 public static async createProductSale(sales:number, productId:string,orderId:string, lastPurchaseDate?:Date){
+  58   const {data: newProductSale, error:postError} = await trycatchHelper<IProductSales>(
+→ 59       () => this.model.create({
+             data: {
+               id: "SALE-8d880ff3e0",
+               lastPurchaseDate: new Date("2024-03-18T03:51:49.529Z"),
+               sales: 12,
+               productId: "PRODUCT-6cb533ce15",
+               orderId: undefined,
+           +   product: {
+           +     create: ProductCreateWithoutProductSalesInput | ProductUncheckedCreateWithoutProductSalesInput,
+           +     connectOrCreate: ProductCreateOrConnectWithoutProductSalesInput,
+           +     connect: ProductWhereUniqueInput
+           +   }
+             }
+           })
+
+Argument `product` is missing.	 PrismaClientValidationError
+2024-03-18T03:53:26.642Z	[async_error]	error	null
+2024-03-18T03:53:26.646Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductSales.ts:59:26
+
+  56 
+  57 public static async createProductSale(sales:number, productId:string,orderId:string, lastPurchaseDate?:Date){
+  58   const {data: newProductSale, error:postError} = await trycatchHelper<IProductSales>(
+→ 59       () => this.model.create({
+             data: {
+               id: "SALE-df1f4e084b",
+               lastPurchaseDate: new Date("2024-03-18T03:53:26.599Z"),
+               sales: 12,
+               productId: "PRODUCT-6cb533ce15",
+               orderId: undefined,
+           +   product: {
+           +     create: ProductCreateWithoutProductSalesInput | ProductUncheckedCreateWithoutProductSalesInput,
+           +     connectOrCreate: ProductCreateOrConnectWithoutProductSalesInput,
+           +     connect: ProductWhereUniqueInput
+           +   }
+             }
+           })
+
+Argument `product` is missing.	 PrismaClientValidationError
+2024-03-18T03:53:26.660Z	[async_error]	error	null
+2024-03-18T03:53:26.662Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\ProductSales.ts:59:26
+
+  56 
+  57 public static async createProductSale(sales:number, productId:string,orderId:string, lastPurchaseDate?:Date){
+  58   const {data: newProductSale, error:postError} = await trycatchHelper<IProductSales>(
+→ 59       () => this.model.create({
+             data: {
+               id: "SALE-36adda87a2",
+               lastPurchaseDate: new Date("2024-03-18T03:53:26.604Z"),
+               sales: 8,
+               productId: "PRODUCT-b68bf064ea",
+               orderId: undefined,
+           +   product: {
+           +     create: ProductCreateWithoutProductSalesInput | ProductUncheckedCreateWithoutProductSalesInput,
+           +     connectOrCreate: ProductCreateOrConnectWithoutProductSalesInput,
+           +     connect: ProductWhereUniqueInput
+           +   }
+             }
+           })
+
+Argument `product` is missing.	 PrismaClientValidationError
