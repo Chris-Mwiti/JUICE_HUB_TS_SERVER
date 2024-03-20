@@ -38,6 +38,8 @@ function verifyJWT(req: Request, res: Response, next: NextFunction) {
     } else {
       return res.status(401);
     }
+  }else {
+    res.status(401).json({ err: "Unauthorized access"});
   }
 }
 

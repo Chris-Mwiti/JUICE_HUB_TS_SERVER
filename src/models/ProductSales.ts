@@ -2,6 +2,7 @@ import {
   ProductSales as IProductSales,
   Product as IProduct,
   Prisma,
+  ProductSales,
 } from "@prisma/client";
 import prismaClient from "../config/prismaConfig";
 import trycatchHelper from "../util/functions/trycatch";
@@ -9,6 +10,8 @@ import prismaErrHandler, {
   PrismaErrorTypes,
 } from "../helpers/prismaErrHandler";
 import RecordIdGenerator from "./generators/RecordIdGenerator";
+import { addDays } from "date-fns";
+import DatabaseError from "../helpers/databaseError";
 
 interface IProductSaleClass {
   createProductSale:(sale:number,productId:string,lastPurchaseDate?:Date) => IProductSales;
@@ -48,7 +51,7 @@ const productSaleIncludeProduct: Prisma.ProductSalesInclude = Prisma.validator<P
         }
     }
 })
-type TProductSaleProduct = Prisma.ProductSalesGetPayload<typeof productSaleProduct>;
+export type TProductSaleProduct = Prisma.ProductSalesGetPayload<typeof productSaleProduct>;
 
 
 class ProductSalesModel {
@@ -97,8 +100,8 @@ class ProductSalesModel {
         () => this.model.findMany({
             where:{
                 lastPurchaseDate:{
-                    gte: endDate,
-                    lte: startDate
+                    lte: endDate,
+                    gte: startDate
                 }
             },
             include: joinProperties ? productSaleIncludeProduct : undefined
@@ -108,6 +111,30 @@ class ProductSalesModel {
     if(fetchError) prismaErrHandler(fetchError as PrismaErrorTypes);
 
     return productSale
+  }
+
+  public static async getProductSalesOfWeek(
+    startDate:Date,
+    joinProperties?:boolean
+  ){
+    const {data: productSaleInfo, error:fetchError } = await trycatchHelper<ProductSales[] | TProductSaleProduct[]>(
+      () => this.model.findMany({
+        where: {
+          lastPurchaseDate: {
+            lte: addDays(startDate,7),
+            gte: startDate
+          }
+        },
+        include: joinProperties ? productSaleIncludeProduct : undefined
+      })
+    )
+
+    if(fetchError) throw new DatabaseError({
+      message: ["Error while fetching product sale", fetchError as PrismaErrorTypes],
+      code: "500"
+    })
+
+    return productSaleInfo
   }
 
   public static async getProductSaleById(saleId:string,joinProperties?:boolean){
@@ -161,8 +188,8 @@ class ProductSalesModel {
         () => this.model.deleteMany({
             where:{
                 lastPurchaseDate:{
-                    gte: endDate,
-                    lte: startDate
+                    lte: endDate,
+                    gte: startDate
                 }
             }
         })

@@ -1665,3 +1665,287 @@ Argument `product` is missing.	 PrismaClientValidationError
 2024-03-18T16:05:07.303Z	[sale]	info	Creating sale
 2024-03-18T16:05:07.312Z	[inventory]	info	Updating the inventory
 2024-03-18T16:05:07.315Z	[inventory]	info	Updating the inventory
+2024-03-18T16:13:24.380Z	[orders]	info	Updating order
+2024-03-18T16:13:24.408Z	[sale]	info	Creating sale
+2024-03-18T16:13:24.411Z	[sale]	info	Creating sale
+2024-03-18T16:13:24.419Z	[inventory]	info	Updating the inventory
+2024-03-18T16:13:24.424Z	[inventory]	info	Updating the inventory
+2024-03-18T16:47:57.171Z	[category]	info	Fetching categories
+2024-03-18T16:47:57.190Z	[discounts]	info	Fetching discounts
+2024-03-18T16:54:33.790Z	[discounts]	info	Fetching discounts
+2024-03-18T16:54:33.801Z	[category]	info	Fetching categories
+2024-03-18T17:08:33.628Z	[category]	info	Fetching categories
+2024-03-18T17:08:33.647Z	[discounts]	info	Fetching discounts
+2024-03-20T12:16:49.712Z	[orders]	info	Fetching orders
+2024-03-20T13:01:25.463Z	[orders]	info	Fetching orders
+2024-03-20T13:01:56.635Z	[orders]	info	Fetching orders
+2024-03-20T13:03:34.941Z	[orders]	info	Fetching orders
+2024-03-20T13:03:55.923Z	[orders]	info	Fetching orders
+2024-03-20T13:04:02.919Z	[orders]	info	Fetching orders
+2024-03-20T13:04:04.142Z	[orders]	info	Fetching orders
+2024-03-20T13:04:27.384Z	[orders]	info	Fetching orders
+2024-03-20T13:04:32.054Z	[orders]	info	Fetching orders
+2024-03-20T13:04:47.625Z	[orders]	info	Fetching orders
+2024-03-20T13:05:39.938Z	[orders]	info	Fetching orders
+2024-03-20T13:05:58.948Z	[orders]	info	Fetching orders
+2024-03-20T13:06:06.937Z	[orders]	info	Fetching orders
+2024-03-20T13:06:07.918Z	[orders]	info	Fetching orders
+2024-03-20T13:06:13.270Z	[orders]	info	Fetching orders
+2024-03-20T13:06:13.724Z	[orders]	info	Fetching orders
+2024-03-20T13:06:26.684Z	[orders]	info	Fetching orders
+2024-03-20T13:06:35.488Z	[orders]	info	Fetching orders
+2024-03-20T13:07:11.236Z	[orders]	info	Fetching orders
+2024-03-20T13:07:19.237Z	[orders]	info	Fetching orders
+2024-03-20T13:07:30.776Z	[orders]	info	Fetching orders
+2024-03-20T13:07:36.246Z	[orders]	info	Fetching orders
+2024-03-20T13:10:35.045Z	[orders]	info	Fetching orders
+2024-03-20T13:21:26.661Z	[orders]	info	Fetching orders
+2024-03-20T13:23:23.093Z	[orders]	info	Deleting order
+2024-03-20T13:23:23.169Z	[async_error]	error	null
+2024-03-20T13:23:23.173Z	[[DB_ERROR]]	error	Error while deleting orders	PrismaClientKnownRequestError: 
+Invalid `this.model.deleteMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:170:30
+
+  167 
+  168 public static async deleteAllOrders(){
+  169     const {data: deletedInfos, error: deleteErr} = await trycatchHelper<OrderDetails[]>(
+→ 170         () => this.model.deleteMany(
+Foreign key constraint failed on the field: `orderId`
+2024-03-20T13:23:23.176Z	[async_error]	error	null
+2024-03-20T13:27:11.022Z	[orders]	info	Deleting order
+2024-03-20T13:27:11.073Z	[async_error]	error	null
+2024-03-20T13:27:11.077Z	[[DB_ERROR]]	error	Error while deleting orders	PrismaClientKnownRequestError: 
+Invalid `this.model.deleteMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:170:30
+
+  167 
+  168 public static async deleteAllOrders(){
+  169     const {data: deletedInfos, error: deleteErr} = await trycatchHelper<OrderDetails[]>(
+→ 170         () => this.model.deleteMany(
+Foreign key constraint failed on the field: `orderId`
+2024-03-20T13:27:11.080Z	[async_error]	error	null
+2024-03-20T13:28:03.970Z	[orders]	info	Deleting order
+2024-03-20T13:28:04.014Z	[async_error]	error	null
+2024-03-20T13:28:04.016Z	[[DB_ERROR]]	error	Error while deleting orders	PrismaClientKnownRequestError: 
+Invalid `this.model.deleteMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:170:30
+
+  167 
+  168 public static async deleteAllOrders(){
+  169     const {data: deletedInfos, error: deleteErr} = await trycatchHelper<OrderDetails[]>(
+→ 170         () => this.model.deleteMany(
+Foreign key constraint failed on the field: `orderId`
+2024-03-20T13:28:04.020Z	[async_error]	error	null
+2024-03-20T13:29:46.554Z	[orders]	info	Fetching orders
+2024-03-20T13:30:49.898Z	[orders]	info	Deleting order
+2024-03-20T13:30:49.930Z	[async_error]	error	null
+2024-03-20T13:30:49.933Z	[[DB_ERROR]]	error	Error while deleting orders	PrismaClientKnownRequestError: 
+Invalid `this.model.deleteMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:170:30
+
+  167 
+  168 public static async deleteAllOrders(){
+  169     const {data: deletedInfos, error: deleteErr} = await trycatchHelper<OrderDetails[]>(
+→ 170         () => this.model.deleteMany(
+Foreign key constraint failed on the field: `orderId`
+2024-03-20T13:30:49.938Z	[async_error]	error	null
+2024-03-20T13:33:50.681Z	[orders]	info	Creating new order
+2024-03-20T13:33:50.685Z	[orderItem]	info	Creating order item
+2024-03-20T13:33:50.692Z	[orderItem]	info	Creating order item
+2024-03-20T13:33:50.739Z	[async_error]	error	null
+2024-03-20T13:33:50.742Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-20T13:33:50.745Z	[async_error]	error	null
+2024-03-20T13:34:31.512Z	[orders]	info	Creating new order
+2024-03-20T13:34:31.515Z	[orderItem]	info	Creating order item
+2024-03-20T13:34:31.516Z	[orderItem]	info	Creating order item
+2024-03-20T13:34:31.543Z	[async_error]	error	null
+2024-03-20T13:34:31.544Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 1 records to be connected after connect operation on one-to-many relation 'ShippingDetailsToUser', found 0.
+2024-03-20T13:34:31.547Z	[async_error]	error	null
+2024-03-20T13:39:46.475Z	[orders]	info	Creating new order
+2024-03-20T13:39:46.476Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:46.478Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:52.038Z	[orders]	info	Creating new order
+2024-03-20T13:39:52.041Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:52.042Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:53.216Z	[orders]	info	Creating new order
+2024-03-20T13:39:53.219Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:53.221Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:54.277Z	[orders]	info	Creating new order
+2024-03-20T13:39:54.280Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:54.281Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:55.497Z	[orders]	info	Creating new order
+2024-03-20T13:39:55.499Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:55.501Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:56.466Z	[orders]	info	Creating new order
+2024-03-20T13:39:56.468Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:56.469Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:57.599Z	[orders]	info	Creating new order
+2024-03-20T13:39:57.602Z	[orderItem]	info	Creating order item
+2024-03-20T13:39:57.605Z	[orderItem]	info	Creating order item
+2024-03-20T13:40:07.622Z	[orders]	info	Deleting order
+2024-03-20T13:40:07.634Z	[async_error]	error	null
+2024-03-20T13:40:07.635Z	[[DB_ERROR]]	error	Error while deleting orders	PrismaClientKnownRequestError: 
+Invalid `this.model.deleteMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:170:30
+
+  167 
+  168 public static async deleteAllOrders(){
+  169     const {data: deletedInfos, error: deleteErr} = await trycatchHelper<OrderDetails[]>(
+→ 170         () => this.model.deleteMany(
+Foreign key constraint failed on the field: `orderId`
+2024-03-20T13:40:07.639Z	[async_error]	error	null
+2024-03-20T13:40:17.167Z	[orders]	info	Fetching orders
+2024-03-20T13:42:05.505Z	[orderItem]	info	Creating order item
+2024-03-20T13:42:05.499Z	[orders]	info	Creating new order
+2024-03-20T13:42:05.509Z	[orderItem]	info	Creating order item
+2024-03-20T14:07:21.193Z	[orders]	info	Creating new order
+2024-03-20T14:07:21.200Z	[orderItem]	info	Creating order item
+2024-03-20T14:07:21.203Z	[orderItem]	info	Creating order item
+2024-03-20T14:07:28.381Z	[orders]	info	Fetching orders
+2024-03-20T14:10:38.751Z	[orders]	info	Creating new order
+2024-03-20T14:10:38.753Z	[orderItem]	info	Creating order item
+2024-03-20T14:10:38.755Z	[orderItem]	info	Creating order item
+2024-03-20T14:10:40.455Z	[orders]	info	Creating new order
+2024-03-20T14:10:40.458Z	[orderItem]	info	Creating order item
+2024-03-20T14:10:40.461Z	[orderItem]	info	Creating order item
+2024-03-20T14:10:45.633Z	[orders]	info	Fetching orders
+2024-03-20T14:11:03.999Z	[orders]	info	Fetching orders
+2024-03-20T14:11:06.992Z	[orders]	info	Fetching orders
+2024-03-20T14:13:43.898Z	[orders]	info	Fetching orders
+2024-03-20T14:13:56.056Z	[orders]	info	Fetching order
+2024-03-20T14:16:57.641Z	[orders]	info	Fetching orders
+2024-03-20T14:19:00.224Z	[orders]	info	Fetching order
+2024-03-20T14:19:28.336Z	[orders]	info	Fetching orders
+2024-03-20T14:19:46.111Z	[orders]	info	Fetching orders
+2024-03-20T14:20:49.558Z	[orders]	info	Fetching orders
+2024-03-20T14:20:52.458Z	[orders]	info	Fetching order
+2024-03-20T14:22:54.031Z	[orders]	info	Fetching order
+2024-03-20T14:23:47.364Z	[orders]	info	Fetching order
+2024-03-20T14:24:51.140Z	[orders]	info	Fetching order
+2024-03-20T14:29:55.936Z	[orders]	info	Fetching order
+2024-03-20T14:33:14.960Z	[orders]	info	Fetching order
+2024-03-20T14:34:52.957Z	[orders]	info	Fetching order
+2024-03-20T14:35:04.931Z	[orders]	info	Fetching order
+2024-03-20T14:35:08.736Z	[orders]	info	Fetching order
+2024-03-20T14:35:59.793Z	[orders]	info	Fetching order
+2024-03-20T14:36:18.734Z	[orders]	info	Fetching order
+2024-03-20T14:38:01.508Z	[orders]	info	Fetching order
+2024-03-20T14:38:05.616Z	[orders]	info	Fetching order
+2024-03-20T14:38:19.952Z	[orders]	info	Fetching order
+2024-03-20T14:38:30.935Z	[orders]	info	Fetching order
+2024-03-20T14:38:34.942Z	[orders]	info	Fetching order
+2024-03-20T14:38:37.980Z	[orders]	info	Fetching order
+2024-03-20T14:38:57.911Z	[orders]	info	Fetching order
+2024-03-20T14:38:58.925Z	[orders]	info	Fetching order
+2024-03-20T14:39:51.942Z	[orders]	info	Fetching order
+2024-03-20T14:39:53.915Z	[orders]	info	Fetching order
+2024-03-20T14:40:00.931Z	[orders]	info	Fetching order
+2024-03-20T14:40:03.929Z	[orders]	info	Fetching order
+2024-03-20T14:40:06.915Z	[orders]	info	Fetching order
+2024-03-20T14:40:08.957Z	[orders]	info	Fetching order
+2024-03-20T14:40:15.926Z	[orders]	info	Fetching order
+2024-03-20T14:40:17.920Z	[orders]	info	Fetching order
+2024-03-20T14:40:19.908Z	[orders]	info	Fetching order
+2024-03-20T14:40:21.951Z	[orders]	info	Fetching order
+2024-03-20T14:40:24.909Z	[orders]	info	Fetching order
+2024-03-20T14:40:29.924Z	[orders]	info	Fetching order
+2024-03-20T14:40:30.931Z	[orders]	info	Fetching order
+2024-03-20T14:40:41.917Z	[orders]	info	Fetching order
+2024-03-20T14:40:43.923Z	[orders]	info	Fetching order
+2024-03-20T14:40:44.923Z	[orders]	info	Fetching order
+2024-03-20T14:40:46.913Z	[orders]	info	Fetching order
+2024-03-20T14:40:49.916Z	[orders]	info	Fetching order
+2024-03-20T14:40:50.914Z	[orders]	info	Fetching order
+2024-03-20T14:40:53.352Z	[orders]	info	Fetching order
+2024-03-20T14:41:04.253Z	[orders]	info	Fetching order
+2024-03-20T14:41:04.464Z	[orders]	info	Fetching order
+2024-03-20T14:41:56.911Z	[orders]	info	Fetching order
+2024-03-20T14:41:59.310Z	[orders]	info	Fetching orders
+2024-03-20T14:42:18.118Z	[orders]	info	Fetching orders
+2024-03-20T14:42:18.334Z	[orders]	info	Fetching orders
+2024-03-20T14:42:34.452Z	[orders]	info	Fetching order
+2024-03-20T14:43:01.708Z	[orders]	info	Fetching order
+2024-03-20T14:43:01.952Z	[orders]	info	Fetching order
+2024-03-20T14:47:09.954Z	[orders]	info	Fetching order
+2024-03-20T14:59:58.250Z	[orders]	info	Fetching order
+2024-03-20T15:01:26.935Z	[orders]	info	Fetching order
+2024-03-20T15:01:30.925Z	[orders]	info	Fetching order
+2024-03-20T15:01:33.699Z	[orders]	info	Fetching order
+2024-03-20T15:02:06.760Z	[orders]	info	Fetching orders
+2024-03-20T15:08:43.140Z	[orders]	info	Fetching orders
+2024-03-20T15:31:09.249Z	[orders]	info	Fetching orders
+2024-03-20T15:36:36.051Z	[orders]	info	Fetching orders
+2024-03-20T15:36:58.142Z	[orders]	info	Fetching orders
+2024-03-20T15:37:02.852Z	[orders]	info	Fetching orders
+2024-03-20T15:37:05.663Z	[orders]	info	Fetching orders
+2024-03-20T15:37:12.524Z	[orders]	info	Fetching orders
+2024-03-20T15:37:14.779Z	[orders]	info	Fetching orders
+2024-03-20T15:37:21.725Z	[orders]	info	Fetching orders
+2024-03-20T15:37:32.163Z	[orders]	info	Fetching orders
+2024-03-20T15:37:36.571Z	[orders]	info	Fetching order
+2024-03-20T15:37:40.693Z	[orders]	info	Fetching order
+2024-03-20T15:38:18.493Z	[orders]	info	Fetching order
+2024-03-20T15:38:20.647Z	[orders]	info	Fetching order
+2024-03-20T15:38:48.211Z	[orders]	info	Fetching order
+2024-03-20T15:38:49.805Z	[orders]	info	Fetching order
+2024-03-20T15:39:47.067Z	[orders]	info	Fetching order
+2024-03-20T15:39:49.750Z	[orders]	info	Fetching order
+2024-03-20T15:39:56.762Z	[orders]	info	Fetching order
+2024-03-20T15:39:58.747Z	[orders]	info	Fetching order
+2024-03-20T15:39:59.827Z	[orders]	info	Fetching order
+2024-03-20T15:40:04.581Z	[orders]	info	Fetching order
+2024-03-20T15:40:08.173Z	[orders]	info	Fetching order
+2024-03-20T15:41:17.479Z	[orders]	info	Fetching order
+2024-03-20T15:41:31.796Z	[orders]	info	Fetching order
+2024-03-20T15:41:32.678Z	[orders]	info	Fetching order
+2024-03-20T15:42:20.191Z	[orders]	info	Fetching order
+2024-03-20T15:43:15.970Z	[orders]	info	Fetching order
+2024-03-20T15:43:30.635Z	[orders]	info	Fetching order
+2024-03-20T15:43:34.550Z	[orders]	info	Fetching order
+2024-03-20T15:43:52.739Z	[orders]	info	Fetching order
+2024-03-20T15:43:57.844Z	[orders]	info	Fetching order
+2024-03-20T15:44:01.506Z	[orders]	info	Fetching order
+2024-03-20T15:44:25.541Z	[orders]	info	Fetching order
+2024-03-20T15:44:52.255Z	[orders]	info	Fetching order
+2024-03-20T15:45:09.571Z	[orders]	info	Updating order
+2024-03-20T15:45:09.582Z	[sale]	info	Creating sale
+2024-03-20T15:45:09.586Z	[sale]	info	Creating sale
+2024-03-20T15:45:09.648Z	[inventory]	info	Updating the inventory
+2024-03-20T15:45:09.658Z	[inventory]	info	Updating the inventory
+2024-03-20T15:45:09.756Z	[orders]	info	Fetching order
+2024-03-20T15:45:11.803Z	[orders]	info	Fetching orders
+2024-03-20T15:45:44.855Z	[orders]	info	Fetching orders
+2024-03-20T15:45:48.545Z	[orders]	info	Fetching order
+2024-03-20T15:46:05.163Z	[orders]	info	Updating order
+2024-03-20T15:46:05.166Z	[refund]	info	Creating refund
+2024-03-20T15:46:05.234Z	[orders]	info	Fetching order
+2024-03-20T15:46:07.794Z	[orders]	info	Fetching order
+2024-03-20T15:46:07.847Z	[orders]	info	Fetching orders
+2024-03-20T15:46:14.867Z	[orders]	info	Fetching orders
+2024-03-20T15:46:39.966Z	[orders]	info	Fetching orders
+2024-03-20T15:46:43.619Z	[orders]	info	Fetching order
+2024-03-20T15:46:50.525Z	[orders]	info	Updating order
+2024-03-20T15:46:50.535Z	[sale]	info	Creating sale
+2024-03-20T15:46:50.538Z	[sale]	info	Creating sale
+2024-03-20T15:46:50.548Z	[inventory]	info	Updating the inventory
+2024-03-20T15:46:50.558Z	[inventory]	info	Updating the inventory
+2024-03-20T15:46:50.610Z	[orders]	info	Fetching order
+2024-03-20T15:46:52.684Z	[orders]	info	Fetching orders
+2024-03-20T15:47:22.513Z	[orders]	info	Fetching orders
+2024-03-20T15:47:30.819Z	[orders]	info	Fetching order
+2024-03-20T15:47:37.504Z	[orders]	info	Updating order
+2024-03-20T15:47:37.537Z	[orders]	info	Fetching order
+2024-03-20T15:47:39.582Z	[orders]	info	Fetching orders
+2024-03-20T15:48:01.592Z	[orders]	info	Fetching orders
+2024-03-20T15:56:21.935Z	[orders]	info	Fetching orders
+2024-03-20T15:56:50.928Z	[orders]	info	Fetching orders
+2024-03-20T15:56:51.826Z	[orders]	info	Fetching orders
+2024-03-20T15:56:52.013Z	[orders]	info	Fetching orders

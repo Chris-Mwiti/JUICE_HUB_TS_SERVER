@@ -21,7 +21,8 @@ const orderInclude: Prisma.OrderDetailsInclude =
         avatarUrl: true,
         firstName: true,
         lastName: true,
-        order: true,
+        email: true,
+        phone: true
       },
     },
     payment: true,
@@ -35,7 +36,12 @@ const orderInclude: Prisma.OrderDetailsInclude =
             assetIds: {
               select: {
                 id: true,
-                images: true,
+                images:{
+                    select: {
+                        id:true,
+                        imageUrl: true
+                    }
+                },
               },
             },
           },
@@ -86,11 +92,7 @@ class Orders {
                         }
                     }
                 },
-                user: {
-                    connect: {
-                        id: orderDto.userId
-                    }
-                }
+                userId: orderDto.userId
             }
            })
         )

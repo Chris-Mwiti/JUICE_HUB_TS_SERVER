@@ -12,6 +12,7 @@ import ProductRouter from "./routes/api/product.routes";
 import DiscountRouter from "./routes/api/discounts.routes";
 import CategoryRouter from "./routes/api/category.routes";
 import OrdersRouter from "./routes/api/orders.routes";
+import GraphRouter from "./routes/api/graphs.routes";
 
 /* ---------------- Server set up ----------------------- */
 
@@ -51,15 +52,23 @@ app.use(LoggerHelper.RequestLogger);
 
 // Auth routes
 app.use("/auth", AuthRouter);
+
+//API routes
 app.use("/api/product", ProductRouter);
 app.use("/api/discounts", DiscountRouter);
 app.use("/api/category", CategoryRouter);
 app.use("/api/orders", OrdersRouter);
+app.use("/api/graphs",GraphRouter);
 
+/** -------- End of Routes setup  */
 
 // Error Logger 
 app.use(ErrMiddleWareHandler.ErrHandler);
 
+
+/** ----------- End of middlewares setup -------------- */
+
+//Server port listener
 app.listen(process.env.DEVELOPMENT_PORT, () => {
   console.log(
     "The sever is up and running on port: " + process.env.DEVELOPMENT_PORT

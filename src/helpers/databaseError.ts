@@ -10,7 +10,7 @@ class DatabaseError extends Error {
     public readonly code: ICustomError["code"];
 
     constructor({message,code}: IDatabaseError){
-        super(JSON.stringify(message));
+        super(JSON.stringify(message[0]));
         this.code = code;
         prismaErrHandler(message);
     }
