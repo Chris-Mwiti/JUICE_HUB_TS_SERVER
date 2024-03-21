@@ -16,7 +16,7 @@ class RegisterController {
 
     const authController = new AuthController("local");
 
-    const {data: isUserExisting, error:checkErr } = await trycatchHelper<boolean>(
+    const {data: isUserExisting, error:checkErr } = await trycatchHelper<IUser>(
       () => authController.CheckIfUserExists(userInfo.email)
     )
 
