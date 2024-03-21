@@ -2,8 +2,9 @@
   "name": "juice-e-shop-server",
   "version": "1.0.0",
   "description": "juice-e-shop server side package",
-  "main": "server.ts",
+  "main": "/api/index.ts",
   "scripts": {
+    "postinstall": "npx prisma generate client",
     "test": "npm run test",
     "dev": "nodemon",
     "build": "concurrently \"npx tsc\" \"npx prisma generate client\""
