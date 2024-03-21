@@ -20,7 +20,11 @@ class RegisterController {
       () => authController.CheckIfUserExists(userInfo.email)
     )
 
-    if(checkErr) return checkErrProperties(this.res,checkErr);
+
+    if(checkErr){
+      console.log(checkErr);
+      return checkErrProperties(this.res, checkErr);
+    };
 
     if (isUserExisting)
       return this.res.status(400).json({ err: "user already exists" });
