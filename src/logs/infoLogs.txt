@@ -2806,3 +2806,28 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:21
   20     () =>
 → 21       this.model.create(
 Unique constraint failed on the constraint: `User_phone_key`	 PrismaClientKnownRequestError
+2024-03-21T11:29:26.069Z	[orders]	info	Fetching orders
+2024-03-21T11:29:27.280Z	[async_error]	error	null
+2024-03-21T11:29:27.285Z	[[DB_ERROR]]	error	Error while fetching orders	PrismaClientKnownRequestError: 
+Invalid `this.model.findMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:110:30
+
+  107 
+  108 public static async getAllOrders(){
+  109     const {data: orderInfos, error: fetchError} = await trycatchHelper<TOrderIncludeDto[]>(
+→ 110         () => this.model.findMany(
+The table `OrderDetails` does not exist in the current database.
+2024-03-21T11:29:27.308Z	[async_error]	error	null
+2024-03-21T11:31:52.756Z	[async_error]	error	null
+2024-03-21T11:31:52.760Z	[async_error]	error	null
+2024-03-21T11:32:28.573Z	[products]	info	Hello my products
+2024-03-21T11:32:28.852Z	[async_error]	error	null
+2024-03-21T11:32:28.855Z	[[DB_ERROR]]	error	
+Invalid `this.model.findMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:149:18
+
+  146 const { data: productInfos, error: fetchError } = await trycatchHelper<
+  147   IProduct[]
+  148 >(() =>
+→ 149   this.model.findMany(
+The table `Product` does not exist in the current database.	 PrismaClientKnownRequestError

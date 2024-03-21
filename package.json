@@ -4,7 +4,7 @@
   "description": "juice-e-shop server side package",
   "main": "/api/index.ts",
   "scripts": {
-    "postinstall": "npx prisma migrate deploy",
+    "postinstall": "npx prisma generate client",
     "test": "npm run test",
     "dev": "nodemon",
     "build": "concurrently \"npx tsc\" \"npx prisma generate client\""
