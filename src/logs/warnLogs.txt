@@ -1329,3 +1329,349 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:
 → 170         () => this.model.deleteMany(
 Foreign key constraint failed on the field: `orderId`
 2024-03-20T13:40:07.639Z	[async_error]	error	null
+2024-03-20T21:00:59.426Z	[async_error]	error	null
+2024-03-20T21:00:59.435Z	[[DB_ERROR]]	error	
+Invalid `this.model.deleteMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:110:24
+
+  107 public static async deleteAllUsers() {
+  108   const { data: deletedInfos, error: deleteErr } = await trycatchHelper<
+  109     IUser[]
+→ 110   >(() => this.model.deleteMany(
+Foreign key constraint failed on the field: `userId`	 PrismaClientKnownRequestError
+2024-03-20T22:39:16.266Z	[async_error]	error	null
+2024-03-20T22:39:16.268Z	[[DB_ERROR]]	error	
+Invalid `this.model.update()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:56:20
+
+  53 ) {
+  54   const { data: updatedInfo, error: updateErr } = await trycatchHelper<IUser>(
+  55     () =>
+→ 56       this.model.update({
+             where: {
+               id: undefined
+             },
+             data: {
+               firstName: "Chris",
+               lastName: "Mutugi",
+               email: "chris2@gmail.com",
+               emailVerified: true,
+               phone: "0112001876",
+               address: "Nairobi",
+               ~~~~~~~
+               company: "Madrigal",
+               role: "admin",
+               avatarUrl: "/avatar.jpg",
+               createdAt: "2024-03-20T22:38:48.575Z",
+               status: "active",
+           ?   id?: String | StringFieldUpdateOperationsInput,
+           ?   googleId?: String | NullableStringFieldUpdateOperationsInput | Null,
+           ?   profileUrl?: String | NullableStringFieldUpdateOperationsInput | Null,
+           ?   password?: String | NullableStringFieldUpdateOperationsInput | Null,
+           ?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+           ?   session?: ShoppingSessionUpdateOneWithoutUserNestedInput,
+           ?   shipping?: ShippingDetailsUpdateOneWithoutUserNestedInput,
+           ?   paymentInfo?: PaymentDetailsUpdateManyWithoutUserNestedInput,
+           ?   orderDetails?: OrderDetailsUpdateManyWithoutUserNestedInput,
+           ?   invoicesSent?: InvoiceReportsUpdateManyWithoutSenderNestedInput,
+           ?   invoicesReceived?: InvoiceReportsUpdateManyWithoutReceipientNestedInput,
+           ?   refreshToken?: RefreshTokensUpdateManyWithoutUserNestedInput
+             }
+           })
+
+Unknown argument `address`. Available options are listed in green.	 PrismaClientValidationError
+2024-03-20T22:43:52.327Z	[async_error]	error	null
+2024-03-20T22:43:52.330Z	[[DB_ERROR]]	error	
+Invalid `this.model.update()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:56:20
+
+  53 ) {
+  54   const { data: updatedInfo, error: updateErr } = await trycatchHelper<IUser>(
+  55     () =>
+→ 56       this.model.update({
+             where: {
+               id: undefined,
+           ?   googleId?: String,
+           ?   email?: String,
+           ?   phone?: String,
+           ?   AND?: UserWhereInput | UserWhereInput[],
+           ?   OR?: UserWhereInput[],
+           ?   NOT?: UserWhereInput | UserWhereInput[],
+           ?   firstName?: StringFilter | String,
+           ?   lastName?: StringFilter | String,
+           ?   avatarUrl?: StringNullableFilter | String | Null,
+           ?   address?: StringNullableFilter | String | Null,
+           ?   role?: EnumRolesFilter | Roles,
+           ?   profileUrl?: StringNullableFilter | String | Null,
+           ?   emailVerified?: BoolNullableFilter | Boolean | Null,
+           ?   password?: StringNullableFilter | String | Null,
+           ?   status?: EnumUserStatusFilter | UserStatus,
+           ?   company?: StringNullableFilter | String | Null,
+           ?   createdAt?: DateTimeFilter | DateTime,
+           ?   updatedAt?: DateTimeFilter | DateTime,
+           ?   shippingId?: StringNullableFilter | String | Null,
+           ?   session?: ShoppingSessionNullableRelationFilter | ShoppingSessionWhereInput | Null,
+           ?   shipping?: ShippingDetailsNullableRelationFilter | ShippingDetailsWhereInput | Null,
+           ?   paymentInfo?: PaymentDetailsListRelationFilter,
+           ?   orderDetails?: OrderDetailsListRelationFilter,
+           ?   invoicesSent?: InvoiceReportsListRelationFilter,
+           ?   invoicesReceived?: InvoiceReportsListRelationFilter,
+           ?   refreshToken?: RefreshTokensListRelationFilter
+             },
+             data: {
+               firstName: "Chris",
+               lastName: "Mutugi",
+               email: "chris2@gmail.com",
+               emailVerified: true,
+               phone: "0112001876",
+               address: "Nairobi",
+               company: "Madrigal",
+               role: "admin",
+               avatarUrl: "/avatar.jpg",
+               createdAt: "2024-03-20T22:42:32.848Z",
+               status: "active"
+             }
+           })
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `id`, `googleId`, `email` or `phone` arguments. Available options are listed in green.	 PrismaClientValidationError
+2024-03-20T22:53:10.023Z	[async_error]	error	null
+2024-03-20T22:53:10.025Z	[[DB_ERROR]]	error	
+Invalid `this.model.update()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:56:20
+
+  53 ) {
+  54   const { data: updatedInfo, error: updateErr } = await trycatchHelper<IUser>(
+  55     () =>
+→ 56       this.model.update({
+             where: {
+               id: undefined,
+           ?   googleId?: String,
+           ?   email?: String,
+           ?   phone?: String,
+           ?   AND?: UserWhereInput | UserWhereInput[],
+           ?   OR?: UserWhereInput[],
+           ?   NOT?: UserWhereInput | UserWhereInput[],
+           ?   firstName?: StringFilter | String,
+           ?   lastName?: StringFilter | String,
+           ?   avatarUrl?: StringNullableFilter | String | Null,
+           ?   address?: StringNullableFilter | String | Null,
+           ?   role?: EnumRolesFilter | Roles,
+           ?   profileUrl?: StringNullableFilter | String | Null,
+           ?   emailVerified?: BoolNullableFilter | Boolean | Null,
+           ?   password?: StringNullableFilter | String | Null,
+           ?   status?: EnumUserStatusFilter | UserStatus,
+           ?   company?: StringNullableFilter | String | Null,
+           ?   createdAt?: DateTimeFilter | DateTime,
+           ?   updatedAt?: DateTimeFilter | DateTime,
+           ?   shippingId?: StringNullableFilter | String | Null,
+           ?   session?: ShoppingSessionNullableRelationFilter | ShoppingSessionWhereInput | Null,
+           ?   shipping?: ShippingDetailsNullableRelationFilter | ShippingDetailsWhereInput | Null,
+           ?   paymentInfo?: PaymentDetailsListRelationFilter,
+           ?   orderDetails?: OrderDetailsListRelationFilter,
+           ?   invoicesSent?: InvoiceReportsListRelationFilter,
+           ?   invoicesReceived?: InvoiceReportsListRelationFilter,
+           ?   refreshToken?: RefreshTokensListRelationFilter
+             },
+             data: {
+               id: "USER-f85e42926a",
+               firstName: "Chris",
+               lastName: "Mutugi",
+               email: "chris2@gmail.com",
+               emailVerified: true,
+               phone: "0112001876",
+               address: "Nairobi",
+               company: "Madrigal",
+               role: "admin",
+               avatarUrl: "/avatar.jpg",
+               createdAt: "2024-03-20T22:47:52.498Z",
+               status: "active"
+             }
+           })
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `id`, `googleId`, `email` or `phone` arguments. Available options are listed in green.	 PrismaClientValidationError
+2024-03-20T23:34:20.783Z	[async_error]	error	null
+2024-03-20T23:34:20.786Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-20T23:34:24.465Z	[async_error]	error	null
+2024-03-20T23:34:24.467Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T01:43:20.156Z	[async_error]	error	null
+2024-03-21T01:43:20.161Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create({
+           data: {
+             id: "PRODUCT-146324c95c",
+             productName: "Broadways",
+             productDescription: "Broadways on sale",
+             buyingPrice: 200,
+             sellingPrice: 250,
+             isPerishable: false,
+             productSku: "BRE123",
+             category: {
+               connectOrCreate: {
+                 where: {
+                   id: undefined,
+         ?         categoryName?: String,
+         ?         AND?: CategoryWhereInput | CategoryWhereInput[],
+         ?         OR?: CategoryWhereInput[],
+         ?         NOT?: CategoryWhereInput | CategoryWhereInput[],
+         ?         categoryDescription?: StringFilter | String,
+         ?         createdAt?: DateTimeFilter | DateTime,
+         ?         updatedAt?: DateTimeFilter | DateTime,
+         ?         product?: ProductListRelationFilter
+                 },
+                 create: {
+                   id: "CATEGORY-9786e65325",
+                   categoryName: "",
+                   categoryDescription: ""
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-09cb51eb69",
+                 productName: "Broadways",
+                 quantity: NaN,
+                 lastRefilDate: new Date("2024-03-21T01:43:20.105Z")
+               }
+             },
+             assetIds: {
+               connect: [
+                 {
+                   id: "ASSET-8975afac24",
+                   createdAt: new Date("2024-03-21T01:43:20.054Z"),
+                   updatedAt: new Date("2024-03-21T01:43:20.054Z")
+                 },
+                 {
+                   id: "ASSET-49f99ba9da",
+                   createdAt: new Date("2024-03-21T01:43:20.054Z"),
+                   updatedAt: new Date("2024-03-21T01:43:20.054Z")
+                 }
+               ]
+             },
+             discountIds: {
+               connect: {
+                 id: "DISCOUNT-bb961cff73"
+               }
+             }
+           }
+         })
+
+Argument `where` of type CategoryWhereUniqueInput needs at least one of `id` or `categoryName` arguments. Available options are listed in green.
+2024-03-21T01:43:22.489Z	[async_error]	error	null
+2024-03-21T01:43:22.493Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create({
+           data: {
+             id: "PRODUCT-3b342d6abd",
+             productName: "Broadways",
+             productDescription: "Broadways on sale",
+             buyingPrice: 200,
+             sellingPrice: 250,
+             isPerishable: false,
+             productSku: "BRE123",
+             category: {
+               connectOrCreate: {
+                 where: {
+                   id: undefined,
+         ?         categoryName?: String,
+         ?         AND?: CategoryWhereInput | CategoryWhereInput[],
+         ?         OR?: CategoryWhereInput[],
+         ?         NOT?: CategoryWhereInput | CategoryWhereInput[],
+         ?         categoryDescription?: StringFilter | String,
+         ?         createdAt?: DateTimeFilter | DateTime,
+         ?         updatedAt?: DateTimeFilter | DateTime,
+         ?         product?: ProductListRelationFilter
+                 },
+                 create: {
+                   id: "CATEGORY-4ca2c2df4c",
+                   categoryName: "",
+                   categoryDescription: ""
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-301e66a042",
+                 productName: "Broadways",
+                 quantity: NaN,
+                 lastRefilDate: new Date("2024-03-21T01:43:22.485Z")
+               }
+             },
+             assetIds: {
+               connect: [
+                 {
+                   id: "ASSET-0a48314828",
+                   createdAt: new Date("2024-03-21T01:43:22.479Z"),
+                   updatedAt: new Date("2024-03-21T01:43:22.479Z")
+                 },
+                 {
+                   id: "ASSET-3fc2774c8a",
+                   createdAt: new Date("2024-03-21T01:43:22.479Z"),
+                   updatedAt: new Date("2024-03-21T01:43:22.479Z")
+                 }
+               ]
+             },
+             discountIds: {
+               connect: {
+                 id: "DISCOUNT-bb961cff73"
+               }
+             }
+           }
+         })
+
+Argument `where` of type CategoryWhereUniqueInput needs at least one of `id` or `categoryName` arguments. Available options are listed in green.
+2024-03-21T01:48:49.603Z	[async_error]	error	null
+2024-03-21T01:48:49.605Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T01:48:52.844Z	[async_error]	error	null
+2024-03-21T01:48:52.848Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T01:55:11.633Z	[async_error]	error	null
+2024-03-21T01:55:11.636Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`

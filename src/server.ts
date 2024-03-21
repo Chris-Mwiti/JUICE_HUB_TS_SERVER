@@ -13,6 +13,7 @@ import DiscountRouter from "./routes/api/discounts.routes";
 import CategoryRouter from "./routes/api/category.routes";
 import OrdersRouter from "./routes/api/orders.routes";
 import GraphRouter from "./routes/api/graphs.routes";
+import UsersRouter from "./routes/api/users.routes";
 
 /* ---------------- Server set up ----------------------- */
 
@@ -54,6 +55,7 @@ app.use(LoggerHelper.RequestLogger);
 app.use("/auth", AuthRouter);
 
 //API routes
+app.use("/api/users", UsersRouter);
 app.use("/api/product", ProductRouter);
 app.use("/api/discounts", DiscountRouter);
 app.use("/api/category", CategoryRouter);

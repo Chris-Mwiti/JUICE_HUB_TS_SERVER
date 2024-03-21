@@ -1949,3 +1949,714 @@ Foreign key constraint failed on the field: `orderId`
 2024-03-20T15:56:50.928Z	[orders]	info	Fetching orders
 2024-03-20T15:56:51.826Z	[orders]	info	Fetching orders
 2024-03-20T15:56:52.013Z	[orders]	info	Fetching orders
+2024-03-20T20:02:22.703Z	[orders]	info	Fetching orders
+2024-03-20T20:08:04.785Z	[orders]	info	Fetching orders
+2024-03-20T20:08:14.680Z	[orders]	info	Fetching orders
+2024-03-20T20:08:27.736Z	[orders]	info	Fetching orders
+2024-03-20T20:08:32.529Z	[orders]	info	Fetching orders
+2024-03-20T20:08:43.643Z	[orders]	info	Fetching orders
+2024-03-20T20:09:01.935Z	[orders]	info	Fetching orders
+2024-03-20T20:09:58.924Z	[orders]	info	Fetching orders
+2024-03-20T20:10:00.928Z	[orders]	info	Fetching orders
+2024-03-20T20:10:16.641Z	[orders]	info	Fetching orders
+2024-03-20T20:10:18.582Z	[orders]	info	Fetching orders
+2024-03-20T20:10:20.628Z	[orders]	info	Fetching orders
+2024-03-20T20:10:23.435Z	[orders]	info	Fetching orders
+2024-03-20T20:10:31.588Z	[orders]	info	Fetching orders
+2024-03-20T20:10:34.376Z	[orders]	info	Fetching orders
+2024-03-20T20:10:35.449Z	[orders]	info	Fetching orders
+2024-03-20T20:10:38.419Z	[orders]	info	Fetching orders
+2024-03-20T20:10:39.902Z	[orders]	info	Fetching orders
+2024-03-20T20:10:44.397Z	[orders]	info	Fetching orders
+2024-03-20T20:10:45.491Z	[orders]	info	Fetching orders
+2024-03-20T20:10:50.549Z	[orders]	info	Fetching orders
+2024-03-20T20:10:58.705Z	[orders]	info	Fetching orders
+2024-03-20T20:11:04.806Z	[orders]	info	Fetching orders
+2024-03-20T20:11:18.981Z	[orders]	info	Fetching orders
+2024-03-20T20:11:20.611Z	[orders]	info	Fetching orders
+2024-03-20T20:11:24.740Z	[orders]	info	Fetching orders
+2024-03-20T20:11:25.986Z	[orders]	info	Fetching orders
+2024-03-20T20:11:30.607Z	[orders]	info	Fetching orders
+2024-03-20T20:11:33.426Z	[orders]	info	Fetching orders
+2024-03-20T20:11:37.573Z	[orders]	info	Fetching orders
+2024-03-20T20:11:39.426Z	[orders]	info	Fetching orders
+2024-03-20T20:11:40.502Z	[orders]	info	Fetching orders
+2024-03-20T20:11:43.490Z	[orders]	info	Fetching orders
+2024-03-20T20:11:48.560Z	[orders]	info	Fetching orders
+2024-03-20T20:11:50.493Z	[orders]	info	Fetching orders
+2024-03-20T20:12:01.705Z	[orders]	info	Fetching orders
+2024-03-20T20:12:02.955Z	[orders]	info	Fetching orders
+2024-03-20T20:12:06.438Z	[orders]	info	Fetching orders
+2024-03-20T20:12:09.483Z	[orders]	info	Fetching orders
+2024-03-20T20:12:11.523Z	[orders]	info	Fetching orders
+2024-03-20T20:12:12.845Z	[orders]	info	Fetching orders
+2024-03-20T20:12:15.450Z	[orders]	info	Fetching orders
+2024-03-20T20:12:18.583Z	[orders]	info	Fetching orders
+2024-03-20T20:12:21.426Z	[orders]	info	Fetching orders
+2024-03-20T20:12:23.494Z	[orders]	info	Fetching orders
+2024-03-20T20:12:25.341Z	[orders]	info	Fetching orders
+2024-03-20T20:12:26.673Z	[orders]	info	Fetching orders
+2024-03-20T20:12:36.678Z	[orders]	info	Fetching orders
+2024-03-20T20:12:38.672Z	[orders]	info	Fetching orders
+2024-03-20T20:12:40.074Z	[orders]	info	Fetching orders
+2024-03-20T20:12:43.468Z	[orders]	info	Fetching orders
+2024-03-20T20:12:48.484Z	[orders]	info	Fetching orders
+2024-03-20T20:12:50.388Z	[orders]	info	Fetching orders
+2024-03-20T20:13:01.677Z	[orders]	info	Fetching orders
+2024-03-20T20:13:03.492Z	[orders]	info	Fetching orders
+2024-03-20T20:13:58.818Z	[orders]	info	Fetching orders
+2024-03-20T20:14:04.576Z	[orders]	info	Fetching orders
+2024-03-20T20:14:08.414Z	[orders]	info	Fetching orders
+2024-03-20T20:14:09.285Z	[orders]	info	Fetching orders
+2024-03-20T20:14:19.773Z	[orders]	info	Fetching orders
+2024-03-20T20:14:31.654Z	[orders]	info	Fetching orders
+2024-03-20T20:14:45.621Z	[orders]	info	Fetching orders
+2024-03-20T20:14:47.860Z	[orders]	info	Fetching orders
+2024-03-20T20:14:49.422Z	[orders]	info	Fetching orders
+2024-03-20T20:14:53.501Z	[orders]	info	Fetching orders
+2024-03-20T20:14:56.561Z	[orders]	info	Fetching orders
+2024-03-20T20:15:44.719Z	[orders]	info	Fetching orders
+2024-03-20T20:15:50.562Z	[orders]	info	Fetching orders
+2024-03-20T20:16:07.606Z	[orders]	info	Fetching orders
+2024-03-20T20:16:37.787Z	[orders]	info	Fetching orders
+2024-03-20T20:16:40.574Z	[orders]	info	Fetching orders
+2024-03-20T20:16:41.622Z	[orders]	info	Fetching orders
+2024-03-20T20:16:45.578Z	[orders]	info	Fetching orders
+2024-03-20T20:16:49.477Z	[orders]	info	Fetching orders
+2024-03-20T20:16:54.690Z	[orders]	info	Fetching orders
+2024-03-20T20:16:58.837Z	[orders]	info	Fetching orders
+2024-03-20T20:17:03.465Z	[orders]	info	Fetching orders
+2024-03-20T20:17:05.580Z	[orders]	info	Fetching orders
+2024-03-20T20:17:06.992Z	[orders]	info	Fetching orders
+2024-03-20T20:17:13.650Z	[orders]	info	Fetching orders
+2024-03-20T20:17:18.595Z	[orders]	info	Fetching orders
+2024-03-20T21:00:59.426Z	[async_error]	error	null
+2024-03-20T21:00:59.435Z	[[DB_ERROR]]	error	
+Invalid `this.model.deleteMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:110:24
+
+  107 public static async deleteAllUsers() {
+  108   const { data: deletedInfos, error: deleteErr } = await trycatchHelper<
+  109     IUser[]
+→ 110   >(() => this.model.deleteMany(
+Foreign key constraint failed on the field: `userId`	 PrismaClientKnownRequestError
+2024-03-20T21:41:58.043Z	[orders]	info	Fetching orders
+2024-03-20T21:42:03.670Z	[orders]	info	Fetching orders
+2024-03-20T21:42:04.916Z	[orders]	info	Fetching orders
+2024-03-20T21:42:08.497Z	[orders]	info	Fetching orders
+2024-03-20T21:42:12.611Z	[orders]	info	Fetching orders
+2024-03-20T21:42:20.535Z	[orders]	info	Fetching orders
+2024-03-20T21:42:21.472Z	[orders]	info	Fetching orders
+2024-03-20T21:42:24.494Z	[orders]	info	Fetching orders
+2024-03-20T21:42:26.641Z	[orders]	info	Fetching orders
+2024-03-20T21:42:30.399Z	[orders]	info	Fetching orders
+2024-03-20T21:42:33.276Z	[orders]	info	Fetching orders
+2024-03-20T21:43:25.920Z	[orders]	info	Fetching orders
+2024-03-20T21:43:27.252Z	[orders]	info	Fetching orders
+2024-03-20T21:43:33.105Z	[orders]	info	Fetching orders
+2024-03-20T21:43:35.433Z	[orders]	info	Fetching orders
+2024-03-20T21:43:37.523Z	[orders]	info	Fetching orders
+2024-03-20T21:43:42.587Z	[orders]	info	Fetching orders
+2024-03-20T21:43:45.432Z	[orders]	info	Fetching orders
+2024-03-20T21:43:48.649Z	[orders]	info	Fetching orders
+2024-03-20T21:43:50.471Z	[orders]	info	Fetching orders
+2024-03-20T21:43:53.933Z	[orders]	info	Fetching orders
+2024-03-20T21:43:54.062Z	[orders]	info	Fetching orders
+2024-03-20T21:43:55.386Z	[orders]	info	Fetching orders
+2024-03-20T21:44:03.752Z	[orders]	info	Fetching orders
+2024-03-20T21:44:05.508Z	[orders]	info	Fetching orders
+2024-03-20T21:44:09.727Z	[orders]	info	Fetching orders
+2024-03-20T21:44:18.983Z	[orders]	info	Fetching orders
+2024-03-20T21:44:28.873Z	[orders]	info	Fetching orders
+2024-03-20T21:44:30.736Z	[orders]	info	Fetching orders
+2024-03-20T21:44:34.879Z	[orders]	info	Fetching orders
+2024-03-20T21:44:44.844Z	[orders]	info	Fetching orders
+2024-03-20T21:44:48.669Z	[orders]	info	Fetching orders
+2024-03-20T21:44:51.817Z	[orders]	info	Fetching orders
+2024-03-20T21:44:51.902Z	[orders]	info	Fetching orders
+2024-03-20T21:44:53.528Z	[orders]	info	Fetching orders
+2024-03-20T21:44:55.016Z	[orders]	info	Fetching orders
+2024-03-20T21:45:00.802Z	[orders]	info	Fetching orders
+2024-03-20T21:45:11.878Z	[orders]	info	Fetching orders
+2024-03-20T21:45:13.693Z	[orders]	info	Fetching orders
+2024-03-20T21:45:18.675Z	[orders]	info	Fetching orders
+2024-03-20T21:45:24.731Z	[orders]	info	Fetching orders
+2024-03-20T21:45:37.893Z	[orders]	info	Fetching orders
+2024-03-20T21:45:40.748Z	[orders]	info	Fetching orders
+2024-03-20T21:45:43.788Z	[orders]	info	Fetching orders
+2024-03-20T21:45:44.889Z	[orders]	info	Fetching orders
+2024-03-20T21:45:46.593Z	[orders]	info	Fetching orders
+2024-03-20T21:45:50.638Z	[orders]	info	Fetching orders
+2024-03-20T21:45:58.852Z	[orders]	info	Fetching orders
+2024-03-20T22:34:58.069Z	[users]	info	Fetching user
+2024-03-20T22:35:03.015Z	[users]	info	Fetching users
+2024-03-20T22:35:14.330Z	[users]	info	Fetching user
+2024-03-20T22:36:15.028Z	[users]	info	Fetching user
+2024-03-20T22:36:16.707Z	[users]	info	Fetching user
+2024-03-20T22:36:19.053Z	[users]	info	Fetching user
+2024-03-20T22:37:06.208Z	[users]	info	Fetching user
+2024-03-20T22:37:08.654Z	[users]	info	Fetching user
+2024-03-20T22:37:26.422Z	[users]	info	Fetching user
+2024-03-20T22:37:38.313Z	[users]	info	Fetching users
+2024-03-20T22:37:53.623Z	[users]	info	Fetching user
+2024-03-20T22:38:12.670Z	[users]	info	Fetching users
+2024-03-20T22:38:49.071Z	[users]	info	Fetching users
+2024-03-20T22:39:02.099Z	[users]	info	Fetching users
+2024-03-20T22:39:09.366Z	[users]	info	Fetching user
+2024-03-20T22:39:16.227Z	[users]	info	Updating user
+2024-03-20T22:39:16.266Z	[async_error]	error	null
+2024-03-20T22:39:16.268Z	[[DB_ERROR]]	error	
+Invalid `this.model.update()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:56:20
+
+  53 ) {
+  54   const { data: updatedInfo, error: updateErr } = await trycatchHelper<IUser>(
+  55     () =>
+→ 56       this.model.update({
+             where: {
+               id: undefined
+             },
+             data: {
+               firstName: "Chris",
+               lastName: "Mutugi",
+               email: "chris2@gmail.com",
+               emailVerified: true,
+               phone: "0112001876",
+               address: "Nairobi",
+               ~~~~~~~
+               company: "Madrigal",
+               role: "admin",
+               avatarUrl: "/avatar.jpg",
+               createdAt: "2024-03-20T22:38:48.575Z",
+               status: "active",
+           ?   id?: String | StringFieldUpdateOperationsInput,
+           ?   googleId?: String | NullableStringFieldUpdateOperationsInput | Null,
+           ?   profileUrl?: String | NullableStringFieldUpdateOperationsInput | Null,
+           ?   password?: String | NullableStringFieldUpdateOperationsInput | Null,
+           ?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+           ?   session?: ShoppingSessionUpdateOneWithoutUserNestedInput,
+           ?   shipping?: ShippingDetailsUpdateOneWithoutUserNestedInput,
+           ?   paymentInfo?: PaymentDetailsUpdateManyWithoutUserNestedInput,
+           ?   orderDetails?: OrderDetailsUpdateManyWithoutUserNestedInput,
+           ?   invoicesSent?: InvoiceReportsUpdateManyWithoutSenderNestedInput,
+           ?   invoicesReceived?: InvoiceReportsUpdateManyWithoutReceipientNestedInput,
+           ?   refreshToken?: RefreshTokensUpdateManyWithoutUserNestedInput
+             }
+           })
+
+Unknown argument `address`. Available options are listed in green.	 PrismaClientValidationError
+2024-03-20T22:39:18.235Z	[users]	info	Fetching users
+2024-03-20T22:43:38.733Z	[users]	info	Fetching users
+2024-03-20T22:43:45.476Z	[users]	info	Fetching user
+2024-03-20T22:43:52.299Z	[users]	info	Updating user
+2024-03-20T22:43:52.327Z	[async_error]	error	null
+2024-03-20T22:43:52.330Z	[[DB_ERROR]]	error	
+Invalid `this.model.update()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:56:20
+
+  53 ) {
+  54   const { data: updatedInfo, error: updateErr } = await trycatchHelper<IUser>(
+  55     () =>
+→ 56       this.model.update({
+             where: {
+               id: undefined,
+           ?   googleId?: String,
+           ?   email?: String,
+           ?   phone?: String,
+           ?   AND?: UserWhereInput | UserWhereInput[],
+           ?   OR?: UserWhereInput[],
+           ?   NOT?: UserWhereInput | UserWhereInput[],
+           ?   firstName?: StringFilter | String,
+           ?   lastName?: StringFilter | String,
+           ?   avatarUrl?: StringNullableFilter | String | Null,
+           ?   address?: StringNullableFilter | String | Null,
+           ?   role?: EnumRolesFilter | Roles,
+           ?   profileUrl?: StringNullableFilter | String | Null,
+           ?   emailVerified?: BoolNullableFilter | Boolean | Null,
+           ?   password?: StringNullableFilter | String | Null,
+           ?   status?: EnumUserStatusFilter | UserStatus,
+           ?   company?: StringNullableFilter | String | Null,
+           ?   createdAt?: DateTimeFilter | DateTime,
+           ?   updatedAt?: DateTimeFilter | DateTime,
+           ?   shippingId?: StringNullableFilter | String | Null,
+           ?   session?: ShoppingSessionNullableRelationFilter | ShoppingSessionWhereInput | Null,
+           ?   shipping?: ShippingDetailsNullableRelationFilter | ShippingDetailsWhereInput | Null,
+           ?   paymentInfo?: PaymentDetailsListRelationFilter,
+           ?   orderDetails?: OrderDetailsListRelationFilter,
+           ?   invoicesSent?: InvoiceReportsListRelationFilter,
+           ?   invoicesReceived?: InvoiceReportsListRelationFilter,
+           ?   refreshToken?: RefreshTokensListRelationFilter
+             },
+             data: {
+               firstName: "Chris",
+               lastName: "Mutugi",
+               email: "chris2@gmail.com",
+               emailVerified: true,
+               phone: "0112001876",
+               address: "Nairobi",
+               company: "Madrigal",
+               role: "admin",
+               avatarUrl: "/avatar.jpg",
+               createdAt: "2024-03-20T22:42:32.848Z",
+               status: "active"
+             }
+           })
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `id`, `googleId`, `email` or `phone` arguments. Available options are listed in green.	 PrismaClientValidationError
+2024-03-20T22:43:54.294Z	[users]	info	Fetching users
+2024-03-20T22:46:30.196Z	[users]	info	Fetching users
+2024-03-20T22:47:44.461Z	[users]	info	Fetching users
+2024-03-20T22:47:52.819Z	[users]	info	Fetching users
+2024-03-20T22:52:57.512Z	[users]	info	Fetching users
+2024-03-20T22:53:02.942Z	[users]	info	Fetching user
+2024-03-20T22:53:10.015Z	[users]	info	Updating user
+2024-03-20T22:53:10.023Z	[async_error]	error	null
+2024-03-20T22:53:10.025Z	[[DB_ERROR]]	error	
+Invalid `this.model.update()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:56:20
+
+  53 ) {
+  54   const { data: updatedInfo, error: updateErr } = await trycatchHelper<IUser>(
+  55     () =>
+→ 56       this.model.update({
+             where: {
+               id: undefined,
+           ?   googleId?: String,
+           ?   email?: String,
+           ?   phone?: String,
+           ?   AND?: UserWhereInput | UserWhereInput[],
+           ?   OR?: UserWhereInput[],
+           ?   NOT?: UserWhereInput | UserWhereInput[],
+           ?   firstName?: StringFilter | String,
+           ?   lastName?: StringFilter | String,
+           ?   avatarUrl?: StringNullableFilter | String | Null,
+           ?   address?: StringNullableFilter | String | Null,
+           ?   role?: EnumRolesFilter | Roles,
+           ?   profileUrl?: StringNullableFilter | String | Null,
+           ?   emailVerified?: BoolNullableFilter | Boolean | Null,
+           ?   password?: StringNullableFilter | String | Null,
+           ?   status?: EnumUserStatusFilter | UserStatus,
+           ?   company?: StringNullableFilter | String | Null,
+           ?   createdAt?: DateTimeFilter | DateTime,
+           ?   updatedAt?: DateTimeFilter | DateTime,
+           ?   shippingId?: StringNullableFilter | String | Null,
+           ?   session?: ShoppingSessionNullableRelationFilter | ShoppingSessionWhereInput | Null,
+           ?   shipping?: ShippingDetailsNullableRelationFilter | ShippingDetailsWhereInput | Null,
+           ?   paymentInfo?: PaymentDetailsListRelationFilter,
+           ?   orderDetails?: OrderDetailsListRelationFilter,
+           ?   invoicesSent?: InvoiceReportsListRelationFilter,
+           ?   invoicesReceived?: InvoiceReportsListRelationFilter,
+           ?   refreshToken?: RefreshTokensListRelationFilter
+             },
+             data: {
+               id: "USER-f85e42926a",
+               firstName: "Chris",
+               lastName: "Mutugi",
+               email: "chris2@gmail.com",
+               emailVerified: true,
+               phone: "0112001876",
+               address: "Nairobi",
+               company: "Madrigal",
+               role: "admin",
+               avatarUrl: "/avatar.jpg",
+               createdAt: "2024-03-20T22:47:52.498Z",
+               status: "active"
+             }
+           })
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `id`, `googleId`, `email` or `phone` arguments. Available options are listed in green.	 PrismaClientValidationError
+2024-03-20T22:53:12.058Z	[users]	info	Fetching users
+2024-03-20T22:55:09.438Z	[users]	info	Fetching users
+2024-03-20T22:55:14.852Z	[users]	info	Fetching user
+2024-03-20T22:55:22.811Z	[users]	info	Updating user
+2024-03-20T22:55:22.861Z	[users]	info	Fetching user
+2024-03-20T22:55:24.822Z	[users]	info	Fetching users
+2024-03-20T22:55:50.186Z	[users]	info	Fetching users
+2024-03-20T23:07:57.013Z	[users]	info	Fetching users
+2024-03-20T23:08:02.127Z	[users]	info	Fetching users
+2024-03-20T23:15:13.120Z	[users]	info	Fetching users
+2024-03-20T23:20:24.400Z	[users]	info	Fetching users
+2024-03-20T23:20:28.577Z	[users]	info	Fetching user
+2024-03-20T23:20:49.152Z	[users]	info	Fetching users
+2024-03-20T23:21:07.421Z	[users]	info	Fetching users
+2024-03-20T23:23:28.782Z	[users]	info	Fetching users
+2024-03-20T23:23:47.431Z	[category]	info	Fetching categories
+2024-03-20T23:23:47.445Z	[discounts]	info	Fetching discounts
+2024-03-20T23:28:14.529Z	[category]	info	Fetching categories
+2024-03-20T23:28:14.537Z	[discounts]	info	Fetching discounts
+2024-03-20T23:32:55.233Z	[category]	info	Fetching categories
+2024-03-20T23:32:55.249Z	[discounts]	info	Fetching discounts
+2024-03-20T23:34:13.573Z	[products]	info	Creating product
+2024-03-20T23:34:17.616Z	[products]	info	Creating product
+2024-03-20T23:34:20.783Z	[async_error]	error	null
+2024-03-20T23:34:20.786Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-20T23:34:22.656Z	[products]	info	Creating product
+2024-03-20T23:34:24.465Z	[async_error]	error	null
+2024-03-20T23:34:24.467Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-20T23:35:03.555Z	[category]	info	Fetching categories
+2024-03-20T23:35:03.563Z	[discounts]	info	Fetching discounts
+2024-03-20T23:48:06.339Z	[category]	info	Fetching categories
+2024-03-20T23:48:06.352Z	[discounts]	info	Fetching discounts
+2024-03-20T23:49:08.926Z	[orders]	info	Creating new order
+2024-03-20T23:49:08.929Z	[orderItem]	info	Creating order item
+2024-03-20T23:49:08.932Z	[orderItem]	info	Creating order item
+2024-03-20T23:50:11.246Z	[category]	info	Fetching categories
+2024-03-20T23:50:11.274Z	[discounts]	info	Fetching discounts
+2024-03-21T00:57:44.609Z	[products]	info	Hello my products
+2024-03-21T00:58:02.980Z	[products]	info	Hello my products
+2024-03-21T00:58:09.091Z	[products]	info	Hello my products
+2024-03-21T00:58:29.316Z	[products]	info	Hello my products
+2024-03-21T00:58:33.529Z	[products]	info	Hello my products
+2024-03-21T00:58:37.053Z	[products]	info	Hello my products
+2024-03-21T00:58:43.828Z	[products]	info	Hello my products
+2024-03-21T00:58:48.063Z	[products]	info	Hello my products
+2024-03-21T00:58:51.546Z	[products]	info	Hello my products
+2024-03-21T01:11:55.378Z	[products]	info	Hello my products
+2024-03-21T01:11:58.223Z	[products]	info	Hello my products
+2024-03-21T01:12:21.690Z	[products]	info	Hello my products
+2024-03-21T01:12:24.257Z	[products]	info	Hello my products
+2024-03-21T01:15:13.001Z	[products]	info	Hello my products
+2024-03-21T01:15:14.287Z	[products]	info	Hello my products
+2024-03-21T01:15:25.804Z	[products]	info	Hello my products
+2024-03-21T01:16:04.520Z	[products]	info	Hello my products
+2024-03-21T01:16:13.868Z	[products]	info	Hello my products
+2024-03-21T01:18:03.771Z	[products]	info	Hello my products
+2024-03-21T01:18:14.527Z	[products]	info	Hello my products
+2024-03-21T01:18:17.437Z	[products]	info	Hello my products
+2024-03-21T01:18:29.480Z	[products]	info	Hello my products
+2024-03-21T01:18:37.024Z	[products]	info	Hello my products
+2024-03-21T01:18:39.973Z	[products]	info	Hello my products
+2024-03-21T01:18:45.196Z	[products]	info	Hello my products
+2024-03-21T01:18:49.465Z	[products]	info	Hello my products
+2024-03-21T01:18:52.167Z	[products]	info	Hello my products
+2024-03-21T01:19:38.452Z	[products]	info	Hello my products
+2024-03-21T01:19:42.142Z	[products]	info	Hello my products
+2024-03-21T01:20:20.204Z	[products]	info	Hello my products
+2024-03-21T01:20:25.842Z	[users]	info	Fetching users
+2024-03-21T01:20:28.298Z	[products]	info	Hello my products
+2024-03-21T01:20:39.044Z	[orders]	info	Fetching orders
+2024-03-21T01:20:41.905Z	[products]	info	Hello my products
+2024-03-21T01:21:27.055Z	[users]	info	Fetching users
+2024-03-21T01:21:30.649Z	[products]	info	Hello my products
+2024-03-21T01:22:21.938Z	[category]	info	Fetching categories
+2024-03-21T01:22:21.949Z	[discounts]	info	Fetching discounts
+2024-03-21T01:24:28.561Z	[category]	info	Fetching categories
+2024-03-21T01:30:56.694Z	[category]	info	Fetching categories
+2024-03-21T01:31:26.647Z	[category]	info	Fetching categories
+2024-03-21T01:31:26.656Z	[discounts]	info	Fetching discounts
+2024-03-21T01:33:04.457Z	[category]	info	Fetching categories
+2024-03-21T01:33:04.465Z	[discounts]	info	Fetching discounts
+2024-03-21T01:34:45.119Z	[category]	info	Fetching categories
+2024-03-21T01:34:50.755Z	[category]	info	Fetching categories
+2024-03-21T01:35:15.659Z	[category]	info	Fetching categories
+2024-03-21T01:36:08.899Z	[discounts]	info	Fetching discounts
+2024-03-21T01:36:13.899Z	[discounts]	info	Fetching discounts
+2024-03-21T01:36:18.326Z	[category]	info	Fetching categories
+2024-03-21T01:36:18.360Z	[discounts]	info	Fetching discounts
+2024-03-21T01:37:24.146Z	[category]	info	Fetching categories
+2024-03-21T01:37:24.157Z	[discounts]	info	Fetching discounts
+2024-03-21T01:42:11.454Z	[category]	info	Fetching categories
+2024-03-21T01:42:11.465Z	[discounts]	info	Fetching discounts
+2024-03-21T01:43:13.404Z	[products]	info	Creating product
+2024-03-21T01:43:17.369Z	[products]	info	Creating product
+2024-03-21T01:43:20.156Z	[async_error]	error	null
+2024-03-21T01:43:20.161Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create({
+           data: {
+             id: "PRODUCT-146324c95c",
+             productName: "Broadways",
+             productDescription: "Broadways on sale",
+             buyingPrice: 200,
+             sellingPrice: 250,
+             isPerishable: false,
+             productSku: "BRE123",
+             category: {
+               connectOrCreate: {
+                 where: {
+                   id: undefined,
+         ?         categoryName?: String,
+         ?         AND?: CategoryWhereInput | CategoryWhereInput[],
+         ?         OR?: CategoryWhereInput[],
+         ?         NOT?: CategoryWhereInput | CategoryWhereInput[],
+         ?         categoryDescription?: StringFilter | String,
+         ?         createdAt?: DateTimeFilter | DateTime,
+         ?         updatedAt?: DateTimeFilter | DateTime,
+         ?         product?: ProductListRelationFilter
+                 },
+                 create: {
+                   id: "CATEGORY-9786e65325",
+                   categoryName: "",
+                   categoryDescription: ""
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-09cb51eb69",
+                 productName: "Broadways",
+                 quantity: NaN,
+                 lastRefilDate: new Date("2024-03-21T01:43:20.105Z")
+               }
+             },
+             assetIds: {
+               connect: [
+                 {
+                   id: "ASSET-8975afac24",
+                   createdAt: new Date("2024-03-21T01:43:20.054Z"),
+                   updatedAt: new Date("2024-03-21T01:43:20.054Z")
+                 },
+                 {
+                   id: "ASSET-49f99ba9da",
+                   createdAt: new Date("2024-03-21T01:43:20.054Z"),
+                   updatedAt: new Date("2024-03-21T01:43:20.054Z")
+                 }
+               ]
+             },
+             discountIds: {
+               connect: {
+                 id: "DISCOUNT-bb961cff73"
+               }
+             }
+           }
+         })
+
+Argument `where` of type CategoryWhereUniqueInput needs at least one of `id` or `categoryName` arguments. Available options are listed in green.
+2024-03-21T01:43:22.264Z	[products]	info	Hello my products
+2024-03-21T01:43:22.489Z	[async_error]	error	null
+2024-03-21T01:43:22.493Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create({
+           data: {
+             id: "PRODUCT-3b342d6abd",
+             productName: "Broadways",
+             productDescription: "Broadways on sale",
+             buyingPrice: 200,
+             sellingPrice: 250,
+             isPerishable: false,
+             productSku: "BRE123",
+             category: {
+               connectOrCreate: {
+                 where: {
+                   id: undefined,
+         ?         categoryName?: String,
+         ?         AND?: CategoryWhereInput | CategoryWhereInput[],
+         ?         OR?: CategoryWhereInput[],
+         ?         NOT?: CategoryWhereInput | CategoryWhereInput[],
+         ?         categoryDescription?: StringFilter | String,
+         ?         createdAt?: DateTimeFilter | DateTime,
+         ?         updatedAt?: DateTimeFilter | DateTime,
+         ?         product?: ProductListRelationFilter
+                 },
+                 create: {
+                   id: "CATEGORY-4ca2c2df4c",
+                   categoryName: "",
+                   categoryDescription: ""
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "INVENTORY-301e66a042",
+                 productName: "Broadways",
+                 quantity: NaN,
+                 lastRefilDate: new Date("2024-03-21T01:43:22.485Z")
+               }
+             },
+             assetIds: {
+               connect: [
+                 {
+                   id: "ASSET-0a48314828",
+                   createdAt: new Date("2024-03-21T01:43:22.479Z"),
+                   updatedAt: new Date("2024-03-21T01:43:22.479Z")
+                 },
+                 {
+                   id: "ASSET-3fc2774c8a",
+                   createdAt: new Date("2024-03-21T01:43:22.479Z"),
+                   updatedAt: new Date("2024-03-21T01:43:22.479Z")
+                 }
+               ]
+             },
+             discountIds: {
+               connect: {
+                 id: "DISCOUNT-bb961cff73"
+               }
+             }
+           }
+         })
+
+Argument `where` of type CategoryWhereUniqueInput needs at least one of `id` or `categoryName` arguments. Available options are listed in green.
+2024-03-21T01:46:59.683Z	[products]	info	Hello my products
+2024-03-21T01:47:08.900Z	[category]	info	Fetching categories
+2024-03-21T01:47:08.909Z	[discounts]	info	Fetching discounts
+2024-03-21T01:48:42.095Z	[products]	info	Creating product
+2024-03-21T01:48:46.095Z	[products]	info	Creating product
+2024-03-21T01:48:49.603Z	[async_error]	error	null
+2024-03-21T01:48:49.605Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T01:48:51.142Z	[products]	info	Creating product
+2024-03-21T01:48:52.844Z	[async_error]	error	null
+2024-03-21T01:48:52.848Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T01:48:54.950Z	[products]	info	Hello my products
+2024-03-21T01:49:58.307Z	[products]	info	Hello my products
+2024-03-21T01:50:16.636Z	[products]	info	Hello my products
+2024-03-21T01:50:26.849Z	[products]	info	Hello my products
+2024-03-21T01:50:29.516Z	[products]	info	Hello my products
+2024-03-21T01:50:39.816Z	[products]	info	Hello my products
+2024-03-21T01:50:43.811Z	[products]	info	Hello my products
+2024-03-21T01:50:45.935Z	[products]	info	Hello my products
+2024-03-21T01:52:18.687Z	[products]	info	Hello my products
+2024-03-21T01:53:21.288Z	[products]	info	Hello my products
+2024-03-21T01:53:27.204Z	[products]	info	Hello my products
+2024-03-21T01:53:54.651Z	[category]	info	Fetching categories
+2024-03-21T01:53:54.658Z	[discounts]	info	Fetching discounts
+2024-03-21T01:55:05.766Z	[products]	info	Creating product
+2024-03-21T01:55:09.804Z	[products]	info	Creating product
+2024-03-21T01:55:11.633Z	[async_error]	error	null
+2024-03-21T01:55:11.636Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T01:55:13.986Z	[products]	info	Hello my products
+2024-03-21T01:55:22.236Z	[products]	info	Hello my products
+2024-03-21T03:01:41.730Z	[products]	info	Hello my products
+2024-03-21T03:05:34.218Z	[products]	info	Hello my products
+2024-03-21T03:18:17.654Z	[products]	info	Hello my products
+2024-03-21T03:18:32.074Z	[products]	info	Hello my products
+2024-03-21T03:18:43.129Z	[products]	info	Hello my products
+2024-03-21T03:18:44.941Z	[products]	info	Hello my products
+2024-03-21T03:18:49.736Z	[products]	info	Hello my products
+2024-03-21T03:18:51.143Z	[products]	info	Hello my products
+2024-03-21T03:18:55.803Z	[products]	info	Hello my products
+2024-03-21T03:19:00.119Z	[products]	info	Hello my products
+2024-03-21T03:19:02.015Z	[products]	info	Hello my products
+2024-03-21T03:19:06.790Z	[products]	info	Hello my products
+2024-03-21T03:19:09.020Z	[products]	info	Hello my products
+2024-03-21T03:19:12.021Z	[products]	info	Hello my products
+2024-03-21T03:19:16.881Z	[products]	info	Hello my products
+2024-03-21T03:19:18.846Z	[products]	info	Hello my products
+2024-03-21T03:19:24.127Z	[products]	info	Hello my products
+2024-03-21T03:19:26.569Z	[products]	info	Hello my products
+2024-03-21T03:19:29.077Z	[products]	info	Hello my products
+2024-03-21T03:19:29.206Z	[products]	info	Hello my products
+2024-03-21T03:19:33.834Z	[products]	info	Hello my products
+2024-03-21T03:19:37.891Z	[products]	info	Hello my products
+2024-03-21T03:19:52.193Z	[products]	info	Hello my products
+2024-03-21T03:19:55.799Z	[products]	info	Hello my products
+2024-03-21T03:19:57.779Z	[products]	info	Hello my products
+2024-03-21T03:20:22.884Z	[products]	info	Hello my products
+2024-03-21T03:20:44.626Z	[products]	info	Hello my products
+2024-03-21T03:20:46.395Z	[products]	info	Hello my products
+2024-03-21T03:20:58.102Z	[products]	info	Hello my products
+2024-03-21T03:21:00.866Z	[products]	info	Hello my products
+2024-03-21T03:21:02.510Z	[products]	info	Hello my products
+2024-03-21T03:21:02.676Z	[products]	info	Hello my products
+2024-03-21T03:21:04.912Z	[products]	info	Hello my products
+2024-03-21T03:21:07.019Z	[products]	info	Hello my products
+2024-03-21T03:23:44.299Z	[products]	info	Hello my products
+2024-03-21T03:23:46.171Z	[products]	info	Hello my products
+2024-03-21T03:23:51.182Z	[products]	info	Hello my products
+2024-03-21T03:23:53.867Z	[products]	info	Hello my products
+2024-03-21T03:24:05.020Z	[products]	info	Hello my products
+2024-03-21T03:24:07.548Z	[products]	info	Hello my products
+2024-03-21T03:24:09.391Z	[products]	info	Hello my products
+2024-03-21T03:24:16.989Z	[products]	info	Hello my products
+2024-03-21T03:24:29.923Z	[products]	info	Hello my products
+2024-03-21T03:24:31.796Z	[products]	info	Hello my products
+2024-03-21T03:24:46.953Z	[products]	info	Hello my products
+2024-03-21T03:24:50.945Z	[products]	info	Hello my products
+2024-03-21T03:24:55.217Z	[products]	info	Hello my products
+2024-03-21T03:25:02.055Z	[products]	info	Hello my products
+2024-03-21T03:25:03.895Z	[products]	info	Hello my products
+2024-03-21T03:25:07.896Z	[products]	info	Hello my products
+2024-03-21T03:25:09.774Z	[products]	info	Hello my products
+2024-03-21T03:25:12.034Z	[products]	info	Hello my products
+2024-03-21T03:25:14.136Z	[products]	info	Hello my products
+2024-03-21T03:25:16.929Z	[products]	info	Hello my products
+2024-03-21T03:25:30.700Z	[products]	info	Hello my products
+2024-03-21T03:25:37.091Z	[products]	info	Hello my products
+2024-03-21T03:25:38.863Z	[products]	info	Hello my products
+2024-03-21T03:25:44.799Z	[products]	info	Hello my products
+2024-03-21T03:25:46.910Z	[products]	info	Hello my products
+2024-03-21T03:25:48.864Z	[products]	info	Hello my products
+2024-03-21T03:25:54.727Z	[products]	info	Hello my products
+2024-03-21T03:25:57.917Z	[products]	info	Hello my products
+2024-03-21T03:26:11.271Z	[products]	info	Hello my products
+2024-03-21T03:26:14.784Z	[products]	info	Hello my products
+2024-03-21T03:26:17.064Z	[products]	info	Hello my products
+2024-03-21T03:26:28.030Z	[products]	info	Hello my products
+2024-03-21T03:26:30.715Z	[products]	info	Hello my products
+2024-03-21T03:26:33.824Z	[products]	info	Hello my products
+2024-03-21T03:26:42.357Z	[products]	info	Hello my products
+2024-03-21T03:26:45.017Z	[products]	info	Hello my products
+2024-03-21T03:26:47.746Z	[products]	info	Hello my products
+2024-03-21T03:26:50.714Z	[products]	info	Hello my products
+2024-03-21T03:27:00.094Z	[products]	info	Hello my products
+2024-03-21T03:27:04.804Z	[products]	info	Hello my products
+2024-03-21T03:27:07.099Z	[products]	info	Hello my products
+2024-03-21T03:27:44.094Z	[products]	info	Hello my products
+2024-03-21T03:27:47.744Z	[products]	info	Hello my products
+2024-03-21T03:27:50.838Z	[products]	info	Hello my products
+2024-03-21T03:28:02.822Z	[products]	info	Hello my products
+2024-03-21T03:28:39.778Z	[products]	info	Hello my products
+2024-03-21T03:28:42.908Z	[products]	info	Hello my products
+2024-03-21T03:28:44.870Z	[products]	info	Hello my products
+2024-03-21T03:28:46.877Z	[products]	info	Hello my products
+2024-03-21T03:28:48.819Z	[products]	info	Hello my products
+2024-03-21T03:28:49.969Z	[products]	info	Hello my products
+2024-03-21T03:29:02.164Z	[products]	info	Hello my products
+2024-03-21T03:29:03.977Z	[products]	info	Hello my products
+2024-03-21T03:29:07.070Z	[products]	info	Hello my products
+2024-03-21T03:29:08.857Z	[products]	info	Hello my products
+2024-03-21T03:29:13.821Z	[products]	info	Hello my products
+2024-03-21T03:29:23.988Z	[products]	info	Hello my products
+2024-03-21T03:29:33.769Z	[products]	info	Hello my products
+2024-03-21T03:29:53.977Z	[products]	info	Hello my products
+2024-03-21T03:31:55.953Z	[products]	info	Hello my products
+2024-03-21T04:28:40.286Z	[products]	info	Hello my products

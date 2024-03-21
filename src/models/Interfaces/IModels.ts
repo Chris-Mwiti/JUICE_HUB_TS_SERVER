@@ -58,7 +58,12 @@ interface INewProductInfoObj  {
   sellingPrice: string;
   productImages: string[];
   productQuantity: string;
-  productCategory?:string;
+  category:{
+    id:string,
+  },
+  inventory: {
+    quantity:string
+  }
   
   //Discount Details
   discountId?:string;

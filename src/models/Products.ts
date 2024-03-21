@@ -106,7 +106,7 @@ class ProductModel {
             category: {
               connectOrCreate: {
                 where: {
-                  id: productInfoObj.productCategory,
+                  id: productInfoObj.category.id,
                 },
                 create: {
                   id: new RecordIdGenerator("CATEGORY").generate(),
@@ -119,7 +119,7 @@ class ProductModel {
               create: {
                 id: new RecordIdGenerator("INVENTORY").generate(),
                 productName: productInfoObj.productName,
-                quantity: parseInt(productInfoObj.productQuantity) ?? 0,
+                quantity: parseInt(productInfoObj.inventory.quantity) ?? 0,
                 lastRefilDate: new Date(),
               },
             },

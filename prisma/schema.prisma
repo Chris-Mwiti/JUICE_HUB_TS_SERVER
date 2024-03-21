@@ -15,13 +15,17 @@ model User {
   id String @id @map("user_id")
   firstName String @db.VarChar(255) @map("first_name")
   lastName String @db.VarChar(255) @map("last_name")
-  avatarUrl String?
+  avatarUrl String? @default("/avatar.jpg")
+  address String? @default("Nairobi")
   role Roles @default(user)
   googleId String? @map("google_id") @unique
   profileUrl String?
   email String @db.VarChar(255) @unique
+  emailVerified Boolean? @default(true)
   password String? @db.VarChar(255)
   phone String? @db.VarChar(10) @unique
+  status UserStatus @default(active)
+  company String? @default("Madrigal")
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
   session ShoppingSession?
@@ -52,6 +56,7 @@ model Product {
   buyingPrice Int @map("buying_price")
   lowLevelAlert Int @default(15)
   isPerishable Boolean @default(false)
+  expireDate DateTime?
   productCode String? @unique
   productLabel String @default("NEW") 
   productTag String?
@@ -199,7 +204,7 @@ model OrderDetails {
   id String @id @map("order_id")
   total Int 
   payment PaymentDetails[]
-  user User @relation(fields: [userId], references: [id])
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   userId String
   shippingInfo ShippingDetails[]
   status OrderStatus @default(pending)
@@ -224,12 +229,12 @@ model OrderItems {
 }
 model PaymentDetails {
   id String  @id @map("payment_id")
-  orderPayment OrderDetails @relation(fields: [orderId], references: [id])
+  orderPayment OrderDetails @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   orderId String 
   amount Int 
   provider PaymentProviders @default(mpesa)
   status PaymentStatus @default(pending)
-  user User @relation(fields: [userId], references: [id])
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   userId String
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
@@ -246,7 +251,7 @@ model ShippingDetails {
   createdAt DateTime @default(now()) @map("created_at")
   modifiedAt DateTime @updatedAt @map("modified_at")
   user User[]
-  order OrderDetails @relation(fields: [orderId], references: [id])
+  order OrderDetails @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   orderId String
 }
 
@@ -327,4 +332,10 @@ enum DiscountTypes {
 enum StockStatus {
   IN_STOCK
   OUT_STOCK 
+}
+
+enum UserStatus {
+  active
+  inactive
+  banned
 }
