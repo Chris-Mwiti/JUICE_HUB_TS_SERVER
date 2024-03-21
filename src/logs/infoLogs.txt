@@ -2660,3 +2660,15 @@ Unique constraint failed on the constraint: `Inventory_product_name_key`
 2024-03-21T03:29:53.977Z	[products]	info	Hello my products
 2024-03-21T03:31:55.953Z	[products]	info	Hello my products
 2024-03-21T04:28:40.286Z	[products]	info	Hello my products
+2024-03-21T06:00:18.586Z	[orders]	info	Fetching orders
+2024-03-21T06:00:20.465Z	[async_error]	error	null
+2024-03-21T06:00:20.468Z	[[DB_ERROR]]	error	Error while fetching orders	PrismaClientKnownRequestError: 
+Invalid `this.model.findMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:110:30
+
+  107 
+  108 public static async getAllOrders(){
+  109     const {data: orderInfos, error: fetchError} = await trycatchHelper<TOrderIncludeDto[]>(
+→ 110         () => this.model.findMany(
+The table `OrderDetails` does not exist in the current database.
+2024-03-21T06:00:20.473Z	[async_error]	error	null
