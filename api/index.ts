@@ -51,6 +51,8 @@ app.use(LoggerHelper.RequestLogger);
 
 /* -------------- Routes Setup ----------------- */
 
+app.get("/", (req,res) => res.send("Welcome to Madrigal"));
+
 // Auth routes
 app.use("/auth", AuthRouter);
 
