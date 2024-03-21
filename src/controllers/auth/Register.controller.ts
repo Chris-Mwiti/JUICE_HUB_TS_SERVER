@@ -16,9 +16,12 @@ class RegisterController {
 
     const authController = new AuthController("local");
 
-    const isUserExisting = await authController.CheckIfUserExists(
-      userInfo.email
-    );
+    const {data: isUserExisting, error:checkErr } = await trycatchHelper<boolean>(
+      () => authController.CheckIfUserExists(userInfo.email)
+    )
+
+    if(checkErr) return checkErrProperties(this.res,checkErr);
+
     if (isUserExisting)
       return this.res.status(400).json({ err: "user already exists" });
 

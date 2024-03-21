@@ -101,6 +101,7 @@ class AuthController {
   public async CreateUser(userInfoObj: UserRecordWithoutId) {
     logger("user").debug("Creating user");
     // Generates a new user id
+    
     const userId = new RecordIdGenerator("USER").generate();
 
     //Create a new user obj containing the generated id
