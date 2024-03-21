@@ -1,19 +1,19 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
-import LoggerHelper from "./helpers/logger";
-import ErrMiddleWareHandler from "./middlewares/errHandler";
+import LoggerHelper from "../src/helpers/logger";
+import ErrMiddleWareHandler from "../src/middlewares/errHandler";
 import cookieParser from "cookie-parser";
 import expressSession from "express-session";
 import cors from "cors";
-import corsOptions from "./config/corsConfig";
-import AuthRouter from "./routes/auth/auth.routes";
-import GooglePassportStrategy from "./config/passport-google-config";
-import ProductRouter from "./routes/api/product.routes";
-import DiscountRouter from "./routes/api/discounts.routes";
-import CategoryRouter from "./routes/api/category.routes";
-import OrdersRouter from "./routes/api/orders.routes";
-import GraphRouter from "./routes/api/graphs.routes";
-import UsersRouter from "./routes/api/users.routes";
+import corsOptions from "../src/config/corsConfig";
+import AuthRouter from "../src/routes/auth/auth.routes";
+import GooglePassportStrategy from "../src/config/passport-google-config";
+import ProductRouter from "../src/routes/api/product.routes";
+import DiscountRouter from "../src/routes/api/discounts.routes";
+import CategoryRouter from "../src/routes/api/category.routes";
+import OrdersRouter from "../src/routes/api/orders.routes";
+import GraphRouter from "../src/routes/api/graphs.routes";
+import UsersRouter from "../src/routes/api/users.routes";
 
 /* ---------------- Server set up ----------------------- */
 
