@@ -36,6 +36,8 @@ model User {
   invoicesSent InvoiceReports[] @relation("sender")
   invoicesReceived InvoiceReports[] @relation("receipient")
   refreshToken RefreshTokens[]
+
+  @@map("User")
 }
 
 model RefreshTokens{
@@ -78,6 +80,8 @@ model Product {
   productRefills ProductRefil[]
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("Product")
 }
 
 model ProductRefunds {
@@ -94,6 +98,7 @@ model ProductRefunds {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  @@map("Productrefunds")
 }
 
 model ProductRefil {
@@ -105,6 +110,8 @@ model ProductRefil {
   productId String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt 
+
+  @@map("Productrefill")
 }
 
 model ProductSales {
@@ -115,6 +122,8 @@ model ProductSales {
   productId String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@map("Productsales")
 }
 
 model Images {
@@ -124,6 +133,8 @@ model Images {
   assetId String @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@map("Images")
 }
 
 model ProductAsset {
@@ -132,6 +143,8 @@ model ProductAsset {
   products  Product[]
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("Productasset")
 }
 
 //@TODO: Create a supplier model to store supplier details on a particular product
@@ -143,6 +156,8 @@ model SupplierDetails {
   product Product[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@map("Supplierdetails")
 }
 
 model Category{
@@ -152,6 +167,8 @@ model Category{
   product Product[]
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("Category")
 }
 model Inventory{
   id String @id @map("inventory_id")
@@ -161,6 +178,8 @@ model Inventory{
   product Product?  
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("Inventory")
 }
 model Discount{
   id String @id @map("discount_id")
@@ -173,6 +192,8 @@ model Discount{
   product Product[]
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("Discount")
 }
 
 // Shopping Cart Management
@@ -185,6 +206,8 @@ model ShoppingSession {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   userId String @unique @map("user_id")
   cartItems CartItems[]
+
+  @@map("Shoppingsession")
 }
 model CartItems{
   id String @id 
@@ -196,7 +219,8 @@ model CartItems{
   createdAt DateTime
   updatedAt DateTime
 
-  @@unique([productId,sessionId])
+
+  @@map("Cartitems")
 }
 
 // Order Structure
@@ -213,6 +237,8 @@ model OrderDetails {
   updatedAt DateTime @updatedAt @map("updated_at")
   createdAt DateTime @default(now()) @map("created_at")
   invoiceReport InvoiceReports?
+
+  @@map("Orderdetails")
 }
 model OrderItems {
   id String @id @map("order_item_id")
@@ -226,6 +252,8 @@ model OrderItems {
   updatedAt DateTime @updatedAt
 
   @@unique([productId,orderId])
+
+  @@map("Orderitems")
 }
 model PaymentDetails {
   id String  @id @map("payment_id")
@@ -238,6 +266,8 @@ model PaymentDetails {
   userId String
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("Paymentdetails")
 
 }
 
@@ -253,6 +283,8 @@ model ShippingDetails {
   user User[]
   order OrderDetails @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   orderId String
+
+  @@map("Shippingdetails")
 }
 
 

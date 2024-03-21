@@ -2672,3 +2672,137 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:
 → 110         () => this.model.findMany(
 The table `OrderDetails` does not exist in the current database.
 2024-03-21T06:00:20.473Z	[async_error]	error	null
+2024-03-21T10:09:20.138Z	[products]	info	Hello my products
+2024-03-21T10:09:23.333Z	[category]	info	Fetching categories
+2024-03-21T10:09:23.346Z	[discounts]	info	Fetching discounts
+2024-03-21T10:10:34.323Z	[cetegory]	info	Creating category
+2024-03-21T10:10:38.865Z	[discounts]	info	Creating discount
+2024-03-21T10:10:45.266Z	[discounts]	info	Creating discount
+2024-03-21T10:10:51.883Z	[discounts]	info	Creating discount
+2024-03-21T10:13:56.138Z	[category]	info	Fetching categories
+2024-03-21T10:13:56.154Z	[discounts]	info	Fetching discounts
+2024-03-21T10:14:18.951Z	[products]	info	Creating product
+2024-03-21T10:14:23.011Z	[products]	info	Creating product
+2024-03-21T10:14:24.916Z	[category]	info	Fetching categories
+2024-03-21T10:14:24.925Z	[discounts]	info	Fetching discounts
+2024-03-21T10:14:28.073Z	[products]	info	Creating product
+2024-03-21T10:14:28.574Z	[async_error]	error	null
+2024-03-21T10:14:28.577Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T10:14:30.456Z	[async_error]	error	null
+2024-03-21T10:14:30.459Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T10:14:32.520Z	[products]	info	Hello my products
+2024-03-21T10:14:40.907Z	[category]	info	Fetching categories
+2024-03-21T10:14:40.912Z	[discounts]	info	Fetching discounts
+2024-03-21T10:15:43.203Z	[products]	info	Creating product
+2024-03-21T10:15:47.203Z	[products]	info	Creating product
+2024-03-21T10:15:50.609Z	[async_error]	error	null
+2024-03-21T10:15:50.611Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T10:15:52.261Z	[products]	info	Creating product
+2024-03-21T10:15:57.728Z	[async_error]	error	null
+2024-03-21T10:15:57.730Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T10:15:59.307Z	[products]	info	Creating product
+2024-03-21T10:16:03.280Z	[async_error]	error	null
+2024-03-21T10:16:03.283Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T10:16:19.739Z	[products]	info	Hello my products
+2024-03-21T10:16:25.742Z	[category]	info	Fetching categories
+2024-03-21T10:16:25.749Z	[discounts]	info	Fetching discounts
+2024-03-21T10:17:36.265Z	[products]	info	Creating product
+2024-03-21T10:17:40.307Z	[products]	info	Creating product
+2024-03-21T10:17:43.077Z	[async_error]	error	null
+2024-03-21T10:17:43.079Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T10:17:45.168Z	[products]	info	Hello my products
+2024-03-21T10:18:57.229Z	[category]	info	Fetching categories
+2024-03-21T10:18:57.237Z	[discounts]	info	Fetching discounts
+2024-03-21T10:19:55.891Z	[products]	info	Creating product
+2024-03-21T10:19:59.907Z	[products]	info	Creating product
+2024-03-21T10:20:04.928Z	[products]	info	Creating product
+2024-03-21T10:20:04.963Z	[async_error]	error	null
+2024-03-21T10:20:04.965Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T10:20:10.287Z	[async_error]	error	null
+2024-03-21T10:20:10.290Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T10:20:11.985Z	[products]	info	Creating product
+2024-03-21T10:20:16.651Z	[async_error]	error	null
+2024-03-21T10:20:16.655Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:95:20
+
+  92 // Creates a new product with its relational subset fields if none of them exists
+  93 const { data: productInfo, error: postErr } =
+  94   await trycatchHelper<IProduct>(() =>
+→ 95     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-21T10:20:22.697Z	[products]	info	Hello my products
+2024-03-21T11:08:46.832Z	[async_error]	error	null
+2024-03-21T11:08:46.834Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:21:20
+
+  18 public static async createUser(userInfo: UserRecord) {
+  19   const { data: userRecord, error: postErr } = await trycatchHelper<IUser>(
+  20     () =>
+→ 21       this.model.create(
+Unique constraint failed on the constraint: `User_phone_key`	 PrismaClientKnownRequestError
