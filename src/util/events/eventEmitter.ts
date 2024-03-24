@@ -1,7 +1,4 @@
-import {
-  Notifications,
-  RetailerProducts,
-} from "@prisma/client";
+import { Notifications, RetailerProducts } from "@prisma/client";
 import EventEmitter from "events";
 import NotificationsModel from "../../models/Notifications";
 import { TProductInclude } from "../../models/Products";
@@ -55,7 +52,7 @@ mardigalEventEmitter.on("getProducts", async (products: TProductInclude[]) => {
 mardigalEventEmitter.on(
   "completeOrder",
   async (productDto: TProductInclude) => {
-    logger("orders").info("Creating notification for complete order");
+    logger("products").info("Creating retailer product");
     const { data: productInfo, error: createErr } =
       await trycatchHelper<RetailerProducts>(() =>
         RetailProductsModel.createProduct(productDto)
@@ -70,6 +67,7 @@ mardigalEventEmitter.on(
       });
 
     if (productInfo) {
+      logger("orders").info("Creating notification for complete order");
       const { data: notificationInfo, error: createErr } =
         await trycatchHelper<Notifications>(() =>
           NotificationsModel.createNotification({

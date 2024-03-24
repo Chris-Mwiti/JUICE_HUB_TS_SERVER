@@ -164,6 +164,9 @@ class OrderController {
 
     if (updateErr) return checkErrProperties(this.res, updateErr);
 
+    //Creates a new notification and creates a q  retailer product
+    mardigalEventEmitter.emit("completeOrder");
+
     new ResponseHandler<OrderDetails | null>(this.res, updatedInfo).updateResponse();
   }
 

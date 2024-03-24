@@ -14,6 +14,7 @@ import CategoryRouter from "../routes/api/category.routes";
 import OrdersRouter from "../routes/api/orders.routes";
 import GraphRouter from "../routes/api/graphs.routes";
 import UsersRouter from "../routes/api/users.routes";
+import NotificationRouter from "../routes/api/notifications.routes";
 
 /* ---------------- Server set up ----------------------- */
 
@@ -63,6 +64,7 @@ app.use("/api/discounts", DiscountRouter);
 app.use("/api/category", CategoryRouter);
 app.use("/api/orders", OrdersRouter);
 app.use("/api/graphs",GraphRouter);
+app.use("/api/notifications", NotificationRouter);
 
 /** -------- End of Routes setup  */
 
