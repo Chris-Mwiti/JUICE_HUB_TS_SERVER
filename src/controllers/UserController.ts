@@ -44,13 +44,15 @@ class UserController {
   public async updateUser() {
     logger("users").info("Updating user")
     const { userId } = this.req.params;
-    const userInfo: Partial<UserRecordWithoutId> = this.req.body;
+    const userInfo: Partial<User> = this.req.body;
 
     //Check if its a password change
     if("password" in userInfo){
       userInfo.password = await new AuthController("local").HashPassword(userInfo.password!);
     }
 
+    delete userInfo.id
+    
     const { data: updatedUser, error: updateErr } = await trycatchHelper<IUser>(
       () => this.model.updateUser(userInfo, userId)
     );
