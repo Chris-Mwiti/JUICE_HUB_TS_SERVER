@@ -33,11 +33,11 @@ mardigalEventEmitter.on("cancelOrder", async (id: string) => {
 });
 
 mardigalEventEmitter.on("getProducts", async (products: TProductInclude[]) => {
-  logger("orders").info("Creating notification for  low level alert");
   const productsPromises = products.map(async (product) => {
     if (product.inventory.quantity <= product.lowLevelAlert) {
+      logger("orders").info("Creating notification for  low level alert");
       return await NotificationsModel.createNotification({
-        message: `Product ${product.id} quantity is low`,
+        message: `Product ${product.productName} quantity is low`,
         title: "Product low level alert",
         type: "products",
         level: "crucial",

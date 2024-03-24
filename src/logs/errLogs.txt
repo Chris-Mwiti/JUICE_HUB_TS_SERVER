@@ -2440,3 +2440,97 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:
 → 114         () => this.model.findUnique(
 Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
 2024-03-23T15:39:36.626Z	[async_error]	error	null
+2024-03-24T11:02:09.190Z	[async_error]	error	null
+2024-03-24T11:02:09.198Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:85:20
+
+  82 // Creates a new product with its relational subset fields if none of them exists
+  83 const { data: productInfo, error: postErr } =
+  84   await trycatchHelper<IProduct>(() =>
+→ 85     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-24T11:02:13.647Z	[async_error]	error	null
+2024-03-24T11:02:13.657Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:85:20
+
+  82 // Creates a new product with its relational subset fields if none of them exists
+  83 const { data: productInfo, error: postErr } =
+  84   await trycatchHelper<IProduct>(() =>
+→ 85     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-24T11:02:20.829Z	[async_error]	error	null
+2024-03-24T11:02:20.831Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:85:20
+
+  82 // Creates a new product with its relational subset fields if none of them exists
+  83 const { data: productInfo, error: postErr } =
+  84   await trycatchHelper<IProduct>(() =>
+→ 85     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-24T12:25:24.034Z	[async_error]	error	null
+2024-03-24T12:25:24.036Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe82d9bc1d9fba437e37e7", length 25.	 PrismaClientKnownRequestError
+2024-03-24T12:25:25.066Z	[async_error]	error	null
+2024-03-24T12:25:25.071Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe82d9bc1d9fba437e37e7", length 25.	 PrismaClientKnownRequestError
+2024-03-24T12:25:27.120Z	[async_error]	error	null
+2024-03-24T12:25:27.132Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe82d9bc1d9fba437e37e7", length 25.	 PrismaClientKnownRequestError
+2024-03-24T12:25:31.181Z	[async_error]	error	null
+2024-03-24T12:25:31.183Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe82d9bc1d9fba437e37e7", length 25.	 PrismaClientKnownRequestError
+2024-03-24T13:00:28.996Z	[async_error]	error	null
+2024-03-24T13:00:29.003Z	[[DB_ERROR]]	error	An error has occured while creating the product	TypeError: Cannot read properties of undefined (reading 'productName')
+2024-03-24T13:09:54.178Z	[async_error]	error	null
+2024-03-24T13:09:54.180Z	[[DB_ERROR]]	error	An error has occured while creating the product	TypeError: Cannot read properties of undefined (reading 'id')
+2024-03-24T13:29:43.108Z	[async_error]	error	null
+2024-03-24T13:29:43.110Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\RetailProducts.ts:86:20
+
+  83 // Creates a new product with its relational subset fields if none of them exists
+  84 const { data: productInfo, error: postErr } =
+  85   await trycatchHelper<IProduct>(() =>
+→ 86     this.model.create(
+Unique constraint failed on the constraint: `RetailerInventory_product_name_key`
+2024-03-24T14:27:11.594Z	[async_error]	error	null
+2024-03-24T14:27:11.596Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\RetailProducts.ts:86:20
+
+  83 // Creates a new product with its relational subset fields if none of them exists
+  84 const { data: productInfo, error: postErr } =
+  85   await trycatchHelper<IProduct>(() =>
+→ 86     this.model.create(
+Unique constraint failed on the constraint: `RetailerInventory_product_name_key`

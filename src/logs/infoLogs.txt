@@ -4019,3 +4019,837 @@ Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at
 2024-03-24T04:40:19.508Z	[orders]	info	Creating notification for new order
 2024-03-24T04:40:26.862Z	[orders]	info	Fetching orders
 2024-03-24T04:40:56.903Z	[orders]	info	Fetching orders
+2024-03-24T10:14:40.074Z	[users]	info	Fetching users
+2024-03-24T10:16:49.952Z	[users]	info	Fetching users
+2024-03-24T10:17:06.458Z	[users]	info	Fetching users
+2024-03-24T10:17:14.313Z	[users]	info	Fetching users
+2024-03-24T10:17:19.228Z	[users]	info	Fetching users
+2024-03-24T10:17:45.630Z	[users]	info	Fetching users
+2024-03-24T10:17:54.349Z	[users]	info	Fetching users
+2024-03-24T10:17:58.085Z	[users]	info	Fetching user
+2024-03-24T10:22:52.809Z	[users]	info	Fetching user
+2024-03-24T10:22:56.832Z	[users]	info	Fetching user
+2024-03-24T10:23:07.712Z	[users]	info	Updating user
+2024-03-24T10:23:08.813Z	[users]	info	Fetching user
+2024-03-24T10:23:10.895Z	[users]	info	Fetching users
+2024-03-24T10:23:47.295Z	[users]	info	Fetching users
+2024-03-24T10:23:52.269Z	[users]	info	Fetching users
+2024-03-24T10:24:04.907Z	[users]	info	Fetching users
+2024-03-24T10:24:07.174Z	[users]	info	Fetching users
+2024-03-24T10:24:09.216Z	[users]	info	Fetching users
+2024-03-24T10:24:12.276Z	[users]	info	Fetching users
+2024-03-24T10:24:14.939Z	[users]	info	Fetching users
+2024-03-24T10:24:21.147Z	[users]	info	Fetching users
+2024-03-24T10:24:22.692Z	[users]	info	Fetching users
+2024-03-24T10:24:24.991Z	[users]	info	Fetching users
+2024-03-24T10:24:27.924Z	[users]	info	Fetching users
+2024-03-24T10:24:29.691Z	[users]	info	Fetching users
+2024-03-24T10:24:35.241Z	[users]	info	Fetching users
+2024-03-24T10:24:37.202Z	[users]	info	Fetching users
+2024-03-24T10:24:40.284Z	[users]	info	Fetching users
+2024-03-24T10:24:43.934Z	[users]	info	Fetching users
+2024-03-24T10:24:56.230Z	[users]	info	Fetching users
+2024-03-24T10:24:57.268Z	[users]	info	Fetching users
+2024-03-24T10:24:58.170Z	[users]	info	Fetching users
+2024-03-24T10:25:00.454Z	[users]	info	Fetching users
+2024-03-24T10:25:14.242Z	[users]	info	Fetching users
+2024-03-24T10:25:29.277Z	[users]	info	Fetching users
+2024-03-24T10:25:30.500Z	[users]	info	Fetching users
+2024-03-24T10:25:35.991Z	[users]	info	Fetching users
+2024-03-24T10:25:39.661Z	[users]	info	Fetching users
+2024-03-24T10:25:42.076Z	[users]	info	Fetching users
+2024-03-24T10:25:43.388Z	[users]	info	Fetching users
+2024-03-24T10:25:45.855Z	[users]	info	Fetching users
+2024-03-24T10:25:48.178Z	[users]	info	Fetching users
+2024-03-24T10:25:55.466Z	[users]	info	Fetching users
+2024-03-24T10:26:06.379Z	[users]	info	Fetching users
+2024-03-24T10:26:08.073Z	[users]	info	Fetching users
+2024-03-24T10:26:18.966Z	[users]	info	Fetching users
+2024-03-24T10:26:23.028Z	[users]	info	Fetching users
+2024-03-24T10:26:28.166Z	[users]	info	Fetching users
+2024-03-24T10:26:31.111Z	[users]	info	Fetching users
+2024-03-24T10:26:41.523Z	[users]	info	Fetching users
+2024-03-24T10:26:44.217Z	[users]	info	Fetching users
+2024-03-24T10:26:48.181Z	[users]	info	Fetching users
+2024-03-24T10:26:50.188Z	[users]	info	Fetching users
+2024-03-24T10:27:06.287Z	[users]	info	Fetching users
+2024-03-24T10:27:14.213Z	[users]	info	Fetching users
+2024-03-24T10:27:28.370Z	[users]	info	Fetching users
+2024-03-24T10:27:46.088Z	[users]	info	Fetching users
+2024-03-24T10:28:59.136Z	[users]	info	Fetching users
+2024-03-24T10:29:20.154Z	[users]	info	Fetching user
+2024-03-24T10:29:24.164Z	[users]	info	Fetching user
+2024-03-24T10:30:08.221Z	[users]	info	Fetching user
+2024-03-24T10:30:12.517Z	[users]	info	Fetching user
+2024-03-24T10:30:18.144Z	[users]	info	Fetching user
+2024-03-24T10:30:43.976Z	[users]	info	Fetching user
+2024-03-24T10:30:46.860Z	[products]	info	Hello my products
+2024-03-24T10:30:49.130Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:35:57.341Z	[products]	info	Hello my products
+2024-03-24T10:36:06.228Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:37:03.655Z	[products]	info	Hello my products
+2024-03-24T10:37:06.249Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:37:26.477Z	[products]	info	Hello my products
+2024-03-24T10:37:28.160Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:37:40.700Z	[products]	info	Hello my products
+2024-03-24T10:37:42.578Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:44:50.996Z	[products]	info	Hello my products
+2024-03-24T10:44:55.022Z	[products]	info	Hello my products
+2024-03-24T10:44:57.989Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:44:59.734Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:46:32.513Z	[products]	info	Hello my products
+2024-03-24T10:46:34.770Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:46:34.798Z	[products]	info	Hello my products
+2024-03-24T10:46:37.231Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:47:14.024Z	[products]	info	Hello my products
+2024-03-24T10:47:16.789Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:47:16.798Z	[products]	info	Hello my products
+2024-03-24T10:47:19.067Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:47:46.534Z	[products]	info	Hello my products
+2024-03-24T10:47:49.451Z	[products]	info	Hello my products
+2024-03-24T10:47:49.707Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:47:53.219Z	[products]	info	Hello my products
+2024-03-24T10:47:54.725Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:47:55.737Z	[products]	info	Hello my products
+2024-03-24T10:47:58.557Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:48:02.335Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:48:06.290Z	[products]	info	Hello my products
+2024-03-24T10:48:16.136Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:48:20.226Z	[products]	info	Hello my products
+2024-03-24T10:48:23.243Z	[products]	info	Hello my products
+2024-03-24T10:48:24.893Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:48:26.239Z	[products]	info	Hello my products
+2024-03-24T10:48:27.831Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:48:30.872Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:48:33.392Z	[products]	info	Hello my products
+2024-03-24T10:48:35.387Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:48:45.895Z	[products]	info	Hello my products
+2024-03-24T10:48:47.560Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T10:50:56.400Z	[category]	info	Fetching categories
+2024-03-24T10:53:08.339Z	[discounts]	info	Fetching discounts
+2024-03-24T10:53:16.327Z	[discounts]	info	Fetching discounts
+2024-03-24T10:53:19.316Z	[discounts]	info	Fetching discounts
+2024-03-24T10:53:45.885Z	[category]	info	Fetching categories
+2024-03-24T10:53:45.892Z	[discounts]	info	Fetching discounts
+2024-03-24T10:54:48.177Z	[category]	info	Fetching categories
+2024-03-24T10:54:48.183Z	[discounts]	info	Fetching discounts
+2024-03-24T10:56:20.337Z	[category]	info	Fetching categories
+2024-03-24T10:56:20.348Z	[discounts]	info	Fetching discounts
+2024-03-24T10:56:23.283Z	[category]	info	Fetching categories
+2024-03-24T10:56:25.286Z	[category]	info	Fetching categories
+2024-03-24T10:56:28.283Z	[category]	info	Fetching categories
+2024-03-24T10:56:34.332Z	[category]	info	Fetching categories
+2024-03-24T10:56:34.338Z	[discounts]	info	Fetching discounts
+2024-03-24T10:56:39.284Z	[category]	info	Fetching categories
+2024-03-24T10:56:42.298Z	[category]	info	Fetching categories
+2024-03-24T10:56:50.335Z	[category]	info	Fetching categories
+2024-03-24T10:56:55.300Z	[category]	info	Fetching categories
+2024-03-24T10:57:02.315Z	[category]	info	Fetching categories
+2024-03-24T10:57:06.332Z	[category]	info	Fetching categories
+2024-03-24T10:57:23.159Z	[category]	info	Fetching categories
+2024-03-24T10:57:23.165Z	[discounts]	info	Fetching discounts
+2024-03-24T10:57:28.961Z	[category]	info	Fetching categories
+2024-03-24T10:57:28.966Z	[discounts]	info	Fetching discounts
+2024-03-24T10:57:35.981Z	[category]	info	Fetching categories
+2024-03-24T10:57:35.994Z	[discounts]	info	Fetching discounts
+2024-03-24T10:57:42.976Z	[category]	info	Fetching categories
+2024-03-24T10:57:42.983Z	[discounts]	info	Fetching discounts
+2024-03-24T10:57:47.896Z	[category]	info	Fetching categories
+2024-03-24T10:57:47.902Z	[discounts]	info	Fetching discounts
+2024-03-24T10:58:27.042Z	[category]	info	Fetching categories
+2024-03-24T10:58:27.046Z	[discounts]	info	Fetching discounts
+2024-03-24T10:58:34.790Z	[category]	info	Fetching categories
+2024-03-24T10:58:34.802Z	[discounts]	info	Fetching discounts
+2024-03-24T11:00:40.973Z	[category]	info	Fetching categories
+2024-03-24T11:00:40.980Z	[discounts]	info	Fetching discounts
+2024-03-24T11:00:45.014Z	[category]	info	Fetching categories
+2024-03-24T11:00:45.025Z	[discounts]	info	Fetching discounts
+2024-03-24T11:00:50.021Z	[category]	info	Fetching categories
+2024-03-24T11:00:50.025Z	[discounts]	info	Fetching discounts
+2024-03-24T11:01:57.935Z	[products]	info	Creating product
+2024-03-24T11:02:01.944Z	[products]	info	Creating product
+2024-03-24T11:02:06.984Z	[products]	info	Creating product
+2024-03-24T11:02:09.190Z	[async_error]	error	null
+2024-03-24T11:02:09.198Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:85:20
+
+  82 // Creates a new product with its relational subset fields if none of them exists
+  83 const { data: productInfo, error: postErr } =
+  84   await trycatchHelper<IProduct>(() =>
+→ 85     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-24T11:02:13.647Z	[async_error]	error	null
+2024-03-24T11:02:13.657Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:85:20
+
+  82 // Creates a new product with its relational subset fields if none of them exists
+  83 const { data: productInfo, error: postErr } =
+  84   await trycatchHelper<IProduct>(() =>
+→ 85     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-24T11:02:13.989Z	[products]	info	Creating product
+2024-03-24T11:02:20.829Z	[async_error]	error	null
+2024-03-24T11:02:20.831Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:85:20
+
+  82 // Creates a new product with its relational subset fields if none of them exists
+  83 const { data: productInfo, error: postErr } =
+  84   await trycatchHelper<IProduct>(() =>
+→ 85     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-24T11:02:49.297Z	[category]	info	Fetching categories
+2024-03-24T11:02:49.307Z	[discounts]	info	Fetching discounts
+2024-03-24T11:02:53.893Z	[products]	info	Hello my products
+2024-03-24T11:02:55.461Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T11:04:47.910Z	[products]	info	Hello my products
+2024-03-24T11:04:49.618Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T11:05:40.603Z	[products]	info	Hello my products
+2024-03-24T11:05:43.100Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T11:22:13.564Z	[products]	info	Hello my products
+2024-03-24T11:22:14.991Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T11:22:44.518Z	[products]	info	Hello my products
+2024-03-24T11:22:47.086Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T11:44:50.789Z	[products]	info	Hello my products
+2024-03-24T11:44:54.796Z	[products]	info	Hello my products
+2024-03-24T11:44:57.084Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T11:44:58.017Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T11:44:59.800Z	[products]	info	Hello my products
+2024-03-24T11:45:01.588Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T11:45:32.955Z	[products]	info	Hello my products
+2024-03-24T11:45:35.533Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T11:48:55.185Z	[products]	info	Hello my products
+2024-03-24T11:48:59.066Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T12:22:14.962Z	[products]	info	Hello my products
+2024-03-24T12:22:18.920Z	[products]	info	Hello my products
+2024-03-24T12:22:23.928Z	[products]	info	Hello my products
+2024-03-24T12:22:24.259Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T12:22:24.782Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T12:22:26.456Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T12:25:24.034Z	[async_error]	error	null
+2024-03-24T12:25:24.036Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe82d9bc1d9fba437e37e7", length 25.	 PrismaClientKnownRequestError
+2024-03-24T12:25:25.066Z	[async_error]	error	null
+2024-03-24T12:25:25.071Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe82d9bc1d9fba437e37e7", length 25.	 PrismaClientKnownRequestError
+2024-03-24T12:25:27.120Z	[async_error]	error	null
+2024-03-24T12:25:27.132Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe82d9bc1d9fba437e37e7", length 25.	 PrismaClientKnownRequestError
+2024-03-24T12:25:31.181Z	[async_error]	error	null
+2024-03-24T12:25:31.183Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe82d9bc1d9fba437e37e7", length 25.	 PrismaClientKnownRequestError
+2024-03-24T12:32:15.666Z	[inventory]	info	Updating inventory
+2024-03-24T12:32:17.400Z	[product]	info	Updating product
+2024-03-24T12:32:29.998Z	[inventory]	info	Updating inventory
+2024-03-24T12:32:31.883Z	[product]	info	Updating product
+2024-03-24T12:32:36.557Z	[inventory]	info	Updating inventory
+2024-03-24T12:32:38.084Z	[product]	info	Updating product
+2024-03-24T12:32:40.865Z	[inventory]	info	Updating inventory
+2024-03-24T12:32:42.651Z	[product]	info	Updating product
+2024-03-24T12:32:47.962Z	[products]	info	Hello my products
+2024-03-24T12:32:49.852Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T12:35:01.533Z	[products]	info	Hello my products
+2024-03-24T12:35:02.291Z	[products]	info	Hello my products
+2024-03-24T12:35:05.163Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T12:35:05.186Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T12:39:43.504Z	[inventory]	info	Updating inventory
+2024-03-24T12:39:45.034Z	[product]	info	Updating product
+2024-03-24T12:40:08.874Z	[inventory]	info	Updating inventory
+2024-03-24T12:40:10.379Z	[product]	info	Updating product
+2024-03-24T12:40:23.712Z	[inventory]	info	Updating inventory
+2024-03-24T12:40:25.197Z	[product]	info	Updating product
+2024-03-24T12:41:11.689Z	[products]	info	Hello my products
+2024-03-24T12:41:12.949Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T12:45:19.837Z	[orders]	info	Fetching orders
+2024-03-24T12:45:35.844Z	[orders]	info	Fetching orders
+2024-03-24T12:45:41.856Z	[orders]	info	Fetching orders
+2024-03-24T12:46:04.868Z	[orders]	info	Fetching orders
+2024-03-24T12:46:07.842Z	[orders]	info	Fetching orders
+2024-03-24T12:46:18.428Z	[orders]	info	Fetching orders
+2024-03-24T12:47:11.231Z	[orders]	info	Fetching orders
+2024-03-24T12:47:13.757Z	[orders]	info	Fetching orders
+2024-03-24T12:47:34.783Z	[orders]	info	Fetching orders
+2024-03-24T12:47:40.552Z	[orders]	info	Fetching orders
+2024-03-24T12:47:43.528Z	[orders]	info	Fetching orders
+2024-03-24T12:47:45.450Z	[orders]	info	Fetching orders
+2024-03-24T12:47:50.537Z	[orders]	info	Fetching orders
+2024-03-24T12:47:52.545Z	[orders]	info	Fetching orders
+2024-03-24T12:48:51.555Z	[orders]	info	Fetching orders
+2024-03-24T12:49:01.926Z	[orders]	info	Fetching orders
+2024-03-24T12:49:03.604Z	[orders]	info	Fetching orders
+2024-03-24T12:49:04.568Z	[orders]	info	Fetching orders
+2024-03-24T12:49:11.573Z	[orders]	info	Fetching orders
+2024-03-24T12:49:15.811Z	[orders]	info	Fetching orders
+2024-03-24T12:49:18.438Z	[orders]	info	Fetching orders
+2024-03-24T12:49:20.485Z	[orders]	info	Fetching orders
+2024-03-24T12:49:29.690Z	[orders]	info	Fetching orders
+2024-03-24T12:49:31.557Z	[orders]	info	Fetching orders
+2024-03-24T12:49:37.481Z	[orders]	info	Fetching orders
+2024-03-24T12:49:46.061Z	[orders]	info	Fetching orders
+2024-03-24T12:49:58.714Z	[orders]	info	Fetching orders
+2024-03-24T12:50:00.567Z	[orders]	info	Fetching orders
+2024-03-24T12:50:02.800Z	[orders]	info	Fetching orders
+2024-03-24T12:50:04.520Z	[orders]	info	Fetching orders
+2024-03-24T12:50:09.650Z	[orders]	info	Fetching orders
+2024-03-24T12:51:11.670Z	[orders]	info	Fetching orders
+2024-03-24T12:51:26.675Z	[orders]	info	Fetching orders
+2024-03-24T12:51:58.536Z	[orders]	info	Fetching orders
+2024-03-24T12:52:06.433Z	[orders]	info	Fetching orders
+2024-03-24T12:52:15.343Z	[orders]	info	Fetching orders
+2024-03-24T12:52:21.570Z	[orders]	info	Fetching orders
+2024-03-24T12:53:27.867Z	[orders]	info	Fetching orders
+2024-03-24T12:53:29.622Z	[orders]	info	Fetching orders
+2024-03-24T12:53:32.519Z	[orders]	info	Fetching orders
+2024-03-24T12:53:33.921Z	[orders]	info	Fetching orders
+2024-03-24T12:53:45.737Z	[orders]	info	Fetching orders
+2024-03-24T12:53:56.288Z	[orders]	info	Fetching order
+2024-03-24T12:54:10.672Z	[orders]	info	Fetching orders
+2024-03-24T12:55:30.103Z	[orders]	info	Fetching orders
+2024-03-24T12:55:40.154Z	[orders]	info	Fetching order
+2024-03-24T12:56:11.768Z	[orders]	info	Fetching order
+2024-03-24T12:56:16.104Z	[orders]	info	Fetching order
+2024-03-24T12:56:26.020Z	[orders]	info	Fetching order
+2024-03-24T12:56:28.720Z	[orders]	info	Fetching order
+2024-03-24T12:56:34.332Z	[orders]	info	Fetching order
+2024-03-24T12:57:05.277Z	[orders]	info	Fetching order
+2024-03-24T12:58:16.814Z	[orders]	info	Fetching order
+2024-03-24T12:58:45.666Z	[orders]	info	Fetching order
+2024-03-24T12:58:51.397Z	[orders]	info	Fetching order
+2024-03-24T12:58:52.214Z	[orders]	info	Fetching order
+2024-03-24T13:00:03.606Z	[orders]	info	Fetching order
+2024-03-24T13:00:09.587Z	[orders]	info	Fetching order
+2024-03-24T13:00:11.606Z	[orders]	info	Fetching order
+2024-03-24T13:00:15.265Z	[orders]	info	Fetching order
+2024-03-24T13:00:21.798Z	[orders]	info	Updating order
+2024-03-24T13:00:23.719Z	[sale]	info	Creating sale
+2024-03-24T13:00:24.404Z	[inventory]	info	Updating the inventory
+2024-03-24T13:00:28.984Z	[products]	info	Creating retailer product
+2024-03-24T13:00:28.996Z	[async_error]	error	null
+2024-03-24T13:00:29.003Z	[[DB_ERROR]]	error	An error has occured while creating the product	TypeError: Cannot read properties of undefined (reading 'productName')
+2024-03-24T13:00:29.006Z	[orders]	info	Creating notification for complete order
+2024-03-24T13:09:34.961Z	[orders]	info	Fetching order
+2024-03-24T13:09:46.029Z	[orders]	info	Fetching order
+2024-03-24T13:09:47.573Z	[orders]	info	Updating order
+2024-03-24T13:09:49.056Z	[sale]	info	Creating sale
+2024-03-24T13:09:49.717Z	[inventory]	info	Updating the inventory
+2024-03-24T13:09:54.176Z	[products]	info	Creating retailer product
+2024-03-24T13:09:54.178Z	[async_error]	error	null
+2024-03-24T13:09:54.180Z	[[DB_ERROR]]	error	An error has occured while creating the product	TypeError: Cannot read properties of undefined (reading 'id')
+2024-03-24T13:09:54.183Z	[orders]	info	Creating notification for complete order
+2024-03-24T13:23:06.675Z	[orders]	info	Fetching order
+2024-03-24T13:23:10.478Z	[orders]	info	Fetching order
+2024-03-24T13:23:15.488Z	[orders]	info	Fetching order
+2024-03-24T13:28:51.697Z	[orders]	info	Updating order
+2024-03-24T13:29:00.262Z	[sale]	info	Creating sale
+2024-03-24T13:29:00.938Z	[products]	info	Fetching product
+2024-03-24T13:29:02.205Z	[products]	info	Creating retailer product
+2024-03-24T13:29:02.207Z	[inventory]	info	Updating the inventory
+2024-03-24T13:29:31.399Z	[orders]	info	Updating order
+2024-03-24T13:29:35.756Z	[sale]	info	Creating sale
+2024-03-24T13:29:38.538Z	[products]	info	Fetching product
+2024-03-24T13:29:40.544Z	[products]	info	Creating retailer product
+2024-03-24T13:29:40.547Z	[inventory]	info	Updating the inventory
+2024-03-24T13:29:43.108Z	[async_error]	error	null
+2024-03-24T13:29:43.110Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\RetailProducts.ts:86:20
+
+  83 // Creates a new product with its relational subset fields if none of them exists
+  84 const { data: productInfo, error: postErr } =
+  85   await trycatchHelper<IProduct>(() =>
+→ 86     this.model.create(
+Unique constraint failed on the constraint: `RetailerInventory_product_name_key`
+2024-03-24T13:29:43.112Z	[orders]	info	Creating notification for complete order
+2024-03-24T13:30:59.215Z	[orders]	info	Fetching order
+2024-03-24T13:31:03.195Z	[orders]	info	Fetching order
+2024-03-24T13:34:05.356Z	[orders]	info	Fetching order
+2024-03-24T13:34:09.347Z	[orders]	info	Fetching order
+2024-03-24T13:54:35.314Z	[orders]	info	Fetching orders
+2024-03-24T13:54:39.291Z	[orders]	info	Fetching orders
+2024-03-24T13:55:10.116Z	[orders]	info	Fetching order
+2024-03-24T13:55:48.291Z	[orders]	info	Fetching order
+2024-03-24T13:56:02.710Z	[orders]	info	Fetching order
+2024-03-24T13:56:12.693Z	[orders]	info	Updating order
+2024-03-24T13:56:14.262Z	[sale]	info	Creating sale
+2024-03-24T13:56:14.984Z	[products]	info	Fetching product
+2024-03-24T13:56:16.762Z	[products]	info	Creating retailer product
+2024-03-24T13:56:16.764Z	[inventory]	info	Updating the inventory
+2024-03-24T13:56:18.425Z	[orders]	info	Creating notification for complete order
+2024-03-24T13:56:31.270Z	[orders]	info	Fetching orders
+2024-03-24T13:56:35.275Z	[orders]	info	Fetching orders
+2024-03-24T13:56:40.297Z	[orders]	info	Fetching orders
+2024-03-24T13:56:47.324Z	[orders]	info	Fetching orders
+2024-03-24T13:57:12.551Z	[orders]	info	Fetching orders
+2024-03-24T13:57:16.568Z	[orders]	info	Fetching orders
+2024-03-24T13:57:21.590Z	[orders]	info	Fetching orders
+2024-03-24T14:02:09.433Z	[orders]	info	Fetching orders
+2024-03-24T14:05:32.698Z	[orders]	info	Fetching orders
+2024-03-24T14:05:35.200Z	[products]	info	Hello my products
+2024-03-24T14:05:39.198Z	[products]	info	Hello my products
+2024-03-24T14:05:44.210Z	[products]	info	Hello my products
+2024-03-24T14:05:45.088Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:05:46.020Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:05:46.865Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:06:06.960Z	[inventory]	info	Updating inventory
+2024-03-24T14:06:10.124Z	[product]	info	Updating product
+2024-03-24T14:06:31.971Z	[products]	info	Hello my products
+2024-03-24T14:06:35.451Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:06:35.982Z	[products]	info	Hello my products
+2024-03-24T14:06:39.884Z	[products]	info	Hello my products
+2024-03-24T14:06:40.395Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:06:43.380Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:06:43.888Z	[products]	info	Hello my products
+2024-03-24T14:06:45.318Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:11:50.700Z	[products]	info	Hello my products
+2024-03-24T14:11:54.635Z	[products]	info	Hello my products
+2024-03-24T14:11:55.580Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:11:57.662Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:11:59.647Z	[products]	info	Hello my products
+2024-03-24T14:12:02.618Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:13:20.609Z	[products]	info	Hello my products
+2024-03-24T14:13:22.426Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:13:33.855Z	[inventory]	info	Updating inventory
+2024-03-24T14:13:35.479Z	[product]	info	Updating product
+2024-03-24T14:15:45.135Z	[orders]	info	Fetching orders
+2024-03-24T14:15:49.144Z	[orders]	info	Fetching orders
+2024-03-24T14:15:58.782Z	[orders]	info	Fetching orders
+2024-03-24T14:16:05.778Z	[orders]	info	Fetching orders
+2024-03-24T14:16:14.403Z	[orders]	info	Fetching orders
+2024-03-24T14:16:18.423Z	[orders]	info	Fetching orders
+2024-03-24T14:16:23.449Z	[orders]	info	Fetching orders
+2024-03-24T14:16:32.475Z	[orders]	info	Fetching orders
+2024-03-24T14:16:43.037Z	[products]	info	Hello my products
+2024-03-24T14:16:45.964Z	[orders]	info	Fetching orders
+2024-03-24T14:16:48.471Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:17:14.662Z	[orders]	info	Fetching orders
+2024-03-24T14:17:33.901Z	[orders]	info	Fetching orders
+2024-03-24T14:17:40.533Z	[orders]	info	Fetching orders
+2024-03-24T14:17:44.548Z	[orders]	info	Fetching orders
+2024-03-24T14:18:17.617Z	[orders]	info	Fetching order
+2024-03-24T14:18:21.617Z	[orders]	info	Fetching order
+2024-03-24T14:18:26.639Z	[orders]	info	Fetching order
+2024-03-24T14:18:33.668Z	[orders]	info	Fetching order
+2024-03-24T14:19:01.846Z	[orders]	info	Updating order
+2024-03-24T14:19:03.353Z	[sale]	info	Creating sale
+2024-03-24T14:19:04.057Z	[products]	info	Fetching product
+2024-03-24T14:19:05.367Z	[products]	info	Creating retailer product
+2024-03-24T14:19:05.369Z	[inventory]	info	Updating the inventory
+2024-03-24T14:19:06.663Z	[orders]	info	Creating notification for complete order
+2024-03-24T14:24:06.116Z	[orders]	info	Fetching order
+2024-03-24T14:24:10.109Z	[orders]	info	Fetching order
+2024-03-24T14:24:10.851Z	[products]	info	Hello my products
+2024-03-24T14:24:14.861Z	[products]	info	Hello my products
+2024-03-24T14:24:14.985Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:24:17.666Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:26:13.016Z	[products]	info	Hello my products
+2024-03-24T14:26:14.363Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:26:16.083Z	[orders]	info	Fetching orders
+2024-03-24T14:26:29.259Z	[orders]	info	Fetching order
+2024-03-24T14:27:03.833Z	[orders]	info	Updating order
+2024-03-24T14:27:05.378Z	[sale]	info	Creating sale
+2024-03-24T14:27:06.413Z	[products]	info	Fetching product
+2024-03-24T14:27:08.053Z	[products]	info	Creating retailer product
+2024-03-24T14:27:08.055Z	[inventory]	info	Updating the inventory
+2024-03-24T14:27:11.594Z	[async_error]	error	null
+2024-03-24T14:27:11.596Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\RetailProducts.ts:86:20
+
+  83 // Creates a new product with its relational subset fields if none of them exists
+  84 const { data: productInfo, error: postErr } =
+  85   await trycatchHelper<IProduct>(() =>
+→ 86     this.model.create(
+Unique constraint failed on the constraint: `RetailerInventory_product_name_key`
+2024-03-24T14:27:11.599Z	[orders]	info	Creating notification for complete order
+2024-03-24T14:28:40.768Z	[orders]	info	Fetching order
+2024-03-24T14:28:46.600Z	[orders]	info	Fetching order
+2024-03-24T14:28:52.617Z	[orders]	info	Fetching order
+2024-03-24T14:36:46.898Z	[orders]	info	Fetching order
+2024-03-24T14:40:04.630Z	[orders]	info	Fetching order
+2024-03-24T14:40:08.630Z	[orders]	info	Fetching order
+2024-03-24T14:40:13.607Z	[orders]	info	Fetching order
+2024-03-24T14:42:53.293Z	[orders]	info	Fetching order
+2024-03-24T14:42:57.294Z	[orders]	info	Fetching order
+2024-03-24T14:48:57.446Z	[products]	info	Hello my products
+2024-03-24T14:49:01.470Z	[products]	info	Hello my products
+2024-03-24T14:49:03.626Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:49:04.621Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:49:06.490Z	[products]	info	Hello my products
+2024-03-24T14:49:07.898Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:49:51.398Z	[products]	info	Hello my products
+2024-03-24T14:49:53.705Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:50:48.487Z	[products]	info	Hello my products
+2024-03-24T14:50:50.355Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:51:48.916Z	[products]	info	Hello my products
+2024-03-24T14:51:50.402Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:51:55.222Z	[products]	info	Hello my products
+2024-03-24T14:51:57.345Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T14:52:10.274Z	[products]	info	Hello my products
+2024-03-24T14:52:11.538Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:01:09.476Z	[users]	info	Fetching users
+2024-03-24T15:01:13.462Z	[users]	info	Fetching users
+2024-03-24T15:01:18.494Z	[users]	info	Fetching users
+2024-03-24T15:04:20.123Z	[users]	info	Fetching users
+2024-03-24T15:04:28.091Z	[users]	info	Fetching users
+2024-03-24T15:05:37.064Z	[users]	info	Fetching users
+2024-03-24T15:05:41.004Z	[users]	info	Fetching users
+2024-03-24T15:05:42.464Z	[products]	info	Hello my products
+2024-03-24T15:05:46.472Z	[products]	info	Hello my products
+2024-03-24T15:05:49.042Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:05:51.481Z	[products]	info	Hello my products
+2024-03-24T15:05:54.125Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:05:54.705Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:05:58.518Z	[products]	info	Hello my products
+2024-03-24T15:06:02.668Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:06:07.722Z	[users]	info	Fetching users
+2024-03-24T15:06:10.643Z	[products]	info	Hello my products
+2024-03-24T15:06:13.758Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:06:28.068Z	[products]	info	Hello my products
+2024-03-24T15:06:29.366Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:07:41.491Z	[inventory]	info	Updating inventory
+2024-03-24T15:07:43.114Z	[product]	info	Updating product
+2024-03-24T15:07:51.851Z	[products]	info	Hello my products
+2024-03-24T15:07:53.472Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:19:01.117Z	[products]	info	Hello my products
+2024-03-24T15:19:02.455Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:19:23.861Z	[products]	info	Hello my products
+2024-03-24T15:19:27.309Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:19:27.880Z	[products]	info	Hello my products
+2024-03-24T15:19:32.062Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:19:32.896Z	[products]	info	Hello my products
+2024-03-24T15:19:39.913Z	[products]	info	Hello my products
+2024-03-24T15:19:41.331Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:19:42.209Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:19:44.357Z	[products]	info	Hello my products
+2024-03-24T15:19:46.923Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:22:14.527Z	[products]	info	Hello my products
+2024-03-24T15:22:19.226Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:24:52.823Z	[users]	info	Fetching users
+2024-03-24T15:24:57.034Z	[users]	info	Fetching users
+2024-03-24T15:26:24.233Z	[users]	info	Fetching users
+2024-03-24T15:26:24.242Z	[products]	info	Hello my products
+2024-03-24T15:26:27.841Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:26:28.248Z	[users]	info	Fetching users
+2024-03-24T15:26:28.253Z	[products]	info	Hello my products
+2024-03-24T15:26:32.223Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:26:33.275Z	[products]	info	Hello my products
+2024-03-24T15:26:35.546Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:27:33.331Z	[users]	info	Fetching users
+2024-03-24T15:27:33.339Z	[products]	info	Hello my products
+2024-03-24T15:27:33.347Z	[orders]	info	Fetching orders
+2024-03-24T15:27:34.693Z	[users]	info	Fetching users
+2024-03-24T15:27:36.109Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:27:38.696Z	[users]	info	Fetching users
+2024-03-24T15:27:56.228Z	[users]	info	Fetching users
+2024-03-24T15:27:56.235Z	[products]	info	Hello my products
+2024-03-24T15:27:56.242Z	[orders]	info	Fetching orders
+2024-03-24T15:27:57.584Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:27:57.745Z	[users]	info	Fetching users
+2024-03-24T15:27:57.754Z	[products]	info	Hello my products
+2024-03-24T15:27:59.893Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:28:00.241Z	[orders]	info	Fetching orders
+2024-03-24T15:28:00.398Z	[users]	info	Fetching users
+2024-03-24T15:28:00.405Z	[products]	info	Hello my products
+2024-03-24T15:28:01.724Z	[users]	info	Fetching users
+2024-03-24T15:28:01.731Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:28:13.479Z	[users]	info	Fetching users
+2024-03-24T15:28:13.486Z	[products]	info	Hello my products
+2024-03-24T15:28:13.493Z	[orders]	info	Fetching orders
+2024-03-24T15:28:14.797Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:28:17.607Z	[users]	info	Fetching users
+2024-03-24T15:28:17.614Z	[products]	info	Hello my products
+2024-03-24T15:28:17.623Z	[orders]	info	Fetching orders
+2024-03-24T15:28:19.370Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:28:25.527Z	[products]	info	Hello my products
+2024-03-24T15:28:25.532Z	[users]	info	Fetching users
+2024-03-24T15:28:25.536Z	[orders]	info	Fetching orders
+2024-03-24T15:28:26.854Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:28:39.451Z	[products]	info	Hello my products
+2024-03-24T15:28:39.458Z	[users]	info	Fetching users
+2024-03-24T15:28:39.465Z	[orders]	info	Fetching orders
+2024-03-24T15:28:41.094Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:28:42.745Z	[users]	info	Fetching users
+2024-03-24T15:28:42.751Z	[products]	info	Hello my products
+2024-03-24T15:28:42.758Z	[orders]	info	Fetching orders
+2024-03-24T15:28:45.547Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:29:24.716Z	[users]	info	Fetching users
+2024-03-24T15:29:24.728Z	[products]	info	Hello my products
+2024-03-24T15:29:24.737Z	[orders]	info	Fetching orders
+2024-03-24T15:29:27.223Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:29:28.725Z	[orders]	info	Fetching orders
+2024-03-24T15:29:49.972Z	[users]	info	Fetching users
+2024-03-24T15:29:49.978Z	[products]	info	Hello my products
+2024-03-24T15:29:49.982Z	[orders]	info	Fetching orders
+2024-03-24T15:29:51.916Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:29:53.978Z	[orders]	info	Fetching orders
+2024-03-24T15:29:58.095Z	[users]	info	Fetching users
+2024-03-24T15:29:58.100Z	[products]	info	Hello my products
+2024-03-24T15:29:58.104Z	[orders]	info	Fetching orders
+2024-03-24T15:29:59.499Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:30:03.901Z	[users]	info	Fetching users
+2024-03-24T15:30:03.910Z	[products]	info	Hello my products
+2024-03-24T15:30:03.916Z	[orders]	info	Fetching orders
+2024-03-24T15:30:05.301Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:30:08.283Z	[users]	info	Fetching users
+2024-03-24T15:30:08.290Z	[products]	info	Hello my products
+2024-03-24T15:30:08.296Z	[orders]	info	Fetching orders
+2024-03-24T15:30:09.644Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:30:10.717Z	[users]	info	Fetching users
+2024-03-24T15:30:10.724Z	[products]	info	Hello my products
+2024-03-24T15:30:10.729Z	[orders]	info	Fetching orders
+2024-03-24T15:30:12.408Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:30:20.616Z	[products]	info	Hello my products
+2024-03-24T15:30:20.621Z	[users]	info	Fetching users
+2024-03-24T15:30:20.626Z	[orders]	info	Fetching orders
+2024-03-24T15:30:21.981Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:30:29.568Z	[users]	info	Fetching users
+2024-03-24T15:30:29.573Z	[products]	info	Hello my products
+2024-03-24T15:30:29.579Z	[orders]	info	Fetching orders
+2024-03-24T15:30:31.493Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:31:48.187Z	[users]	info	Fetching users
+2024-03-24T15:31:48.194Z	[orders]	info	Fetching orders
+2024-03-24T15:31:48.201Z	[products]	info	Hello my products
+2024-03-24T15:31:49.584Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:31:50.179Z	[users]	info	Fetching users
+2024-03-24T15:31:50.183Z	[products]	info	Hello my products
+2024-03-24T15:31:50.191Z	[orders]	info	Fetching orders
+2024-03-24T15:31:51.814Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:37:29.639Z	[users]	info	Fetching users
+2024-03-24T15:37:29.645Z	[products]	info	Hello my products
+2024-03-24T15:37:29.650Z	[orders]	info	Fetching orders
+2024-03-24T15:37:33.624Z	[users]	info	Fetching users
+2024-03-24T15:37:33.631Z	[products]	info	Hello my products
+2024-03-24T15:37:33.638Z	[orders]	info	Fetching orders
+2024-03-24T15:37:36.712Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:37:37.296Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:37:38.658Z	[products]	info	Hello my products
+2024-03-24T15:37:38.665Z	[orders]	info	Fetching orders
+2024-03-24T15:37:40.124Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:37:49.879Z	[users]	info	Fetching users
+2024-03-24T15:37:49.887Z	[products]	info	Hello my products
+2024-03-24T15:37:49.893Z	[orders]	info	Fetching orders
+2024-03-24T15:37:52.971Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:37:53.875Z	[products]	info	Hello my products
+2024-03-24T15:37:55.624Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:39:11.931Z	[users]	info	Fetching users
+2024-03-24T15:39:11.936Z	[products]	info	Hello my products
+2024-03-24T15:39:11.945Z	[orders]	info	Fetching orders
+2024-03-24T15:39:14.624Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:39:15.908Z	[orders]	info	Fetching orders
+2024-03-24T15:39:20.938Z	[orders]	info	Fetching orders
+2024-03-24T15:39:27.932Z	[orders]	info	Fetching orders
+2024-03-24T15:39:38.362Z	[users]	info	Fetching users
+2024-03-24T15:39:38.367Z	[orders]	info	Fetching orders
+2024-03-24T15:39:38.374Z	[products]	info	Hello my products
+2024-03-24T15:39:42.365Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:39:42.392Z	[products]	info	Hello my products
+2024-03-24T15:39:42.406Z	[orders]	info	Fetching orders
+2024-03-24T15:39:47.403Z	[products]	info	Hello my products
+2024-03-24T15:39:47.412Z	[orders]	info	Fetching orders
+2024-03-24T15:39:52.741Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:39:53.995Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:39:54.427Z	[products]	info	Hello my products
+2024-03-24T15:39:54.437Z	[orders]	info	Fetching orders
+2024-03-24T15:39:58.011Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:40:23.135Z	[products]	info	Hello my products
+2024-03-24T15:40:23.143Z	[users]	info	Fetching users
+2024-03-24T15:40:23.151Z	[orders]	info	Fetching orders
+2024-03-24T15:40:24.772Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:42:42.966Z	[users]	info	Fetching users
+2024-03-24T15:42:42.976Z	[products]	info	Hello my products
+2024-03-24T15:42:42.983Z	[orders]	info	Fetching orders
+2024-03-24T15:42:47.953Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:42:53.282Z	[users]	info	Fetching users
+2024-03-24T15:42:53.290Z	[products]	info	Hello my products
+2024-03-24T15:42:53.305Z	[orders]	info	Fetching orders
+2024-03-24T15:42:55.321Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:42:56.323Z	[users]	info	Fetching users
+2024-03-24T15:42:56.333Z	[orders]	info	Fetching orders
+2024-03-24T15:42:56.338Z	[products]	info	Hello my products
+2024-03-24T15:43:01.031Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:43:05.881Z	[users]	info	Fetching users
+2024-03-24T15:43:05.887Z	[orders]	info	Fetching orders
+2024-03-24T15:43:12.888Z	[products]	info	Hello my products
+2024-03-24T15:43:12.893Z	[users]	info	Fetching users
+2024-03-24T15:43:12.900Z	[orders]	info	Fetching orders
+2024-03-24T15:43:14.847Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:43:16.887Z	[orders]	info	Fetching orders
+2024-03-24T15:44:04.817Z	[users]	info	Fetching users
+2024-03-24T15:44:04.827Z	[orders]	info	Fetching orders
+2024-03-24T15:44:04.834Z	[products]	info	Hello my products
+2024-03-24T15:44:06.209Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:44:07.565Z	[users]	info	Fetching users
+2024-03-24T15:44:07.571Z	[products]	info	Hello my products
+2024-03-24T15:44:07.575Z	[orders]	info	Fetching orders
+2024-03-24T15:44:10.764Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:44:11.593Z	[products]	info	Hello my products
+2024-03-24T15:44:11.608Z	[orders]	info	Fetching orders
+2024-03-24T15:44:15.056Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:44:39.915Z	[users]	info	Fetching users
+2024-03-24T15:44:39.909Z	[orders]	info	Fetching orders
+2024-03-24T15:44:48.926Z	[users]	info	Fetching users
+2024-03-24T15:44:48.931Z	[orders]	info	Fetching orders
+2024-03-24T15:44:55.309Z	[users]	info	Fetching users
+2024-03-24T15:44:55.314Z	[products]	info	Hello my products
+2024-03-24T15:44:55.318Z	[orders]	info	Fetching orders
+2024-03-24T15:44:59.327Z	[products]	info	Hello my products
+2024-03-24T15:44:59.335Z	[orders]	info	Fetching orders
+2024-03-24T15:45:04.367Z	[orders]	info	Fetching orders
+2024-03-24T15:45:04.372Z	[products]	info	Hello my products
+2024-03-24T15:45:11.384Z	[orders]	info	Fetching orders
+2024-03-24T15:45:11.391Z	[products]	info	Hello my products
+2024-03-24T15:45:11.677Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:45:12.502Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:45:12.816Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:45:14.459Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:46:23.923Z	[products]	info	Hello my products
+2024-03-24T15:46:23.928Z	[users]	info	Fetching users
+2024-03-24T15:46:23.933Z	[orders]	info	Fetching orders
+2024-03-24T15:46:27.894Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:46:27.946Z	[products]	info	Hello my products
+2024-03-24T15:46:27.954Z	[orders]	info	Fetching orders
+2024-03-24T15:46:32.963Z	[products]	info	Hello my products
+2024-03-24T15:46:32.966Z	[orders]	info	Fetching orders
+2024-03-24T15:46:39.713Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:46:39.987Z	[products]	info	Hello my products
+2024-03-24T15:46:39.999Z	[orders]	info	Fetching orders
+2024-03-24T15:46:45.851Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:46:51.459Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:47:34.096Z	[users]	info	Fetching users
+2024-03-24T15:47:34.105Z	[products]	info	Hello my products
+2024-03-24T15:47:34.111Z	[orders]	info	Fetching orders
+2024-03-24T15:47:36.647Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:47:37.721Z	[users]	info	Fetching users
+2024-03-24T15:47:37.730Z	[products]	info	Hello my products
+2024-03-24T15:47:38.102Z	[orders]	info	Fetching orders
+2024-03-24T15:47:41.380Z	[users]	info	Fetching users
+2024-03-24T15:47:41.717Z	[products]	info	Hello my products
+2024-03-24T15:47:43.119Z	[orders]	info	Fetching orders
+2024-03-24T15:47:43.579Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:47:46.732Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:47:46.739Z	[products]	info	Hello my products
+2024-03-24T15:47:46.944Z	[users]	info	Fetching users
+2024-03-24T15:47:50.135Z	[orders]	info	Fetching orders
+2024-03-24T15:47:51.513Z	[users]	info	Fetching users
+2024-03-24T15:47:53.752Z	[products]	info	Hello my products
+2024-03-24T15:47:55.218Z	[users]	info	Fetching users
+2024-03-24T15:47:55.224Z	[orders]	info	Fetching orders
+2024-03-24T15:47:56.763Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:47:56.994Z	[users]	info	Fetching users
+2024-03-24T15:47:56.999Z	[products]	info	Hello my products
+2024-03-24T15:47:57.300Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:47:59.253Z	[orders]	info	Fetching orders
+2024-03-24T15:48:01.016Z	[products]	info	Hello my products
+2024-03-24T15:48:01.011Z	[users]	info	Fetching users
+2024-03-24T15:48:03.429Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:03.796Z	[users]	info	Fetching users
+2024-03-24T15:48:04.248Z	[orders]	info	Fetching orders
+2024-03-24T15:48:04.924Z	[users]	info	Fetching users
+2024-03-24T15:48:05.237Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:06.020Z	[products]	info	Hello my products
+2024-03-24T15:48:07.048Z	[users]	info	Fetching users
+2024-03-24T15:48:08.386Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:08.502Z	[products]	info	Hello my products
+2024-03-24T15:48:08.511Z	[users]	info	Fetching users
+2024-03-24T15:48:11.263Z	[orders]	info	Fetching orders
+2024-03-24T15:48:11.499Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:12.497Z	[products]	info	Hello my products
+2024-03-24T15:48:14.019Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:20.215Z	[users]	info	Fetching users
+2024-03-24T15:48:20.223Z	[products]	info	Hello my products
+2024-03-24T15:48:20.228Z	[orders]	info	Fetching orders
+2024-03-24T15:48:24.274Z	[products]	info	Hello my products
+2024-03-24T15:48:24.280Z	[orders]	info	Fetching orders
+2024-03-24T15:48:24.352Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:27.598Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:29.289Z	[products]	info	Hello my products
+2024-03-24T15:48:29.296Z	[orders]	info	Fetching orders
+2024-03-24T15:48:29.431Z	[users]	info	Fetching users
+2024-03-24T15:48:30.726Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:35.881Z	[users]	info	Fetching users
+2024-03-24T15:48:35.889Z	[products]	info	Hello my products
+2024-03-24T15:48:36.294Z	[orders]	info	Fetching orders
+2024-03-24T15:48:39.879Z	[products]	info	Hello my products
+2024-03-24T15:48:40.420Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:40.621Z	[users]	info	Fetching users
+2024-03-24T15:48:40.629Z	[orders]	info	Fetching orders
+2024-03-24T15:48:42.083Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:44.644Z	[orders]	info	Fetching orders
+2024-03-24T15:48:45.456Z	[users]	info	Fetching users
+2024-03-24T15:48:45.463Z	[products]	info	Hello my products
+2024-03-24T15:48:49.461Z	[products]	info	Hello my products
+2024-03-24T15:48:49.583Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:49.658Z	[orders]	info	Fetching orders
+2024-03-24T15:48:50.593Z	[users]	info	Fetching users
+2024-03-24T15:48:51.679Z	[users]	info	Fetching users
+2024-03-24T15:48:51.908Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:48:56.660Z	[orders]	info	Fetching orders
+2024-03-24T15:49:00.422Z	[users]	info	Fetching users
+2024-03-24T15:49:00.427Z	[products]	info	Hello my products
+2024-03-24T15:49:00.434Z	[orders]	info	Fetching orders
+2024-03-24T15:49:03.740Z	[users]	info	Fetching users
+2024-03-24T15:49:04.425Z	[products]	info	Hello my products
+2024-03-24T15:49:04.430Z	[orders]	info	Fetching orders
+2024-03-24T15:49:06.806Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:49:09.443Z	[products]	info	Hello my products
+2024-03-24T15:49:09.449Z	[orders]	info	Fetching orders
+2024-03-24T15:49:10.387Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:49:11.304Z	[users]	info	Fetching users
+2024-03-24T15:49:15.306Z	[users]	info	Fetching users
+2024-03-24T15:49:16.470Z	[products]	info	Hello my products
+2024-03-24T15:49:16.475Z	[orders]	info	Fetching orders
+2024-03-24T15:49:20.323Z	[users]	info	Fetching users
+2024-03-24T15:49:25.128Z	[products]	info	Hello my products
+2024-03-24T15:49:25.135Z	[orders]	info	Fetching orders
+2024-03-24T15:49:27.321Z	[users]	info	Fetching users
+2024-03-24T15:49:29.147Z	[products]	info	Hello my products
+2024-03-24T15:49:29.156Z	[orders]	info	Fetching orders
+2024-03-24T15:49:31.615Z	[users]	info	Fetching users
+2024-03-24T15:49:32.617Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:49:33.003Z	[users]	info	Fetching users
+2024-03-24T15:49:34.162Z	[products]	info	Hello my products
+2024-03-24T15:49:34.171Z	[orders]	info	Fetching orders
+2024-03-24T15:49:34.420Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:49:37.193Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:49:37.390Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:49:41.189Z	[orders]	info	Fetching orders
+2024-03-24T15:49:41.183Z	[products]	info	Hello my products
+2024-03-24T15:49:43.622Z	[products]	info	Hello my products
+2024-03-24T15:49:43.629Z	[orders]	info	Fetching orders
+2024-03-24T15:49:43.639Z	[users]	info	Fetching users
+2024-03-24T15:49:44.658Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:49:44.935Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:49:47.650Z	[products]	info	Hello my products
+2024-03-24T15:49:47.660Z	[orders]	info	Fetching orders
+2024-03-24T15:49:49.804Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T15:49:51.286Z	[orders]	info	Creating notification for  low level alert
