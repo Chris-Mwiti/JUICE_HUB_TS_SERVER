@@ -26,17 +26,17 @@ dotenv.config();
 app.use(cors(corsOptions));
 
 //Cookies setup
-app.use(
-  expressSession({
-    secret: process.env.COOKIE_SESSION_KEY as string,
-    saveUninitialized: true,
-    resave: false,
-    cookie: {
-      secure: true,
-      maxAge: 24 * 60 * 60 * 1000,
-    },
-  })
-);
+// app.use(
+//   expressSession({
+//     secret: process.env.COOKIE_SESSION_KEY as string,
+//     saveUninitialized: true,
+//     resave: false,
+//     cookie: {
+//       secure: true,
+//       maxAge: 24 * 60 * 60 * 1000,
+//     },
+//   })
+// );
 
 //Passport intialization
 app.use(GooglePassportStrategy.initialize());
