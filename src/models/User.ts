@@ -1,4 +1,5 @@
 import prismaClient from "../config/prismaConfig";
+import DatabaseError from "../helpers/databaseError";
 import prismaErrHandler, {
   PrismaErrorTypes,
 } from "../helpers/prismaErrHandler";
@@ -22,7 +23,13 @@ class UserModel {
           data: userInfo,
         })
     );
-    if (postErr) prismaErrHandler(postErr as PrismaErrorTypes);
+    if (postErr) {
+      console.log(postErr);
+      throw new DatabaseError({
+        message:["Error while creating user", postErr as PrismaErrorTypes],
+        code: "500"
+      })
+    };
     return userRecord;
   }
 
@@ -41,6 +48,9 @@ class UserModel {
           where: {
             id: id,
           },
+          include: {
+            orderDetails: true
+          }
         })
     );
     if (fetchErr) prismaErrHandler(fetchErr as PrismaErrorTypes);

@@ -1809,3 +1809,612 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.t
   148 >(() =>
 → 149   this.model.findMany(
 The table `Product` does not exist in the current database.	 PrismaClientKnownRequestError
+2024-03-23T05:30:00.749Z	[async_error]	error	null
+2024-03-23T05:30:00.777Z	[async_error]	error	null
+2024-03-23T05:39:43.436Z	[async_error]	error	null
+2024-03-23T05:39:43.446Z	[async_error]	error	null
+2024-03-23T05:42:15.570Z	[async_error]	error	null
+2024-03-23T05:42:15.577Z	[async_error]	error	null
+2024-03-23T05:44:15.812Z	[async_error]	error	null
+2024-03-23T05:44:15.860Z	[async_error]	error	null
+2024-03-23T05:47:45.349Z	[async_error]	error	null
+2024-03-23T05:47:45.371Z	[async_error]	error	null
+2024-03-23T06:01:32.955Z	[async_error]	error	null
+2024-03-23T06:01:32.996Z	[async_error]	error	null
+2024-03-23T06:05:07.276Z	[async_error]	error	null
+2024-03-23T06:05:07.300Z	[async_error]	error	null
+2024-03-23T06:35:27.105Z	[async_error]	error	null
+2024-03-23T06:35:27.115Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:21:20
+
+  18 public static async createUser(userInfo: UserRecord) {
+  19   const { data: userRecord, error: postErr } = await trycatchHelper<IUser>(
+  20     () =>
+→ 21       this.model.create(
+Unique constraint failed on the constraint: `User_google_id_key`	 PrismaClientKnownRequestError
+2024-03-23T06:40:54.382Z	[async_error]	error	null
+2024-03-23T06:40:54.386Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:21:20
+
+  18 public static async createUser(userInfo: UserRecord) {
+  19   const { data: userRecord, error: postErr } = await trycatchHelper<IUser>(
+  20     () =>
+→ 21       this.model.create(
+Unique constraint failed on the constraint: `User_google_id_key`	 PrismaClientKnownRequestError
+2024-03-23T06:42:25.932Z	[async_error]	error	null
+2024-03-23T06:42:25.948Z	[[DB_ERROR]]	error	Error while creating user	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:22:20
+
+  19 public static async createUser(userInfo: UserRecord) {
+  20   const { data: userRecord, error: postErr } = await trycatchHelper<IUser>(
+  21     () =>
+→ 22       this.model.create(
+Unique constraint failed on the constraint: `User_google_id_key`
+2024-03-23T06:42:25.955Z	[async_error]	error	null
+2024-03-23T06:42:25.958Z	[async_error]	error	null
+2024-03-23T06:44:10.780Z	[async_error]	error	null
+2024-03-23T06:44:10.790Z	[[DB_ERROR]]	error	Error while creating user	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:22:20
+
+  19 public static async createUser(userInfo: UserRecord) {
+  20   const { data: userRecord, error: postErr } = await trycatchHelper<IUser>(
+  21     () =>
+→ 22       this.model.create(
+Unique constraint failed on the constraint: `User_phone_key`
+2024-03-23T06:44:10.793Z	[async_error]	error	null
+2024-03-23T06:44:10.795Z	[async_error]	error	null
+2024-03-23T06:53:47.406Z	[async_error]	error	null
+2024-03-23T06:53:47.407Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create({
+           data: {
+             id: "65fe7c7b8f3a7ea1976567a6",
+             productName: "White Bread",
+             productDescription: "White Bread On Sale",
+             buyingPrice: 200,
+             sellingPrice: 300,
+             isPerishable: false,
+             productSku: "BRW123",
+             category: {
+               connectOrCreate: {
+                 where: {
+                   id: "65fe7c0a8f3a7ea1976567a3"
+                 },
+                 create: {
+                   id: "65fe7c7b8f3a7ea1976567a7",
+                   categoryName: "",
+                   categoryDescription: ""
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "65fe7c7b8f3a7ea1976567a8",
+                 productName: "White Bread",
+                 quantity: 70,
+                 lastRefilDate: new Date("2024-03-23T06:53:47.361Z")
+               }
+             },
+             asset: {
+               create: {
+                 id: "65fe7c7b8f3a7ea1976567a9",
+                 images: [
+                   "madrigal/e2tbzzlyq1fle63zpqti"
+                 ]
+               }
+             },
+             discounts: {
+               connect: {
+                 id: "65fe7c198f3a7ea1976567a5"
+               }
+             },
+         +   productBarCode: String
+           }
+         })
+
+Argument `productBarCode` is missing.
+2024-03-23T07:04:05.583Z	[async_error]	error	null
+2024-03-23T07:04:05.588Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-23T07:04:19.804Z	[async_error]	error	null
+2024-03-23T07:04:19.807Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-23T07:15:06.224Z	[async_error]	error	null
+2024-03-23T07:15:06.226Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Product_productCode_key`
+2024-03-23T07:15:09.055Z	[async_error]	error	null
+2024-03-23T07:15:09.058Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Product_productCode_key`
+2024-03-23T07:17:56.162Z	[async_error]	error	null
+2024-03-23T07:17:56.164Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Product_productCode_key`
+2024-03-23T07:18:07.351Z	[async_error]	error	null
+2024-03-23T07:18:07.355Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Product_productCode_key`
+2024-03-23T07:21:09.827Z	[async_error]	error	null
+2024-03-23T07:21:09.833Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-23T10:07:25.693Z	[async_error]	error	null
+2024-03-23T10:07:25.695Z	[[DB_ERROR]]	error	
+Invalid `this.model.findMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:146:18
+
+  143 const { data: productInfos, error: fetchError } = await trycatchHelper<
+  144   IProduct[]
+  145 >(() =>
+→ 146   this.model.findMany(
+Cannot select both '$scalars: true' and a specific scalar field 'supplier'.	 PrismaClientUnknownRequestError
+2024-03-23T10:07:26.739Z	[async_error]	error	null
+2024-03-23T10:07:26.741Z	[[DB_ERROR]]	error	
+Invalid `this.model.findMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:146:18
+
+  143 const { data: productInfos, error: fetchError } = await trycatchHelper<
+  144   IProduct[]
+  145 >(() =>
+→ 146   this.model.findMany(
+Cannot select both '$scalars: true' and a specific scalar field 'supplier'.	 PrismaClientUnknownRequestError
+2024-03-23T10:07:28.782Z	[async_error]	error	null
+2024-03-23T10:07:28.784Z	[[DB_ERROR]]	error	
+Invalid `this.model.findMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:146:18
+
+  143 const { data: productInfos, error: fetchError } = await trycatchHelper<
+  144   IProduct[]
+  145 >(() =>
+→ 146   this.model.findMany(
+Cannot select both '$scalars: true' and a specific scalar field 'supplier'.	 PrismaClientUnknownRequestError
+2024-03-23T10:59:13.173Z	[async_error]	error	null
+2024-03-23T10:59:13.180Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe7edf8f3a7ea1976567aa", length 25.	 PrismaClientKnownRequestError
+2024-03-23T10:59:14.247Z	[async_error]	error	null
+2024-03-23T10:59:14.260Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe7edf8f3a7ea1976567aa", length 25.	 PrismaClientKnownRequestError
+2024-03-23T10:59:16.357Z	[async_error]	error	null
+2024-03-23T10:59:16.363Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe7edf8f3a7ea1976567aa", length 25.	 PrismaClientKnownRequestError
+2024-03-23T10:59:50.023Z	[async_error]	error	null
+2024-03-23T10:59:50.026Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe7edf8f3a7ea1976567aa", length 25.	 PrismaClientKnownRequestError
+2024-03-23T11:02:09.480Z	[async_error]	error	null
+2024-03-23T11:02:09.486Z	[[DB_ERROR]]	error	
+Invalid `this.model.update()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:195:20
+
+  192 ) {
+  193   const { data: updatedProductInfo, error: updateError } =
+  194     await trycatchHelper<IProduct>(() =>
+→ 195       this.model.update({
+              where: {
+                id: "65fe7edf8f3a7ea1976567aa"
+              },
+              data: {
+                id: "65fe7edf8f3a7ea1976567aa",
+                ~~
+                productName: "Festive Bread",
+                productDescription: "Festive Bread on Sale",
+                sellingPrice: 250,
+                buyingPrice: 200,
+                lowLevelAlert: 15,
+                isPerishable: false,
+                expireDate: null,
+                productCode: null,
+                productLabel: "NEW",
+                productTag: null,
+                productSku: "BRW123",
+                productBarCode: "1234567",
+                published: false,
+                stockStatus: "IN_STOCK",
+                categoryId: "65fe7c0a8f3a7ea1976567a3",
+                inventoryId: "65fe7edf8f3a7ea1976567ac",
+                discountIds: [
+                  "65fe7c198f3a7ea1976567a5"
+                ],
+                createdAt: new Date("2024-03-23T07:03:59.938Z"),
+                updatedAt: new Date("2024-03-23T07:03:59.938Z"),
+                asset: [
+                  {
+                    id: "65fe7edf8f3a7ea1976567ad",
+                    images: [
+                      "madrigal/amxxejnmbuor4wv9u9rm"
+                    ],
+                    productsId: "65fe7edf8f3a7ea1976567aa",
+                    createdAt: new Date("2024-03-23T07:03:59.938Z"),
+                    updatedAt: new Date("2024-03-23T07:03:59.938Z")
+                  }
+                ],
+                category: {
+                  id: "65fe7c0a8f3a7ea1976567a3",
+                  categoryName: "Food",
+                  categoryDescription: "Food Category",
+                  createdAt: new Date("2024-03-23T06:51:54.178Z"),
+                  updatedAt: new Date("2024-03-23T06:51:54.178Z")
+                },
+                inventory: {
+                  id: "65fe7edf8f3a7ea1976567ac",
+                  quantity: 1000,
+                  productName: "Festive Bread",
+                  lastRefilDate: new Date("2024-03-23T07:03:59.936Z"),
+                  createdAt: new Date("2024-03-23T07:03:59.938Z"),
+                  updatedAt: new Date("2024-03-23T07:03:59.938Z")
+                },
+                discounts: [
+                  {
+                    id: "65fe7c198f3a7ea1976567a5",
+                    coupon: "ABSFD",
+                    tokens: 50,
+                    percentage: 5,
+                    status: "inactive",
+                    type: "STANDARD",
+                    expirationDate: new Date("2024-03-22T21:00:00.000Z"),
+                    products: [
+                      "65fe7edf8f3a7ea1976567aa",
+                      "65fe82d9bc1d9fba437e37e7"
+                    ],
+                    createdAt: new Date("2024-03-23T06:52:09.156Z"),
+                    updatedAt: new Date("2024-03-23T06:52:09.156Z")
+                  }
+                ],
+            ?   cartItem?: CartItemsUpdateManyWithoutProductNestedInput,
+            ?   orderItem?: OrderItemsUpdateManyWithoutProductNestedInput,
+            ?   productSales?: ProductSalesUpdateManyWithoutProductNestedInput,
+            ?   productRefunds?: ProductRefundsUpdateManyWithoutProductNestedInput,
+            ?   productRefills?: ProductRefilUpdateManyWithoutProductNestedInput
+              },
+              include: undefined
+            })
+
+Unknown argument `id`. Available options are listed in green.	 PrismaClientValidationError
+2024-03-23T11:44:59.436Z	[async_error]	error	null
+2024-03-23T11:44:59.440Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: I/O error: An existing connection was forcibly closed by the remote host. (os error 10054), labels: {}`	 PrismaClientKnownRequestError
+2024-03-23T11:45:01.104Z	[async_error]	error	null
+2024-03-23T11:45:01.109Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Server selection timeout: None of the available servers suitable for criteria ReadPreference(Primary). Topology: { Type: ReplicaSetNoPrimary, Set Name: atlas-74jcqy-shard-0, Max Set Version: 12, Max Election ID: 7fffffff000000000000012c, Servers: [ { Address: ac-zemxwgt-shard-00-00.afkpmlc.mongodb.net:27017, Type: RsSecondary, Average RTT: 2.371093363s, Last Update Time: 2024-03-23 11:44:56.905 +00:00:00, Max Wire Version: 21, Min Wire Version: 0, Replica Set Name: atlas-74jcqy-shard-0, Replica Set Version: 12, Tags: {"diskState": "READY", "provider": "AWS", "availabilityZone": "use1-az1", "workloadType": "OPERATIONAL", "region": "US_EAST_1", "nodeType": "ELECTABLE"} }, { Address: ac-zemxwgt-shard-00-02.afkpmlc.mongodb.net:27017, Type: RsSecondary, Average RTT: 2.354071467s, Last Update Time: 2024-03-23 11:44:57.658 +00:00:00, Max Wire Version: 21, Min Wire Version: 0, Replica Set Name: atlas-74jcqy-shard-0, Replica Set Version: 12, Tags: {"diskState": "READY", "availabilityZone": "use1-az5", "nodeType": "ELECTABLE", "provider": "AWS", "workloadType": "OPERATIONAL", "region": "US_EAST_1"} }, { Address: ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017, Type: Unknown, Error: Kind: I/O error: timed out, labels: {} } ] }, labels: {}`	 PrismaClientKnownRequestError
+2024-03-23T11:45:07.355Z	[async_error]	error	null
+2024-03-23T11:45:07.358Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Server selection timeout: None of the available servers suitable for criteria ReadPreference(Primary). Topology: { Type: ReplicaSetNoPrimary, Set Name: atlas-74jcqy-shard-0, Max Set Version: 12, Max Election ID: 7fffffff000000000000012c, Servers: [ { Address: ac-zemxwgt-shard-00-00.afkpmlc.mongodb.net:27017, Type: RsSecondary, Average RTT: 2.78884181s, Last Update Time: 2024-03-23 11:45:03.245 +00:00:00, Max Wire Version: 21, Min Wire Version: 0, Replica Set Name: atlas-74jcqy-shard-0, Replica Set Version: 12, Tags: {"provider": "AWS", "nodeType": "ELECTABLE", "workloadType": "OPERATIONAL", "region": "US_EAST_1", "availabilityZone": "use1-az1", "diskState": "READY"} }, { Address: ac-zemxwgt-shard-00-02.afkpmlc.mongodb.net:27017, Type: RsSecondary, Average RTT: 2.775304753s, Last Update Time: 2024-03-23 11:45:07.27 +00:00:00, Max Wire Version: 21, Min Wire Version: 0, Replica Set Name: atlas-74jcqy-shard-0, Replica Set Version: 12, Tags: {"availabilityZone": "use1-az5", "region": "US_EAST_1", "nodeType": "ELECTABLE", "workloadType": "OPERATIONAL", "diskState": "READY", "provider": "AWS"} }, { Address: ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017, Type: Unknown, Error: Kind: I/O error: timed out, labels: {} } ] }, labels: {}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:18.416Z	[async_error]	error	null
+2024-03-23T11:48:18.418Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: I/O error: timed out, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.779Z	[async_error]	error	null
+2024-03-23T11:48:45.820Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.831Z	[async_error]	error	null
+2024-03-23T11:48:45.832Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.840Z	[async_error]	error	null
+2024-03-23T11:48:45.843Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.854Z	[async_error]	error	null
+2024-03-23T11:48:45.857Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.865Z	[async_error]	error	null
+2024-03-23T11:48:45.873Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.882Z	[async_error]	error	null
+2024-03-23T11:48:45.884Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.891Z	[async_error]	error	null
+2024-03-23T11:48:45.893Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: I/O error: timed out, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T13:19:54.245Z	[async_error]	error	null
+2024-03-23T13:19:54.249Z	[[DB_ERROR]]	error	Error while creating new order	TypeError: Cannot read properties of undefined (reading 'county')
+2024-03-23T13:19:54.253Z	[async_error]	error	null
+2024-03-23T13:21:19.174Z	[async_error]	error	null
+2024-03-23T13:21:19.176Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:24:22
+
+  21 logger("orderItem").info("Creating order item");
+  22 const { data: itemInfo, error: createErr } =
+  23   await trycatchHelper<OrderItems>(() =>
+→ 24     this.model.create(
+Unique constraint failed on the constraint: `Orderitems_productId_orderId_key`
+2024-03-23T13:21:19.181Z	[async_error]	error	null
+2024-03-23T13:21:20.784Z	[async_error]	error	null
+2024-03-23T13:21:20.790Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:24:22
+
+  21 logger("orderItem").info("Creating order item");
+  22 const { data: itemInfo, error: createErr } =
+  23   await trycatchHelper<OrderItems>(() =>
+→ 24     this.model.create(
+Unique constraint failed on the constraint: `Orderitems_productId_orderId_key`
+2024-03-23T13:26:42.122Z	[async_error]	error	null
+2024-03-23T13:26:42.127Z	[[DB_ERROR]]	error	Error while creating new order	TypeError: Cannot read properties of undefined (reading 'county')
+2024-03-23T13:26:42.130Z	[async_error]	error	null
+2024-03-23T13:28:52.792Z	[async_error]	error	null
+2024-03-23T13:28:52.798Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:28:52.805Z	[async_error]	error	null
+2024-03-23T13:31:00.679Z	[async_error]	error	null
+2024-03-23T13:31:00.683Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:31:00.688Z	[async_error]	error	null
+2024-03-23T13:38:17.453Z	[async_error]	error	null
+2024-03-23T13:38:17.460Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:38:17.470Z	[async_error]	error	null
+2024-03-23T13:48:08.721Z	[async_error]	error	null
+2024-03-23T13:48:08.726Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:48:08.730Z	[async_error]	error	null
+2024-03-23T13:58:18.909Z	[async_error]	error	null
+2024-03-23T13:58:18.914Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:58:18.918Z	[async_error]	error	null
+2024-03-23T13:59:12.179Z	[async_error]	error	null
+2024-03-23T13:59:12.184Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:59:12.189Z	[async_error]	error	null
+2024-03-23T14:07:59.050Z	[async_error]	error	null
+2024-03-23T14:07:59.053Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:24:22
+
+  21 logger("orderItem").info("Creating order item");
+  22 const { data: itemInfo, error: createErr } =
+  23   await trycatchHelper<OrderItems>(() =>
+→ 24     this.model.create(
+Unique constraint failed on the constraint: `Orderitems_orderId_key`
+2024-03-23T14:07:59.057Z	[async_error]	error	null
+2024-03-23T15:38:32.505Z	[async_error]	error	null
+2024-03-23T15:38:32.508Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:38:32.511Z	[async_error]	error	null
+2024-03-23T15:38:33.549Z	[async_error]	error	null
+2024-03-23T15:38:33.550Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:38:33.552Z	[async_error]	error	null
+2024-03-23T15:38:35.584Z	[async_error]	error	null
+2024-03-23T15:38:35.585Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:38:35.587Z	[async_error]	error	null
+2024-03-23T15:38:39.613Z	[async_error]	error	null
+2024-03-23T15:38:39.614Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:38:39.616Z	[async_error]	error	null
+2024-03-23T15:39:33.539Z	[async_error]	error	null
+2024-03-23T15:39:33.542Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:39:33.545Z	[async_error]	error	null
+2024-03-23T15:39:34.584Z	[async_error]	error	null
+2024-03-23T15:39:34.586Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:39:34.591Z	[async_error]	error	null
+2024-03-23T15:39:36.622Z	[async_error]	error	null
+2024-03-23T15:39:36.624Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:39:36.626Z	[async_error]	error	null

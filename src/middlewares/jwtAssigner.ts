@@ -64,6 +64,7 @@ function JWTMiddlewareAssigner(
     res.status(200).json({
       accessToken,
       refreshToken,
+      user
     });
     next();
   }

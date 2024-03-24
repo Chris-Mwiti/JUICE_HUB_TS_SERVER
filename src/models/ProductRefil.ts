@@ -5,6 +5,7 @@ import RecordIdGenerator from "./generators/RecordIdGenerator";
 import prismaErrHandler, {
   PrismaErrorTypes,
 } from "../helpers/prismaErrHandler";
+import { ObjectId } from "bson";
 
 
 const productRefillInventory = Prisma.validator<Prisma.ProductRefilDefaultArgs>()({
@@ -13,7 +14,6 @@ const productRefillInventory = Prisma.validator<Prisma.ProductRefilDefaultArgs>(
             select:{
                 buyingPrice: true,
                 productName: true,
-                supplierId: true,
                 inventory:{
                     select:{
                         lastRefilDate: true,
@@ -31,7 +31,6 @@ const productRefillInclude:Prisma.ProductRefilInclude = Prisma.validator<Prisma.
         select:{
             buyingPrice: true,
             productName: true,
-            supplierId: true,
             inventory:{
                 select:{
                     lastRefilDate: true,
@@ -63,7 +62,7 @@ class ProductRefillsModel {
       await trycatchHelper<IProductRefill>(() =>
         this.model.create({
           data: {
-            id: new RecordIdGenerator("REFILL").generate(),
+            id: new ObjectId().toHexString(),
             refilAmount: refillAmount,
             productId: productId,
           },

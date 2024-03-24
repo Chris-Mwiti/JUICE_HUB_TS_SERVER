@@ -8,7 +8,8 @@ import { InnerJoinActionsProperties } from "../util/types/util.types";
 import { INewProductInfoObj, IProduct } from "./Interfaces/IModels";
 import RecordIdGenerator from "./generators/RecordIdGenerator";
 import DatabaseError from "../helpers/databaseError";
-import {ObjectId} from 'bson'
+import { ObjectId } from "bson";
+import { TProductInclude } from "./Products";
 
 export type ProductRecord = Pick<
   IProduct,
@@ -29,11 +30,13 @@ export type ProductRecordWithoutId = Pick<
 //@TODO: Redefine the join properties structure to be strongly typed
 // Inner join properties
 export interface IJoinProperties {
-  assetIds?:boolean | {
-    include: {
-      images: true
-    }
-  }
+  assetIds?:
+    | boolean
+    | {
+        include: {
+          images: true;
+        };
+      };
   category?: boolean | InnerJoinActionsProperties;
   inventory?: boolean | InnerJoinActionsProperties;
   discount?: boolean | InnerJoinActionsProperties;
@@ -53,32 +56,30 @@ interface IProductUpdateQtyObj {
 }
 
 //Include Type
-const productInclude = Prisma.validator<Prisma.ProductDefaultArgs>()({
+const productInclude = Prisma.validator<Prisma.RetailerProductsDefaultArgs>()({
   include: {
     asset: true,
     category: true,
     inventory: true,
-    discounts: true,
   },
 });
-const producIncludeProp: Prisma.ProductInclude =
-  Prisma.validator<Prisma.ProductInclude>()({
+const producIncludeProp: Prisma.RetailerProductsInclude =
+  Prisma.validator<Prisma.RetailerProductsInclude>()({
     asset: true,
     category: true,
     inventory: true,
-    discounts: true,
   });
 
-export type TProductInclude = Prisma.ProductGetPayload<typeof productInclude>;
+export type TRetailProductInclude = Prisma.RetailerProductsGetPayload<typeof productInclude>;
 
 /**
  * Performs CRUD operations on the Product model
  */
 
-class ProductModel {
-  private static model = prismaClient.product;
+class RetailProductsModel {
+  private static model = prismaClient.retailerProducts;
 
-  public static async createProduct(productInfoObj: INewProductInfoObj) {
+  public static async createProduct(productInfoObj: TProductInclude) {
     // Creates a new product with its relational subset fields if none of them exists
     const { data: productInfo, error: postErr } =
       await trycatchHelper<IProduct>(() =>
@@ -88,8 +89,8 @@ class ProductModel {
             id: new ObjectId().toHexString(),
             productName: productInfoObj.productName,
             productDescription: productInfoObj.productDescription,
-            buyingPrice: parseInt(productInfoObj.buyingPrice),
-            sellingPrice: parseInt(productInfoObj.sellingPrice),
+            buyingPrice: productInfoObj.buyingPrice,
+            sellingPrice: productInfoObj.sellingPrice,
             isPerishable: productInfoObj.isPerishable,
             productBarCode: productInfoObj.productBarCode,
             productSku: productInfoObj.productSku,
@@ -101,8 +102,8 @@ class ProductModel {
                 },
                 create: {
                   id: new ObjectId().toHexString(),
-                  categoryName: productInfoObj.categoryName ?? "",
-                  categoryDescription: productInfoObj.categoryDescription ?? "",
+                  categoryName: productInfoObj.category.categoryName ?? "",
+                  categoryDescription: productInfoObj.category.categoryDescription ?? "",
                 },
               },
             },
@@ -110,33 +111,32 @@ class ProductModel {
               create: {
                 id: new ObjectId().toHexString(),
                 productName: productInfoObj.productName,
-                quantity: parseInt(productInfoObj.inventory.quantity) ?? 0,
+                quantity: productInfoObj.inventory.quantity,
                 lastRefilDate: new Date(),
               },
             },
-            asset:{
+            asset: {
               create: {
                 id: new ObjectId().toHexString(),
-                images: productInfoObj.imageUrl
-              }
-            },
-            discounts: {
-              connect: {
-                id: productInfoObj.discountId
-              }
+                images: productInfoObj.asset[0].images,
+              },
             }
           },
         })
       );
-    if (postErr) return new DatabaseError({
-      message: ["An error has occured while creating the product", postErr as PrismaErrorTypes],
-      code: "500"
-    }) 
+    if (postErr)
+      return new DatabaseError({
+        message: [
+          "An error has occured while creating the product",
+          postErr as PrismaErrorTypes,
+        ],
+        code: "500",
+      });
 
     return productInfo;
   }
 
-  public static async getAllProducts(joinProperties?: TProductInclude) {
+  public static async getAllProducts(joinProperties?: TRetailProductInclude) {
     const { data: productInfos, error: fetchError } = await trycatchHelper<
       IProduct[]
     >(() =>
@@ -312,4 +312,4 @@ class ProductModel {
   }
 }
 
-export default ProductModel;
+export default RetailProductsModel;

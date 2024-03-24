@@ -4,6 +4,7 @@ import trycatchHelper from "../util/functions/trycatch";
 import RecordIdGenerator from "./generators/RecordIdGenerator";
 import DatabaseError from "../helpers/databaseError";
 import { PrismaErrorTypes } from "../helpers/prismaErrHandler";
+import { ObjectId } from "bson";
 
 export type TOrderDto = Omit<OrderDetails, "id"> & {
     total: string
@@ -33,17 +34,7 @@ const orderInclude: Prisma.OrderDetailsInclude =
             productName: true,
             sellingPrice: true,
             inventoryId: true,
-            assetIds: {
-              select: {
-                id: true,
-                images:{
-                    select: {
-                        id:true,
-                        imageUrl: true
-                    }
-                },
-              },
-            },
+            asset: true
           },
         },
       },
@@ -65,14 +56,11 @@ class Orders {
         const {data: orderInfo, error:createErr} = await trycatchHelper<OrderDetails>(
            () => this.model.create<Prisma.OrderDetailsCreateArgs>({
             data: {
-                id: new RecordIdGenerator("ORDER_DETAIL").generate(),
+                id: new ObjectId().toHexString(),
                 total: parseInt(orderDto.total),
-                items: {
-                    connect: orderDto.items
-                },
                 payment: {
                     create: {
-                        id: new RecordIdGenerator("PAYMENT").generate(),
+                        id: new ObjectId().toHexString(),
                         amount: parseInt(orderDto.total),
                         user: {
                             connect: {id: orderDto.userId}
@@ -82,11 +70,11 @@ class Orders {
                 },
                 shippingInfo: {
                     create: {
-                        id: new RecordIdGenerator("SHIPPING_DTL").generate(),
-                        county: orderDto.shippingDto.county,
-                        street: orderDto.shippingDto.street,
-                        town: orderDto.shippingDto.town,
-                        locationDesc: orderDto.shippingDto.locationDesc,
+                        id: new ObjectId().toHexString(),
+                        county: "Nairobi",
+                        street: "Mombasa",
+                        town: "Juja",
+                        locationDesc: "Juja police station",
                         user: {
                             connect: {id: orderDto.userId}
                         }

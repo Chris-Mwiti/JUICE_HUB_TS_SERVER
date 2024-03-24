@@ -12,12 +12,12 @@ import RegisterController from "../../controllers/auth/Register.controller";
 
 const AuthRouter = Router();
 
-AuthRouter.post('/register', async(req,res) => {
-  const registerController = new RegisterController(req,res);
+AuthRouter.post("/register", async (req, res) => {
+  const registerController = new RegisterController(req, res);
   await registerController.createUser();
-})
+});
 //Login route
-AuthRouter.post('/login', verifyUser, JWTMiddlewareAssigner)
+AuthRouter.post("/login", verifyUser, JWTMiddlewareAssigner);
 
 // Logout route
 AuthRouter.get("/logout", (req, res) => {
@@ -38,7 +38,7 @@ AuthRouter.get(
   GooglePassportStrategy.authenticate("google"),
   JWTMiddlewareAssigner,
   (req, res) => {
-    res.status(200).json({msg: "Ok"});
+    res.status(200).json({ msg: "Ok" });
   }
 );
 

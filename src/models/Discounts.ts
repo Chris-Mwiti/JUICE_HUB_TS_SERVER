@@ -4,6 +4,7 @@ import prismaErrHandler, { PrismaErrorTypes } from "../helpers/prismaErrHandler"
 import trycatchHelper from "../util/functions/trycatch";
 import { IDiscount } from "./Interfaces/IModels";
 import RecordIdGenerator from "./generators/RecordIdGenerator";
+import { ObjectId } from "bson";
 
 export type TDiscountRecord = Omit<IDiscount, "id" | "createdAt" | "updatedAt">;
 
@@ -38,7 +39,7 @@ class DiscountModel {
         const { data:newInfo, error:postErr } = await trycatchHelper<IDiscount>(
             () => this.model.create({
                 data:{
-                    id: new RecordIdGenerator("DISCOUNT").generate(),
+                    id: new ObjectId().toHexString(),
                     ...info
                 }
             })

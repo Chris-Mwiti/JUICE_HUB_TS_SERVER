@@ -4,6 +4,7 @@ import trycatchHelper from "../util/functions/trycatch";
 import RecordIdGenerator from "./generators/RecordIdGenerator";
 import DatabaseError from "../helpers/databaseError";
 import { PrismaErrorTypes } from "../helpers/prismaErrHandler";
+import { ObjectId } from "bson";
 
 class CategoryModel{
     private static model = prismaClient.category;
@@ -12,7 +13,7 @@ class CategoryModel{
         const {data: createInfo, error: createErr} = await trycatchHelper<Category>(
             () => this.model.create({
                 data:{
-                    id: new RecordIdGenerator("CATEGORY").generate(),
+                    id: new ObjectId().toHexString(),
                     ...categoryDto
                 }
             })

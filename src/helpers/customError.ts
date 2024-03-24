@@ -24,14 +24,18 @@ export function checkErrProperties(
 ) {
   //Checks if there is an
   if (err instanceof CustomError) {
+    console.log(err);
     res.status(parseInt(err.code)).json({ err: err.message });
   } else if (err instanceof DatabaseError) {
+    console.log(err)
     res
       .status(parseInt(err.code))
       .json({ err: typeof err === "string" ? err : err.message });
   } else if (err instanceof Error) {
+    console.log(err)
     res.status(500).json({ err: err.message });
   } else {
+    console.log(err)
     res.status(500).json({ err: err });
   }
 }

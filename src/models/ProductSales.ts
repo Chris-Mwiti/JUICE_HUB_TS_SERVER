@@ -12,6 +12,7 @@ import prismaErrHandler, {
 import RecordIdGenerator from "./generators/RecordIdGenerator";
 import { addDays } from "date-fns";
 import DatabaseError from "../helpers/databaseError";
+import { ObjectId } from "bson";
 
 interface IProductSaleClass {
   createProductSale:(sale:number,productId:string,lastPurchaseDate?:Date) => IProductSales;
@@ -61,7 +62,7 @@ class ProductSalesModel {
     const {data: newProductSale, error:postError} = await trycatchHelper<IProductSales>(
         () => this.model.create({
             data:{
-                id: new RecordIdGenerator("SALE").generate(),
+                id: new ObjectId().toHexString(),
                 lastPurchaseDate: lastPurchaseDate ? lastPurchaseDate : new Date(),
                 sales: sales,
                 productId: productId,

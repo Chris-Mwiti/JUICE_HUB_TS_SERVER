@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import Orders, { TOrderDto, TOrderIncludeDto } from "../models/Orders";
+import { TOrderDto, TOrderIncludeDto } from "../models/Orders";
 import trycatchHelper from "../util/functions/trycatch";
 import {
   Inventory,
@@ -21,6 +21,8 @@ import ProductSalesModel from "../models/ProductSales";
 import DatabaseError from "../helpers/databaseError";
 import { PrismaErrorTypes } from "../helpers/prismaErrHandler";
 import StockController from "./StockController";
+import Orders from "../models/Orders";
+import mardigalEventEmitter from "../util/events/eventEmitter";
 
 type TUpdateBodyDto = {
   status: OrderStatus;
@@ -35,56 +37,59 @@ class OrderController {
 
   constructor(private req: Request, private res: Response) {
     this.refundsController = new ProductRefundsController(req, res);
-    this.stockController = new StockController(req,res);
+    this.stockController = new StockController(req, res);
   }
 
   public async createOrder() {
     logger("orders").info("Creating new order");
-
     let orderDto: TOrderDto = this.req.body;
     const userInfo = this.req.user as TReqUser;
-
-    console.log(userInfo);
-    //Create the order items first
-    const { data: orderItems, error: createErr } = await trycatchHelper<
-      OrderItems[]
-    >(() => this.itemsModel.createOrderItem(orderDto.items));
-    if (createErr) return checkErrProperties(this.res, createErr);
-    if (!orderItems)
-      return this.res.status(500).json({ err: "Internal server error" });
-
-    orderDto.items = orderItems;
+  
     orderDto.userId = userInfo.userId;
-
-    //Create the order itself
+    // //Create the order itself
     const { data: orderInfo, error: createOrderErr } =
-      await trycatchHelper<Orders>(() => this.model.createOrder(orderDto));
+      await trycatchHelper<OrderDetails>(() => this.model.createOrder(orderDto));
 
-    if (createOrderErr) return checkErrProperties(this.res, checkErrProperties);
+    if (createOrderErr) return checkErrProperties(this.res, createOrderErr);
+    if(orderInfo) {
+      //Create the order items first
+      const { data: orderItems, error: createErr } = await trycatchHelper<
+        OrderItems[]
+      >(() => this.itemsModel.createOrderItem(orderDto.items,orderInfo.id));
+      if (createErr) return checkErrProperties(this.res, createErr);
+      if (!orderItems)
+        return this.res.status(500).json({ err: "Internal server error" });
 
-    new ResponseHandler<Orders | null>(this.res, orderInfo).postResponse();
+      //Creates a notification for the newly created order
+      mardigalEventEmitter.emit("newOrder");
+
+      new ResponseHandler<OrderItems[] | null>(this.res, orderItems).postResponse();
+    }else {
+      this.res.status(500).json({err: "Error while creating order"})
+    }
+
   }
 
   public async getAllOrders() {
     logger("orders").info("Fetching orders");
     const { data: ordersInfo, error: fetchErr } = await trycatchHelper<
-      Orders[]
+      OrderDetails[]
     >(() => this.model.getAllOrders());
 
     if (fetchErr) return checkErrProperties(this.res, fetchErr);
 
-    new ResponseHandler<Orders[] | null>(this.res, ordersInfo).getResponse();
+    new ResponseHandler<OrderDetails[] | null>(this.res, ordersInfo).getResponse();
   }
 
   public async getOrderById() {
     logger("orders").info("Fetching order");
     const { orderId } = this.req.params;
-    const { data: orderInfo, error: fetchErr } = await trycatchHelper<Orders>(
+    const { data: orderInfo, error: fetchErr } = await trycatchHelper<OrderDetails>(
       () => this.model.getOrderById(orderId)
     );
     if (fetchErr) return checkErrProperties(this.res, fetchErr);
 
-    new ResponseHandler<Orders | null>(this.res, orderInfo).getResponse();
+    new ResponseHandler<OrderDetails | null>(this.res, orderInfo).getResponse();
   }
 
   public async updateOrderStatus() {
@@ -96,6 +101,10 @@ class OrderController {
       const { data: refundedInfo, error: refundedErr } = await trycatchHelper<
         ProductRefunds[]
       >(() => this.refundsController.createRefund(orderId));
+
+      //Create a new notification on cancelation of order
+      mardigalEventEmitter.emit("cancelOrder",orderId)
+
       if (refundedErr) return checkErrProperties(this.res, refundedErr);
     }
 
@@ -126,45 +135,47 @@ class OrderController {
           });
 
         logger("inventory").info("Updating the inventory");
-        const {data: inventoryInfo, error:updateErr} = await trycatchHelper<Inventory>(
-          () => this.stockController.reduceProductQtyByProductId(dto.productId,dto.quantity)
-        )
+        const { data: inventoryInfo, error: updateErr } =
+          await trycatchHelper<Inventory>(() =>
+            this.stockController.reduceProductQtyByProductId(
+              dto.productId,
+              dto.quantity
+            )
+          );
 
-        if(updateErr) return checkErrProperties(this.res,updateErr);
+        if (updateErr) return checkErrProperties(this.res, updateErr);
 
         return {
           inventoryInfo,
-          saleInfo
-        }
+          saleInfo,
+        };
       });
 
       if (!salesPromises)
         return this.res.status(400).json({ err: "Order does not exist" });
 
       await Promise.all(salesPromises);
-
-
     }
 
     const { data: updatedInfo, error: updateErr } =
-      await trycatchHelper<Orders>(() =>
+      await trycatchHelper<OrderDetails>(() =>
         this.model.updateOrderStatus(orderId, updateDto.status)
       );
 
     if (updateErr) return checkErrProperties(this.res, updateErr);
 
-    new ResponseHandler<Orders | null>(this.res, updatedInfo).updateResponse();
+    new ResponseHandler<OrderDetails | null>(this.res, updatedInfo).updateResponse();
   }
 
   public async deleteAllOrders() {
     logger("orders").info("Deleting order");
     const { data: deletedInfos, error: deleteErr } = await trycatchHelper<
-      Orders[]
+      OrderDetails[]
     >(() => this.model.deleteAllOrders());
 
     if (deleteErr) return checkErrProperties(this.res, deleteErr);
 
-    new ResponseHandler<Orders[] | null>(
+    new ResponseHandler<OrderDetails[] | null>(
       this.res,
       deletedInfos
     ).deleteResponse();
@@ -175,11 +186,11 @@ class OrderController {
     const { orderId } = this.req.params;
 
     const { data: deletedInfo, error: deleteErr } =
-      await trycatchHelper<Orders>(() => this.model.deleteOrderById(orderId));
+      await trycatchHelper<OrderDetails>(() => this.model.deleteOrderById(orderId));
 
     if (deleteErr) return checkErrProperties(this.res, deleteErr);
 
-    new ResponseHandler<Orders | null>(this.res, deletedInfo).deleteResponse();
+    new ResponseHandler<OrderDetails | null>(this.res, deletedInfo).deleteResponse();
   }
 }
 

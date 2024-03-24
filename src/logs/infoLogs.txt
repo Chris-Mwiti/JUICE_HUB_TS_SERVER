@@ -2831,3 +2831,1191 @@ D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.t
   148 >(() =>
 → 149   this.model.findMany(
 The table `Product` does not exist in the current database.	 PrismaClientKnownRequestError
+2024-03-21T16:56:49.094Z	[products]	info	Hello my products
+2024-03-23T05:30:00.749Z	[async_error]	error	null
+2024-03-23T05:30:00.777Z	[async_error]	error	null
+2024-03-23T05:39:43.436Z	[async_error]	error	null
+2024-03-23T05:39:43.446Z	[async_error]	error	null
+2024-03-23T05:42:15.570Z	[async_error]	error	null
+2024-03-23T05:42:15.577Z	[async_error]	error	null
+2024-03-23T05:44:15.812Z	[async_error]	error	null
+2024-03-23T05:44:15.860Z	[async_error]	error	null
+2024-03-23T05:47:45.349Z	[async_error]	error	null
+2024-03-23T05:47:45.371Z	[async_error]	error	null
+2024-03-23T06:01:32.955Z	[async_error]	error	null
+2024-03-23T06:01:32.996Z	[async_error]	error	null
+2024-03-23T06:05:07.276Z	[async_error]	error	null
+2024-03-23T06:05:07.300Z	[async_error]	error	null
+2024-03-23T06:35:27.105Z	[async_error]	error	null
+2024-03-23T06:35:27.115Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:21:20
+
+  18 public static async createUser(userInfo: UserRecord) {
+  19   const { data: userRecord, error: postErr } = await trycatchHelper<IUser>(
+  20     () =>
+→ 21       this.model.create(
+Unique constraint failed on the constraint: `User_google_id_key`	 PrismaClientKnownRequestError
+2024-03-23T06:40:54.382Z	[async_error]	error	null
+2024-03-23T06:40:54.386Z	[[DB_ERROR]]	error	
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:21:20
+
+  18 public static async createUser(userInfo: UserRecord) {
+  19   const { data: userRecord, error: postErr } = await trycatchHelper<IUser>(
+  20     () =>
+→ 21       this.model.create(
+Unique constraint failed on the constraint: `User_google_id_key`	 PrismaClientKnownRequestError
+2024-03-23T06:42:25.932Z	[async_error]	error	null
+2024-03-23T06:42:25.948Z	[[DB_ERROR]]	error	Error while creating user	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:22:20
+
+  19 public static async createUser(userInfo: UserRecord) {
+  20   const { data: userRecord, error: postErr } = await trycatchHelper<IUser>(
+  21     () =>
+→ 22       this.model.create(
+Unique constraint failed on the constraint: `User_google_id_key`
+2024-03-23T06:42:25.955Z	[async_error]	error	null
+2024-03-23T06:42:25.958Z	[async_error]	error	null
+2024-03-23T06:44:10.780Z	[async_error]	error	null
+2024-03-23T06:44:10.790Z	[[DB_ERROR]]	error	Error while creating user	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\User.ts:22:20
+
+  19 public static async createUser(userInfo: UserRecord) {
+  20   const { data: userRecord, error: postErr } = await trycatchHelper<IUser>(
+  21     () =>
+→ 22       this.model.create(
+Unique constraint failed on the constraint: `User_phone_key`
+2024-03-23T06:44:10.793Z	[async_error]	error	null
+2024-03-23T06:44:10.795Z	[async_error]	error	null
+2024-03-23T06:45:50.733Z	[products]	info	Hello my products
+2024-03-23T06:46:02.687Z	[products]	info	Hello my products
+2024-03-23T06:51:09.782Z	[category]	info	Fetching categories
+2024-03-23T06:51:17.765Z	[category]	info	Fetching categories
+2024-03-23T06:51:25.774Z	[category]	info	Fetching categories
+2024-03-23T06:51:28.761Z	[category]	info	Fetching categories
+2024-03-23T06:51:34.767Z	[category]	info	Fetching categories
+2024-03-23T06:51:36.759Z	[category]	info	Fetching categories
+2024-03-23T06:51:40.766Z	[category]	info	Fetching categories
+2024-03-23T06:51:54.165Z	[cetegory]	info	Creating category
+2024-03-23T06:52:03.299Z	[discounts]	info	Creating discount
+2024-03-23T06:52:09.144Z	[discounts]	info	Creating discount
+2024-03-23T06:52:31.761Z	[discounts]	info	Fetching discounts
+2024-03-23T06:52:42.823Z	[category]	info	Fetching categories
+2024-03-23T06:52:42.830Z	[discounts]	info	Fetching discounts
+2024-03-23T06:52:45.067Z	[category]	info	Fetching categories
+2024-03-23T06:52:46.857Z	[discounts]	info	Fetching discounts
+2024-03-23T06:53:44.856Z	[products]	info	Creating product
+2024-03-23T06:53:47.406Z	[async_error]	error	null
+2024-03-23T06:53:47.407Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientValidationError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create({
+           data: {
+             id: "65fe7c7b8f3a7ea1976567a6",
+             productName: "White Bread",
+             productDescription: "White Bread On Sale",
+             buyingPrice: 200,
+             sellingPrice: 300,
+             isPerishable: false,
+             productSku: "BRW123",
+             category: {
+               connectOrCreate: {
+                 where: {
+                   id: "65fe7c0a8f3a7ea1976567a3"
+                 },
+                 create: {
+                   id: "65fe7c7b8f3a7ea1976567a7",
+                   categoryName: "",
+                   categoryDescription: ""
+                 }
+               }
+             },
+             inventory: {
+               create: {
+                 id: "65fe7c7b8f3a7ea1976567a8",
+                 productName: "White Bread",
+                 quantity: 70,
+                 lastRefilDate: new Date("2024-03-23T06:53:47.361Z")
+               }
+             },
+             asset: {
+               create: {
+                 id: "65fe7c7b8f3a7ea1976567a9",
+                 images: [
+                   "madrigal/e2tbzzlyq1fle63zpqti"
+                 ]
+               }
+             },
+             discounts: {
+               connect: {
+                 id: "65fe7c198f3a7ea1976567a5"
+               }
+             },
+         +   productBarCode: String
+           }
+         })
+
+Argument `productBarCode` is missing.
+2024-03-23T06:53:49.505Z	[products]	info	Hello my products
+2024-03-23T06:54:15.665Z	[products]	info	Hello my products
+2024-03-23T06:55:43.432Z	[products]	info	Hello my products
+2024-03-23T06:56:19.100Z	[products]	info	Hello my products
+2024-03-23T06:56:21.888Z	[category]	info	Fetching categories
+2024-03-23T06:56:21.901Z	[discounts]	info	Fetching discounts
+2024-03-23T06:56:35.694Z	[category]	info	Fetching categories
+2024-03-23T06:56:35.725Z	[discounts]	info	Fetching discounts
+2024-03-23T06:56:39.707Z	[discounts]	info	Fetching discounts
+2024-03-23T06:56:50.173Z	[category]	info	Fetching categories
+2024-03-23T06:56:50.184Z	[discounts]	info	Fetching discounts
+2024-03-23T06:57:05.774Z	[category]	info	Fetching categories
+2024-03-23T06:57:09.771Z	[category]	info	Fetching categories
+2024-03-23T06:57:13.767Z	[category]	info	Fetching categories
+2024-03-23T06:57:17.765Z	[category]	info	Fetching categories
+2024-03-23T06:57:20.326Z	[category]	info	Fetching categories
+2024-03-23T06:57:20.337Z	[discounts]	info	Fetching discounts
+2024-03-23T06:58:33.409Z	[category]	info	Fetching categories
+2024-03-23T06:58:33.421Z	[discounts]	info	Fetching discounts
+2024-03-23T06:58:35.569Z	[category]	info	Fetching categories
+2024-03-23T06:58:35.578Z	[discounts]	info	Fetching discounts
+2024-03-23T06:58:38.388Z	[category]	info	Fetching categories
+2024-03-23T06:58:38.395Z	[discounts]	info	Fetching discounts
+2024-03-23T06:58:54.403Z	[category]	info	Fetching categories
+2024-03-23T06:58:54.410Z	[discounts]	info	Fetching discounts
+2024-03-23T06:59:10.024Z	[products]	info	Hello my products
+2024-03-23T07:01:25.599Z	[category]	info	Fetching categories
+2024-03-23T07:01:25.607Z	[discounts]	info	Fetching discounts
+2024-03-23T07:01:28.223Z	[category]	info	Fetching categories
+2024-03-23T07:01:28.227Z	[discounts]	info	Fetching discounts
+2024-03-23T07:01:39.384Z	[category]	info	Fetching categories
+2024-03-23T07:01:39.392Z	[discounts]	info	Fetching discounts
+2024-03-23T07:01:47.228Z	[category]	info	Fetching categories
+2024-03-23T07:01:47.237Z	[discounts]	info	Fetching discounts
+2024-03-23T07:02:40.763Z	[category]	info	Fetching categories
+2024-03-23T07:02:40.770Z	[discounts]	info	Fetching discounts
+2024-03-23T07:03:58.127Z	[products]	info	Creating product
+2024-03-23T07:04:02.150Z	[products]	info	Creating product
+2024-03-23T07:04:05.583Z	[async_error]	error	null
+2024-03-23T07:04:05.588Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-23T07:04:17.468Z	[category]	info	Fetching categories
+2024-03-23T07:04:17.482Z	[products]	info	Creating product
+2024-03-23T07:04:17.501Z	[discounts]	info	Fetching discounts
+2024-03-23T07:04:19.804Z	[async_error]	error	null
+2024-03-23T07:04:19.807Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-23T07:04:22.808Z	[products]	info	Hello my products
+2024-03-23T07:04:29.010Z	[products]	info	Hello my products
+2024-03-23T07:04:48.788Z	[products]	info	Hello my products
+2024-03-23T07:06:51.537Z	[products]	info	Hello my products
+2024-03-23T07:07:04.874Z	[products]	info	Hello my products
+2024-03-23T07:07:10.610Z	[products]	info	Hello my products
+2024-03-23T07:07:53.795Z	[products]	info	Hello my products
+2024-03-23T07:07:57.810Z	[products]	info	Hello my products
+2024-03-23T07:09:02.740Z	[products]	info	Hello my products
+2024-03-23T07:09:04.135Z	[category]	info	Fetching categories
+2024-03-23T07:09:04.143Z	[discounts]	info	Fetching discounts
+2024-03-23T07:09:08.155Z	[discounts]	info	Fetching discounts
+2024-03-23T07:09:13.170Z	[discounts]	info	Fetching discounts
+2024-03-23T07:11:46.296Z	[category]	info	Fetching categories
+2024-03-23T07:11:46.321Z	[discounts]	info	Fetching discounts
+2024-03-23T07:12:15.253Z	[category]	info	Fetching categories
+2024-03-23T07:12:15.267Z	[discounts]	info	Fetching discounts
+2024-03-23T07:12:17.196Z	[category]	info	Fetching categories
+2024-03-23T07:12:17.209Z	[discounts]	info	Fetching discounts
+2024-03-23T07:13:31.932Z	[category]	info	Fetching categories
+2024-03-23T07:13:31.940Z	[discounts]	info	Fetching discounts
+2024-03-23T07:13:37.662Z	[category]	info	Fetching categories
+2024-03-23T07:13:37.672Z	[discounts]	info	Fetching discounts
+2024-03-23T07:13:51.605Z	[category]	info	Fetching categories
+2024-03-23T07:13:51.624Z	[discounts]	info	Fetching discounts
+2024-03-23T07:15:02.799Z	[products]	info	Creating product
+2024-03-23T07:15:06.224Z	[async_error]	error	null
+2024-03-23T07:15:06.226Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Product_productCode_key`
+2024-03-23T07:15:06.822Z	[products]	info	Creating product
+2024-03-23T07:15:09.055Z	[async_error]	error	null
+2024-03-23T07:15:09.058Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Product_productCode_key`
+2024-03-23T07:15:11.786Z	[products]	info	Hello my products
+2024-03-23T07:15:14.889Z	[products]	info	Hello my products
+2024-03-23T07:15:23.550Z	[products]	info	Hello my products
+2024-03-23T07:15:38.388Z	[products]	info	Hello my products
+2024-03-23T07:15:40.359Z	[category]	info	Fetching categories
+2024-03-23T07:15:40.365Z	[discounts]	info	Fetching discounts
+2024-03-23T07:16:40.475Z	[category]	info	Fetching categories
+2024-03-23T07:16:40.501Z	[discounts]	info	Fetching discounts
+2024-03-23T07:17:52.522Z	[products]	info	Creating product
+2024-03-23T07:17:56.162Z	[async_error]	error	null
+2024-03-23T07:17:56.164Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Product_productCode_key`
+2024-03-23T07:18:02.976Z	[category]	info	Fetching categories
+2024-03-23T07:18:02.998Z	[products]	info	Creating product
+2024-03-23T07:18:03.024Z	[discounts]	info	Fetching discounts
+2024-03-23T07:18:07.351Z	[async_error]	error	null
+2024-03-23T07:18:07.355Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Product_productCode_key`
+2024-03-23T07:18:13.461Z	[category]	info	Fetching categories
+2024-03-23T07:18:13.473Z	[discounts]	info	Fetching discounts
+2024-03-23T07:20:21.882Z	[category]	info	Fetching categories
+2024-03-23T07:20:21.914Z	[discounts]	info	Fetching discounts
+2024-03-23T07:20:25.839Z	[discounts]	info	Fetching discounts
+2024-03-23T07:20:54.674Z	[products]	info	Creating product
+2024-03-23T07:21:07.051Z	[category]	info	Fetching categories
+2024-03-23T07:21:07.065Z	[discounts]	info	Fetching discounts
+2024-03-23T07:21:07.076Z	[products]	info	Creating product
+2024-03-23T07:21:09.827Z	[async_error]	error	null
+2024-03-23T07:21:09.833Z	[[DB_ERROR]]	error	An error has occured while creating the product	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:88:20
+
+  85 // Creates a new product with its relational subset fields if none of them exists
+  86 const { data: productInfo, error: postErr } =
+  87   await trycatchHelper<IProduct>(() =>
+→ 88     this.model.create(
+Unique constraint failed on the constraint: `Inventory_product_name_key`
+2024-03-23T07:21:12.805Z	[products]	info	Hello my products
+2024-03-23T08:04:33.685Z	[products]	info	Hello my products
+2024-03-23T08:04:34.758Z	[products]	info	Hello my products
+2024-03-23T08:04:38.772Z	[products]	info	Hello my products
+2024-03-23T08:07:00.958Z	[products]	info	Hello my products
+2024-03-23T08:07:04.958Z	[products]	info	Hello my products
+2024-03-23T08:08:00.997Z	[products]	info	Hello my products
+2024-03-23T08:10:17.452Z	[products]	info	Hello my products
+2024-03-23T08:25:18.909Z	[products]	info	Hello my products
+2024-03-23T08:25:23.366Z	[category]	info	Fetching categories
+2024-03-23T08:25:23.388Z	[discounts]	info	Fetching discounts
+2024-03-23T08:26:27.404Z	[products]	info	Hello my products
+2024-03-23T08:45:00.753Z	[products]	info	Hello my products
+2024-03-23T08:46:03.572Z	[products]	info	Hello my products
+2024-03-23T08:47:00.823Z	[products]	info	Hello my products
+2024-03-23T08:47:02.791Z	[products]	info	Hello my products
+2024-03-23T08:47:06.721Z	[products]	info	Hello my products
+2024-03-23T08:47:15.661Z	[products]	info	Hello my products
+2024-03-23T08:47:24.639Z	[products]	info	Hello my products
+2024-03-23T08:49:43.867Z	[products]	info	Hello my products
+2024-03-23T10:07:25.466Z	[products]	info	Hello my products
+2024-03-23T10:07:25.693Z	[async_error]	error	null
+2024-03-23T10:07:25.695Z	[[DB_ERROR]]	error	
+Invalid `this.model.findMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:146:18
+
+  143 const { data: productInfos, error: fetchError } = await trycatchHelper<
+  144   IProduct[]
+  145 >(() =>
+→ 146   this.model.findMany(
+Cannot select both '$scalars: true' and a specific scalar field 'supplier'.	 PrismaClientUnknownRequestError
+2024-03-23T10:07:26.733Z	[products]	info	Hello my products
+2024-03-23T10:07:26.739Z	[async_error]	error	null
+2024-03-23T10:07:26.741Z	[[DB_ERROR]]	error	
+Invalid `this.model.findMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:146:18
+
+  143 const { data: productInfos, error: fetchError } = await trycatchHelper<
+  144   IProduct[]
+  145 >(() =>
+→ 146   this.model.findMany(
+Cannot select both '$scalars: true' and a specific scalar field 'supplier'.	 PrismaClientUnknownRequestError
+2024-03-23T10:07:28.776Z	[products]	info	Hello my products
+2024-03-23T10:07:28.782Z	[async_error]	error	null
+2024-03-23T10:07:28.784Z	[[DB_ERROR]]	error	
+Invalid `this.model.findMany()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:146:18
+
+  143 const { data: productInfos, error: fetchError } = await trycatchHelper<
+  144   IProduct[]
+  145 >(() =>
+→ 146   this.model.findMany(
+Cannot select both '$scalars: true' and a specific scalar field 'supplier'.	 PrismaClientUnknownRequestError
+2024-03-23T10:08:30.450Z	[products]	info	Hello my products
+2024-03-23T10:08:39.805Z	[products]	info	Hello my products
+2024-03-23T10:17:49.914Z	[products]	info	Hello my products
+2024-03-23T10:59:13.173Z	[async_error]	error	null
+2024-03-23T10:59:13.180Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe7edf8f3a7ea1976567aa", length 25.	 PrismaClientKnownRequestError
+2024-03-23T10:59:14.247Z	[async_error]	error	null
+2024-03-23T10:59:14.260Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe7edf8f3a7ea1976567aa", length 25.	 PrismaClientKnownRequestError
+2024-03-23T10:59:16.357Z	[async_error]	error	null
+2024-03-23T10:59:16.363Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe7edf8f3a7ea1976567aa", length 25.	 PrismaClientKnownRequestError
+2024-03-23T10:59:50.023Z	[async_error]	error	null
+2024-03-23T10:59:50.026Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: provided hex string representation must be exactly 12 bytes, instead got: " 65fe7edf8f3a7ea1976567aa", length 25.	 PrismaClientKnownRequestError
+2024-03-23T11:02:09.480Z	[async_error]	error	null
+2024-03-23T11:02:09.486Z	[[DB_ERROR]]	error	
+Invalid `this.model.update()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:195:20
+
+  192 ) {
+  193   const { data: updatedProductInfo, error: updateError } =
+  194     await trycatchHelper<IProduct>(() =>
+→ 195       this.model.update({
+              where: {
+                id: "65fe7edf8f3a7ea1976567aa"
+              },
+              data: {
+                id: "65fe7edf8f3a7ea1976567aa",
+                ~~
+                productName: "Festive Bread",
+                productDescription: "Festive Bread on Sale",
+                sellingPrice: 250,
+                buyingPrice: 200,
+                lowLevelAlert: 15,
+                isPerishable: false,
+                expireDate: null,
+                productCode: null,
+                productLabel: "NEW",
+                productTag: null,
+                productSku: "BRW123",
+                productBarCode: "1234567",
+                published: false,
+                stockStatus: "IN_STOCK",
+                categoryId: "65fe7c0a8f3a7ea1976567a3",
+                inventoryId: "65fe7edf8f3a7ea1976567ac",
+                discountIds: [
+                  "65fe7c198f3a7ea1976567a5"
+                ],
+                createdAt: new Date("2024-03-23T07:03:59.938Z"),
+                updatedAt: new Date("2024-03-23T07:03:59.938Z"),
+                asset: [
+                  {
+                    id: "65fe7edf8f3a7ea1976567ad",
+                    images: [
+                      "madrigal/amxxejnmbuor4wv9u9rm"
+                    ],
+                    productsId: "65fe7edf8f3a7ea1976567aa",
+                    createdAt: new Date("2024-03-23T07:03:59.938Z"),
+                    updatedAt: new Date("2024-03-23T07:03:59.938Z")
+                  }
+                ],
+                category: {
+                  id: "65fe7c0a8f3a7ea1976567a3",
+                  categoryName: "Food",
+                  categoryDescription: "Food Category",
+                  createdAt: new Date("2024-03-23T06:51:54.178Z"),
+                  updatedAt: new Date("2024-03-23T06:51:54.178Z")
+                },
+                inventory: {
+                  id: "65fe7edf8f3a7ea1976567ac",
+                  quantity: 1000,
+                  productName: "Festive Bread",
+                  lastRefilDate: new Date("2024-03-23T07:03:59.936Z"),
+                  createdAt: new Date("2024-03-23T07:03:59.938Z"),
+                  updatedAt: new Date("2024-03-23T07:03:59.938Z")
+                },
+                discounts: [
+                  {
+                    id: "65fe7c198f3a7ea1976567a5",
+                    coupon: "ABSFD",
+                    tokens: 50,
+                    percentage: 5,
+                    status: "inactive",
+                    type: "STANDARD",
+                    expirationDate: new Date("2024-03-22T21:00:00.000Z"),
+                    products: [
+                      "65fe7edf8f3a7ea1976567aa",
+                      "65fe82d9bc1d9fba437e37e7"
+                    ],
+                    createdAt: new Date("2024-03-23T06:52:09.156Z"),
+                    updatedAt: new Date("2024-03-23T06:52:09.156Z")
+                  }
+                ],
+            ?   cartItem?: CartItemsUpdateManyWithoutProductNestedInput,
+            ?   orderItem?: OrderItemsUpdateManyWithoutProductNestedInput,
+            ?   productSales?: ProductSalesUpdateManyWithoutProductNestedInput,
+            ?   productRefunds?: ProductRefundsUpdateManyWithoutProductNestedInput,
+            ?   productRefills?: ProductRefilUpdateManyWithoutProductNestedInput
+              },
+              include: undefined
+            })
+
+Unknown argument `id`. Available options are listed in green.	 PrismaClientValidationError
+2024-03-23T11:05:26.374Z	[products]	info	Hello my products
+2024-03-23T11:13:43.819Z	[inventory]	info	Updating inventory
+2024-03-23T11:13:47.438Z	[product]	info	Updating product
+2024-03-23T11:15:09.017Z	[inventory]	info	Updating inventory
+2024-03-23T11:15:11.064Z	[product]	info	Updating product
+2024-03-23T11:15:40.004Z	[inventory]	info	Updating inventory
+2024-03-23T11:15:43.569Z	[product]	info	Updating product
+2024-03-23T11:36:04.810Z	[products]	info	Hello my products
+2024-03-23T11:44:59.436Z	[async_error]	error	null
+2024-03-23T11:44:59.440Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: I/O error: An existing connection was forcibly closed by the remote host. (os error 10054), labels: {}`	 PrismaClientKnownRequestError
+2024-03-23T11:45:01.104Z	[async_error]	error	null
+2024-03-23T11:45:01.109Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Server selection timeout: None of the available servers suitable for criteria ReadPreference(Primary). Topology: { Type: ReplicaSetNoPrimary, Set Name: atlas-74jcqy-shard-0, Max Set Version: 12, Max Election ID: 7fffffff000000000000012c, Servers: [ { Address: ac-zemxwgt-shard-00-00.afkpmlc.mongodb.net:27017, Type: RsSecondary, Average RTT: 2.371093363s, Last Update Time: 2024-03-23 11:44:56.905 +00:00:00, Max Wire Version: 21, Min Wire Version: 0, Replica Set Name: atlas-74jcqy-shard-0, Replica Set Version: 12, Tags: {"diskState": "READY", "provider": "AWS", "availabilityZone": "use1-az1", "workloadType": "OPERATIONAL", "region": "US_EAST_1", "nodeType": "ELECTABLE"} }, { Address: ac-zemxwgt-shard-00-02.afkpmlc.mongodb.net:27017, Type: RsSecondary, Average RTT: 2.354071467s, Last Update Time: 2024-03-23 11:44:57.658 +00:00:00, Max Wire Version: 21, Min Wire Version: 0, Replica Set Name: atlas-74jcqy-shard-0, Replica Set Version: 12, Tags: {"diskState": "READY", "availabilityZone": "use1-az5", "nodeType": "ELECTABLE", "provider": "AWS", "workloadType": "OPERATIONAL", "region": "US_EAST_1"} }, { Address: ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017, Type: Unknown, Error: Kind: I/O error: timed out, labels: {} } ] }, labels: {}`	 PrismaClientKnownRequestError
+2024-03-23T11:45:07.355Z	[async_error]	error	null
+2024-03-23T11:45:07.358Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Server selection timeout: None of the available servers suitable for criteria ReadPreference(Primary). Topology: { Type: ReplicaSetNoPrimary, Set Name: atlas-74jcqy-shard-0, Max Set Version: 12, Max Election ID: 7fffffff000000000000012c, Servers: [ { Address: ac-zemxwgt-shard-00-00.afkpmlc.mongodb.net:27017, Type: RsSecondary, Average RTT: 2.78884181s, Last Update Time: 2024-03-23 11:45:03.245 +00:00:00, Max Wire Version: 21, Min Wire Version: 0, Replica Set Name: atlas-74jcqy-shard-0, Replica Set Version: 12, Tags: {"provider": "AWS", "nodeType": "ELECTABLE", "workloadType": "OPERATIONAL", "region": "US_EAST_1", "availabilityZone": "use1-az1", "diskState": "READY"} }, { Address: ac-zemxwgt-shard-00-02.afkpmlc.mongodb.net:27017, Type: RsSecondary, Average RTT: 2.775304753s, Last Update Time: 2024-03-23 11:45:07.27 +00:00:00, Max Wire Version: 21, Min Wire Version: 0, Replica Set Name: atlas-74jcqy-shard-0, Replica Set Version: 12, Tags: {"availabilityZone": "use1-az5", "region": "US_EAST_1", "nodeType": "ELECTABLE", "workloadType": "OPERATIONAL", "diskState": "READY", "provider": "AWS"} }, { Address: ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017, Type: Unknown, Error: Kind: I/O error: timed out, labels: {} } ] }, labels: {}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:18.416Z	[async_error]	error	null
+2024-03-23T11:48:18.418Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: I/O error: timed out, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.779Z	[async_error]	error	null
+2024-03-23T11:48:45.820Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.831Z	[async_error]	error	null
+2024-03-23T11:48:45.832Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.840Z	[async_error]	error	null
+2024-03-23T11:48:45.843Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.854Z	[async_error]	error	null
+2024-03-23T11:48:45.857Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.865Z	[async_error]	error	null
+2024-03-23T11:48:45.873Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.882Z	[async_error]	error	null
+2024-03-23T11:48:45.884Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: Connection pool for ac-zemxwgt-shard-00-01.afkpmlc.mongodb.net:27017 cleared because another operation failed with: Kind: I/O error: timed out, labels: {}, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T11:48:45.891Z	[async_error]	error	null
+2024-03-23T11:48:45.893Z	[[DB_ERROR]]	error	
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Products.ts:154:20
+
+  151 public static async getProduct(id: string, properties?: IJoinProperties) {
+  152   const { data: productInfo, error: fetchError } =
+  153     await trycatchHelper<IProduct>(() =>
+→ 154       this.model.findUnique(
+Raw query failed. Code: `unknown`. Message: `Kind: I/O error: timed out, labels: {"RetryableWriteError"}`	 PrismaClientKnownRequestError
+2024-03-23T12:18:58.745Z	[products]	info	Hello my products
+2024-03-23T12:19:41.394Z	[products]	info	Hello my products
+2024-03-23T12:19:52.298Z	[products]	info	Hello my products
+2024-03-23T12:20:08.306Z	[products]	info	Hello my products
+2024-03-23T12:20:14.828Z	[products]	info	Hello my products
+2024-03-23T12:20:20.444Z	[products]	info	Hello my products
+2024-03-23T12:24:16.123Z	[products]	info	Hello my products
+2024-03-23T12:25:44.367Z	[products]	info	Hello my products
+2024-03-23T12:33:46.371Z	[products]	info	Hello my products
+2024-03-23T12:33:50.354Z	[products]	info	Hello my products
+2024-03-23T12:34:02.750Z	[products]	info	Hello my products
+2024-03-23T12:34:16.794Z	[products]	info	Hello my products
+2024-03-23T12:34:34.681Z	[products]	info	Hello my products
+2024-03-23T12:34:40.576Z	[products]	info	Hello my products
+2024-03-23T12:34:44.343Z	[products]	info	Hello my products
+2024-03-23T12:34:50.633Z	[products]	info	Hello my products
+2024-03-23T12:35:04.185Z	[products]	info	Hello my products
+2024-03-23T12:35:19.631Z	[products]	info	Hello my products
+2024-03-23T12:35:24.183Z	[products]	info	Hello my products
+2024-03-23T12:35:35.373Z	[products]	info	Hello my products
+2024-03-23T12:35:38.658Z	[products]	info	Hello my products
+2024-03-23T12:35:41.445Z	[products]	info	Hello my products
+2024-03-23T12:36:22.884Z	[products]	info	Hello my products
+2024-03-23T12:36:37.490Z	[products]	info	Hello my products
+2024-03-23T12:42:53.198Z	[products]	info	Hello my products
+2024-03-23T12:42:57.186Z	[products]	info	Hello my products
+2024-03-23T12:43:03.404Z	[products]	info	Hello my products
+2024-03-23T12:43:13.460Z	[products]	info	Hello my products
+2024-03-23T12:43:32.599Z	[products]	info	Hello my products
+2024-03-23T12:43:35.517Z	[products]	info	Hello my products
+2024-03-23T12:43:37.634Z	[products]	info	Hello my products
+2024-03-23T12:45:20.440Z	[inventory]	info	Updating inventory
+2024-03-23T12:45:22.485Z	[product]	info	Updating product
+2024-03-23T12:45:26.623Z	[inventory]	info	Updating inventory
+2024-03-23T12:45:28.547Z	[product]	info	Updating product
+2024-03-23T13:19:45.691Z	[inventory]	info	Updating inventory
+2024-03-23T13:19:49.026Z	[product]	info	Updating product
+2024-03-23T13:19:50.370Z	[inventory]	info	Updating inventory
+2024-03-23T13:19:51.917Z	[orders]	info	Creating new order
+2024-03-23T13:19:51.920Z	[orderItem]	info	Creating order item
+2024-03-23T13:19:51.927Z	[orderItem]	info	Creating order item
+2024-03-23T13:19:54.245Z	[async_error]	error	null
+2024-03-23T13:19:54.249Z	[[DB_ERROR]]	error	Error while creating new order	TypeError: Cannot read properties of undefined (reading 'county')
+2024-03-23T13:19:54.253Z	[async_error]	error	null
+2024-03-23T13:19:55.479Z	[product]	info	Updating product
+2024-03-23T13:21:18.577Z	[orders]	info	Creating new order
+2024-03-23T13:21:18.582Z	[orderItem]	info	Creating order item
+2024-03-23T13:21:18.585Z	[orderItem]	info	Creating order item
+2024-03-23T13:21:19.174Z	[async_error]	error	null
+2024-03-23T13:21:19.176Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:24:22
+
+  21 logger("orderItem").info("Creating order item");
+  22 const { data: itemInfo, error: createErr } =
+  23   await trycatchHelper<OrderItems>(() =>
+→ 24     this.model.create(
+Unique constraint failed on the constraint: `Orderitems_productId_orderId_key`
+2024-03-23T13:21:19.181Z	[async_error]	error	null
+2024-03-23T13:21:20.784Z	[async_error]	error	null
+2024-03-23T13:21:20.790Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:24:22
+
+  21 logger("orderItem").info("Creating order item");
+  22 const { data: itemInfo, error: createErr } =
+  23   await trycatchHelper<OrderItems>(() =>
+→ 24     this.model.create(
+Unique constraint failed on the constraint: `Orderitems_productId_orderId_key`
+2024-03-23T13:26:40.155Z	[orders]	info	Creating new order
+2024-03-23T13:26:40.162Z	[orderItem]	info	Creating order item
+2024-03-23T13:26:40.166Z	[orderItem]	info	Creating order item
+2024-03-23T13:26:42.122Z	[async_error]	error	null
+2024-03-23T13:26:42.127Z	[[DB_ERROR]]	error	Error while creating new order	TypeError: Cannot read properties of undefined (reading 'county')
+2024-03-23T13:26:42.130Z	[async_error]	error	null
+2024-03-23T13:28:29.131Z	[products]	info	Hello my products
+2024-03-23T13:28:33.089Z	[products]	info	Hello my products
+2024-03-23T13:28:38.110Z	[products]	info	Hello my products
+2024-03-23T13:28:45.116Z	[products]	info	Hello my products
+2024-03-23T13:28:51.307Z	[orders]	info	Creating new order
+2024-03-23T13:28:51.310Z	[orderItem]	info	Creating order item
+2024-03-23T13:28:51.315Z	[orderItem]	info	Creating order item
+2024-03-23T13:28:52.792Z	[async_error]	error	null
+2024-03-23T13:28:52.798Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:28:52.805Z	[async_error]	error	null
+2024-03-23T13:30:17.026Z	[products]	info	Hello my products
+2024-03-23T13:30:22.017Z	[products]	info	Hello my products
+2024-03-23T13:30:29.027Z	[products]	info	Hello my products
+2024-03-23T13:30:57.937Z	[orders]	info	Creating new order
+2024-03-23T13:30:57.942Z	[orderItem]	info	Creating order item
+2024-03-23T13:30:57.946Z	[orderItem]	info	Creating order item
+2024-03-23T13:31:00.679Z	[async_error]	error	null
+2024-03-23T13:31:00.683Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:31:00.688Z	[async_error]	error	null
+2024-03-23T13:35:31.571Z	[products]	info	Hello my products
+2024-03-23T13:35:35.527Z	[products]	info	Hello my products
+2024-03-23T13:35:43.505Z	[products]	info	Hello my products
+2024-03-23T13:36:01.323Z	[products]	info	Hello my products
+2024-03-23T13:36:14.904Z	[products]	info	Hello my products
+2024-03-23T13:38:12.897Z	[orders]	info	Creating new order
+2024-03-23T13:38:12.903Z	[orderItem]	info	Creating order item
+2024-03-23T13:38:12.907Z	[orderItem]	info	Creating order item
+2024-03-23T13:38:17.453Z	[async_error]	error	null
+2024-03-23T13:38:17.460Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:38:17.470Z	[async_error]	error	null
+2024-03-23T13:39:48.998Z	[products]	info	Hello my products
+2024-03-23T13:48:00.682Z	[products]	info	Hello my products
+2024-03-23T13:48:03.327Z	[orders]	info	Creating new order
+2024-03-23T13:48:03.335Z	[orderItem]	info	Creating order item
+2024-03-23T13:48:03.343Z	[orderItem]	info	Creating order item
+2024-03-23T13:48:04.626Z	[products]	info	Hello my products
+2024-03-23T13:48:08.721Z	[async_error]	error	null
+2024-03-23T13:48:08.726Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:48:08.730Z	[async_error]	error	null
+2024-03-23T13:58:10.806Z	[products]	info	Hello my products
+2024-03-23T13:58:15.027Z	[orders]	info	Creating new order
+2024-03-23T13:58:15.962Z	[orderItem]	info	Creating order item
+2024-03-23T13:58:15.973Z	[orderItem]	info	Creating order item
+2024-03-23T13:58:18.909Z	[async_error]	error	null
+2024-03-23T13:58:18.914Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:58:18.918Z	[async_error]	error	null
+2024-03-23T13:59:02.663Z	[products]	info	Hello my products
+2024-03-23T13:59:05.814Z	[orders]	info	Creating new order
+2024-03-23T13:59:06.593Z	[products]	info	Hello my products
+2024-03-23T13:59:07.835Z	[orderItem]	info	Creating order item
+2024-03-23T13:59:07.839Z	[orderItem]	info	Creating order item
+2024-03-23T13:59:12.179Z	[async_error]	error	null
+2024-03-23T13:59:12.184Z	[[DB_ERROR]]	error	Error while creating new order	PrismaClientKnownRequestError: 
+Invalid `prisma.orderDetails.create()` invocation:
+
+
+The required connected records were not found. Expected 2 records to be connected after connect operation on one-to-many relation 'OrderDetailsToOrderItems', found 0.
+2024-03-23T13:59:12.189Z	[async_error]	error	null
+2024-03-23T14:06:44.680Z	[products]	info	Hello my products
+2024-03-23T14:06:46.648Z	[orders]	info	Creating new order
+2024-03-23T14:06:48.578Z	[products]	info	Hello my products
+2024-03-23T14:06:52.947Z	[products]	info	Hello my products
+2024-03-23T14:07:52.685Z	[products]	info	Hello my products
+2024-03-23T14:07:54.592Z	[orders]	info	Creating new order
+2024-03-23T14:07:56.628Z	[products]	info	Hello my products
+2024-03-23T14:07:57.517Z	[orderItem]	info	Creating order item
+2024-03-23T14:07:57.522Z	[orderItem]	info	Creating order item
+2024-03-23T14:07:59.050Z	[async_error]	error	null
+2024-03-23T14:07:59.053Z	[[DB_ERROR]]	error	Error while creating order item	PrismaClientKnownRequestError: 
+Invalid `this.model.create()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\OrderItems.ts:24:22
+
+  21 logger("orderItem").info("Creating order item");
+  22 const { data: itemInfo, error: createErr } =
+  23   await trycatchHelper<OrderItems>(() =>
+→ 24     this.model.create(
+Unique constraint failed on the constraint: `Orderitems_orderId_key`
+2024-03-23T14:07:59.057Z	[async_error]	error	null
+2024-03-23T14:08:28.080Z	[products]	info	Hello my products
+2024-03-23T14:08:29.821Z	[orders]	info	Creating new order
+2024-03-23T14:18:11.628Z	[products]	info	Hello my products
+2024-03-23T14:18:15.876Z	[orders]	info	Creating new order
+2024-03-23T14:18:16.578Z	[products]	info	Hello my products
+2024-03-23T14:20:32.473Z	[products]	info	Hello my products
+2024-03-23T14:20:34.216Z	[orders]	info	Creating new order
+2024-03-23T14:20:37.228Z	[orderItem]	info	Creating order item
+2024-03-23T14:20:37.231Z	[orderItem]	info	Creating order item
+2024-03-23T14:20:37.393Z	[products]	info	Hello my products
+2024-03-23T14:22:15.898Z	[products]	info	Hello my products
+2024-03-23T14:22:30.540Z	[orders]	info	Creating new order
+2024-03-23T14:22:32.287Z	[orderItem]	info	Creating order item
+2024-03-23T14:22:32.290Z	[orderItem]	info	Creating order item
+2024-03-23T14:25:09.424Z	[products]	info	Hello my products
+2024-03-23T14:25:13.298Z	[products]	info	Hello my products
+2024-03-23T14:25:18.308Z	[products]	info	Hello my products
+2024-03-23T14:28:53.786Z	[products]	info	Hello my products
+2024-03-23T14:29:08.143Z	[products]	info	Hello my products
+2024-03-23T14:29:45.104Z	[products]	info	Hello my products
+2024-03-23T14:31:12.564Z	[products]	info	Hello my products
+2024-03-23T14:31:35.126Z	[products]	info	Hello my products
+2024-03-23T14:36:00.157Z	[products]	info	Hello my products
+2024-03-23T14:36:04.164Z	[products]	info	Hello my products
+2024-03-23T14:36:38.124Z	[inventory]	info	Updating inventory
+2024-03-23T14:36:40.433Z	[product]	info	Updating product
+2024-03-23T14:36:41.541Z	[inventory]	info	Updating inventory
+2024-03-23T14:36:43.255Z	[product]	info	Updating product
+2024-03-23T14:38:03.632Z	[inventory]	info	Updating inventory
+2024-03-23T14:38:05.115Z	[product]	info	Updating product
+2024-03-23T14:40:51.113Z	[inventory]	info	Updating inventory
+2024-03-23T14:40:52.614Z	[product]	info	Updating product
+2024-03-23T14:43:34.914Z	[inventory]	info	Updating inventory
+2024-03-23T14:43:36.426Z	[product]	info	Updating product
+2024-03-23T14:44:52.005Z	[inventory]	info	Updating inventory
+2024-03-23T14:44:52.793Z	[products]	info	Hello my products
+2024-03-23T14:44:55.838Z	[product]	info	Updating product
+2024-03-23T14:44:56.780Z	[products]	info	Hello my products
+2024-03-23T14:46:13.317Z	[products]	info	Hello my products
+2024-03-23T14:54:12.723Z	[products]	info	Hello my products
+2024-03-23T14:54:54.675Z	[products]	info	Hello my products
+2024-03-23T14:55:05.694Z	[products]	info	Hello my products
+2024-03-23T14:55:07.625Z	[products]	info	Hello my products
+2024-03-23T14:55:09.851Z	[products]	info	Hello my products
+2024-03-23T14:55:12.614Z	[products]	info	Hello my products
+2024-03-23T14:55:14.559Z	[products]	info	Hello my products
+2024-03-23T14:56:01.544Z	[products]	info	Hello my products
+2024-03-23T14:57:21.742Z	[products]	info	Hello my products
+2024-03-23T14:57:23.455Z	[products]	info	Hello my products
+2024-03-23T14:57:25.560Z	[products]	info	Hello my products
+2024-03-23T14:57:29.328Z	[products]	info	Hello my products
+2024-03-23T14:57:35.764Z	[products]	info	Hello my products
+2024-03-23T14:57:38.574Z	[products]	info	Hello my products
+2024-03-23T14:57:39.867Z	[products]	info	Hello my products
+2024-03-23T14:57:41.582Z	[products]	info	Hello my products
+2024-03-23T14:57:46.449Z	[products]	info	Hello my products
+2024-03-23T14:57:53.651Z	[products]	info	Hello my products
+2024-03-23T14:58:00.608Z	[products]	info	Hello my products
+2024-03-23T14:58:15.837Z	[products]	info	Hello my products
+2024-03-23T14:58:17.507Z	[products]	info	Hello my products
+2024-03-23T14:58:22.426Z	[products]	info	Hello my products
+2024-03-23T14:58:30.563Z	[products]	info	Hello my products
+2024-03-23T14:59:38.730Z	[products]	info	Hello my products
+2024-03-23T14:59:39.915Z	[products]	info	Hello my products
+2024-03-23T14:59:42.536Z	[products]	info	Hello my products
+2024-03-23T14:59:44.341Z	[products]	info	Hello my products
+2024-03-23T14:59:59.378Z	[products]	info	Hello my products
+2024-03-23T15:00:17.659Z	[products]	info	Hello my products
+2024-03-23T15:02:17.720Z	[products]	info	Hello my products
+2024-03-23T15:02:22.530Z	[products]	info	Hello my products
+2024-03-23T15:02:25.744Z	[products]	info	Hello my products
+2024-03-23T15:02:28.578Z	[products]	info	Hello my products
+2024-03-23T15:02:31.517Z	[products]	info	Hello my products
+2024-03-23T15:02:34.628Z	[products]	info	Hello my products
+2024-03-23T15:02:36.703Z	[products]	info	Hello my products
+2024-03-23T15:02:38.685Z	[products]	info	Hello my products
+2024-03-23T15:02:45.659Z	[products]	info	Hello my products
+2024-03-23T15:02:47.548Z	[products]	info	Hello my products
+2024-03-23T15:03:43.682Z	[products]	info	Hello my products
+2024-03-23T15:03:45.622Z	[products]	info	Hello my products
+2024-03-23T15:03:49.857Z	[products]	info	Hello my products
+2024-03-23T15:03:50.452Z	[products]	info	Hello my products
+2024-03-23T15:03:52.321Z	[products]	info	Hello my products
+2024-03-23T15:03:53.310Z	[products]	info	Hello my products
+2024-03-23T15:04:04.349Z	[products]	info	Hello my products
+2024-03-23T15:04:18.644Z	[products]	info	Hello my products
+2024-03-23T15:05:57.004Z	[products]	info	Hello my products
+2024-03-23T15:05:58.724Z	[products]	info	Hello my products
+2024-03-23T15:06:00.555Z	[products]	info	Hello my products
+2024-03-23T15:06:03.442Z	[products]	info	Hello my products
+2024-03-23T15:06:04.662Z	[products]	info	Hello my products
+2024-03-23T15:06:08.601Z	[products]	info	Hello my products
+2024-03-23T15:06:09.670Z	[products]	info	Hello my products
+2024-03-23T15:06:20.496Z	[products]	info	Hello my products
+2024-03-23T15:06:25.535Z	[products]	info	Hello my products
+2024-03-23T15:06:30.481Z	[products]	info	Hello my products
+2024-03-23T15:06:37.595Z	[products]	info	Hello my products
+2024-03-23T15:06:44.691Z	[products]	info	Hello my products
+2024-03-23T15:07:28.743Z	[products]	info	Hello my products
+2024-03-23T15:07:31.587Z	[products]	info	Hello my products
+2024-03-23T15:07:34.151Z	[products]	info	Hello my products
+2024-03-23T15:07:35.733Z	[products]	info	Hello my products
+2024-03-23T15:07:38.621Z	[products]	info	Hello my products
+2024-03-23T15:07:42.550Z	[products]	info	Hello my products
+2024-03-23T15:07:43.585Z	[products]	info	Hello my products
+2024-03-23T15:07:46.454Z	[products]	info	Hello my products
+2024-03-23T15:07:49.251Z	[products]	info	Hello my products
+2024-03-23T15:07:51.434Z	[products]	info	Hello my products
+2024-03-23T15:07:53.278Z	[products]	info	Hello my products
+2024-03-23T15:08:10.709Z	[products]	info	Hello my products
+2024-03-23T15:08:12.549Z	[products]	info	Hello my products
+2024-03-23T15:08:14.531Z	[products]	info	Hello my products
+2024-03-23T15:08:19.409Z	[products]	info	Hello my products
+2024-03-23T15:08:22.311Z	[products]	info	Hello my products
+2024-03-23T15:08:25.332Z	[products]	info	Hello my products
+2024-03-23T15:08:31.756Z	[products]	info	Hello my products
+2024-03-23T15:08:33.504Z	[products]	info	Hello my products
+2024-03-23T15:08:35.645Z	[products]	info	Hello my products
+2024-03-23T15:09:22.934Z	[products]	info	Hello my products
+2024-03-23T15:13:08.782Z	[products]	info	Hello my products
+2024-03-23T15:13:11.472Z	[products]	info	Hello my products
+2024-03-23T15:13:14.033Z	[products]	info	Hello my products
+2024-03-23T15:13:15.291Z	[products]	info	Hello my products
+2024-03-23T15:13:22.503Z	[products]	info	Hello my products
+2024-03-23T15:13:40.809Z	[products]	info	Hello my products
+2024-03-23T15:13:42.466Z	[products]	info	Hello my products
+2024-03-23T15:15:56.060Z	[products]	info	Hello my products
+2024-03-23T15:16:17.601Z	[products]	info	Hello my products
+2024-03-23T15:16:50.648Z	[products]	info	Hello my products
+2024-03-23T15:17:03.259Z	[products]	info	Hello my products
+2024-03-23T15:17:10.638Z	[orders]	info	Fetching orders
+2024-03-23T15:22:00.201Z	[orders]	info	Fetching orders
+2024-03-23T15:22:23.574Z	[orders]	info	Fetching orders
+2024-03-23T15:22:28.585Z	[orders]	info	Fetching orders
+2024-03-23T15:22:30.573Z	[orders]	info	Fetching orders
+2024-03-23T15:22:40.872Z	[orders]	info	Fetching orders
+2024-03-23T15:22:44.745Z	[orders]	info	Fetching orders
+2024-03-23T15:22:49.616Z	[orders]	info	Fetching orders
+2024-03-23T15:22:56.579Z	[orders]	info	Fetching orders
+2024-03-23T15:23:18.904Z	[orders]	info	Fetching orders
+2024-03-23T15:23:20.543Z	[orders]	info	Fetching orders
+2024-03-23T15:23:29.733Z	[orders]	info	Fetching orders
+2024-03-23T15:23:35.515Z	[orders]	info	Fetching orders
+2024-03-23T15:23:45.611Z	[orders]	info	Fetching orders
+2024-03-23T15:23:52.600Z	[orders]	info	Fetching orders
+2024-03-23T15:23:56.663Z	[orders]	info	Fetching orders
+2024-03-23T15:23:58.688Z	[orders]	info	Fetching orders
+2024-03-23T15:24:01.430Z	[orders]	info	Fetching orders
+2024-03-23T15:24:03.617Z	[orders]	info	Fetching orders
+2024-03-23T15:24:10.447Z	[orders]	info	Fetching orders
+2024-03-23T15:24:13.517Z	[orders]	info	Fetching orders
+2024-03-23T15:24:16.563Z	[orders]	info	Fetching orders
+2024-03-23T15:24:19.642Z	[orders]	info	Fetching orders
+2024-03-23T15:24:29.550Z	[orders]	info	Fetching orders
+2024-03-23T15:24:32.515Z	[orders]	info	Fetching orders
+2024-03-23T15:24:42.552Z	[orders]	info	Fetching orders
+2024-03-23T15:24:47.699Z	[orders]	info	Fetching orders
+2024-03-23T15:24:49.526Z	[orders]	info	Fetching orders
+2024-03-23T15:24:51.500Z	[orders]	info	Fetching orders
+2024-03-23T15:24:52.580Z	[orders]	info	Fetching orders
+2024-03-23T15:25:52.649Z	[orders]	info	Fetching orders
+2024-03-23T15:25:56.475Z	[orders]	info	Fetching orders
+2024-03-23T15:25:59.509Z	[orders]	info	Fetching orders
+2024-03-23T15:26:02.542Z	[orders]	info	Fetching orders
+2024-03-23T15:26:08.789Z	[orders]	info	Fetching orders
+2024-03-23T15:26:10.570Z	[orders]	info	Fetching orders
+2024-03-23T15:26:12.488Z	[orders]	info	Fetching orders
+2024-03-23T15:26:46.790Z	[orders]	info	Fetching orders
+2024-03-23T15:26:48.624Z	[orders]	info	Fetching orders
+2024-03-23T15:26:49.475Z	[orders]	info	Fetching orders
+2024-03-23T15:26:51.565Z	[orders]	info	Fetching orders
+2024-03-23T15:26:54.688Z	[orders]	info	Fetching orders
+2024-03-23T15:26:56.447Z	[orders]	info	Fetching orders
+2024-03-23T15:27:04.680Z	[orders]	info	Fetching orders
+2024-03-23T15:29:01.908Z	[orders]	info	Fetching orders
+2024-03-23T15:29:03.599Z	[orders]	info	Fetching orders
+2024-03-23T15:29:08.554Z	[orders]	info	Fetching orders
+2024-03-23T15:29:21.645Z	[orders]	info	Fetching orders
+2024-03-23T15:29:25.528Z	[orders]	info	Fetching orders
+2024-03-23T15:29:36.099Z	[orders]	info	Fetching orders
+2024-03-23T15:30:01.576Z	[orders]	info	Fetching orders
+2024-03-23T15:30:03.526Z	[orders]	info	Fetching orders
+2024-03-23T15:30:10.641Z	[orders]	info	Fetching orders
+2024-03-23T15:30:14.712Z	[orders]	info	Fetching orders
+2024-03-23T15:30:15.460Z	[orders]	info	Fetching orders
+2024-03-23T15:30:17.815Z	[orders]	info	Fetching orders
+2024-03-23T15:30:19.308Z	[orders]	info	Fetching orders
+2024-03-23T15:30:22.396Z	[orders]	info	Fetching orders
+2024-03-23T15:30:23.285Z	[orders]	info	Fetching orders
+2024-03-23T15:30:27.442Z	[orders]	info	Fetching orders
+2024-03-23T15:30:30.534Z	[orders]	info	Fetching orders
+2024-03-23T15:30:32.617Z	[orders]	info	Fetching orders
+2024-03-23T15:30:35.530Z	[orders]	info	Fetching orders
+2024-03-23T15:30:36.715Z	[orders]	info	Fetching orders
+2024-03-23T15:30:40.565Z	[orders]	info	Fetching orders
+2024-03-23T15:30:42.502Z	[orders]	info	Fetching orders
+2024-03-23T15:30:44.544Z	[orders]	info	Fetching orders
+2024-03-23T15:30:46.687Z	[orders]	info	Fetching orders
+2024-03-23T15:30:48.481Z	[orders]	info	Fetching orders
+2024-03-23T15:30:55.967Z	[orders]	info	Fetching orders
+2024-03-23T15:31:00.577Z	[orders]	info	Fetching orders
+2024-03-23T15:31:02.468Z	[orders]	info	Fetching orders
+2024-03-23T15:31:05.576Z	[orders]	info	Fetching orders
+2024-03-23T15:31:07.549Z	[orders]	info	Fetching orders
+2024-03-23T15:31:10.491Z	[orders]	info	Fetching orders
+2024-03-23T15:31:12.574Z	[orders]	info	Fetching orders
+2024-03-23T15:31:14.477Z	[orders]	info	Fetching orders
+2024-03-23T15:31:37.745Z	[orders]	info	Fetching orders
+2024-03-23T15:31:43.754Z	[orders]	info	Fetching orders
+2024-03-23T15:31:46.468Z	[orders]	info	Fetching orders
+2024-03-23T15:31:48.557Z	[orders]	info	Fetching orders
+2024-03-23T15:31:51.543Z	[orders]	info	Fetching orders
+2024-03-23T15:31:57.737Z	[orders]	info	Fetching orders
+2024-03-23T15:31:59.745Z	[orders]	info	Fetching orders
+2024-03-23T15:32:02.501Z	[orders]	info	Fetching orders
+2024-03-23T15:32:11.630Z	[orders]	info	Fetching orders
+2024-03-23T15:32:23.768Z	[orders]	info	Fetching orders
+2024-03-23T15:32:25.538Z	[orders]	info	Fetching orders
+2024-03-23T15:32:35.685Z	[orders]	info	Fetching orders
+2024-03-23T15:32:54.910Z	[orders]	info	Fetching orders
+2024-03-23T15:32:56.668Z	[orders]	info	Fetching orders
+2024-03-23T15:33:00.776Z	[orders]	info	Fetching orders
+2024-03-23T15:33:02.702Z	[orders]	info	Fetching orders
+2024-03-23T15:33:03.691Z	[orders]	info	Fetching orders
+2024-03-23T15:33:25.973Z	[orders]	info	Fetching orders
+2024-03-23T15:33:38.180Z	[orders]	info	Fetching orders
+2024-03-23T15:33:49.632Z	[orders]	info	Fetching orders
+2024-03-23T15:33:51.508Z	[orders]	info	Fetching orders
+2024-03-23T15:33:56.478Z	[orders]	info	Fetching orders
+2024-03-23T15:34:20.671Z	[orders]	info	Fetching orders
+2024-03-23T15:34:22.637Z	[orders]	info	Fetching orders
+2024-03-23T15:34:24.214Z	[orders]	info	Fetching orders
+2024-03-23T15:34:25.596Z	[orders]	info	Fetching orders
+2024-03-23T15:34:28.497Z	[orders]	info	Fetching orders
+2024-03-23T15:34:30.531Z	[orders]	info	Fetching orders
+2024-03-23T15:34:32.599Z	[orders]	info	Fetching orders
+2024-03-23T15:34:40.559Z	[orders]	info	Fetching orders
+2024-03-23T15:36:31.939Z	[orders]	info	Fetching orders
+2024-03-23T15:37:12.907Z	[orders]	info	Fetching orders
+2024-03-23T15:37:28.626Z	[orders]	info	Fetching orders
+2024-03-23T15:37:30.588Z	[orders]	info	Fetching orders
+2024-03-23T15:37:46.462Z	[orders]	info	Fetching orders
+2024-03-23T15:37:49.640Z	[orders]	info	Fetching orders
+2024-03-23T15:38:23.243Z	[orders]	info	Fetching orders
+2024-03-23T15:38:32.438Z	[orders]	info	Fetching order
+2024-03-23T15:38:32.505Z	[async_error]	error	null
+2024-03-23T15:38:32.508Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:38:32.511Z	[async_error]	error	null
+2024-03-23T15:38:33.542Z	[orders]	info	Fetching order
+2024-03-23T15:38:33.549Z	[async_error]	error	null
+2024-03-23T15:38:33.550Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:38:33.552Z	[async_error]	error	null
+2024-03-23T15:38:35.579Z	[orders]	info	Fetching order
+2024-03-23T15:38:35.584Z	[async_error]	error	null
+2024-03-23T15:38:35.585Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:38:35.587Z	[async_error]	error	null
+2024-03-23T15:38:39.609Z	[orders]	info	Fetching order
+2024-03-23T15:38:39.613Z	[async_error]	error	null
+2024-03-23T15:38:39.614Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:38:39.616Z	[async_error]	error	null
+2024-03-23T15:39:33.528Z	[orders]	info	Fetching order
+2024-03-23T15:39:33.539Z	[async_error]	error	null
+2024-03-23T15:39:33.542Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:39:33.545Z	[async_error]	error	null
+2024-03-23T15:39:34.567Z	[orders]	info	Fetching order
+2024-03-23T15:39:34.584Z	[async_error]	error	null
+2024-03-23T15:39:34.586Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:39:34.591Z	[async_error]	error	null
+2024-03-23T15:39:36.615Z	[orders]	info	Fetching order
+2024-03-23T15:39:36.622Z	[async_error]	error	null
+2024-03-23T15:39:36.624Z	[[DB_ERROR]]	error	Error while fetching order	PrismaClientKnownRequestError: 
+Invalid `this.model.findUnique()` invocation in
+D:\WORK\Projects\JUICE_E_VENDOR\SERVER\JUICE_HUB_TS_SERVER\src\models\Orders.ts:114:30
+
+  111 
+  112 public static async getOrderById(orderId:string){
+  113     const {data: orderInfo, error: fetchErr} = await trycatchHelper<TOrderIncludeDto>(
+→ 114         () => this.model.findUnique(
+Inconsistent column data: Malformed ObjectID: invalid character 'O' was found at index 0 in the provided hex string: "ORDER_WERT".
+2024-03-23T15:39:36.626Z	[async_error]	error	null
+2024-03-23T15:42:20.391Z	[orders]	info	Fetching orders
+2024-03-23T15:42:24.390Z	[orders]	info	Fetching orders
+2024-03-23T15:43:07.072Z	[orders]	info	Fetching orders
+2024-03-23T15:43:58.058Z	[orders]	info	Fetching orders
+2024-03-23T15:44:45.773Z	[orders]	info	Fetching order
+2024-03-23T15:44:48.751Z	[orders]	info	Fetching order
+2024-03-23T15:44:54.746Z	[orders]	info	Fetching order
+2024-03-23T15:45:00.738Z	[orders]	info	Fetching order
+2024-03-23T15:45:03.928Z	[orders]	info	Fetching order
+2024-03-23T15:45:22.128Z	[orders]	info	Fetching order
+2024-03-23T15:47:26.093Z	[products]	info	Hello my products
+2024-03-23T15:47:30.093Z	[products]	info	Hello my products
+2024-03-23T15:47:58.134Z	[inventory]	info	Updating inventory
+2024-03-23T15:47:58.844Z	[products]	info	Hello my products
+2024-03-23T15:47:59.820Z	[product]	info	Updating product
+2024-03-23T15:54:09.584Z	[products]	info	Hello my products
+2024-03-23T15:54:13.532Z	[products]	info	Hello my products
+2024-03-23T15:54:14.490Z	[orders]	info	Fetching orders
+2024-03-23T15:54:22.140Z	[orders]	info	Fetching order
+2024-03-23T15:54:53.301Z	[orders]	info	Fetching order
+2024-03-23T15:55:16.740Z	[orders]	info	Fetching order
+2024-03-23T15:55:20.472Z	[orders]	info	Fetching order
+2024-03-23T15:55:50.748Z	[orders]	info	Fetching order
+2024-03-23T15:55:52.738Z	[orders]	info	Fetching order
+2024-03-23T15:55:59.753Z	[orders]	info	Fetching order
+2024-03-23T15:56:03.755Z	[orders]	info	Fetching order
+2024-03-23T15:56:11.783Z	[orders]	info	Fetching order
+2024-03-23T15:56:17.100Z	[orders]	info	Fetching order
+2024-03-23T15:56:33.747Z	[orders]	info	Fetching order
+2024-03-23T15:56:41.737Z	[orders]	info	Fetching order
+2024-03-23T15:56:47.747Z	[orders]	info	Fetching order
+2024-03-23T15:56:51.378Z	[orders]	info	Fetching order
+2024-03-23T15:57:10.742Z	[orders]	info	Fetching order
+2024-03-23T15:57:44.735Z	[orders]	info	Fetching order
+2024-03-23T15:58:04.741Z	[orders]	info	Fetching order
+2024-03-23T15:58:10.736Z	[orders]	info	Fetching order
+2024-03-23T15:58:13.745Z	[orders]	info	Fetching order
+2024-03-23T15:58:28.739Z	[orders]	info	Fetching order
+2024-03-23T15:58:48.339Z	[orders]	info	Fetching order
+2024-03-23T15:58:49.833Z	[orders]	info	Fetching order
+2024-03-23T15:58:52.783Z	[orders]	info	Fetching order
+2024-03-23T15:58:54.606Z	[orders]	info	Fetching order
+2024-03-23T15:59:16.206Z	[orders]	info	Fetching order
+2024-03-23T15:59:26.460Z	[orders]	info	Fetching order
+2024-03-23T15:59:27.587Z	[orders]	info	Fetching order
+2024-03-23T16:01:01.671Z	[orders]	info	Fetching order
+2024-03-23T16:01:05.197Z	[orders]	info	Fetching order
+2024-03-23T16:01:06.064Z	[orders]	info	Fetching order
+2024-03-23T16:01:15.460Z	[orders]	info	Fetching order
+2024-03-23T16:01:16.275Z	[orders]	info	Fetching order
+2024-03-23T16:01:24.656Z	[orders]	info	Updating order
+2024-03-23T16:01:24.664Z	[refund]	info	Creating refund
+2024-03-23T16:01:42.210Z	[orders]	info	Fetching order
+2024-03-23T16:01:47.070Z	[orders]	info	Fetching orders
+2024-03-23T16:03:24.698Z	[orders]	info	Fetching order
+2024-03-23T16:36:22.853Z	[products]	info	Hello my products
+2024-03-23T16:36:26.847Z	[products]	info	Hello my products
+2024-03-23T16:36:48.113Z	[products]	info	Hello my products
+2024-03-23T16:37:00.577Z	[products]	info	Hello my products
+2024-03-23T16:37:17.382Z	[orders]	info	Fetching orders
+2024-03-23T16:37:32.376Z	[orders]	info	Fetching order
+2024-03-23T16:37:35.607Z	[orders]	info	Fetching orders
+2024-03-23T16:37:39.015Z	[orders]	info	Fetching order
+2024-03-24T03:55:21.837Z	[orders]	info	Fetching order
+2024-03-24T03:55:23.243Z	[orders]	info	Fetching order
+2024-03-24T03:55:28.799Z	[products]	info	Hello my products
+2024-03-24T03:57:12.171Z	[products]	info	Hello my products
+2024-03-24T03:57:16.103Z	[products]	info	Hello my products
+2024-03-24T03:57:19.412Z	[products]	info	Hello my products
+2024-03-24T03:57:40.264Z	[products]	info	Hello my products
+2024-03-24T04:35:46.457Z	[orders]	info	Fetching orders
+2024-03-24T04:35:50.036Z	[products]	info	Hello my products
+2024-03-24T04:35:52.602Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T04:35:52.610Z	[products]	info	Hello my products
+2024-03-24T04:35:53.929Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T04:35:59.091Z	[orders]	info	Fetching orders
+2024-03-24T04:36:06.230Z	[orders]	info	Fetching order
+2024-03-24T04:36:12.319Z	[orders]	info	Updating order
+2024-03-24T04:36:12.320Z	[refund]	info	Creating refund
+2024-03-24T04:36:14.719Z	[orders]	info	Creating notification for cancel order
+2024-03-24T04:36:20.435Z	[orders]	info	Fetching order
+2024-03-24T04:36:35.191Z	[orders]	info	Fetching order
+2024-03-24T04:38:59.894Z	[orders]	info	Fetching order
+2024-03-24T04:39:55.266Z	[orders]	info	Fetching order
+2024-03-24T04:39:57.961Z	[products]	info	Hello my products
+2024-03-24T04:40:00.350Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T04:40:12.562Z	[products]	info	Hello my products
+2024-03-24T04:40:14.272Z	[orders]	info	Creating notification for  low level alert
+2024-03-24T04:40:17.147Z	[orders]	info	Creating new order
+2024-03-24T04:40:18.866Z	[orderItem]	info	Creating order item
+2024-03-24T04:40:19.508Z	[orders]	info	Creating notification for new order
+2024-03-24T04:40:26.862Z	[orders]	info	Fetching orders
+2024-03-24T04:40:56.903Z	[orders]	info	Fetching orders

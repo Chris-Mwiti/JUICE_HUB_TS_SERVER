@@ -22,6 +22,7 @@ import bcrypt from "bcrypt";
 import jsonwebtoken from "jsonwebtoken";
 import dotenv from "dotenv";
 import logger from "../../util/functions/logger";
+import { ObjectId } from "bson";
 dotenv.config();
 
 type AuthStrategies = "google" | "local";
@@ -43,21 +44,7 @@ class AuthController {
     if (typeof userInfo === "object" && "googleId" in userInfo) {
       // Checks if there is any existing users based on there googleId
       if (this.strategies === "google") {
-        const { data: retrivedUser, error: fetchErr } =
-          await trycatchHelper<IUser>(() =>
-            this.UserModel.findUnique({
-              where: {
-                googleId: userInfo.googleId!
-              },
-            })
-          );
-        if (fetchErr)
-          throw new CustomError({
-            message: "Error while retrieving user",
-            code: "500",
-          });
-        if (!retrivedUser) return null;
-        return retrivedUser;
+        console.log("Hello google user");
       }
     } else {
       // Checks if user exists based on their email
@@ -69,11 +56,14 @@ class AuthController {
             },
           })
         );
-      if (fetchErr)
+      if (fetchErr){
+        console.log(fetchErr);
         throw new CustomError({
           message: "Error while retrieving user",
           code: "500",
         });
+      }
+        
       if (!retrivedUser) return null;
       return retrivedUser;
     }
@@ -102,7 +92,7 @@ class AuthController {
     logger("user").debug("Creating user");
     // Generates a new user id
     
-    const userId = new RecordIdGenerator("USER").generate();
+    const userId = new ObjectId().toHexString();
 
     //Create a new user obj containing the generated id
     let userInfo = { ...userInfoObj, id: userId };

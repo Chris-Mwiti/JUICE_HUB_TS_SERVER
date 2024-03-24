@@ -3,6 +3,7 @@ import prismaClient from "../config/prismaConfig";
 import trycatchHelper from "../util/functions/trycatch";
 import RecordIdGenerator from "./generators/RecordIdGenerator";
 import prismaErrHandler, { PrismaErrorTypes } from "../helpers/prismaErrHandler";
+import { ObjectId } from "bson";
 
 interface IRefundInfo {
     orderId:string;
@@ -62,7 +63,7 @@ class ProductRefundsModel {
         const { data:newRefundInfo, error:postErr } = await trycatchHelper<IProductRefunds>(
             () => this.model.create({
                 data:{
-                    id: new RecordIdGenerator("REFUND").generate(),
+                    id: new ObjectId().toHexString(),
                     refundQuantity: refundInfo.refundQuantity,
                     refundAmount:refundInfo.refundAmount ,
                     productId:refundInfo.productId ,

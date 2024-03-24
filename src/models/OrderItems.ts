@@ -6,6 +6,7 @@ import DatabaseError from "../helpers/databaseError";
 import { PrismaErrorTypes } from "../helpers/prismaErrHandler";
 import ProductSalesModel from "./ProductSales";
 import logger from "../util/functions/logger";
+import { ObjectId } from "bson";
 
 // @TODO: Recheck on this
 type TOrderItem = Omit<OrderItems, "id">;
@@ -13,7 +14,7 @@ class OrderItemsModel {
   private static model = prismaClient.orderItems;
   private static salesModel = ProductSalesModel;
 
-  public static async createOrderItem(itemDtos: TOrderItem[]) {
+  public static async createOrderItem(itemDtos: TOrderItem[],orderId:string) {
     //Create Product sales for each item
     const orderItemsPromises = itemDtos.map(async (dto) => {
     
@@ -22,10 +23,11 @@ class OrderItemsModel {
         await trycatchHelper<OrderItems>(() =>
           this.model.create({
             data: {
-              id: new RecordIdGenerator("ORDER_ITEM").generate(),
+              id: new ObjectId().toHexString(),
               productId: dto.productId,
               quantity: dto.quantity,
-              price: dto.price
+              price: dto.price,
+              orderId: orderId
             },
           })
         );
@@ -43,6 +45,17 @@ class OrderItemsModel {
     });
 
     return await Promise.all(orderItemsPromises);
+  }
+
+  public static async deleteAllRecords() {
+    const {data:deleteInfo,error:deleteErr} = await trycatchHelper<OrderItems>(
+      () => this.model.deleteMany()
+    )
+    if(deleteErr) throw new DatabaseError({
+      message: ["Error while deleting the records", deleteErr as PrismaErrorTypes],
+      code: "500"
+    })
+    return deleteInfo
   }
 }
 

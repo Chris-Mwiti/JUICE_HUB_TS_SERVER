@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
@@ -12,102 +12,253 @@ datasource db {
 
 // User Management Database structure
 model User {
-  id String @id @map("user_id")
-  firstName String @db.VarChar(255) @map("first_name")
-  lastName String @db.VarChar(255) @map("last_name")
+  id String @id @default(auto()) @db.ObjectId  @map("_id")
+  firstName String  
+  lastName String
   avatarUrl String? @default("/avatar.jpg")
   address String? @default("Nairobi")
   role Roles @default(user)
-  googleId String? @map("google_id") @unique
+  googleId String? @map("google_id") 
   profileUrl String?
-  email String @db.VarChar(255) @unique
+  email String @unique
   emailVerified Boolean? @default(true)
-  password String? @db.VarChar(255)
-  phone String? @db.VarChar(10) @unique
+  password String?
+  phone String?  @unique
   status UserStatus @default(active)
   company String? @default("Madrigal")
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  createdAt DateTime @default(now()) 
+  updatedAt DateTime @updatedAt 
   session ShoppingSession?
-  shipping ShippingDetails? @relation(fields: [shippingId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  shippingId String?
+  shipping ShippingDetails? @relation(fields: [shippingId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  shippingId String? @db.ObjectId
   paymentInfo PaymentDetails[]
   orderDetails OrderDetails[]
   invoicesSent InvoiceReports[] @relation("sender")
   invoicesReceived InvoiceReports[] @relation("receipient")
   refreshToken RefreshTokens[]
-
+  retailerOrders RetailerOrder[]
+  retailPayments RetailerPayments[]
+  retailerShipping RetailerShippingDetails? @relation(fields: [retailerShippindId], references: [id], onDelete: NoAction, onUpdate:NoAction) 
+  retailerShippindId String? @db.ObjectId
   @@map("User")
 }
 
 model RefreshTokens{
-  id String @id 
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   refreshToken String @unique @map("refresh_token")
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId String
+  userId String @db.ObjectId
   createdAt DateTime
   updatedAt DateTime
 } 
 
 // Product Management 
 model Product {
-  id String @id @map("product_id")
-  productName String @db.VarChar(255) @map("product_name")
-  productDescription String @db.VarChar(255) @map("product_description")
-  sellingPrice Int @map("selling_price")
-  buyingPrice Int @map("buying_price")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  productName String 
+  productDescription String 
+  sellingPrice Int 
+  buyingPrice Int 
   lowLevelAlert Int @default(15)
   isPerishable Boolean @default(false)
   expireDate DateTime?
-  productCode String? @unique
+  productCode String? 
   productLabel String @default("NEW") 
   productTag String?
   productSku String
+  productBarCode String @unique
   published Boolean @default(false)
   stockStatus StockStatus @default(IN_STOCK)
-  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  categoryId String @map("category_id") 
+  category Category @relation(fields: [categoryId], references: [id])
+  categoryId String @db.ObjectId 
   inventory Inventory @relation(fields: [inventoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  inventoryId String @unique @map("inventory_id")
-  supplier SupplierDetails? @relation(fields: [supplierId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  supplierId String? 
+  inventoryId String @unique @db.ObjectId
   cartItem CartItems[] 
   orderItem OrderItems[]
-  discountIds Discount[]
-  assetIds ProductAsset[]
+  discountIds String[] @db.ObjectId
+  discounts Discount[] @relation(fields: [discountIds], references: [id])
+  asset ProductAsset[]
   productSales ProductSales[]
   productRefunds ProductRefunds[]
   productRefills ProductRefil[]
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  createdAt DateTime @default(now()) 
+  updatedAt DateTime @updatedAt 
 
   @@map("Product")
 }
 
+
+model RetailerProducts {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  productName String 
+  productDescription String 
+  sellingPrice Int 
+  buyingPrice Int 
+  lowLevelAlert Int @default(15)
+  isPerishable Boolean @default(false)
+  expireDate DateTime?
+  productCode String? 
+  productLabel String @default("NEW") 
+  productTag String?
+  productSku String
+  productBarCode String @unique
+  published Boolean @default(false)
+  stockStatus StockStatus @default(IN_STOCK)
+  category Category @relation(fields: [categoryId], references: [id])
+  categoryId String @db.ObjectId 
+  inventory RetailerInventory @relation(fields: [inventoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  inventoryId String @unique @db.ObjectId
+  supplier SupplierDetails? @relation(fields: [supplierId], references: [id])
+  supplierId String? @db.ObjectId
+  orderItem RetailerOrderItems[]
+  asset RetailerProductAsset[]
+  productSales RetailerSales[]
+  productRefills RetailerProductRefills[]
+  createdAt DateTime @default(now()) 
+  updatedAt DateTime @updatedAt 
+
+  @@map("RetailerProducts")
+}
+
+model RetailerProductAsset {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  images String[]
+  productsId  String @db.ObjectId
+  product RetailerProducts @relation(fields: [productsId], references: [id])
+  createdAt DateTime @default(now()) 
+  updatedAt DateTime @updatedAt 
+
+  @@map("RetailerProductasset")
+}
+
+model RetailerProductRefills {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  refilDate DateTime @default(now())
+  refilAmount Int 
+  status RefillStatus @default(pending) 
+  product RetailerProducts @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate:Cascade)
+  productId String @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt 
+
+  @@map("RetailerProductrefill")
+
+}
+
+model RetailerSales {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  lastPurchaseDate DateTime @default(now()) @map("sales_date")
+  sales Int
+  product RetailerProducts @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  productId String @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("RetailerProductSales")
+
+}
+
+model RetailerInventory {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  quantity Int
+  productName String @unique @map("product_name")
+  lastRefilDate DateTime?
+  product RetailerProducts?  
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("RetailerInventory")
+}
+model RetailerShippingDetails {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  county String 
+  street String
+  town String
+  locationDesc String @map("location_desc")
+  status ShippingStatus @default(pending)
+  createdAt DateTime @default(now()) @map("created_at")
+  modifiedAt DateTime @updatedAt @map("modified_at")
+  user User[]
+  order RetailerOrder @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  orderId String @db.ObjectId
+
+  @@map("RetailerShippingdetails")
+
+}
+
+model RetailerOrder {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  total Int 
+  payment RetailerPayments[]
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId String @db.ObjectId
+  shippingInfo RetailerShippingDetails[]
+  status OrderStatus @default(pending)
+  items RetailerOrderItems[]
+  updatedAt DateTime @updatedAt 
+  createdAt DateTime @default(now()) 
+
+  @@map("RetailerOrders")
+}
+
+
+
+model RetailerPayments {
+  id String  @id @default(auto()) @map("_id") @db.ObjectId
+  orderPayment RetailerOrder @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  orderId String @db.ObjectId
+  amount Int 
+  provider PaymentProviders @default(mpesa)
+  status PaymentStatus @default(pending)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId String @db.ObjectId
+  createdAt DateTime @default(now()) 
+  updatedAt DateTime @updatedAt 
+
+  @@map("RetailerPaymentdetails")
+}
+
+model RetailerOrderItems {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  order RetailerOrder? @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  orderId String? @db.ObjectId
+  product RetailerProducts @relation(fields: [productId], references: [id], onUpdate: Cascade)
+  productId String @db.ObjectId
+  quantity Int
+  price Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([productId,orderId])
+
+  @@map("RetailerOrderitems")
+}
+
 model ProductRefunds {
 
-  id String @id @map("refund_id")
+  id String @id @default(auto()) @db.ObjectId @map("_id")
   returnDate DateTime @default(now())
   status RefundStatus @default(pending)
   refundQuantity Int
   refundAmount Int
   product Product @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  productId String
+  productId String @db.ObjectId
   order OrderDetails @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  orderId String
+  orderId String @db.ObjectId
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@map("Productrefunds")
 }
 
+
 model ProductRefil {
-  id String @id @map("refill_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   refilDate DateTime @default(now())
   refilAmount Int 
   status RefillStatus @default(pending) 
   product Product @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate:Cascade)
-  productId String
+  productId String @db.ObjectId
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt 
 
@@ -115,45 +266,36 @@ model ProductRefil {
 }
 
 model ProductSales {
-  id String @id @map("sales_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   lastPurchaseDate DateTime @default(now()) @map("sales_date")
   sales Int
   product Product @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  productId String
+  productId String @db.ObjectId
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@map("Productsales")
 }
 
-model Images {
-  id String @id @map("image_id")
-  imageUrl String
-  asset ProductAsset @relation(fields: [assetId], references: [id], onDelete: Cascade)
-  assetId String @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("Images")
-}
 
 model ProductAsset {
-  id String @id @map("asset_id")
-  images Images?
-  products  Product[]
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  images String[]
+  productsId  String @db.ObjectId
+  product Product @relation(fields: [productsId], references: [id])
+  createdAt DateTime @default(now()) 
+  updatedAt DateTime @updatedAt 
 
   @@map("Productasset")
 }
 
 //@TODO: Create a supplier model to store supplier details on a particular product
 model SupplierDetails {
-  id String @id @map("supplier_id")
-  companyName String @db.VarChar(25) @map("company_name")
-  address String @db.VarChar(25) @map("company_address")
-  phone String @db.VarChar(10) @map("company_phone")
-  product Product[]
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  companyName String 
+  address String 
+  phone String 
+  product RetailerProducts[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -161,17 +303,18 @@ model SupplierDetails {
 }
 
 model Category{
-  id String @id @map("category_id")
-  categoryName String @db.VarChar(255) @unique @map("category_name")
-  categoryDescription String @db.VarChar(255) @map("category_description")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  categoryName String @unique 
+  categoryDescription String 
   product Product[]
+  retailerProducts RetailerProducts[]
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("Category")
 }
 model Inventory{
-  id String @id @map("inventory_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   quantity Int
   productName String @unique @map("product_name")
   lastRefilDate DateTime?
@@ -182,14 +325,15 @@ model Inventory{
   @@map("Inventory")
 }
 model Discount{
-  id String @id @map("discount_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   coupon String @unique
   tokens Int @default(15)
   percentage Int
   status DiscountStatus @default(inactive)
   type DiscountTypes @default(STANDARD)
   expirationDate DateTime 
-  product Product[]
+  products String[] @db.ObjectId
+  product Product[] @relation(fields: [products], references: [id])
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
@@ -198,24 +342,24 @@ model Discount{
 
 // Shopping Cart Management
 model ShoppingSession {
-  id String @id @map("session_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   total Int
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
   status ShoppingSessionStatus @default(pending)
   user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  userId String @unique @map("user_id")
+  userId String @unique @db.ObjectId
   cartItems CartItems[]
 
   @@map("Shoppingsession")
 }
 model CartItems{
-  id String @id 
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   product Product @relation(fields: [productId], references: [id], onUpdate: Cascade)
-  productId String
+  productId String @db.ObjectId
   quantity Int 
   session ShoppingSession @relation(fields: [sessionId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  sessionId String
+  sessionId String @db.ObjectId
   createdAt DateTime
   updatedAt DateTime
 
@@ -225,54 +369,53 @@ model CartItems{
 
 // Order Structure
 model OrderDetails {
-  id String @id @map("order_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   total Int 
   payment PaymentDetails[]
   user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  userId String
+  userId String @db.ObjectId
   shippingInfo ShippingDetails[]
   status OrderStatus @default(pending)
   orderRefunds ProductRefunds[]
   items OrderItems[]
-  updatedAt DateTime @updatedAt @map("updated_at")
-  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt 
+  createdAt DateTime @default(now()) 
   invoiceReport InvoiceReports?
 
   @@map("Orderdetails")
 }
 model OrderItems {
-  id String @id @map("order_item_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   order OrderDetails? @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  orderId String? @map("order_id")
+  orderId String? @db.ObjectId 
   product Product @relation(fields: [productId], references: [id], onUpdate: Cascade)
-  productId String @map("product_id")
+  productId String @db.ObjectId
   quantity Int
   price Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@unique([productId,orderId])
 
   @@map("Orderitems")
 }
 model PaymentDetails {
-  id String  @id @map("payment_id")
+  id String  @id @default(auto()) @map("_id") @db.ObjectId
   orderPayment OrderDetails @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  orderId String 
+  orderId String @db.ObjectId
   amount Int 
   provider PaymentProviders @default(mpesa)
   status PaymentStatus @default(pending)
   user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  userId String
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  userId String @db.ObjectId
+  createdAt DateTime @default(now()) 
+  updatedAt DateTime @updatedAt 
 
   @@map("Paymentdetails")
 
 }
 
 model ShippingDetails {
-  id String @id @map("shipping_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   county String 
   street String
   town String
@@ -282,7 +425,7 @@ model ShippingDetails {
   modifiedAt DateTime @updatedAt @map("modified_at")
   user User[]
   order OrderDetails @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  orderId String
+  orderId String @db.ObjectId
 
   @@map("Shippingdetails")
 }
@@ -292,18 +435,40 @@ model ShippingDetails {
 
 //Invoices, Reports, Sales Managment
 model InvoiceReports {
-  id String @id @map("invoice_id")
+  id String @id @default(auto()) @map("_id") @db.ObjectId
   title String 
   description String
   receipient User @relation("receipient",fields: [receipientId], references: [id], onUpdate: Cascade, onDelete: Cascade)
-  receipientId String
+  receipientId String @db.ObjectId
   sender User @relation("sender",fields: [senderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  senderId String
+  senderId String @db.ObjectId
   order OrderDetails @relation(fields: [orderId], references: [id])
-  orderId String @unique
+  orderId String @unique @db.ObjectId
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   @@map("invoice_reports")
+}
+
+model Notifications {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+  type NotificationTypes
+  message String
+  level NotificationsLevel @default(important)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum NotificationTypes {
+  products
+  users
+  orders
+}
+
+enum NotificationsLevel {
+  important
+  crucial
+  info
 }
 
 enum Roles {

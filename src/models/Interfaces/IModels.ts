@@ -50,6 +50,7 @@ interface INewProductInfoObj  {
   productName: string;
   productDescription: string;
   productSku:string;
+  productBarCode:string;
   productLabel?:string;
   productCode?:string;
   buyingPrice:string;
@@ -82,7 +83,7 @@ interface INewProductInfoObj  {
   inventoryQty:number;
 
   //Asset Details
-  assetId?:ProductAsset[];
+  imageUrl:string[]
 }
 
 type TJoinProductTypes = {
