@@ -39,8 +39,8 @@ app.use(cors(corsOptions));
 // );
 
 //Passport intialization
-app.use(GooglePassportStrategy.initialize());
-app.use(GooglePassportStrategy.session());
+// app.use(GooglePassportStrategy.initialize());
+// app.use(GooglePassportStrategy.session());
 app.use(cookieParser());
 
 // Body parser
