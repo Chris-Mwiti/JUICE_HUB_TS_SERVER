@@ -84,7 +84,7 @@ class OrderController {
 
     if (fetchErr) return checkErrProperties(this.res, fetchErr);
 
-    new ResponseHandler<OrderDetails[] | null>(
+    new ResponseHandler<OrderDetails[ | null>(
       this.res,
       ordersInfo
     ).getResponse();
